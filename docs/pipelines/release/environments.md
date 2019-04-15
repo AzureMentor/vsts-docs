@@ -1,12 +1,12 @@
 ---
-title: Stages in Azure Pipelines
-titleSuffix: Azure Pipelines & TFS
+title: Release stages, queuing policies, and options
+ms.custom: seodec18
 description: DevOps CI CD - Understand stages in Azure Pipelines and Team Foundation Server (TFS)
 ms.assetid: F3AB8DE0-CBB6-4B52-B483-435E0000E594
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
 ms.date: 08/24/2018
@@ -15,7 +15,7 @@ monikerRange: '>= tfs-2015'
 
 # Release stages, queuing policies, and options
 
-[!INCLUDE [version-rm-dev14](../_shared/version-rm-dev14.md)]
+[!INCLUDE [version-tfs-2015-rtm](../_shared/version-tfs-2015-rtm.md)]
 
 ::: moniker range="<= tfs-2018"
 [!INCLUDE [temp](../_shared/concept-rename-note.md)]
@@ -158,7 +158,7 @@ for a stage in a release pipeline. You can:
   group to be the stage owner. Stage owners are
   notified whenever a deployment of a release is completed to that
   stage. Stage owners are not automatically assigned
-  any addition permissions.
+  any additional permissions.
 * Delete the stage from the pipeline.
 * Change the order of stages.
 * Save a copy of the stage as a template.

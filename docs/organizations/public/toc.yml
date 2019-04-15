@@ -15,7 +15,7 @@
   - name: Make a project public
     href: make-project-public.md
   - name: Share your project vision
-    href: ../../project/wiki/project-vision-status.md?toc=/azure/devops/organizations/public/toc.json&bc=/azure/devops/organizations/public/breadcrumb/toc.json
+    href: ../projects/project-vision-status.md?toc=/azure/devops/organizations/public/toc.json&bc=/azure/devops/organizations/public/breadcrumb/toc.json
   - name: Browse code, download code 
     href: browse-code-public.md  
   - name: View and filter work items
@@ -26,7 +26,7 @@
     href: migration-checklist.md
   - name: Glossary of key terms
     href: glossary-public.md
-- name: How-to Guides
+- name: How-to guides
   items:
   - name: Clone a repository
     href: clone-git-repo-public.md 
@@ -52,6 +52,8 @@
     href: feature-differences.md 
   - name: Extensions and public project support 
     href: ../../extend/develop/public-project.md?toc=/azure/devops/organizations/public/toc.json&bc=/azure/devops/organizations/public/breadcrumb/toc.json
+  - name: Data protection overview
+    href: ../../organizations/security/data-protection.md?toc=/azure/devops/organizations/public/toc.json&bc=/azure/devops/organizations/public/breadcrumb/toc.json
 - name: Resources
   items:
   - name: Git Repositories
@@ -62,6 +64,4 @@
     href: ../projects/index.md 
   - name: Process Customization
     href: ../settings/work/customize-process.md 
-  - name: Data protection overview
-    href: ../../articles/team-services-security-whitepaper.md 
 

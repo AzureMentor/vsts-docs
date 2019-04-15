@@ -1,19 +1,19 @@
 ---
 title: What settings are supported? 
-titleSuffix: Azure DevOps & TFS
+titleSuffix: Azure DevOps
 description: Configure team, project, collection, and organizational-level settings in Azure DevOps
 ms.technology: devops-settings
 ms.prod: devops
 ms.topic: overview
 ms.assetid: 
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 monikerRange: '>= tfs-2013'
-ms.date: 10/29/2018
+ms.date: 02/11/2019
 ---
 
-::: moniker range="vsts" 
+::: moniker range="azure-devops" 
 # About user, team, project, and organization-level settings 
 
 [!INCLUDE [temp](../../_shared/version-vsts-tfs-all-versions.md)]
@@ -27,7 +27,7 @@ If you're just getting started as a project administrator, see [Get started as a
 
 ::: moniker-end  
 
-::: moniker range=">= tfs-2013 <= tfs-2018"
+::: moniker range="<= azure-devops-2019"
 
 # About user, team, project, and collection-level settings
 
@@ -119,13 +119,13 @@ For a complete overview of all Agile tools that you can configure, see [Manage t
 <td>Members of a team are included within the team group which can be used in queries and **@mentions** in pull requests and work item discussions.</td>
 </tr>
 <tr>
-<td>**Work, Team configuration**</td>
+<td>**Boards, Team configuration**</td>
 <td><ul>
 <li>[Backlog levels](select-backlog-navigation-levels.md?toc=/azure/devops/organizations/settings/toc.json&bc=/azure/devops/organizations/settings/breadcrumb/toc.json)</li>
 <li>[Show bugs on backlogs & boards](show-bugs-on-backlog.md?toc=/azure/devops/organizations/settings/toc.json&bc=/azure/devops/organizations/settings/breadcrumb/toc.json)</li>
 <li>[Set working days](set-working-days.md?toc=/azure/devops/organizations/settings/toc.json&bc=/azure/devops/organizations/settings/breadcrumb/toc.json)</li>
-<li>[Configure default area and iteration paths](set-team-defaults.md)</li>
-<li>[Select active iteration paths (sprints)](set-team-defaults.md)</li>
+<li>[Configure area paths](set-area-paths.md)</li>
+<li>[Select active iteration paths (sprints)](set-iteration-paths-sprints.md)</li>
 <li>[Define work item templates](../../boards/backlogs/work-item-template.md)</li>
 </ul></td>
 <td>For an overview of team resources, see [About teams and Agile tools](about-teams-and-settings.md). You configure Kanban boards from the board view: [Columns](../../boards/boards/add-columns.md), [Swimlanes](../../boards/boards/expedite-work.md), [Cards](../../boards/boards/customize-cards.md), [WIP limits](../../boards/boards/wip-limits.md). </td>
@@ -156,11 +156,7 @@ Members of the [Project Administrators group](../security/set-project-collection
 
 See also [Get started as an administrator](../../user-guide/project-admin-tutorial.md).
 
-[!INCLUDE [temp](../../_shared/new-navigation.md)]
-
-# [New navigation](#tab/new-nav)  
-
-::: moniker range="vsts"
+::: moniker range=">= azure-devops-2019"
 **Project settings**  
 From the administrative **Project settings** pages, you can configure settings available from the tabs shown in the following image. 
 
@@ -168,25 +164,20 @@ From the administrative **Project settings** pages, you can configure settings a
 
 ::: moniker-end
 
-::: moniker range=">= tfs-2013  <= tfs-2018"
-[!INCLUDE [temp](../../_shared/new-navigation-not-supported.md)]  
-::: moniker-end
 
-# [Previous navigation](#tab/previous-nav)
+::: moniker range="<= tfs-2018"
 
 **Project-level settings**  
 From the administrative **Project settings** pages, you can configure settings available from the tabs shown in the following image.
 
-
-::: moniker range=">= tfs-2013"
-![Project settings, conceptual](_img/about/project-settings-prev-nav.png) 
+![Project settings, conceptual](_img/about/project-settings-prev-nav.png)  
 ::: moniker-end
 
 ::: moniker range=">= tfs-2013 <= tfs-2018"
 > [!NOTE]  
 > Project settings differ depending on your on-premises TFS version. Some settings aren't available for earlier versions of TFS. 
 ::: moniker-end
----
+
 
 <table>
 <tbody valign="top">
@@ -204,19 +195,19 @@ From the administrative **Project settings** pages, you can configure settings a
 <td>Update the project description or change it's visibility.</p></td>
 </tr>
 <tr>
-<td>**Services** (Azure DevOps Services only)</td>
+<td>**Services** </td>
 <td><ul>
-<li>[Turn a service on or off ](set-services.md)</li>
+<li>[Turn a service on or off ](set-services.md) </li>
 </ul></td>
 <td>Services that aren't use by project members can be disabled so that they don't appear in the web portal. Turning a service off removes the service from the user interface for all project users. However, data defined for the service is preserved and available if you later decide to turn the service on. </p></td>
 </tr>
 <tr>
 <td>**Teams**</td>
 <td><ul>
-<li>[Add another team and team members](../../organizations/settings/add-teams.md)</li>
-<li>[Add a team administrator](../../organizations/settings/add-team-administrator.md)</li>
+<li>[Add another team and team members](add-teams.md)</li>
+<li>[Add a team administrator](add-team-administrator.md)</li>
 </ul></td>
-<td>A default team is created when you create a project. You add a team when you want to provide a group of users in your organization a set of Agile tools which they have full ownership to configure and manage. Teams have access to a product backlog, porfolio backlogs, sprint backlogs, dashboards, team-scoped widgets, and more.<p>For an overview of all tools that support a team, see [About teams and Agile tools](about-teams-and-settings.md).</p></td>
+<td>A default team is created when you create a project. You add a team when you want to provide a group of users in your organization a set of Agile tools which they have full ownership to configure and manage. Teams have access to a product backlog, portfolio backlogs, sprint backlogs, dashboards, team-scoped widgets, and more.<p>For an overview of all tools that support a team, see [About teams and Agile tools](about-teams-and-settings.md).</p></td>
 </tr>
 <tr>
 <td>**Security**</td>
@@ -252,7 +243,7 @@ From the administrative **Project settings** pages, you can configure settings a
 <td>New dashboards added to a project inherit the default dashboard permissions. The default permissions allow team members to create and edit dashboards for their team.</td>
 </tr>
 <tr>
-<td><a id="work" />**Boards, Project configuration (Work)**</td>
+<td><a id="work" />**Boards, Project configuration**</td>
 <td><ul>
 <li>[Define area paths](set-area-paths.md)</li>
 <li>[Define iteration paths or sprints](set-iteration-paths-sprints.md)</li>
@@ -271,7 +262,7 @@ From the administrative **Project settings** pages, you can configure settings a
 <td>To build your code or deploy your software you need at least one agent. Agent and deployment pools are build and release resources that you manage across projects. </td>
 </tr>
 <tr>
-<td><a id="repos" />**Code (Version control)** </td>
+<td><a id="repos" />**Repos, Code, version control** </td>
 <td><ul>
 <li>[Create additional Git repos](../../repos/git/creatingrepo.md)</li>
 <li>[Manage repository permissions](../security/set-git-tfvc-repository-permissions.md)</li>
@@ -294,7 +285,7 @@ From the administrative **Project settings** pages, you can configure settings a
 <td>**Wiki**</td>
 <td><ul>
 <li>[Create a wiki for your project](../../project/wiki/wiki-create-repo.md)</li>
-<li>[Publish a Git repository to a wiki](../../project/wiki/publish-repo-to-wiki.md) (Azure DevOps Services only)</li>
+<li>[Publish a Git repository to a wiki](../../project/wiki/publish-repo-to-wiki.md) </li>
 <li>[Manage README and Wiki permissions](../../project/wiki/manage-readme-wiki-permissions.md)</li>
 </ul></td>
 <td>To share information with your team, you can use Markdown format within a project Wiki, within your project README file, or other repository README file. To learn more, see [About READMes and Wikis](../../project/wiki/about-readme-wiki.md).</td>
@@ -315,9 +306,7 @@ From the administrative **Project settings** pages, you can configure settings a
 Members of the [Project Collection Administrators group](../security/set-project-collection-level-permissions.md) are tasked with configuring resources for all projects defined for an organization or collection. They also can perform all tasks to add projects, manage projects, and manage permissions for the collection, a project, or an object.   
 
 
-# [New navigation](#tab/new-nav)  
-
-::: moniker range="vsts"   
+::: moniker range=">= azure-devops-2019"   
 **Organization settings**  
 From the administrative **Organization settings** pages, you can configure settings available from the tabs shown in the following image.
 
@@ -325,22 +314,8 @@ From the administrative **Organization settings** pages, you can configure setti
 
 ::: moniker-end
 
-::: moniker range=">= tfs-2013  <= tfs-2018"
-[!INCLUDE [temp](../../_shared/new-navigation-not-supported.md)]  
-::: moniker-end
 
-# [Previous navigation](#tab/previous-nav)
-
-::: moniker range="vsts"   
-
-**Organization settings**  
-From the **Admin settings** page, you can configure the settings shown in the following image. 
-
-![Organization settings, conceptual](_img/about/organization-settings-prev-nav.png) 
-
-::: moniker-end
-
-::: moniker range=">= tfs-2013  <= tfs-2018"  
+::: moniker range="<= tfs-2018"  
 **Project collection-level settings**  
 From the administrative pages for a collection, you can configure the settings shown in the following image. 
 
@@ -350,9 +325,8 @@ From the administrative pages for a collection, you can configure the settings s
 ![Collection settings, TFS, conceptual](_img/about/collection-settings-tfs-nav.png) 
 ::: moniker-end
 
----
 
-::: moniker range="vsts" 
+::: moniker range="azure-devops" 
 For an overview of managing your organization, see [About organization management](../accounts/organization-management.md).
 
 <table>
@@ -385,7 +359,6 @@ For an overview of managing your organization, see [About organization managemen
 <li>[Start free trials for paid features and extensions](../billing/try-additional-features-vs.md)</li>
 <li>[Pay for users (Basic)](../billing/buy-basic-access-add-users.md)</li>
 <li>[Buy CI/CD](../billing/buy-more-build-vs.md)</li>
-<li>[Buy cloud-based load testing](../billing/buy-load-testing-vs.md)</li>
 <li>[Add a user to make purchases](../billing/add-backup-billing-managers.md)</li>
 </ul></td>
 <td>All billing is managed through Azure. To learn more, see [Billing overview](../billing/overview.md). </td>
@@ -439,14 +412,14 @@ For an overview of managing your organization, see [About organization managemen
 <tr>
 <td>**Extensions**</td>
 <td><ul>
-<li>[Install and manage Marketplace extensions](../../marketplace/install-vsts-extension.md)</li>
+<li>[Install and manage Marketplace extensions](../../marketplace/install-extension.md)</li>
 <li>[Approve extensions](../../marketplace/approve-extensions.md)</li>
 <li>[Assign paid extension access to users](../../marketplace/assign-paid-extensions.md)</li>
 <li>[Change the number of paid users](../billing/change-number-paid-extension-users.md) </li>
 <li>[Grant permissions to manage extensions](../../marketplace/how-to/grant-permissions.md)</li>
 <li>[Uninstall or disable extensions](../../marketplace/uninstall-disable-extensions.md)</li>
 </ul></td>
-<td>An extension is an installable unit that contributes new capabilities to your projects. You can find extensions from within the [Visual Studio Marketplace](https://marketplace.visualstudio.com/vsts) in the Azure DevOps tab to support planning and tracking of work items, sprints, scrums, etc.; build and release flows; code testing and tracking; and collaboration among team members.
+<td>An extension is an installable unit that contributes new capabilities to your projects. You can find extensions from within the [Visual Studio Marketplace](https://marketplace.visualstudio.com/azuredevops) in the Azure DevOps tab to support planning and tracking of work items, sprints, scrums, etc.; build and release flows; code testing and tracking; and collaboration among team members.
 </td>
 </tr>
 <tr>
@@ -479,8 +452,8 @@ For an overview of managing your organization, see [About organization managemen
 
 ::: moniker-end
 
-::: moniker range=">= tfs-2013  <= tfs-2018"
-For an overview of managing collections, see [Configure and manage TFS resources](/tfs/server/admin/config-tfs-resources).
+::: moniker range="azure-devops-2019"
+For an overview of managing collections, see [Configure and manage Azure DevOps Server resources](/azure/devops/server/admin/config-tfs-resources).
 
 
 <table>
@@ -511,9 +484,91 @@ For an overview of managing collections, see [Configure and manage TFS resources
 <td><ul>
 <li>[Change individual permissions](../security/change-individual-permissions.md)</li>
 <li>[Grant or restrict access to select features ](../security/restrict-access.md)</li>
-<li>[Add collectino-level administrators](../security/set-project-collection-level-permissions.md)</li>
-<li>[Set up groups for use in TFS deployments](/tfs/server/admin/setup-ad-groups)</li>
-<li>[Add administrators to TFS](/tfs/server/admin/add-administrator-tfs)</li>
+<li>[Add collection-level administrators](../security/set-project-collection-level-permissions.md)</li>
+<li>[Set up groups for use in Azure DevOps Server deployments](/azure/devops/server/admin/setup-ad-groups)</li>
+<li>[Add administrators to Azure DevOps Server](/azure/devops/server/admin/add-administrator-tfs)</li>
+</ul></td>
+<td>For an overview of security concepts, see [About permissions and groups](../security/about-permissions.md) and [About access levels](../security/access-levels.md). For a list of collection-level permissions, see [Permissions and groups reference, Collection-level permissions](../security/permissions.md#collection-level).</p></td>
+</tr>
+<tr>
+<td>**Notifications**</td>
+<td><ul>
+<li>Manage collection-level notifications </li>
+</ul></td>
+<td>A number of notifications are automatically defined when a project collection is added. Notifications at the collection-level are managed in much the same way as they are at the [team level](../../notifications/howto-manage-team-notifications.md). </td>
+</tr>
+<tr>
+<td>**Boards, Process** </td>
+<td><ul>
+<li>[Customize a project](./work/customize-process.md)</li>
+<li>[Add and manage processes](./work/manage-process.md)</li>
+</ul></td>
+<td>Process customization applies to Azure Boards only. To customize the Agile tools and work tracking artifacts, you create and customize an inherited process and then update the project to use that process. To learn more, see [About process customization and inherited processes](./work/inheritance-process-model.md). </td>
+</tr>
+<tr>
+<td>**Build and release, Agent pools, Deployment pools**</td>
+<td><ul>
+<li>[Set retention policies](../../pipelines/policies/retention.md)</li>
+<li>[Set resource limits for pipelines](../../pipelines/licensing/concurrent-pipelines-ts.md)</li>
+<li>[Add and manage agent pools](../../pipelines/agents/pools-queues.md)</li>
+<li>[Add and manage deployment pools](../../pipelines/release/deployment-groups/index.md)</li>
+</ul></td>
+<td>You manage resources that support CI/CD operations for all projects through the **Agent pools**, **Deployment pools**, and **Retention and limits** pages.</td>
+</tr>
+<tr>
+<td>**Extensions**</td>
+<td><ul>
+<li>[Install and manage Marketplace extensions](../../marketplace/install-extension.md)</li>
+<li>[Approve extensions](../../marketplace/approve-extensions.md)</li>
+<li>[Assign paid extension access to users](../../marketplace/assign-paid-extensions.md)</li>
+<li>[Change the number of paid users](../billing/change-number-paid-extension-users.md) </li>
+<li>[Grant permissions to manage extensions](../../marketplace/how-to/grant-permissions.md)</li>
+<li>[Uninstall or disable extensions](../../marketplace/uninstall-disable-extensions.md)</li>
+</ul></td>
+<td>An extension is an installable unit that contributes new capabilities to your projects. You can find extensions from within the [Visual Studio Marketplace](https://marketplace.visualstudio.com/azuredevops) in the Azure DevOps tab to support planning and tracking of work items, sprints, scrums, etc.; build and release flows; code testing and tracking; and collaboration among team members.
+</td>
+</tr>
+
+</tbody>
+</table>
+
+::: moniker-end
+
+::: moniker range="<= tfs-2018"
+For an overview of managing collections, see [Configure and manage TFS resources](/azure/devops/server/admin/config-tfs-resources).
+
+
+<table>
+<tbody valign="top">
+<tr>
+<th width="15%">Area</th>
+<th width="40%">Supported tasks</th>
+<th width="45%">Notes</th>
+</tr>
+<tr>
+<td>**Settings**</td>
+<td><ul>
+<li>[Change access levels](../security/change-access-levels.md)</li>
+</ul></td>
+<td>From the **Settings** page, you can manage the time zone, owner, region, and other settings that apply to all projects defined under your account.</td>
+</tr>
+<tr>
+<td>**Projects**</td>
+<td><ul>
+<li>Add and manage projects: [Create](../projects/create-project.md), [Rename](../projects/rename-project.md), [Delete](../projects/delete-project.md)</li>
+<li>[Add users to projects](../security/add-users-team-project.md)</li>
+<li>[Save project data](../accounts/save-team-project-data.md)</li>
+</ul></td>
+<td>A project provides the fundamental resource for storing your code, managing your CI/CD operations, and planning and tracking work for your project. In general, you'll want to minimize the number of projects you create, to keep things simple. Learn more [About projects and scaling your organization](../projects/about-projects.md). </td>
+</tr>
+<tr>
+<td>**Security**</td>
+<td><ul>
+<li>[Change individual permissions](../security/change-individual-permissions.md)</li>
+<li>[Grant or restrict access to select features ](../security/restrict-access.md)</li>
+<li>[Add collection-level administrators](../security/set-project-collection-level-permissions.md)</li>
+<li>[Set up groups for use in TFS deployments](/azure/devops/server/admin/setup-ad-groups)</li>
+<li>[Add administrators to TFS](/azure/devops/server/admin/add-administrator-tfs)</li>
 </ul></td>
 <td>For an overview of security concepts, see [About permissions and groups](../security/about-permissions.md) and [About access levels](../security/access-levels.md). For a list of collection-level permissions, see [Permissions and groups reference, Collection-level permissions](../security/permissions.md#collection-level).</p></td>
 </tr>
@@ -544,7 +599,7 @@ For an overview of managing collections, see [Configure and manage TFS resources
 <li>[Grant permissions to manage extensions](../../marketplace/how-to/grant-permissions.md)</li>
 <li>[Uninstall or disable extensions](../../marketplace/uninstall-disable-extensions.md)</li>
 </ul></td>
-<td>An extension is an installable unit that contributes new capabilities to your projects. You can find extensions from within the [Visual Studio Marketplace](https://marketplace.visualstudio.com/vsts) in the Azure DevOps tab to support planning and tracking of work items, sprints, scrums, etc.; build and release flows; code testing and tracking; and collaboration among team members.
+<td>An extension is an installable unit that contributes new capabilities to your projects. You can find extensions from within the [Visual Studio Marketplace](https://marketplace.visualstudio.com/azuredevops) in the Azure DevOps tab to support planning and tracking of work items, sprints, scrums, etc.; build and release flows; code testing and tracking; and collaboration among team members.
 </td>
 </tr>
 
@@ -554,13 +609,13 @@ For an overview of managing collections, see [Configure and manage TFS resources
 ::: moniker-end
 
 
-::: moniker range=">= tfs-2013  <= tfs-2018"
+::: moniker range="<= azure-devops-2019"
 
 <a id="admin" />
 
 ## Server administrator role 
 
-Members of the [Team Foundation Server Administrators group](/tfs/server/admin/add-administrator-tfs) are tasked with configuring resources for all project collections. They also can perform all tasks to administer projects, collections, and server instances.     
+Members of the [Team Foundation Server Administrators group](/azure/devops/server/admin/add-administrator-tfs) are tasked with configuring resources for all project collections. They also can perform all tasks to administer projects, collections, and server instances.     
 
 The main task they perform from the web portal is to set access levels for a user or security group. See [Change access levels](../security/change-access-levels.md). 
 

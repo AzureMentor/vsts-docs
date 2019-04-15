@@ -1,6 +1,6 @@
 ---
 title: Go task
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Get, build, test a go application, or run a custom go command.
 ms.topic: reference
 ms.prod: devops
@@ -9,7 +9,7 @@ ms.assetid: 34B37FDD-BBF7-4EF1-B37C-9652CA7BB355
 ms.manager: dastahel
 ms.author: dastahel
 ms.date: 05/04/2018
-monikerRange: 'vsts'
+monikerRange: 'azure-devops'
 ---
 
 # Go task
@@ -35,7 +35,7 @@ Use this task in a build or release pipeline to get, build, or test a go applica
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 

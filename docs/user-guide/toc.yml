@@ -1,4 +1,4 @@
-- name: Azure DevOps Services user guide
+- name: Start using Azure DevOps
   href: index.yml
 - name: Overview
   expanded: true
@@ -8,7 +8,9 @@
   - name: Overview of Services
     href: services.md
   - name: Where's VSTS?
-    href: what-happened-vsts.md 
+    href: what-happened-vsts.md
+  - name: Azure DevOps Services vs. Azure DevOps Server
+    href: about-azure-devops-services-tfs.md  
 - name: Quickstarts for users
   items:
   - name: Code with Git
@@ -27,14 +29,14 @@
     href: sign-up-invite-teammates.md
   - name: Create organizations
     href: ../organizations/accounts/create-organization.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json
+  - name: Manage your project
+    href: project-admin-tutorial.md
   - name: Add users to a project or team 
     href: ../organizations/security/add-users-team-project.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/breadcrumb/toc.json&bc=/azure/devops/breadcrumb/toc.json 
   - name: Manage teams and configure team tools
     href: ../organizations/settings/manage-teams.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json
-  - name: Get started as an admin
-    href: project-admin-tutorial.md
   - name: Install a Marketplace extension
-    href: ../marketplace/install-vsts-extension.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json
+    href: ../marketplace/install-extension.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json
 - name: Tutorials for users
   items:
   - name: Set favorites
@@ -51,10 +53,8 @@
     href: ../organizations/security/restrict-access.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json 
 - name: Concepts
   items:
-  - name: Key concepts 
-    href: concepts.md
-  - name: Define organizations and projects
-    href: define-organizations-and-projects.md
+  - name: Plan your org structure
+    href: plan-your-azure-devops-org-structure.md
   - name: Source control 
     href: source-control.md
   - name: Backlogs, boards, and Agile tools
@@ -63,8 +63,6 @@
     href: tools.md  
   - name: Software development roles
     href: roles.md
-  - name: What's the difference? Azure DevOps Services vs. TFS
-    href: about-azure-devops-services-tfs.md  
   - name: Glossary
     href: ../project/navigation/glossary.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json   
 - name: How-to guides
@@ -93,6 +91,10 @@
     href: work-team-explorer.md  
   - name: FAQs
     href: faqs.md
+  - name: Service status  
+    href: service-status-info.md
+  - name: Data protection overview
+    href: ../organizations/security/data-protection.md?toc=/azure/devops/user-guide/toc.json&bc=/azure/devops/user-guide/breadcrumb/toc.json
 - name: Resources
   items:
   - name: Web portal navigation

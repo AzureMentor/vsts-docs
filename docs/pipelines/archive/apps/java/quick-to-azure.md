@@ -1,16 +1,16 @@
 ---
 title: Quick Start - Build and Deploy a Java app | Azure Pipelines
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Set up a continuous integration (CI) build for your Java app, and then a continuous deployment (CD) release to Azure using Azure Pipelines
 ms.topic: conceptual
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: E67B2B25-5928-4784-A6CD-E998F4FDE620
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
 ms.date: 06/27/2017
-monikerRange: 'vsts'
+monikerRange: 'azure-devops'
 ---
 
 
@@ -65,12 +65,12 @@ Navigate to the **Code** hub in the Azure DevOps portal. Navigate to **src/main/
 ![Screenshot showing update to code](_img/quick-to-azure/cicd-get-started-update-code.png)
 
 Change the following line of text:
-```
+```html
 <h2>Hello World!</h2>
 ```
 
 to the following:
-```
+```html
 <h2>Demo of CI/CD!!</h2>
 ```
 

@@ -3,7 +3,7 @@ title: TFS extensions for SharePoint Products
 description: Understand what is installed and configured with TFS extensions for SharePoint Products 
 ms.prod: devops
 ms.technology: devops-analytics
-ms.manager: douge
+ms.manager: jillfra
 ms.reviewer: greggboe
 ms.topic: conceptual
 ms.author: kaelli
@@ -30,4 +30,4 @@ When you create a team project, you have an option to include a SharePoint porta
 
 ## Related notes
 
-- [Configure Team Foundation Server Extensions for SharePoint Products](/tfs/server/install/sharepoint/setup-remote-sharepoint?toc=/azure/devops/report/sharepoint-dashboards/toc.json&bc=/azure/devops/report/sharepoint-dashboards/breadcrumb/toc.json) 
+- [Configure Team Foundation Server Extensions for SharePoint Products](/azure/devops/server/install/sharepoint/setup-remote-sharepoint?toc=/azure/devops/report/sharepoint-dashboards/toc.json&bc=/azure/devops/report/sharepoint-dashboards/breadcrumb/toc.json) 

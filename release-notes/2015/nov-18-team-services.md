@@ -22,11 +22,11 @@ Let’s start the news with our new name! Visual Studio Online has been renamed 
 
 Today we are introducing a new extensions model for VSTS and a marketplace to find and install them. Extensions enable first-class, integrated experiences that extend and enhance the Team Services web experience, either by adding new capabilities or integrating with existing services. Extensions can contribute—hubs, custom controls, context menus, dashboard widgets, build and release tasks, and more.
 
-Users can discover extensions via the new Visual Studio Marketplace. The Marketplace provides a single place for developers to find extensions for Visual Studio, Visual Studio Team Services, and Visual Studio Code. The marketplace will support both community and commercial extensions. Start browsing the Marketplace today: [https://marketplace.visualstudio.com](https://marketplace.visualstudio.com/).
+Users can discover extensions via the new Visual Studio Marketplace. The Marketplace provides a single place for developers to find extensions for Visual Studio, Visual Studio Team Services, and Visual Studio Code. The marketplace will support both community and commercial extensions. Start browsing the Marketplace today: [https://marketplace.visualstudio.com](https://marketplace.visualstudio.com/azuredevops).
 
 ![Visual Studio Marketplace](_img/11_18_01.png)
 
-There are lots of Team Services extensions available in the marketplace today, but there’s room for a whole lot more. Developing extensions is straightforward and anyone can do it. To get started, visit [http://aka.ms/vsoextensions](http://aka.ms/vsoextensions).
+There are lots of Team Services extensions available in the marketplace today, but there’s room for a whole lot more. Developing extensions is straightforward and anyone can do it. To get started, visit [https://aka.ms/vsoextensions](https://aka.ms/vsoextensions).
 
 ##Release Management public preview
 
@@ -42,7 +42,7 @@ This Release Management update has a number of improvements over our previous ve
 - Use the same agents, task model, and extensibility model as the new Build system, enabling seamless migration from continuous delivery to staged release practices.
 - It has fewer concepts and is easier to get started.
 
-For more information, and to get started, see the full documentation at [http://aka.ms/rmpreview](http://aka.ms/rmpreview).
+For more information, and to get started, see the full documentation at [https://aka.ms/rmpreview](https://aka.ms/rmpreview).
 
 ##Package Management public preview
 

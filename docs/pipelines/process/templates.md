@@ -1,16 +1,16 @@
 ---
 title: Job and step templates
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: How to re-use pipelines through templates
 ms.assetid: 6f26464b-1ab8-4e5b-aad8-3f593da556cf
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: reference
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: vtbassmatt
-ms.date: 10/10/2018
-monikerRange: 'vsts'
+ms.date: 03/22/2019
+monikerRange: 'azure-devops'
 ---
 
 # Job and step templates
@@ -87,6 +87,8 @@ You can pass parameters to both step and job templates.
 The `parameters` section defines what parameters are available in the template and their default values. 
 Templates are expanded just before the pipeline runs so that values surrounded by `${{ }}` are replaced by the parameters it receives from the enclosing pipeline.
 
+### Job templates with parameters
+
 ```yaml
 # File: templates/npm-with-params.yml
 
@@ -126,7 +128,36 @@ jobs:
     vmImage: 'vs2017-win2016'
 ```
 
-The above example shows only how to use parameters with a job template. But you can also use parameters with step templates.
+### Step templates with parameters
+
+You can also use parameters with step templates:
+
+```yaml
+# File: templates/steps-with-params.yml
+
+parameters:
+  runExtendedTests: 'false'  # defaults for any parameters that aren't specified
+
+steps:
+- script: npm test
+- ${{ if eq(parameters.runExtendedTests, 'true') }}:
+  - script: npm test --extended
+```
+
+When you consume the template in your pipeline, specify values for
+the template parameters.
+
+```yaml
+# File: azure-pipelines.yml
+
+steps:
+- script: npm install
+  
+- template: templates/steps-with-params.yml  # Template reference
+  parameters:
+    runExtendedTests: 'true'
+```
+
 
 ## Using other repositories
 
@@ -174,6 +205,7 @@ resources:
     - repository: templates
       type: github
       name: Contoso/BuildTemplates
+      ref: refs/tags/v1.0 # optional ref to pin to
 
 jobs:
 - template: common.yml@templates  # Template reference
@@ -186,6 +218,10 @@ After that, the same resource is used for the duration of the pipeline.
 Only the template files are used.
 Once the templates are fully expanded, the final pipeline runs as if it were defined entirely in the source repo.
 This means that you can't use scripts from the template repo in your pipeline.
+
+If you want to use a particular, fixed version of the template, be sure to pin to a ref.
+Refs are either branches (`refs/heads/<name>`) or tags (`refs/tags/<name>`).
+If you want to pin a specific commit, first create a tag pointing to that commit, then pin to that tag.
 
 ## Template expressions
 
@@ -240,7 +276,8 @@ parameters:
 steps:
 - bash: |
     if [ -z "$SOLUTION" ]; then
-      echo ##vso[task.complete result=Failed;]Missing template parameter \"solution\"
+      echo "##vso[task.logissue type=error;]Missing template parameter \"solution\""
+      echo "##vso[task.complete result=Failed;]"
     fi
   env:
     SOLUTION: ${{ parameters.solution }}
@@ -253,7 +290,7 @@ steps:
     solution: ${{ parameters.solution }}
 ```
 
-To prove that the template fails if it's missing the required parameter:
+To show that the template fails if it's missing the required parameter:
 
 ```yaml
 # File: azure-pipelines.yml
@@ -334,14 +371,14 @@ To insert into a mapping, use the special property `${{ insert }}`.
 ```yaml
 # Default values
 parameters:
-  variables: {}
+  additionalVariables: {}
 
 jobs:
 - job: build
   variables:
     configuration: debug
     arch: x86
-    ${{ insert }}: ${{ parameters.variables }}
+    ${{ insert }}: ${{ parameters.additionalVariables }}
   steps:
   - task: msbuild@1
   - task: vstest@2
@@ -351,7 +388,7 @@ jobs:
 jobs:
 - template: jobs/build.yml
   parameters:
-    variables:
+    additionalVariables:
       TEST_SUITE: L0,L1
 ```
 
@@ -413,6 +450,81 @@ steps:
 - template: steps/build.yml
   parameters:
     debug: true
+```
+
+## Iterative insertion
+
+The `each` directive allows iterative insertion based on a YAML sequence (array) or mapping (key-value pairs).
+
+For example, you can wrap the steps of each job with additional pre- and post-steps:
+
+```yaml
+# job.yml
+parameters:
+  jobs: []
+
+jobs:
+- ${{ each job in parameters.jobs }}: # Each job
+  - ${{ each pair in job }}:          # Insert all properties other than "steps"
+      ${{ if ne(pair.key, 'steps') }}:
+        ${{ pair.key }}: ${{ pair.value }}
+    steps:                            # Wrap the steps
+    - task: SetupMyBuildTools@1       # Pre steps
+    - ${{ job.steps }}                # Users steps
+    - task: PublishMyTelemetry@1      # Post steps
+      condition: always()
+```
+
+```yaml
+# azure-pipelines.yml
+jobs:
+- template: job.yml
+  parameters:
+    jobs:
+    - job: A
+      steps:
+      - script: echo This will get sandwiched between SetupMyBuildTools and PublishMyTelemetry.
+    - job: B
+      steps:
+      - script: echo So will this!
+```
+
+You can also manipulate the properties of whatever you're iterating over.
+For example, to add additional dependencies:
+
+```yaml
+# job.yml
+parameters:
+  jobs: []
+
+jobs:
+- job: SomeSpecialTool                # Run your special tool in its own job first
+  steps:
+  - task: RunSpecialTool@1
+- ${{ each job in parameters.jobs }}: # Then do each job
+  - ${{ each pair in job }}:          # Insert all properties other than "dependsOn"
+      ${{ if ne(pair.key, 'dependsOn') }}:
+        ${{ pair.key }}: ${{ pair.value }}
+    dependsOn:                        # Inject dependency
+    - SomeSpecialTool
+    - ${{ if job.dependsOn }}:
+      - ${{ job.dependsOn }}
+```
+
+```yaml
+# azure-pipelines.yml
+jobs:
+- template: job.yml
+  parameters:
+    jobs:
+    - job: A
+      steps:
+      - script: echo This job depends on SomeSpecialTool, even though it's not explicitly shown here.
+    - job: B
+      dependsOn:
+      - A
+      steps:
+      - script: echo This job depends on both Job A and on SomeSpecialTool.
 ```
 
 ## Escaping

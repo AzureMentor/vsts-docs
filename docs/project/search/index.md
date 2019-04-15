@@ -1,18 +1,20 @@
 ---
-title: Search index of topics for Azure DevOps and TFS
+title: Code, workitem, and wiki search - index of topics
 description: Search with Azure DevOps and TFS
 ms.assetid: A8EB4B0C-5656-4070-9A0F-488AB8288BBE
 ms.prod: devops
 ms.technology: devops-collab
 ms.topic: overview
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2017'
 ---
 
 # Search
+
+[!INCLUDE [version-header](../../_shared/version-tfs-2017-through-vsts.md)]
 
 Search makes it easy to locate information across all your projects, from anywhere and any computer or mobile device,
 using just a web browser.

@@ -31,7 +31,7 @@ ms.topic: include
 
 <tr>
 <td>Agent.JobName</td>
-<td>The display name of the running job.</td>
+<td>The name of the running job. This will usually be "Job" or "__default", but in multi-config scenarios, will be the configuration.</td>
 </tr>
 
 <tr>
@@ -74,6 +74,18 @@ If you're running in a container, the agent host and container may be running di
 </tr>
 
 <tr>
+<td>Agent.OSArchitecture</td>
+<td>
+The operating system processor architecture of the agent host. Valid values are:
+<ul>
+<li>X86
+<li>X64
+<li>ARM
+</ul>
+</td>
+</tr>
+
+<tr>
 <td>Agent.ToolsDirectory</td>
 <td>
 The directory used by tasks such as [Node Tool Installer](../../tasks/tool/node-js.md) and [Use Python Version](../../tasks/tool/use-python-version.md) to switch between multiple versions of a tool.
@@ -88,6 +100,8 @@ Learn about [managing this directory on a self-hosted agent](https://go.microsof
 <td>
 The working directory for this agent.
 For example: `c:\agent\_work`.
+<br><br>
+Note: This directory is not guaranteed to be writable by pipeline tasks (eg. when mapped into a container)
 </td>
 </tr>
 
@@ -278,7 +292,7 @@ Note: In TFVC, if you are running a gated check-in build or manually building a 
 <td>Build.SourceBranchName</td>
 <td>The name of the branch the build was queued for.
 <ul>
-<li>Git repo branch or pull request: The last path segment in the ref. For example, in `refs/heads/master` this value is `master`.</li>
+<li>Git repo branch or pull request: The last path segment in the ref. For example, in `refs/heads/master` this value is `master`. In `refs/heads/feature/tools` this value is `tools`.</li>
 <li>TFVC repo branch: The last path segment in the root server path for the workspace. For example in `$/teamproject/main` this value is `main`.</li>
 <li>TFVC repo gated check-in or shelveset build is the name of the shelveset. For example, `Gated_2016-06-06_05.20.51.4369;username@live.com` or `myshelveset;username@live.com`.</li>
 </ul>
@@ -331,7 +345,7 @@ This variable is agent-scoped. It can be used as an environment variable in a sc
 <td>Build.SourceTfvcShelveset</td>
 <td>Defined if your [repository](../repository.md) is Team Foundation Version Control.
 <br/><br/>              
-If you are running a [gated build](../triggers.md#gated) or a [shelveset build](../../get-started-designer.md#queueabuild), this is set to the name of the [shelveset](../../../repos/tfvc/suspend-your-work-manage-your-shelvesets.md) you are building.
+If you are running a [gated build](../triggers.md#gated) or a [shelveset build](../../create-first-pipeline.md#queueabuild), this is set to the name of the [shelveset](../../../repos/tfvc/suspend-your-work-manage-your-shelvesets.md) you are building.
 <br/><br/>
 Note: This variable yields a value that is invalid for build use in a build number format.
 </td>
@@ -389,6 +403,8 @@ This variable is agent-scoped. It can be used as an environment variable in a sc
 <tr>
 <td>System.AccessToken</td>
 <td>[Use the OAuth token to access the REST API](../../scripts/powershell.md#oauth).
+<br/><br/>
+[Use System.AccessToken from YAML scripts](../variables.md#systemaccesstoken).
 <br/><br/>
 This variable is agent-scoped. It can be used as an environment variable in a script and as a parameter in a build task, but not as part of the build number or as a version control tag.</td>
 </tr>

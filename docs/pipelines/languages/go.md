@@ -1,24 +1,24 @@
 ---
-title: Building and testing Go projects with Azure Pipelines or TFS
-titleSuffix: Azure Pipelines & TFS
-description: Build and test Go projects using Azure Pipelines or TFS
+title: Build and test Go projects 
+description: Build and test Go projects with Azure Pipelines & Azure DevOps
 ms.prod: devops
 ms.technology: devops-cicd
+ms.topic: quickstart
 ms.assetid: a72557df-6df4-4fb6-b437-be0730624e3c
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
 ms.reviewer: dastahel
+ms.custom: seodec18
 ms.date: 08/31/2018
-ms.topic: quickstart
-monikerRange: '> tfs-2018'
+monikerRange: 'azure-devops'
 ---
 
-# Build Go projects with Azure Pipelines
+# Build and test Go projects
 
 **Azure Pipelines**
 
-This guidance explains how to use Azure Pipelines to automatically build and test Go projects with CI/CD pipelines.
+This guidance explains how to automatically build and test Go projects.
 
 ## Example
 
@@ -30,7 +30,7 @@ https://github.com/MicrosoftDocs/pipelines-go
 
 The sample code includes an `azure-pipelines.yml` file at the root of the repository. You can use this file to build the app.
 
-Follow instructions in [Create your first pipeline](../get-started-yaml.md) to create a build pipeline for the sample project.
+Follow instructions in [Create your first pipeline](../create-first-pipeline.md) to create a build pipeline for the sample project.
 
 The rest of this topic describes ways to customize your Go build pipeline.
 
@@ -101,7 +101,7 @@ Use `go get` to download the source code for a Go project or to install a tool i
 
 ### dep ensure
 
-Use `dep ensure` if your project uses dep to download dependencies imported in your code. Running `dep ensure` clones imported repositories into your project's vendor directory. Its `Gopkg.lock` and `Gpkg.toml` files guarantee that everyone working on the project uses the same version of dependencies as your build. Add the following snippet to your `azure-pipelines.yml` file. Note: this script runs in bash on Linux and macOS agents, but must be modified for Windows.
+Use `dep ensure` if your project uses dep to download dependencies imported in your code. Running `dep ensure` clones imported repositories into your project's vendor directory. Its `Gopkg.lock` and `Gopkg.toml` files guarantee that everyone working on the project uses the same version of dependencies as your build. Add the following snippet to your `azure-pipelines.yml` file. Note: this script runs in bash on Linux and macOS agents, but must be modified for Windows.
 
 ```yaml
 - script: |
@@ -125,7 +125,7 @@ Use `go test` to test your go module and its subdirectories (`./...`). Add the f
 
 ## Build
 
-Use `go build` to bulid your Go project. Add the following snippet to your `azure-pipelines.yml` file:
+Use `go build` to build your Go project. Add the following snippet to your `azure-pipelines.yml` file:
 
 ```yaml
 - script: go build -v .

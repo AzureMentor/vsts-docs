@@ -5,11 +5,11 @@ ms.topic: conceptual
 ms.prod: devops
 ms.technology: devops-marketplace
 ms.assetid: b30a4604-d34d-43d4-9de9-02f1fea108ea
-ms.manager: douge
+ms.manager: jillfra
 ms.author: elbatk
 author: elbatk
 ms.date: 03/24/2018
-monikerRange: '>= tfs-2013 < vsts'
+monikerRange: '>= tfs-2013 < azure-devops'
 ---
 
 # Team Foundation Server extension FAQs
@@ -117,7 +117,7 @@ is available only for Azure DevOps Services (targets = Microsoft.Visualstudio.Se
 ### Q: Why can't I upload extensions to TFS?
 
 A: You must be a member of the 
-[Team Foundation Administrators group](/tfs/server/admin/add-administrator-tfs#server) 
+[Team Foundation Administrators group](/azure/devops/server/admin/add-administrator-tfs#server) 
 with [**Edit instance-level information** permissions](../organizations/security/permissions.md#server) 
 for the Team Foundation Server where you want to upload extensions.
 

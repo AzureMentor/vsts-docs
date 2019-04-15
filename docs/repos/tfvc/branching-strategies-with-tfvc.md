@@ -5,9 +5,9 @@ description: Learn about branching strategies for Team Foundation Version Contro
 ms.assetid: C9659CD5-CC5D-4522-9DB7-B887F361819F
 ms.prod: devops
 ms.technology: devops-code-tfvc 
-ms.manager: douge
+ms.manager: jillfra
 ms.date: 04/25/2018
-ms.author: willys
+ms.author: sdanie
 author: wpschaub
 ms.topic: conceptual
 monikerRange: '>= tfs-2015'
@@ -90,7 +90,7 @@ By keeping branches short-lived,  merge conflicts are kept to as few as possible
 
 ### Why only branch if necessary?
 
-To embrace [DevOps](http://aka.ms/devops), you need to rely on automation of build, test, and deployment. Change is **continuous**, frequent, and merge operations more challenging as merge conflicts often require manual intervention. It is therefore recommended to avoid branching and rely on other strategies, such as feature toggling.
+To embrace [DevOps](https://aka.ms/devops), you need to rely on automation of build, test, and deployment. Change is **continuous**, frequent, and merge operations more challenging as merge conflicts often require manual intervention. It is therefore recommended to avoid branching and rely on other strategies, such as feature toggling.
 
 ### Why remove branches?
 

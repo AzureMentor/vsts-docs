@@ -1,15 +1,17 @@
 ---
-title: Troubleshoot adding members to projects in Azure DevOps Services
-description: Learn the answers to frequently asked questions (FAQs), like how to add more members to your project, help users sign in, remove users, and more
+title: Troubleshoot adding members, users to projects
+titleSuffix: Azure DevOps Services
+ms.custom: seodec18
+description: Learn the answers to frequently asked questions (FAQs), like how to add more members to your project, help users sign in, remove users, and more.
 ms.prod: devops
 ms.technology: devops-accounts
 ms.assetid: d3945cd4-d024-4d6f-b949-9feaa62e9948
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
-ms.date: 10/29/2018
-monikerRange: 'vsts'
+ms.date: 12/06/2018
+monikerRange: 'azure-devops'
 ---
 
 # Troubleshoot adding members to projects
@@ -24,7 +26,7 @@ A: Your organization is free for the first five users with Basic access. You can
 
 To add six or more users with Basic access, you need to [set up billing in Azure](../billing/set-up-billing-for-your-organization-vs.md). Then you can [pay for more users who need Basic access](../billing/buy-basic-access-add-users.md), return to your organization, [add these users, and assign them Basic access](add-organization-users.md). When billing is set up, you can pay monthly for the extra users' access. And you can cancel at any time.
 
-If you need more Visual Studio subscriptions, learn [how to buy subscriptions](../billing/change-azure-subscription.md) from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions), Azure DevOps tab.
+If you need more Visual Studio subscriptions, learn [how to buy subscriptions](../billing/change-azure-subscription.md) from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/subscriptions), Subscriptions tab.
 
 <a name="WhyCantSignIn"></a>
 

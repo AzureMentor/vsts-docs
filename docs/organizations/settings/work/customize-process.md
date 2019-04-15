@@ -6,27 +6,29 @@ ms-custom: inherited-process
 ms.technology: devops-agile
 ms.prod: devops
 ms.assetid: 31CA1DCB-8E3E-4B9E-A64A-D47DF23490A3   
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
-monikerRange: 'vsts'
+monikerRange: '>= azure-devops-2019'
 ms.topic: tutorial
-ms.date: 05/31/2018
---- 
+ms.date: 11/19/2018
+---
 
 # Customize a project using an inherited process
 
-[!INCLUDE [temp](../../../boards/_shared/version-vsts-only.md)]
+[!INCLUDE [temp](../../../boards/_shared/version-vsts-plus-azdevserver-2019.md)]
 
 Each project is based on a process that defines the building blocks for tracking work. The first project you create uses one of the default processes&mdash;[Agile](/azure/devops/boards/work-items/guidance/agile-process), [Scrum](/azure/devops/boards/work-items/guidance/scrum-process), or [CMMI](/azure/devops/boards/work-items/guidance/cmmi-process). 
-You can only customize inherited processes.  Any changes you make to the inherited process will automatically appear in the projects that use that process. 
+You can only customize inherited processes.  Any changes you make to the inherited process automatically appears in the projects that use that process. 
 
-> [!IMPORTANT]  
-> To customize an on-premises TFS project, see [On-premises XML process model](../../../reference/on-premises-xml-process-model.md). This article applies to Azure DevOps Services only.  
+[!INCLUDE [temp](../_shared/note-on-prem-link.md)]
+
+
 
 The general sequence for customizing a project is to customize an inherited process, verify your customizations, and then change the process of the project(s) to use that process. 
 
 [![Create an inherited process](_img/process/customize-work-phase2-step1.png)](manage-process.md#create-inherited-process)[![Customize the inherited process](_img/process/customize-work-phase2-step2.png)](customize-process.md)[![Apply inherited process to  project(s)](_img/process/customize-work-phase2-step3.png)](manage-process.md#migrate)![Refresh and verify changes](_img/process/customize-work-phase2-step4.png)  
+
 
 You primarily customize a process by adding or modifying a work item type (WIT) defined for that process.  
 
@@ -58,9 +60,9 @@ Learn how to perform these tasks:
 
 Locked ![ ](_img/process/locked-icon.png) fields and inherited ![ ](_img/process/inherited-icon.png) fields correspond to fields inherited from a system process. You can't customize locked fields. You can customize some options for inherited fields. You can fully customize fields that you add to a process. 
 
-0. To begin, choose your inherited process, and then choose the WIT you want to customize. 
+1. To begin, choose your inherited process, and then choose the WIT you want to customize. 
 
-0. To add a field, choose the ![ ](_img/process/new-field-icon.png) (**New Field** icon).  
+2. To add a field, choose the ![ ](_img/process/new-field-icon.png) (**New Field** icon).  
 
 	> [!div class="mx-imgBorder"]  
 	> ![Process Work Item Types page, Add a field to a WIT](_img/field/bug-new-field.png)
@@ -89,7 +91,7 @@ To add a rule, choose your inherited process, the work item type, and then choos
 > [!div class="mx-imgBorder"]  
 > ![Process, WIT, Bug, Layout, New custom control](_img/rules/custom-rule-create-rule.png) 
 
-To learn more, see [Add a rule to a work item type ](custom-rules.md).
+To learn more, see [Add a rule to a work item type](custom-rules.md).
 
 ## Add or modify work item types
 
@@ -101,7 +103,7 @@ You use different WITs to plan and track different types of work. The main reaso
 
 	<img src="_img/process/cpwit-add-new-wit.png" alt="Process, Inherited process, Work Item Types, Add new work item type" style="border: 2px solid #C3C3C3;" />
 
-0. Name the WIT and optionally specify a description, icon and color. The icon and color you specify will appear throughout the web portal, including on the work item form and when associated work items appear on a backlog, boards, query results, and more. 
+1. Name the WIT and optionally specify a description, icon and color. The icon and color you specify appear throughout the web portal, including on the work item form and when associated work items appear on a backlog, boards, query results, and more. 
 
 	<img src="_img/process/cwit-create-wit-ticket.png" alt="Create new work item type dialog" style="border: 1px solid #C3C3C3;" /> 
 
@@ -162,7 +164,7 @@ An extension is an installable unit that contributes new capabilities to your pr
 0. Select the organization you want to add it to and choose **Install**.  
 
 	> [!div class="mx-imgBorder"]  
-	> ![Visual Studio Markeplace, install extension](_img/process/cprocess-install-extension.png) 
+	> ![Visual Studio Marketplace, install extension](_img/process/cprocess-install-extension.png) 
 
 	Extensions are available to add to all projects and processes. 
 
@@ -237,11 +239,11 @@ You can also use the following steps to verify the customizations you've made to
 <a id="process-rest-api">  </a>
 ## Programmatically work with processes 
 
-You can get, create, update, and delete processes defined for an organization using the [REST API, Processes](/rest/api/vsts/processes/processes).
+You can get, create, update, and delete processes defined for an organization using the [REST API, Processes](/rest/api/azure/devops/processes/processes).
 
 ## Related articles
 
-Keep in mind that all projects that reference the inherited process that you're customizing will automatically update to contain the modifications you make. 
+Keep in mind that all projects that reference the inherited process that you're customizing automatically updates to contain the modifications you make.
 
 To customize a single project, always start by [creating an inherited process and changing the project to use that process](manage-process.md). Then, all the customizations that you make to the inherited process automatically appear for the project you migrated.  
 

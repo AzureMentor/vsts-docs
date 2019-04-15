@@ -1,15 +1,15 @@
 ---
 title: Copy Files Over SSH task
-titleSuffix: Azure Pipelines & TFS
 description: Copy Files Over SSH task for use in the jobs of all of your build and release pipelines in Azure Pipelines and TFS
 ms.assetid: 7ff495cf-2d1f-4baa-a052-d176bd507ef4
 ms.prod: devops
 ms.technology: devops-cicd 
 ms.topic: reference
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2017'
 ---
 
@@ -52,7 +52,7 @@ In addition to Linux, macOS is partially supported (see [Q&A](#is-this-task-supp
 
 ## See also
 
-* [Install SSH Key task](https://github.com/Microsoft/vsts-tasks/tree/master/Tasks/InstallSSHKey)
+* [Install SSH Key task](https://github.com/Microsoft/azure-pipelines-tasks/tree/master/Tasks/InstallSSHKey)
 
 * [SSH task](ssh.md)
 
@@ -60,10 +60,12 @@ In addition to Linux, macOS is partially supported (see [Q&A](#is-this-task-supp
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 <!-- BEGINSECTION class="md-qanda" -->
+
+[!INCLUDE [qa-ssh-supported-keys](../_shared/qa-ssh-supported-keys.md)]
 
 [!INCLUDE [qa-agents](../../_shared/qa-agents.md)]
 
@@ -72,7 +74,7 @@ This task is intended for target machines running Linux.
 - For copying files to a macOS machine, this task may be used, but authenticating with a password is not supported.
 - For copying files to a Windows machine, consider using [Windows Machine File Copy](windows-machine-file-copy.md).
 
-::: moniker range="< vsts"
+::: moniker range="<= tfs-2018"
 [!INCLUDE [qa-versions](../../_shared/qa-versions.md)]
 ::: moniker-end
 

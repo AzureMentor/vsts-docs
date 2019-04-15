@@ -5,7 +5,7 @@ description: Configure Command
 ms.assetid: c61c2a48-20d4-4452-b6e1-6c1aa3b521ee
 ms.prod: devops
 ms.technology: devops-code-tfvc
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: reference
@@ -81,7 +81,7 @@ The following example displays the myproj project settings in the project collec
 
 #### Concepts
 
-[Managing File Types](/tfs/server/admin/manage-file-types)
+[Managing File Types](/azure/devops/server/admin/manage-file-types)
 
 #### Other Resources
 

@@ -1,16 +1,17 @@
 ---
 title: Add a team administrator 
-titleSuffix: Azure DevOps & TFS
-description: Add a user to the team administrator role in Azure DevOps Services & Team Foundation Server   
+titleSuffix: Azure DevOps
+description: Add a user to the team administrator role in Azure DevOps  
 ms.technology: devops-settings
 ms.prod: devops
 ms.topic: overview
 ms.assetid: 843D5E56-D24E-4DEA-9915-19B1F76E9A56
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: quickstart
-ms.date: 07/27/2018
+monikerRange: '>= tfs-2013'
+ms.date: 02/11/2019
 ---
 
 # Add a team administrator 
@@ -28,11 +29,11 @@ As a team administrator, you can configure, customize, and manage all team-relat
 <a name="permissions"></a>
 ## Prerequisites
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 * You must be a member of a project. If you don't have a project yet, [create one](../projects/create-project.md). 
 * You must be a [member of the Project Administrators group](../security/set-project-collection-level-permissions.md), or a team administrator for the team you want to update. 
 ::: moniker-end
-::: moniker range=">= tfs-2013 <= tfs-2018"
+::: moniker range="<= azure-devops-2019"
 * You must be a member of a project. If you don't have a project yet, [create one](../projects/create-project.md). * You must be a [member of the Project Administrators group](../security/set-project-collection-level-permissions.md), or a team administrator for the team you want to update. 
 ::: moniker-end
 To get added as a team administrator, ask another team admin, the organization owner, or a member of the [Project Administrators group](../security/set-project-collection-level-permissions.md) to add you.  
@@ -44,14 +45,9 @@ If you need to add a team, see [Add teams](add-teams.md).
 
 From the web portal, open the admin page for the team. 
 
-[!INCLUDE [temp](../../_shared/new-navigation.md)]  
+::: moniker range=">= azure-devops-2019"
 
-
-# [New navigation](#tab/new-nav)
-
-::: moniker range="vsts"  
-
-0. Choose **Project Settings** and choose **Teams**. 
+1. Choose **Project Settings** and choose **Teams**. 
 
 	> [!div class="mx-imgBorder"]
 	> ![Open Code, new nav](_img/add-team/open-project-settings-teams-new-nav.png) 
@@ -66,16 +62,10 @@ From the web portal, open the admin page for the team.
 	> [!div class="mx-imgBorder"]
 	> ![Add team administrator dialog](_img/add-team-admin/add-team-admin-dialog.png)
    
-::: moniker-end  
-
-::: moniker range=">= tfs-2013  <= tfs-2018"  
-[!INCLUDE [temp](../../_shared/new-navigation-not-supported.md)]  
-::: moniker-end  
+::: moniker-end    
 
 
-# [Previous navigation](#tab/previous-nav)
-
-::: moniker range=">= tfs-2017"  
+::: moniker range=">= tfs-2017 <= tfs-2018"
 
 0. From the web portal and team context, choose the ![ ](../../_img/icons/gear_icon.png) gear icon to open **Team Settings**.
 
@@ -94,7 +84,6 @@ From the web portal, open the admin page for the team.
 	> ![Add team administrator dialog](_img/add-team-admin/add-team-admin-dialog.png)
    
 ::: moniker-end     
-
 
 ::: moniker range=">= tfs-2013 <= tfs-2015"  
 
@@ -115,7 +104,6 @@ From the web portal, open the admin page for the team.
 	
 ::: moniker-end  
 
----   
 
 ## Try this next  
 

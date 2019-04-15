@@ -1,14 +1,14 @@
 ---
-title: Collect diagnostic data while testing your apps
+title: Collect diagnostic data
 description: Manual and exploratory testing - collect diagnostic data while testing web and desktop apps with Azure DevOps and Team Foundation Server (TFS)
 ms.assetid: F536C364-BEFC-48A8-B977-19233941EF6A
 ms.prod: devops
 ms.technology: devops-test
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2015'
 ---
 
@@ -19,15 +19,16 @@ monikerRange: '>= tfs-2015'
 Collect diagnostic data while testing your apps.
 This data will be included in the bugs you file 
 during the test. You can collect diagnostic data from
-web apps and from desktop apps, and view it in Azure Test Plans or Team Foundation Server.
+web apps and from desktop apps, web apps and from desktop apps,
+and view it in Azure Test Plans or Team Foundation Server.
 
 [!INCLUDE [feature-availability](_shared/feature-availability.md)] 
 
 <a name="collect-web"></a>
-## Collect diagnostic data from web apps and desktop apps
+## Collect diagnostic data from web and desktop apps
 
 For web apps under test, you can use web-based Microsoft Test Runner. 
-For desktop apps, download and install the [Azure Test Runner client](http://aka.ms/ATRDownload) to collect the following data on demand:
+For desktop apps, download and install the [Test Runner desktop client](https://aka.ms/ATPTestRunnerDownload) to collect the following data on demand:
 
 * [Screen captures](#web-screenshot)
 * [Image action log](#web-log)
@@ -39,10 +40,10 @@ For desktop apps, download and install the [Azure Test Runner client](http://aka
 <a name="collect-desktop"></a>
 ### Screen capture
 
-Capture annotated screenshots from your app. 
+Capture annotated screenshots from your app: 
 
-1. Open Test Runner and choose the **Capture screenshot** icon. Ensure that the app from which you want to 
-   capture data is selected.
+1. Open Test Runner and choose the **Capture screenshot** icon. 
+   Ensure that the app from which you want to capture data is selected.
 
    ![Capturing a screenshot from the app](_img/_shared/collect-diagnostic-data-01.png) 
 
@@ -63,11 +64,11 @@ Capture annotated screenshots from your app.
 <a name="web-log"></a>
 ### Image action log
 
-Capture your interactions with the web or desktop app as an image action log that provides context.
+Capture your interactions with the web or desktop app as an image action log that provides context:
 
-1. Open or switch to the Test Runner and choose the **Capture user actions...** icon. Ensure that app from which you want to 
-   capture data is selected.
- 
+1. Open or switch to the Test Runner and choose the **Capture user actions...** icon. 
+   Ensure that the app from which you want to capture data is selected.
+
    ![Capturing an image action log from the app](_img/_shared/collect-diagnostic-data-06.png) 
 
 1. The Test Runner will now record all the actions you take
@@ -96,7 +97,7 @@ Capture your interactions with the web or desktop app as an image action log tha
 <a name="web-recording"></a>
 ### Screen recording
 
-Capture screen recordings from your apps.
+Capture screen recordings from your apps:
 
 1. Open or switch to the Test Runner and choose the **Record screen** icon. 
  

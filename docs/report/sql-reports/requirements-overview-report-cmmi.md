@@ -6,7 +6,7 @@ ms.technology: devops-analytics
 ms.topic: reference
 description: Lists all requirements, filtered by area and iteration and in order of importance.
 ms.assetid: 18214bb0-6ff1-4e91-b354-a9b46823f69d
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelliauthor: KathrynEE
 ms.date: 10/17/17
 ---
@@ -96,7 +96,7 @@ The Requirements Overview report lists all requirements, filtered by area and it
   
 -   Specify the **Iteration** and **Area** paths of interest.  
   
-     For more information, see [Filtering the Report](#Changing) later in this topic.  
+     For more information, see [Filtering the Report](#Changing) later in this article.  
   
 -   Click ![Expand](_img/icon_expand.gif "Icon_Expand") or ![Collapse](_img/icon_collapse.gif "Icon_Collapse") to expand or collapse a requirement and display child requirements. Parent requirements display a rollup of all task hours that are assigned to it and its child requirements.  
   

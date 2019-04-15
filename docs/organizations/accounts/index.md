@@ -1,14 +1,16 @@
 ---
-title: Organization management topics and articles for Azure DevOps Services  
-description: Index to topics for managing the organization for Azure DevOps
+title: Organization management articles - Azure DevOps
+titleSuffix: Azure DevOps
+ms.custom: seodec18
+description: Index to topics for managing your organization in Azure DevOps
 ms.prod: devops
 ms.technology: devops-accounts
 ms.assetid: 753DE499-C3D1-426B-B2B0-855D99669223
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
-ms.date: 10/11/2018
+ms.date: 02/22/2019
 monikerRange: '>= tfs-2013'
 ---
 # Organization management in Azure DevOps
@@ -35,7 +37,7 @@ Sign up for an organization, add users, and manage permissions and access.
 
 ## Concepts
 
-* [Define organizations and projects](../../user-guide/define-organizations-and-projects.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
+* [Plan your organizational structure in Azure DevOps](../../user-guide/plan-your-azure-devops-org-structure.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
 * [Add subscription user to organization](add-basic-or-vs-subscription-users.md)
 * [Resources granted to project members](../projects/resources-granted-to-project-members.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
 * [Glossary](../../project/navigation/glossary.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
@@ -50,12 +52,14 @@ Sign up for an organization, add users, and manage permissions and access.
     * [Recover your organization](recover-your-organization.md)
     * [Sign in with different credentials](../projects/connect-to-projects.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
     * [Change organization location (region)](change-organization-location.md)
+    * [Add privacy URL](add-privacy-url.md)
 * Manage access to your organization
     * [Add users to your organization](add-organization-users.md)
     * [Manage users](manage-users-table-view.md)
     * [Manage conditional access](manage-conditional-access.md)
-    * [Link work accounts to Visual Studio subscriptions](https://docs.microsoft.com/en-us/visualstudio/subscriptions/vs-alternate-identity?toc=%2Fazure%2Fdevops%2Forganizations%2Faccounts%2Ftoc.json&bc=%2Fazure%2Fdevops%2Forganizations%2Faccounts%2Fbreadcrumb%2Ftoc.json&view=vsts)
+    * [Link work accounts to Visual Studio subscriptions](https://docs.microsoft.com/visualstudio/subscriptions/vs-alternate-identity?toc=%2Fazure%2Fdevops%2Forganizations%2Faccounts%2Ftoc.json&bc=%2Fazure%2Fdevops%2Forganizations%2Faccounts%2Fbreadcrumb%2Ftoc.json&view=azure-devops)
     * [Authenticate with personal access tokens](use-personal-access-tokens-to-authenticate.md)
+    * [Revoke user PATs - for admins](admin-revoke-user-pats.md)
     * [Change app access policies](change-application-access-policies.md)
     * [Delete users](delete-organization-users.md)
     * [Add external users](add-external-user.md)
@@ -65,7 +69,7 @@ Sign up for an organization, add users, and manage permissions and access.
         * [Disconnect your organization from Azure AD](disconnect-organization-from-azure-ad.md)
         * [Delete Azure DevOps users connected to Azure AD](delete-users-from-services-azure-ad.md)
 * Manage extensions
-    * [Install extensions](../../marketplace/install-vsts-extension.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
+    * [Install extensions](../../marketplace/install-extension.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
     * [Assign paid extensions access](../../marketplace/assign-paid-extensions.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
     * [Approve requests for extensions](../../marketplace/approve-extensions.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
     * [Uninstall or disable extensions](../../marketplace/uninstall-disable-extensions.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
@@ -79,8 +83,8 @@ Sign up for an organization, add users, and manage permissions and access.
 * [Permissions and access (Security)](../security/permissions-access.md)
 * [Permission lookup guide (Security)](../security/permissions-lookup-guide.md)
 * [Permissions and groups reference (Security)](../security/permissions.md)
-* [Azure DevOps data protection overview](../../articles/team-services-security-whitepaper.md)
-* [Migrate from TFS to Azure DevOps](../../articles/migrate-to-vsts-from-tfs.md)
+* [Azure DevOps data protection overview](../../organizations/security/data-protection.md)
+* [Migrate from Azure DevOps Server to Azure DevOps Services](../../migrate/migrate-from-tfs.md?toc=/azure/devops/organizations/accounts/toc.json&bc=/azure/devops/organizations/accounts/breadcrumb/toc.json)
 
 ## Resources
 

@@ -1,14 +1,16 @@
 ---
-title: Create and manage your Azure DevOps organization 
-description: Collaborate with others to develop apps by using our cloud service, plan and track work, integrate with other services, and get more features or extensions
+title: About creating and managing organization - Azure DevOps
+titleSuffix: Azure DevOps
+ms.custom: seodec18
+description: Collaborate with others to develop apps by using our cloud service, plan and track work, integrate with other services, and get more features or extensions.
 ms.prod: devops
 ms.technology: devops-accounts
 ms.assetid: fa1dbe39-08b1-4eba-886a-33c1aa1e6a83
 ms.topic: overview
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
-ms.date: 10/10/2018
+ms.date: 12/06/2018
 monikerRange: '>= tfs-2013'
 ---
 
@@ -26,7 +28,7 @@ With an organization, you gain access to the platform in which you can do the fo
 
 ## Create your organization
 
-Before you get started, read [Define your organizations and projects](../../user-guide/define-organizations-and-projects.md). Then, you can [create your organization](create-organization.md) and invite others so they can access your organization.
+Before you get started, read [Plan your organizational structure in Azure DevOps](../../user-guide/plan-your-azure-devops-org-structure.md). Then, you can [create your organization](create-organization.md) and invite others so they can access your organization.
 
 Choose Git or Team Foundation Server as your version control,
 so that Azure DevOps can create your project for code and other assets,
@@ -38,8 +40,7 @@ Your organization includes five free users
 with Basic access, plus unlimited Visual Studio
 subscribers and stakeholders at no extra charge.
 Your organization also includes free monthly amounts
-of additional services, like build and deployment,
-and cloud-based load testing.
+of additional services such as build and deployment.
 
 ## Connect to your organization
 
@@ -69,7 +70,7 @@ and let Azure DevOps assign the next available access to them.
 
 Help your team do more with [Marketplace extensions](https://marketplace.visualstudio.com/).
 For example, organization owners can
-try the Test Manager extension free for 90 days.
+try the Test Manager extension for Azure Test Plans free for 90 days.
 During the trial, all users with Basic access can
 [try Test Manager for free](../billing/try-additional-features-vs.md).
 

@@ -5,7 +5,7 @@ description: Create a serverless function to listen to pull request events and p
 ms.assetid: 
 ms.prod: devops
 ms.technology: devops-code-git
-ms.manager: douge
+ms.manager: jillfra
 ms.author: yohasna
 author: steved0x
 ms.topic: conceptual
@@ -22,14 +22,12 @@ The pull request (PR) workflow provides developers with an opportunity to get fe
 For more information about PR status, see [Customize and extend pull request workflows with pull request status](pull-request-status.md).
 
 ## Prerequisites
-An Azure DevOps organization with a Git repo. If you don't have an Azure DevOps organization, [sign up](../../organizations/accounts/create-organization.md) to upload and share code in free unlimited private Git repositories.
+An organization in Azure DevOps with a Git repo. If you don't have an organization, [sign up](../../organizations/accounts/create-organization.md) to upload and share code in free unlimited private Git repositories.
 
 ## Create a basic Azure function to listen to Azure Repos events
 Follow the [create your first Azure function](/azure/azure-functions/functions-create-first-azure-function) documentation to create a simple function. Modify the code in the sample to look like this:
 
 ```cs
-#r "Newtonsoft.Json"
-
 using System;
 using System.Net;
 using System.Net.Http;
@@ -84,7 +82,7 @@ For this sample you will need to configure 2 service hooks. The first will be fo
 
     ![Copy function url](_img/create-pr-status-server-with-azure-functions/copy-function-url.png)
 
-2. Browse to your Azure DevOps project, e.g. `https://dev.azure.com/<your account>/<your project name>`
+2. Browse to your project in Azure DevOps, e.g. `https://dev.azure.com/<your account>/<your project name>`
 
 3. From the navigation menu, hover over the **gear** and select **Service Hooks**.
 
@@ -146,8 +144,6 @@ Make sure to update the code with your account name, project name, repository na
 This sample inspects the PR title to see if the user has indicated if the PR is a work in progress by adding **WIP** to the title. If so, the sample code changes the status posted back to the PR. Replace the code in your Azure function with the following code to implement updating the status posted back to the PR.
 
 ```cs
-#r "Newtonsoft.Json"
-
 using System;
 using System.Net;
 using System.Net.Http;

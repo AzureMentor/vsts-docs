@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: Work Item Areas and Iterations | REST API Reference for Team Foundation Server
 description: Work with work item areas and iterations programmatically using the REST APIs for Team Foundation Server. 
 ms.assetid: 8AD3C764-692D-440D-8133-311CD6A0FC94
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -19,7 +19,7 @@ ms.date: 08/04/2016
 [!INCLUDE [API_version](../_data/version.md)]
 
 All work items have an area and an iteration field. 
-The values that these fields can have are defined in the [classification hierarchies](http://msdn.microsoft.com/en-us/library/ms181692.aspx). 
+The values that these fields can have are defined in the [classification hierarchies](http://msdn.microsoft.com/library/ms181692.aspx). 
 
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 

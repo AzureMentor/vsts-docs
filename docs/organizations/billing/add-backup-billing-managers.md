@@ -1,22 +1,26 @@
 ---
-title: Add a user who can purchase
+title: Add a user who can buy extensions
+titleSuffix: Azure DevOps Services
+ms.custom: seodec18
 description: Add a backup user or other billing manager who can buy via Visual Studio Marketplace extensions
+titleSuffix: Azure DevOps
+ms.custom: seodec18
 ms.prod: devops
 ms.technology: devops-billing
 ms.assetid: bd87ec5c-84f2-4efa-bc37-a6999cb9532e
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
-ms.date: 10/29/2018
-monikerRange: 'vsts'
+ms.date: 04/10/2019
+monikerRange: 'azure-devops'
 ---
 
-# Add a user to make purchases for Azure DevOps
+# Add a user who can make purchases for Azure DevOps
 
 [!INCLUDE [version-vsts-only](../../_shared/version-vsts-only.md)]
 
-To let a user manage billing or make purchases through Visual Studio Marketplace for your organization, go to the **Azure DevOps** tab and
+To let a user manage billing or make purchases through the [Visual Studio Marketplace](https://marketplace.visualstudio.com/azuredevops) for your organization, go to the **Azure DevOps** tab and
 add [**owner**](/azure/role-based-access-control/built-in-roles#owner), [**contributor**](/azure/role-based-access-control/built-in-roles#contributor), [**service admin**](/azure/billing/billing-add-change-azure-subscription-administrator#change-the-service-administrator-for-an-azure-subscription), or [**co-admin**](/azure/billing/billing-add-change-azure-subscription-administrator#add-or-change-co-administrator) roles to users in the Azure subscription that's linked to your organization.
 
 1. [Sign in to the Azure portal](https://portal.azure.com/) as the Azure subscription administrator.
@@ -27,7 +31,7 @@ add [**owner**](/azure/role-based-access-control/built-in-roles#owner), [**contr
 
 3. Choose **Access control (IAM)**.
 
-   ![Choose access control and then add](_img/add-backup-billing-manager/choose-access-control.png)
+   ![Choose access control, and then add](_img/add-backup-billing-manager/choose-access-control.png)
 
 4. Choose **Add**.
 
@@ -43,7 +47,7 @@ add [**owner**](/azure/role-based-access-control/built-in-roles#owner), [**contr
 
 7. If your update is complete, choose **Save**.
 
-A backup billing manager is added to your organization.
+A backup billing manager or user who can make purchases is added to your organization.
 
 >[!Note]
 >To give access to a user who's not in your directory, the user must accept the invitation that's received via email before they can access the Azure subscription.
@@ -52,5 +56,5 @@ A backup billing manager is added to your organization.
 
 * [Set up billing](set-up-billing-for-your-organization-vs.md)
 * [Change the Azure subscription for billing](change-azure-subscription.md)
-* [Pricing](https://azure.microsoft.com/pricing/details/visual-studio-team-services/)
-* [Billing support](https://azure.microsoft.com/support/devops/)
+* [Azure DevOps pricing](https://azure.microsoft.com/pricing/details/visual-studio-team-services/)
+* [Azure DevOps billing support](https://azure.microsoft.com/support/devops/)

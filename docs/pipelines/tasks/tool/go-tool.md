@@ -1,15 +1,15 @@
 ---
 title: Go Tool Installer task
-titleSuffix: Azure Pipelines & TFS
 description: Finds or downloads a specific version of the Go tool into the tools cache and adds it to the PATH
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 334727F4-9495-4F9D-A391-FC621D671474
 ms.manager: dastahel
+ms.custom: seodec18
 ms.author: dastahel
-ms.date: 05/04/2018
-monikerRange: 'vsts'
+ms.date: 12/07/2018
+monikerRange: 'azure-devops'
 ---
 
 # Go Tool Installer task
@@ -35,4 +35,4 @@ tools cache and add it to the PATH. Use the task to change the version of Go Lan
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.

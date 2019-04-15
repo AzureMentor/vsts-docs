@@ -92,7 +92,7 @@ We’re heard your feedback on working with tags, and with this update, you’ll
 
 ##Deleting a custom field
 
-In the last [deployment](../2015/dec-10-team-services.md), we introduced the ability to customize work items and add new fields. With this update, users with process editing permissions can now delete custom fields created within their process. This action will delete all data associated with the field, including current values and revision history, and free up the field name for reuse. You can delete a field from the Fields tab on the process administration page. To delete a field, it must first be removed from all work item types that reference it.
+In the last [deployment](https://visualstudio.microsoft.com/articles/news/2015/dec-10-team-services), we introduced the ability to customize work items and add new fields. With this update, users with process editing permissions can now delete custom fields created within their process. This action will delete all data associated with the field, including current values and revision history, and free up the field name for reuse. You can delete a field from the Fields tab on the process administration page. To delete a field, it must first be removed from all work item types that reference it.
 
 ##Keyboard shortcuts
 
@@ -188,7 +188,7 @@ The default retention policy for all release definitions is 60 days. By default,
 
 At this point, the retention policies for release management are independent from builds. In a future version, we will help you retain builds based on their usage in release management.
 
-For more information, see [documentation](http://aka.ms/rmpreview) for release management. You can track all of the new features as and when they get deployed in the [What's new section](/azure/devops/release/getting-started/release-notes). Have a question? Follow us on Twitter (@vsreleasemgmt).
+For more information, see [documentation](https://aka.ms/rmpreview) for release management. You can track all of the new features as and when they get deployed in the [What's new section](/azure/devops/release/getting-started/release-notes). Have a question? Follow us on Twitter (@vsreleasemgmt).
 
 ##UI extensibility for release management
 

@@ -1,27 +1,28 @@
 ---
-title: Software development roles supported by Azure DevOps Services and TFS
-description: Understand how Azure DevOps Services and Team Foundation Server tools support various software development roles
+title: Supported roles for software development
+titleSuffix: Azure DevOps
+ms.custom: seodec18
+description: Understand how Azure DevOps tools support various software development roles
 ms.technology: devops-new-user 
 ms.prod: devops
 ms.assetid: 4600B0D9-3799-4902-814B-F6EC9098C4CE
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
 ms.topic: conceptual
-ms.date: 09/13/2018
+ms.date: 12/06/2018
 monikerRange: '>= tfs-2013'
 ---
 
-
-# Software development roles supported by Azure DevOps Services and TFS
+# Software development roles supported by Azure DevOps
 
 [!INCLUDE [version-vsts-tfs-all-versions](../_shared/version-vsts-tfs-all-versions.md)]
 
 If you are a sole developer or you work on a small team, chances are that you perform tasks associated with issue tracking, feature planning, coding, testing, build, and deployment.  
 
-If you work in a large organization, you're probably more focused on a specific set of tasks that are traditionally aligned with one or two specific roles, such as software development, project management, and DevOps.
+If you work in a large company, you're probably more focused on a specific set of tasks that are traditionally aligned with one or two specific roles, such as software development, project management, and DevOps.
 
-This topic describes the features and tasks available to you based on the role you perform.  
+This article describes the features and tasks available to you based on the role you perform.  
 
 ## Contributor roles
 
@@ -54,16 +55,15 @@ A project manager typically plans the feature set to deliver, sets priorities, a
   
 To get started, see [About Azure Boards and Agile tools](../boards/get-started/what-is-azure-boards.md).  
 
-If you are used to using Excel or Project to plan and track your work, you can still use these tools and integrate with Azure DevOps Services and TFS. See [Bulk modify by using Excel](../boards/backlogs/office/bulk-add-modify-work-items-excel.md) and [Create your backlog and tasks by using Project](../boards/backlogs/office/create-your-backlog-tasks-using-project.md). 
+If you are used to using Excel or Project to plan and track your work, you can still use these tools and integrate with Azure DevOps. See [Bulk modify by using Excel](../boards/backlogs/office/bulk-add-modify-work-items-excel.md) and [Create your backlog and tasks by using Project](../boards/backlogs/office/create-your-backlog-tasks-using-project.md). 
 
 ### DevOps: builders, testers, and release managers
 
-One of the main advantages to working with Azure DevOps Services or TFS is the suite of tools and integrated functionality that support build, testing, and deploying software applications. Here are the main DevOps-associated tasks that Azure DevOps Services and TFS support:
+One of the main advantages to working with Azure DevOps is the suite of tools and integrated functionality that support build, testing, and deploying software applications. Here are the main DevOps-associated tasks that Azure DevOps support:
 
 - Define builds
 - Unit test your code 
 - Run tests with your builds 
-- Performance test your apps
 - Perform exploratory tests
 - Define, manage, track, and approve releases 
 - Deploy applications to Azure, a virtual machine, Docker containers, and more  
@@ -101,12 +101,12 @@ To get started, see [Manage teams and configure team tools](../organizations/set
 
 Responsible for configuring project-level resources, including:
 
-::: moniker range="vsts" 
+::: moniker range="azure-devops" 
 - [Area paths](../organizations/settings/set-area-paths.md) and [iteration paths](../organizations/settings/set-iteration-paths-sprints.md)  
 - [Project permissions and repository security](../organizations/security/permissions.md)  
 - [Build agents, pools, and service connections](../pipelines/overview.md)  
 - [Test](../test/how-long-to-keep-test-results.md) and [release](../pipelines/policies/retention.md) retention policies  
-::: moniker-end   
+::: moniker-end  
 
 
 ::: moniker range=">= tfs-2013 <= tfs-2018" 
@@ -115,9 +115,9 @@ Responsible for configuring project-level resources, including:
 - [Customizing work tracking objects](../reference/customize-work.md)  
 - [Build agents, pools, and service connections](../pipelines/overview.md)  
 - [Test](../test/how-long-to-keep-test-results.md) and [release](../pipelines/policies/retention.md) retention policies 
-::: moniker-end   
+::: moniker-end  
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 ### Organization owners and project collection administrators
 
@@ -154,13 +154,12 @@ Responsible for installing, upgrading, and maintaining an on-premises TFS deploy
 - Build retention policies
 - Add and manage project collections
   
-To get started, see [Server Administration (TFS)](/tfs/server/index). 
+To get started, see [Server Administration (TFS)](/azure/devops/server/index). 
 
 ::: moniker-end
 
 
 ## Related articles
 
-- [Key concepts](concepts.md)
-- [Essential services](services.md)
-- [Define organizations and projects](define-organizations-and-projects.md)
+- [A tour of services](services.md)
+- [Plan your organizational structure in Azure DevOps](plan-your-azure-devops-org-structure.md)

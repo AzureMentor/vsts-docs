@@ -6,7 +6,7 @@ ms.technology: devops-analytics
 ms.topic: conceptual
 description: Use SQL Server Report Designer to create a report to track the team's progress by-Team Foundation Server 
 ms.assetid: 5fc5d272-2569-4dd8-b493-704f03f2aca1
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.date: 10/17/17
@@ -30,7 +30,7 @@ You can track your team's progress by using SQL Server Report Designer to create
   
 -   You must be a member of the **TfsWarehouseDataReaders** security role in the Analysis Services database on the data-tier server of Team Foundation Server. For more information, see [How to: Grant Access to the Databases of the Data Warehouse](../admin/grant-permissions-to-reports.md).  
 
--   You must be a member of the **Team Foundation Content Manager** role in SQL Server Reporting Services. For more information, see [Add accounts to administer TFS](/tfs/server/admin/add-administrator-tfs).  
+-   You must be a member of the **Team Foundation Content Manager** role in SQL Server Reporting Services. For more information, see [Add accounts to administer TFS](/azure/devops/server/admin/add-administrator-tfs).  
   
 ### To create a Reporting Server project  
   
@@ -40,11 +40,11 @@ You can track your team's progress by using SQL Server Report Designer to create
   
 2.  Under **Project types**, choose **Business Intelligence Projects**.  
   
-     If **Business Intelligence Projects** does not appear in the list of project types, you must install SQL Server Business Intelligence Development Studio. For more information, see the Prerequisites section near the start of this topic.  
+     If **Business Intelligence Projects** does not appear in the list of project types, you must install SQL Server Business Intelligence Development Studio. For more information, see the Prerequisites section near the start of this article.  
   
 3.  Under **Templates**, choose **Report Server Project.**  
   
-4.  In the **Name** box, typea name for the project, and then choose **OK**.  
+4.  In the **Name** box, type a name for the project, and then choose **OK**.  
   
 ### To create the Tfs2010ReportDS and Tfs2010OlapReportDS data sources  
   

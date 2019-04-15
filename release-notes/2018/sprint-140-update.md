@@ -10,7 +10,7 @@ description: In the Sprint 140 Update of Azure DevOps Services, you'll find a ne
 
 # Pipeline container jobs - Sprint 140 Update
 
-In the **Sprint 140 Update** of Azure DevOps Services, you'll find a new way to customize build dependencies to your specific requirements with the introduction of [container jobs](#control-specific-build-dependencies-using-container-jobs) in Azure Pipelines. In Wiki you can now [add videos](#embed-a-video-in-wiki), [rename](#rename-a-wiki), and [add a table of contents with a single click](#insert-a-wiki-table-of-contents-with-the-click-of-a-button).
+In the **Sprint 140 Update** of Azure DevOps Services, you'll find a new way to customize build dependencies to your specific requirements with the introduction of [container jobs](#control-specific-build-dependencies-using-container-jobs) in Azure Pipelines. In Wiki you can now [add videos](#embed-a-video-in-wiki), [rename](#rename-a-wiki), and [insert a wiki table of contents from the format pane](#insert-a-wiki-table-of-contents-from-the-format-pane).
 
 Check out the [Features](#features) list below for more.
 
@@ -55,7 +55,7 @@ Read about the new features below and head over to Azure DevOps Services to try 
 
 ### Control specific build dependencies using container jobs
 
-By default, jobs run on the host machine where the agent is installed. Container jobs, using the lightweight abstraction over the host operating system that containers provide, let you isolate your tools and dependencies inside a container instead. The agent will launch an instance of your specified container, then run steps inside it. You can select the exact versions of operating systems, tools, and dependencies that your build requires. See the [Container jobs](/azure/devops/pipelines/process/container-phases?view=vsts&tabs=yaml) documentation for more information.
+By default, jobs run on the host machine where the agent is installed. Container jobs, using the lightweight abstraction over the host operating system that containers provide, let you isolate your tools and dependencies inside a container instead. The agent will launch an instance of your specified container, then run steps inside it. You can select the exact versions of operating systems, tools, and dependencies that your build requires. See the [Container jobs](/azure/devops/pipelines/process/container-phases?view=azure-devops&tabs=yaml) documentation for more information.
 
 ### Enable code coverage in .NET Core task
 

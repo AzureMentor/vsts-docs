@@ -1,7 +1,6 @@
 ---
-title: Building Ruby projects with Azure Pipelines
-titleSuffix: Azure Pipelines & TFS
-description: CI and CD for Ruby projects.
+title: Build and test Ruby apps
+description: Automatically build and test Ruby apps with Azure Pipelines, Azure DevOps
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: quickstart
@@ -9,19 +8,20 @@ ms.assetid: 61052605-ec85-45ca-b57e-8664cd41c0ea
 ms.manager: alewis
 ms.author: dastahel
 ms.reviewer: dastahel
+ms.custom: seodec18
 ms.date: 08/31/2018
-monikerRange: '> tfs-2018'
+monikerRange: 'azure-devops'
 ---
 
-# Build Ruby projects with Azure Pipelines
+# Build and test Ruby apps
 
 **Azure Pipelines**
 
-This guidance explains how to use Azure Pipelines to automatically build Ruby projects with CI/CD pipelines.
+This guidance explains how to automatically build Ruby projects.
 
 ## Example
 
-For a working example of how to build a Ruby project, import (into Azure Repos or TFS) or fork (into GitHub) this repo:
+For a working example of how to build a Ruby project, import into Azure Repos or fork (into GitHub) this repo:
 
 ```
 https://github.com/MicrosoftDocs/pipelines-ruby
@@ -30,7 +30,7 @@ https://github.com/MicrosoftDocs/pipelines-ruby
 The sample code includes an `azure-pipelines.yml` file at the root of the repository.
 You can use this file to build the project.
 
-Follow all the instructions in [Create your first pipeline](../get-started-yaml.md) to create a build pipeline for the sample project.
+Follow all the instructions in [Create your first pipeline](../create-first-pipeline.md) to create a build pipeline for the sample project.
 
 ## Build environment
 
@@ -69,7 +69,7 @@ To use Bundler to install dependencies, add the following snippet to your `azure
 
 ```yaml
 - script: |
-    gem install bundler
+    CALL gem install bundler
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 ```
@@ -91,6 +91,7 @@ Add the [Publish Test Results](../tasks/test/publish-test-results.md) task to pu
 
 ```yaml
 - task: PublishTestResults@2
+  condition: succeededOrFailed()
   inputs:
     testResultsFiles: '**/test-*.xml'
     testRunTitle: 'Ruby tests'

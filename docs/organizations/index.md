@@ -1,14 +1,15 @@
 ---
 title: Azure DevOps Settings Documentation 
 titleSuffix: Azure DevOps Services
-description: Plan and track work and collaborate on software development using Agile tools you configure and customize to support your business needs.  
+description: Configure user preferences, and project, collection, and organization resources to support your business needs. 
+ms.custom: seodec18 
 layout: HubPage 
 hide_bc: true
 ms.topic: hub-page
 ms.prod: devops 
-ms.technology: vs-devops-overview 
+ms.technology: devops-settings
 ms.assetid:  
-ms.manager: douge 
+ms.manager: jillfra 
 ms.author: kaelli 
 ms.date: 09/05/2018
 featureFlags:
@@ -214,7 +215,7 @@ featureFlags:
                                                         </div>
                                                         <div class="cardText">
                                                             <h3>Service hooks</h3>
-                                                            <p>Create subscriptions and configure the integration of Azure DevOps Services or TFS with third-party apps.</p>
+                                                            <p>Create subscriptions and configure the integration of Azure DevOps with third-party apps.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -241,7 +242,7 @@ featureFlags:
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/azure/devops/articles/index">
+                                        <a href="/azure/devops/migrate/index">
                                             <div class="cardSize">
                                                 <div class="cardPadding">
                                                     <div class="card">

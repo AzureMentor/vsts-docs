@@ -5,17 +5,17 @@ description: Repository settings
 ms.assetid: 9336ed18-c239-4394-aa4c-64b6d01130f9
 ms.prod: devops
 ms.technology: devops-code-git 
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: conceptual
 ms.date: 10/12/2018
-monikerRange: '>= tfs-2018'
+monikerRange: '>= tfs-2017'
 ---
 
 # Repository settings
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 #### Azure Repos
 
@@ -36,13 +36,9 @@ You may also want to learn about client-side [Git preferences](git-config.md).
 
 ## View and edit repository settings
 
-::: moniker range="vsts"
+::: moniker range=">= azure-devops-2019"
 
-[!INCLUDE [temp](../../_shared/new-navigation.md)]
-
-# [New navigation](#tab/new-nav)
-
-1. From your web browser, open the project for your Azure DevOps organization and choose **Project settings**, **Repositories**, and select your repository.
+1. From your web browser, open the project for your organization in Azure DevOps and choose **Project settings**, **Repositories**, and select your repository.
 
   ![Project settings for your repository](_img/repository-settings/project-repository-settings.png)
 
@@ -50,9 +46,11 @@ You may also want to learn about client-side [Git preferences](git-config.md).
 
   ![The options UI](_img/repository-settings/repository-settings.png)
 
-# [Previous navigation](#tab/previous-nav)
+::: moniker-end
 
-1. From your web browser, open the project for your Azure DevOps organization and choose the gear icon, **Version Control**, and select your repository.
+::: moniker range="<= tfs-2017"
+
+1. From your web browser, open the project for your organization in Azure DevOps and choose the gear icon, **Version Control**, and select your repository.
 
   ![Project settings for your repository](_img/repository-settings/project-repository-settings-prev-nav.png)
 
@@ -60,13 +58,11 @@ You may also want to learn about client-side [Git preferences](git-config.md).
 
   ![The options UI](_img/repository-settings/repository-settings.png)
 
----
-
 ::: moniker-end
 
 ::: moniker range="tfs-2018"
 
-1. From your web browser, open the project for your Azure DevOps organization and choose the gear icon, **Version Control**, and select your repository.
+1. From your web browser, open the project for your organization in Azure DevOps and choose the gear icon, **Version Control**, and select your repository.
 
   ![Project settings for your repository](_img/repository-settings/project-repository-settings-prev-nav.png)
 
@@ -75,7 +71,6 @@ You may also want to learn about client-side [Git preferences](git-config.md).
   ![The options UI](_img/repository-settings/repository-settings-tfs2018.2.png)
 
 ::: moniker-end
-
 
 ## Forking
 
@@ -118,7 +113,7 @@ This setting will not fix a repository which already contains objects that only 
 We recommend fixing such issues before turning the policy on.
 You can rename files and folders or re-create [branches](create-branch.md) and [tags](git-tags.md) using new, non-conflicting names.
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 ### Restrict File Names
 

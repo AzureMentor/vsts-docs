@@ -9,6 +9,7 @@
     #custom: # Required when command == Custom
     #arguments: # Optional
     #publishTestResults: true # Optional
+    #testRunTitle: # Optional
     #zipAfterPublish: true # Optional
     #modifyOutputPath: true # Optional
     #feedsToUse: 'select' # Options: select, config
@@ -22,6 +23,7 @@
     #packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg' # Required when command == Push
     #nuGetFeedType: 'internal' # Required when command == Push# Options: internal, external
     #publishVstsFeed: # Required when command == Push && NuGetFeedType == Internal
+    #publishPackageMetadata: true # Optional
     #publishFeedCredentials: # Required when command == Push && NuGetFeedType == External
     #packagesToPack: '**/*.csproj' # Required when command == Pack
     #configuration: '$(BuildConfiguration)' # Optional

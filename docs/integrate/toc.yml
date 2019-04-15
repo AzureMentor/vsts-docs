@@ -28,6 +28,8 @@
       href: ./concepts/rate-limits.md
     - name: Deprecation of WIT & Test Client OM
       href: ./concepts/wit-client-om-deprecation.md
+    - name: Migration Guide
+      href: ./concepts/migration-guide.md
 - name: How-to Guides
   items:
     - name: Authenticate with PATs
@@ -353,8 +355,10 @@
   items:
     - name: IIS Basic Authentication and PATs
       href: get-started/authentication/iis-basic-auth.md
-- name: REST API Reference
+- name: REST API reference
   href: /rest/api/vsts/
+- name: .NET client libraries reference
+  href: https://docs.microsoft.com/dotnet/api/index?view=azure-devops-dotnet
 - name: How to get help
   href: ../extend/support/help.md?toc=/azure/devops/integrate/toc.json&bc=/azure/devops/integrate/breadcrumb/toc.json
 - name: Visual Studio extensions

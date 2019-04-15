@@ -1,12 +1,12 @@
 ---
 title: System requirements for Microsoft Release Management
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Learn about the system requirements for Release Management server and client for VS 2015 and Team Foundation Server (TFS) 2015
 ms.assetid: 5B39B13E-166B-48DF-B8CB-45725355F644
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
 ms.date: 07/16/2018
@@ -54,7 +54,7 @@ with the following versions of TFS:
 **SQL Server:** 
 
 You can use the same SQL Server instance you used for TFS, 
-**[install a new instance](/tfs/server/install/sql-server/install-sql-server)**, 
+**[install a new instance](/azure/devops/server/install/sql-server/install-sql-server)**, 
 or use an instance that matches the following requirements: 
 
 * SQL Server 2016 

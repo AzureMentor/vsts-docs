@@ -6,7 +6,7 @@ ms.prod: devops
 ms.technology: devops-analytics
 ms.topic: reference
 ms.assetid: 9faa625b-d87b-46a9-96ec-0618fe93db96
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelliauthor: KathrynEE
 ms.date: 04/05/2017
 ---
@@ -15,7 +15,7 @@ ms.date: 04/05/2017
 
 [!INCLUDE [temp](../_shared/tfs-sharepoint-version.md)]
 
-You can use the Microsoft Excel reports to display information from the data warehouse for your team project. This topic describes reports that are provided with the [Agile](../../boards/work-items/guidance/agile-process.md) process template. For a summary of reports provided with the CMMI process template, see [Excel reports (CMMI)](excel-reports-cmmi.md).
+You can use the Microsoft Excel reports to display information from the data warehouse for your team project. this article describes reports that are provided with the [Agile](../../boards/work-items/guidance/agile-process.md) process template. For a summary of reports provided with the CMMI process template, see [Excel reports (CMMI)](excel-reports-cmmi.md).
 
 If you want to export work items to Excel, see [Bulk add or modify work items with Excel](../../boards/backlogs/office/bulk-add-modify-work-items-excel.md). Or, if you want to create an Excel report from a query, see [Create Excel reports from a work item query](create-status-and-trend-excel-reports.md).  
  

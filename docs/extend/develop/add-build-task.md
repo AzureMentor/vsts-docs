@@ -5,7 +5,7 @@ ms.assetid: 98821825-da46-498e-9b01-64d3a8c78ea0
 ms.prod: devops
 ms.technology: devops-ecosystem
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 monikerRange: '>= tfs-2017'
 ms.author: elbatk
 author: elbatk
@@ -14,19 +14,19 @@ ms.date: 10/18/2018
 
 # Add a build or release task
 
-Custom build or release tasks can be contributed by extensions that can be discovered and installed by users into an Azure DevOps Services organization. 
+Custom build or release tasks can be contributed by extensions that can be discovered and installed by users into an organization in Azure DevOps Services. 
 These tasks will appear next to Microsoft-provided tasks in the Add Step wizard:
 
 ![Build task catalog for extensions in Azure DevOps Services](_img/build-task-ext-choose-task.png)
 
 To learn more about the new cross-platform build/release system, see [Team Foundation Build & Release](../..//pipelines/overview.md). 
 
-> **Note:** This article covers agent tasks in agent-based extensions. For information on server tasks/server-based extensions, checkout the [Server Task GitHub Documentation](https://github.com/Microsoft/vsts-tasks/blob/master/docs/authoring/servertaskauthoring.md).
+> **Note:** This article covers agent tasks in agent-based extensions. For information on server tasks/server-based extensions, checkout the [Server Task GitHub Documentation](https://github.com/Microsoft/azure-pipelines-tasks/blob/master/docs/authoring/servertaskauthoring.md).
 
 ## Preparation and required setup for this tutorial
 In order to create extensions for Azure DevOps Services, there are some prerequisite software and tools you'll need:
 
-- A **Azure DevOps Services organization**, more information can be found [here](https://visualstudio.microsoft.com/en-us/products/visual-studio-team-services-vs.aspx)
+- An **organization** in Azure DevOps Services, more information can be found [here](https://visualstudio.microsoft.com/products/visual-studio-team-services-vs.aspx)
 - **A text editor**. For many of the tutorials we used `Visual Studio Code`, which can be downloaded [here](https://code.visualstudio.com/)
 - The latest version of **node**, which can be downloaded [here](https://nodejs.org/en/download/)
 - **Typescript Compiler** 2.2.0 or greater, which can be downloaded [here](https://www.npmjs.com/package/typescript)
@@ -52,19 +52,22 @@ This walkthrough was done on Windows with PowerShell. We attempted to make it ge
 If using a Mac or Linux, replace any instances of ```$env:<var>=<val>``` with ```export <var>=<val>```
 
 ## Steps
-There are four steps to creating a build or release task extension and putting it on the Marketplace:
-* [Step 1: Create the task metadata file](#createmetadata)
-* [Step 2: Create the extension manifest file](#extensionmanifest)
-* [Step 3: Package your extension](#packageext)
-* [Step 4: Publish your extension](#publishext)
+Below are the steps to create a build or release task extension and put it on the Marketplace:
+* [Step 1: Create a custom task](#createtask)
+* [Step 2: Unit test the task scripts](#testscripts)
+* [Step 3: Create the extension manifest file](#extensionmanifest)
+* [Step 4: Package your extension](#packageext)
+* [Step 5: Publish your extension](#publishext)
 * [Optional: Install and test your extension](#installandtest)
 
 <a name="createtask" />
 ## Step 1: Create the custom task
 
+Step 1 is all about setting up your task. Every part of Step 1 should be done within the `buildAndReleaseTask` folder.
+
 ### Create task scaffolding
 
-The first step is to create the folder structure for the task and intall the required libraries and dependencies.
+The first step is to create the folder structure for the task and install the required libraries and dependencies.
 
 #### Create a directory and package.json file
 
@@ -82,12 +85,6 @@ We provide a library, _azure-pipelines-task-lib_, that should be used to create 
 
 ```
 npm install azure-pipelines-task-lib --save
-```
-
-Additionally, in order to create your extension you must have the VSS Web Extension SDK installed:
-
-```
-npm install vss-web-extension-sdk
 ```
 
 #### Add typings for external dependencies
@@ -117,13 +114,16 @@ tsc --init
 In addition, for this example we want to compile to the ES6 standard instead of ES5.
 To ensure this happens, open the newly generated ```tsconfig.ts``` and update the ```target``` field to "es6".
 
+>[!NOTE]
+>To have the command run successfully, make sure that TypeScript is installed globally with npm on your local machine.
+
 ### Task implementation
 
 Now that the scaffolding is complete, we can start to create our custom task.
 
 #### task.json
 
-Next, we will create a ```task.json``` file in the root directory. The ```task.json``` file describes the build or release task and is what the build/release system uses to render configuration options to the user and to know which scripts to execute at build/release time.
+Next, we will create a ```task.json``` file in the ``buildAndReleaseTask`` folder. The ```task.json``` file describes the build or release task and is what the build/release system uses to render configuration options to the user and to know which scripts to execute at build/release time.
 
 Copy the code below and replace the ```{{placeholders}}``` with your tasks information. The most important placeholder is the ```taskguid```, which must be unique and can be generated [here](https://www.guidgen.com/).
 
@@ -267,7 +267,7 @@ import * as ttm from 'azure-pipelines-task-lib/mock-test';
 
 describe('Sample task tests', function () {
 
-    before(() => {
+    before( function() {
 
     });
 
@@ -275,11 +275,11 @@ describe('Sample task tests', function () {
 
     });
 
-    it('should succeed with simple inputs', (done: MochaDone) => {
+    it('should succeed with simple inputs', function(done: MochaDone) {
         // Add success test here
     });
 
-    it('it should fail if tool returns 1', (done: MochaDone) => {
+    it('it should fail if tool returns 1', function(done: MochaDone) {
         // Add failure test here
     });    
 });
@@ -310,7 +310,7 @@ tmr.run();
 Next, add the following example success test to your ```_suite.ts``` file to run the task mock runner:
 
 ```typescript
-it('should succeed with simple inputs', (done: MochaDone) => {
+it('should succeed with simple inputs', function(done: MochaDone) {
     this.timeout(1000);
 
     let tp = path.join(__dirname, 'success.js');
@@ -349,7 +349,7 @@ tmr.run();
 Next, add the following to your ```_suite.ts``` file to run the task mock runner:
 
 ```typescript
-it('it should fail if tool returns 1', (done: MochaDone) => {
+it('it should fail if tool returns 1', function(done: MochaDone) {
     this.timeout(1000);
 
     let tp = path.join(__dirname, 'failure.js');
@@ -376,7 +376,7 @@ tsc
 mocha tests/_suite.js
 ```
 
-Both tests should pass. If you want to run the tests with more verbose output (what you would see in the build console), set the environment variable: ```TAST_TEST_TRACE=1```:
+Both tests should pass. If you want to run the tests with more verbose output (what you would see in the build console), set the environment variable: ```TASK_TEST_TRACE=1```:
 
 ```
 $env:TASK_TEST_TRACE=1
@@ -387,7 +387,9 @@ $env:TASK_TEST_TRACE=1
 The extension manifest contains all of the information about your extension. It includes links to your files, including your task folders and images. This example is an extension manifest which contains the build or release task.
 
 Copy the .json code below and save it as your `vss-extension.json` file:
-[!code-javascript[JSON]](../_data/extension-build-tasks.json)]
+
+[!code-javascript[JSON](../_data/extension-build-tasks.json)]
+
 
 >[!NOTE]
 >The **publisher** here will need to be changed to your publisher name. If you would like to create a publisher now, you can jump down to
@@ -435,12 +437,12 @@ After you have your packaged extension in a .vsix file, you're ready to publish 
 All extensions, including those from Microsoft, are identified as being provided by a publisher.
 If you aren't already a member of an existing publisher, you'll create one.
 
-1. Sign in to the [Visual Studio Marketplace Publishing Portal](http://aka.ms/vsmarketplace-manage)
+1. Sign in to the [Visual Studio Marketplace Publishing Portal](https://marketplace.visualstudio.com/manage/createpublisher)
 2. If you are not already a member of an existing publisher, you'll be prompted to create a publisher. If you're not prompted to create a publisher, scroll down to the bottom of the page and select <i>Publish Extensions</i> underneath <b>Related Sites</b>.
  * Specify an identifier for your publisher, for example: `mycompany-myteam`
     * This will be used as the value for the `publisher` attribute in your extensions' manifest file.
  * Specify a display name for your publisher, for example: `My Team`
-3. Review the [Marketplace Publisher Agreement](http://aka.ms/vsmarketplace-agreement) and click **Create**
+3. Review the [Marketplace Publisher Agreement](https://aka.ms/vsmarketplace-agreement) and click **Create**
 
 Now your publisher is defined. In a future release, you'll be able to grant permissions to view and manage your publisher's extensions.
 This will make it easy (and more secure) for teams and organizations to publish extensions under a common publisher,
@@ -477,7 +479,7 @@ Now that your extension is in the marketplace and shared, anyone who wants to us
 ## Optional: Install and test your extension
 Installing an extension that is shared with you is simple and can be done in a few steps:
 
-1. From your organization control panel (`https://dev.azure.com/{organization}/_admin`), go to the project collection administraton page.
+1. From your organization control panel (`https://dev.azure.com/{organization}/_admin`), go to the project collection administration page.
 2. In the Extensions tab, find your extension in the "Extensions Shared With Me" group, click on the extension link.
 3. Install the extension!
 

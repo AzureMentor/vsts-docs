@@ -7,7 +7,7 @@ ms.technology: devops-agile
 ms.assetid: 962eba84-0c28-4c94-8abc-3cdb9f1df53a
 ms.author: kaelli
 author: KathrynEE
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: conceptual
 ms.date: 01/12/2017
 ---
@@ -45,7 +45,7 @@ ms.date: 01/12/2017
   
 1.  Move or split the collection.  
 
-     For more information, see [Manage project collections](/tfs/server/admin/manage-team-project-collections).  
+     For more information, see [Manage project collections](/azure/devops/server/admin/manage-team-project-collections).  
   
 2.  Grant required permissions to the service account for the second instance of Team Foundation Server.  
   
@@ -70,7 +70,7 @@ ms.date: 01/12/2017
   
 2.  Move or split the collection.  
 
-     For more information, see [Manage project collections](/tfs/server/admin/manage-team-project-collections).  
+     For more information, see [Manage project collections](/azure/devops/server/admin/manage-team-project-collections).  
   
 3.  Assign all required permissions.  
   
@@ -80,13 +80,13 @@ ms.date: 01/12/2017
   
 5.  Use the **/MapPwaToCollection** command option to map each collection that you moved to the second instance of PWA.  
   
-6.  Use the **/MapPlapToTeamProject** command option to map each plan to the project that was moved to a different collection.  
+6.  Use the **/MapPlanToTeamProject** command option to map each plan to the project that was moved to a different collection.  
   
  For more information, see the following topics:  
 
--   [Move or clone TFS](/tfs/server/admin/move-across-domains)  
+-   [Move or clone TFS](/azure/devops/server/admin/move-across-domains)  
 
--   [Move TFS to a new domain ( environment move)](/tfs/server/admin/move-across-domains)  
+-   [Move TFS to a new domain ( environment move)](/azure/devops/server/admin/move-across-domains)  
   
 -   [Register an instance of PWA](register-pwa.md)  
   
@@ -101,7 +101,7 @@ ms.date: 01/12/2017
   
 1.  Move the instance of Team Foundation Server.  
   /tfs/server
-     For more information, see [Move or clone TFS](/tfs/server/admin/move-clone-hardware).  
+     For more information, see [Move or clone TFS](/azure/devops/server/admin/move-clone-hardware).  
   
 2.  Assign all required permissions.  
   

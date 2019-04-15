@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: Test Overview | REST API Reference for Team Foundation Server
 description: Work with test management programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 82EB89BA-B237-453B-8F15-E2747458C790
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -66,6 +66,6 @@ After you've run some tests...
 ## Licensing Requirements
 Test resources are subject to specific licensing and access restrictions. Please refer to the documentation links below for ensuring that the REST APIs are accessed with the appropriate user context.
 
-[Access Levels for Test Manager](/azure/devops/organizations/security/change-access-levels#test-manager)
+[Access Levels for Test Manager](https://visualstudio.microsoft.com/docs/work/connect/change-access-levels#test-manager)
 
-[Test Manager Extension](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)
+[Test Manager extension for Azure Test Plans](https://marketplace.visualstudio.com/items?itemName=ms.vss-testmanager-web)

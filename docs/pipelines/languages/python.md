@@ -1,7 +1,6 @@
 ---
-title: Building Python apps with Azure Pipelines or TFS
-titleSuffix: Azure Pipelines & TFS
-description: CI and CD for Python projects.
+title: Build and test Python apps
+description: Automatically build and test Python apps with Azure Pipelines, Azure DevOps
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: quickstart
@@ -9,19 +8,20 @@ ms.assetid: 141149f8-d1a9-49fa-be98-ee9a825a951a
 ms.manager: alewis
 ms.author: dastahel
 ms.reviewer: dastahel
+ms.custom: seodec18
 ms.date: 08/31/2018
-monikerRange: '> tfs-2018'
+monikerRange: 'azure-devops'
 ---
 
-# Build Python apps with Azure Pipelines
+# Build Python apps
 
 **Azure Pipelines**
 
-This guidance explains how to use Azure Pipelines to automatically build, test, and deploy Python apps or scripts with CI/CD pipelines. 
+This guidance explains how to automatically build, test, and deploy Python apps or scripts.
 
 ## Example
 
-For a working example of how to build a Python app with Django, import (into Azure Repos or TFS) or fork (into GitHub) this repo:
+For a working example of how to build a Python app with Django, import into Azure Repos or fork (into GitHub) this repo:
 
 ```
 https://github.com/MicrosoftDocs/pipelines-python-django
@@ -30,7 +30,7 @@ https://github.com/MicrosoftDocs/pipelines-python-django
 The sample code includes an `azure-pipelines.yml` file at the root of the repository.
 You can use this file to build the project.
 
-Follow all the instructions in [Create your first pipeline](../get-started-yaml.md) to create a build pipeline for the sample project.
+Follow all the instructions in [Create your first pipeline](../create-first-pipeline.md) to create a build pipeline for the sample project.
 
 ## Build environment
 
@@ -83,16 +83,9 @@ jobs:
   # Add additional tasks to run using each Python version in the matrix above
 ```
 
-### Activate an Anaconda environment
+### Create and activate an Anaconda environment
 
-As an alternative to the **Use Python Version** task, create and activate a conda environment and Python version using the [Conda Environment](../tasks/package/conda-environment.md) task. Add the following YAML to activate an environment named `myEnvironment` with the Python 3 package.
-
-```yaml
-- task: CondaEnvironment@0
-  inputs:
-    environmentName: 'myEnvironment'
-    packageSpecs: 'python=3'
-```
+See [Run pipelines with Anaconda environments](./anaconda.md).
 
 ## Run a Python script
 
@@ -137,12 +130,7 @@ After updating `pip` and friends, a typical next step is to install from `requir
 
 ### Install Anaconda packages with conda
 
-Add the following YAML to install the `scipy` package in the conda environment named `myEnvironment`. See [Activate an Anaconda environment](#activate-an-anaconda-environment) above.
-
-```yaml
-- script: conda install -n myEnvironment scipy
-  displayName: 'Install conda libraries'
-```
+See [Run pipelines with Anaconda environments](./anaconda.md).
 
 ## Test
 
@@ -176,6 +164,7 @@ Add the [Publish Test Results](../tasks/test/publish-test-results.md) task to pu
 
 ```yaml
 - task: PublishTestResults@2
+  condition: succeededOrFailed()
   inputs:
     testResultsFiles: '**/test-*.xml'
     testRunTitle: 'Publish test results for Python $(python.version)'
@@ -193,37 +182,60 @@ Add the [Publish Code Coverage Results](../tasks/test/publish-code-coverage-resu
     reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov'
 ```
 
+### Run tests with Tox
+
+When running tests with Tox, you can run parallel jobs to split up the work.
+This is somewhat different from how you would run Tox on your development machine, where you would run all of your test environments in series.
+In the sample below, note the use of `tox -e py` to run whichever version of Python is active for the current job.
+
+```yaml
+- job:
+
+  pool:
+    vmImage: 'ubuntu-16.04'
+  strategy:
+    matrix:
+      Python27:
+        python.version: '2.7'
+      Python35:
+        python.version: '3.5'
+      Python36:
+        python.version: '3.6'
+      Python37:
+        python.version: '3.7'
+
+  steps:
+  - task: UsePythonVersion@0
+    displayName: 'Use Python $(python.version)'
+    inputs:
+      versionSpec: '$(python.version)'
+
+  - script: pip install tox
+    displayName: 'Install Tox'
+
+  - script: tox -e py
+    displayName: 'Run Tox'
+```
+
 ## Package and deliver your code
 
-### Retain artifacts with the build record
+### Authenticate with twine
 
-First, build an sdist of your package.
+The [Twine Authenticate task](../tasks/package/twine-authenticate.md) stores authentication credentials for twine in the `PYPIRC_PATH` environment variable.
 
 ```yaml
-- script: 'python setup.py sdist'
-  displayName: 'Build sdist'
+- task: TwineAuthenticate@0
+  inputs:
+    artifactFeeds: 'feed_name1, feed_name2'
+    externalFeeds: 'feed_name1, feed_name2'
 ```
 
-Then, add the [Publish Build Artifacts](../tasks/utility/publish-build-artifacts.md) task to store your build output with the build record or test and deploy it in subsequent pipelines. See [Artifacts](../build/artifacts.md).
+### Publish with twine
+
+Then, add a [custom script task](../yaml-schema.md#script) to use `twine` to publish your packages.
 
 ```yaml
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish artifact: dist'
-  inputs:
-    pathtoPublish: 'dist'
-    artifactName: 'dist'
-```
-
-### Deploy to a PyPI-compatible index
-
-Add the [PyPI Publisher](../tasks/package/pypi-publisher.md) task to package and publish to a PyPI-compatible index.
-
-```yaml
-- task: PyPIPublisher@0
-  inputs:
-    pypiConnection: ''
-    packageDirectory: '$(build.sourcesDirectory)'
-    alsoPublishWheel: false
+- script: 'twine -r {feedName/EndpointName} --config-file $(PYPIRC_PATH) {package path to publish}'
 ```
 
 ## Build a container image

@@ -1,12 +1,12 @@
 ---
 title: Build and deploy your app - examples
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Build and deploy your app examples with Azure Pipelines and Team Foundation Server
 ms.topic: conceptual
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 955133FD-76B4-4D63-AB46-9043D96F8A9D
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
 ms.date: 08/22/2016
@@ -103,7 +103,7 @@ continuous integration (CI) and continuous deployment (CD) pipeline.
 
 * [Visual Studio devops Blog: Deploying an Azure Red Hat Linux VM Running Apache Tomcat](https://blogs.msdn.microsoft.com/visualstudioalm/2016/08/18/deploying-an-azure-red-hat-linux-vm-running-apache-tomcat-for-use-with-visual-studio-team-services-and-team-foundation-server)
 
-* [Visual Studio devops Blog: Deploying an Azure Ubuntu Linux VM Running Apache Tomcat ](https://blogs.msdn.microsoft.com/visualstudioalm/2016/08/18/deploying-an-azure-ubuntu-linux-vm-running-apache-tomcat-for-use-with-visual-studio-team-services-and-team-foundation-server)
+* [Visual Studio devops Blog: Deploying an Azure Ubuntu Linux VM Running Apache Tomcat](https://blogs.msdn.microsoft.com/visualstudioalm/2016/08/18/deploying-an-azure-ubuntu-linux-vm-running-apache-tomcat-for-use-with-visual-studio-team-services-and-team-foundation-server)
 
 ## Related topics
 
@@ -117,7 +117,7 @@ continuous integration (CI) and continuous deployment (CD) pipeline.
 
 [!INCLUDE [temp](../_shared/qa-agents.md)]
 
-::: moniker range="< vsts"
+::: moniker range="< azure-devops"
 [!INCLUDE [temp](../_shared/qa-versions.md)]
 ::: moniker-end
 

@@ -1,21 +1,21 @@
 ---
 title: Deploy a build and release agent on macOS
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Learn how to deploy a macOS agent to build and deploy your iOS application for Azure Pipelines and Team Foundation Server (TFS)
 ms.topic: conceptual
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 3D487E4E-D940-4DA9-BDE1-1F60E74DD6F1
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
-ms.date: 10/15/2018
+ms.date: 03/19/2019
 monikerRange: '>= tfs-2015'
 ---
 
 # Deploy an agent on macOS
 
-**Azure Pipelines | TFS 2018 | TFS 2017 | TFS 2015**
+[!INCLUDE [version-tfs-2015-rtm](../_shared/version-tfs-2015-rtm.md)]
 
 ::: moniker range="<= tfs-2018"
 [!INCLUDE [temp](../_shared/concept-rename-note.md)]
@@ -36,6 +36,9 @@ Make sure your machine is prepared with our [macOS system prerequisites](https:/
 <h2 id="permissions">Prepare permissions</h2>
 
 If you're building from a Subversion repo, you must install the Subversion client on the machine.
+
+You should run agent setup manually the first time.
+After you get a feel for how agents work, or if you want to automate setting up many agents, consider using [unattended config](#unattended-config).
 
 [!INCLUDE [permissions](_shared/v2/prepare-permissions.md)]
 
@@ -60,7 +63,7 @@ If you're building from a Subversion repo, you must install the Subversion clien
 
 <li>Follow the instructions on the page.</li>
 
-<li>Unpack the agent into the directory of your choice. `cd` to that directory and run `./config.sh`.</li>
+<li>Unpack the agent into the directory of your choice. `cd` to that directory and run `./config.sh`. Make sure that the path to the directory contains no spaces because tools and scripts don't always properly escape spaces.</li>
 </ol>
 
 ::: moniker-end
@@ -82,7 +85,7 @@ If you're building from a Subversion repo, you must install the Subversion clien
 
 ### Server URL
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 Azure Pipelines: `https://dev.azure.com/{your-organization}`
 
@@ -106,7 +109,7 @@ TFS 2015: `http://{your_server}:8080/tfs`
 
 ## Run interactively
 
-For guidance on whether to run the agent in interactive mode or as a service, see [Agents: Interactive vs. service](agents.md#account).
+For guidance on whether to run the agent in interactive mode or as a service, see [Agents: Interactive vs. service](agents.md#interactive-or-service).
 
 To run the agent interactively:
 
@@ -117,12 +120,15 @@ To run the agent interactively:
 ./run.sh
  ```
 
+To use your agent, run a [job](../process/phases.md) using the agent's pool.
+If you didn't choose a different pool, your agent will be in the **Default** pool.
+
 ## Run as a launchd service
 
 We provide the `./svc.sh` script for you to run and manage your agent as a launchd LaunchAgent service. This script will be generated after you configure the agent. The service has access to the UI to run your UI tests.
 
 > [!NOTE]
-> If you prefer other approaches, you can use whatever kind of service mechanism you prefer. See [Service files](#service_files).
+> If you prefer other approaches, you can use whatever kind of service mechanism you prefer. See [Service files](#service-files).
 
 ### Tokens
 
@@ -232,9 +238,9 @@ Command:
 ./svc.sh uninstall
 ```
 
-#### Automatic log on and lock
+#### Automatic login and lock
 
-The service runs when the user logs in. If you want the agent service start when the machine restarts, you can configure the machine it to automatically log on and lock on startup. See [Auto Logon and Lock](https://www.engadget.com/2011/03/07/terminally-geeky-use-automatic-login-more-securely/).
+Normally, the agent service runs only after the user logs in. If you want the agent service to automatically start when the machine restarts, you can configure the machine to automatically log in and lock on startup. See [Set your Mac to automatically log in during startup - Apple Support](https://support.apple.com/HT201476).
 
 <h3 id="service-update-environment-variables">Update environment variables</h3>
 
@@ -266,7 +272,7 @@ You can also run your own instructions and commands to run when the service star
 
 0. Replace the following line with your instructions:
 
-```
+```bash
 
 # insert anything to setup env when running as a service
 
@@ -314,13 +320,13 @@ You can use the template described above as to facilitate generating other kinds
 
 <!-- BEGINSECTION class="md-qanda" -->
 
+[!INCLUDE [include](_shared/v2/qa-agent-version.md)]
+
 ### Where can I learn more about how the launchd service works?
 
-[Apple Developer Library: Creating Launch Daemons and Agents](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html)
+[Apple Developer Library: Creating Launch Daemons and Agents](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html)
 
-[launchd.plist manpage](https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man5/launchd.plist.5.html)
-
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 [!INCLUDE [include](_shared/v2/qa-firewall.md)]
 ::: moniker-end
 
@@ -332,15 +338,15 @@ You can use the template described above as to facilitate generating other kinds
 
 [Run the agent behind a web proxy](proxy.md)
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 [!INCLUDE [include](_shared/v2/web-proxy-bypass.md)]
 ::: moniker-end
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 [!INCLUDE [include](_shared/v2/qa-urls.md)]
 ::: moniker-end
 
-::: moniker range="< vsts"
+::: moniker range="< azure-devops"
 [!INCLUDE [include](../_shared/qa-versions.md)]
 ::: moniker-end
 

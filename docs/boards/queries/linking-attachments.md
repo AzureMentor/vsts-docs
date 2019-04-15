@@ -1,16 +1,16 @@
 ---
 title: Query by link of attachment count   
-titleSuffix: Azure Boards and TFS
-description: Query work items based on link type, link count, link restrictions, and attachment file count in Azure Boards & Team Foundation Server 
+titleSuffix: Azure Boards
+description: Query work items based on link type, link count, link restrictions, and attachment file count in Azure Boards, Azure DevOps, & Team Foundation Server 
 ms.technology: devops-agile
 ms.prod: devops
 ms.assetid: 219717a0-de6e-4f70-8558-54f813f82507
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
-monikerRange: '>= tfs-2013'
 ms.topic: sample
-ms.date: 10/19/2018
+monikerRange: '>= tfs-2013'
+ms.date: 11/19/2018
 ---
 
 
@@ -18,9 +18,9 @@ ms.date: 10/19/2018
 
 [!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
 
-You can [link work items to track related work and dependencies](link-work-items-support-traceability.md) and [attach files to share information with your team](share-plans.md#attachments). You can then list work items based on one or more of the following fields:
+You can [link work items to track related work and dependencies](link-work-items-support-traceability.md) and [attach files to share information with your team](share-plans.md#attachments). You can then list work items based on one or more of the following integer fields:
 
-::: moniker range="vsts"  
+::: moniker range="azure-devops"  
 - Attachment File Count
 - (Discussion) Comment Count 
 - External Link count
@@ -31,7 +31,7 @@ You can [link work items to track related work and dependencies](link-work-items
 ::: moniker-end 
 
 
-::: moniker range=">= tfs-2017 <= tfs-2018" 
+::: moniker range=">= tfs-2017 <= azure-devops-2019" 
 - Attachment File Count
 - (Discussion) Comment Count 
 - External Link count
@@ -51,7 +51,15 @@ You can [link work items to track related work and dependencies](link-work-items
 
 For descriptions of each of these fields, see the [table provided later in this article](#table-field). 
 
-## Query based on link or attachment counts
+
+## Supported operators and macros 
+Query clauses that specify an integer field can use the operators listed below.
+- = , <> , > , < , >= , <= , 
+- =[Field], <>[Field], >[Field], <[Field], >=[Field], <=[Field], 
+- In, Not In, 
+- Was Ever
+
+## Link or attachment count queries
 
 <p>You can filter for work items by the link type, link count, or attachment count.  </p>
 
@@ -118,6 +126,8 @@ For descriptions of each of these fields, see the [table provided later in this 
 ## List work items containing remote links 
 -->
 
+
+<a id="tree" />
 ## List hierarchical items in a tree view  
 
 Add a query and select **Tree of work items** to begin your query. You should see something similar to the following: 
@@ -175,7 +185,7 @@ Add to Filters for linked work items:
 </tbody>
 </table>  
 
-
+<a id="dependents" />
 ## List items based on linked dependents  
 
 The following example shows a dependent linked query that returns items with dependencies on work managed by other teams and other projects. Use this query to see all dependent work items that link to active Product Backlog Items or Bugs that have not been removed, closed, or completed. Only those dependent work items that are under a product area other than the **Phone Save\\Phone Customers** are returned.
@@ -259,7 +269,7 @@ For Azure Boards (cloud service), you can add up to 100 attachments to a work it
 <tr>
 <td><a id="related-link-count"/>
 <p>Related Link Count</p></td>
-<td><p>The number of links defined for a work item which use a work link type, such as Parent-Child, Predecessor-Sucessor, and Related. For a full list, see  [Link type reference](link-type-reference.md#work-link-types)</p>
+<td><p>The number of links defined for a work item which use a work link type, such as Parent-Child, Predecessor-Successor, and Related. For a full list, see  [Link type reference](link-type-reference.md#work-link-types)</p>
 <p>Reference Name=System.RelatedLinkCount, Data type=Integer</p>
 </td>
 <td>All</td>
@@ -277,21 +287,22 @@ For Azure Boards (cloud service), you can add up to 100 attachments to a work it
 
 ## Related articles
 
-- [Add link to multiple work items](../backlogs/add-link.md) 
+- [Add a link to multiple work items](../backlogs/add-link.md) 
 - [Linking, traceability, and managing dependencies](link-work-items-support-traceability.md) 
+- [Query quick reference](query-index-quick-ref.md)
 - [Query editor](using-queries.md)   
 - [Query fields, operators, and macros](query-operators-variables.md)   
 - [Add work items](../backlogs/add-work-items.md)  
 - [Work item field index](../work-items/guidance/work-item-field.md) 
 
  
-::: moniker range=">= tfs-2015 <= tfs-2018" 
+::: moniker range=">= tfs-2015 <= azure-devops-2019" 
 ### Visualize related work and other objects 
 
-You can view related work items and object within a work item form by installing the [Work item visualization extension](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.WorkItemVisualization) available from the Visual Studio Marketplace. 
+You can view related work items and object within a work item form by installing the [Work item visualization extension](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.WorkItemVisualization) available from the Visual Studio Marketplace, Azure DevOps tab. 
 ::: moniker-end 
 
-::: moniker range=">= tfs-2013 <= tfs-2018" 
+::: moniker range=">= tfs-2013 <= azure-devops-2019" 
 
 ### Add custom link types or customize the links controls 
 

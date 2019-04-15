@@ -1,12 +1,12 @@
 ---
 title: Install Release Management server and client for VS 2015 and TFS 2015
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Learn how you can install the Release Management server and client for VS 2015 and Team Foundation Server (TFS) 2015.
 ms.assetid: 6F4596D5-848B-42AF-BFDD-7698BC815942
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
 ms.date: 07/16/2018
@@ -74,9 +74,9 @@ administration console. Scroll down to **Data Tier Summary** and look for
    database and then choose **Test** to verify connectivity. Accept the default 
    values for the service account and web port (Network Service and port 1000) 
    or specify alternates. For more information, see 
-   [Ports required for installation of Team Foundation Server](/tfs/server/architecture/required-ports)
+   [Ports required for installation of Team Foundation Server](/azure/devops/server/architecture/required-ports)
    and
-   [Accounts required for installation of Team Foundation Server](/tfs/server/requirements#accounts).
+   [Accounts required for installation of Team Foundation Server](/azure/devops/server/requirements#accounts).
    Release Management server uses the identity set here for its Application 
    Pools in IIS and the Release Management Monitor Windows service.
 

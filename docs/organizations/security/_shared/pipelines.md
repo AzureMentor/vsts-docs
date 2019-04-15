@@ -11,12 +11,12 @@ ms.topic: include
 <th>Readers</th>
 <th>Contributors</th>
 <th>Build<br/>Admins</th>
-<th>Organization Owner/<br/>Project Admins</th>
+<th>Project Admins</th>
 <th>Release Admins</th>
 </tr>
 <tbody valign="top" align="center">
 <tr>
-<td align="left">View build and release pipelines</td>
+<td align="left">View release pipelines</td>
 <td>![checkmark](/azure/devops/_img/icons/preview.png)</td>
 <td>![checkmark](/azure/devops/_img/icons/checkmark.png)</td>
 <td>![checkmark](/azure/devops/_img/icons/checkmark.png)</td>

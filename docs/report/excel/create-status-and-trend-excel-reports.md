@@ -6,22 +6,37 @@ titleSuffix: TFS
 ms.prod: devops
 ms.technology: devops-analytics
 ms.topic: quickstart
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
-ms.date: 10/10/2017
+monikerRange: '<= azure-devops-2019'
+ms.date: 11/19/2018
 ---
 
 # Create Excel reports from a work item query  
 
-[!INCLUDE [temp](../_shared/tfs-sharepoint-version.md)]
+[!INCLUDE [temp](../_shared/tfs-report-platform-version.md)]
 
->[!NOTE]  
-><b>Feature availability: </b>You can use this feature only when you connect to a team project hosted an on-premises Team Foundation Server (TFS) and with SQL Server Analysis Services configured. 
+One of the quickest ways to generate a custom report in Excel is to start with a flat list query. You can generate both status and trend charts. Also, once you've build a report, you can manipulate the data further by adding or filtering fields using the PivotTable. 
+
+::: moniker range="azure-devops-2019"
+
+> [!NOTE]  
+>This feature is available with Azure DevOps Server 2019 configured with SQL Server Analysis Services. 
 > 
 >If you want to export work items to Excel, see [Bulk add or modify work items with Excel](../../boards/backlogs/office/bulk-add-modify-work-items-excel.md).
 
-One of the quickest ways to generate a custom report in Excel is to start with a flat list query. You can generate both status and trend charts. Also, once you've build a report, you can manipulate the data further by adding or filtering fields using the PivotTable.  
+::: moniker-end
+
+::: moniker range="<= tfs-2018"
+
+> [!NOTE]  
+> This feature is available with an on-premises Team Foundation Server (TFS) configured with SQL Server Analysis Services. 
+> 
+>If you want to export work items to Excel, see [Bulk add or modify work items with Excel](../../boards/backlogs/office/bulk-add-modify-work-items-excel.md).
+
+::: moniker-end
+
 
 Here's an example of a status report generated from a flat-list query.  
 
@@ -73,7 +88,7 @@ Use this procedure when you work from the web portal or the Team Explorer plug-i
 1. Open an Office Excel workbook and choose **New Report**.  
    ![New Report (Team menu selection)](_img/IC733833.png)  
 
-   If you don't see the Team menu, you'll need to install Team Explorer to get the Team Foundation add-in to Excel. See **Requirements** listed earlier in this topic.   
+   If you don't see the Team menu, you'll need to install Team Explorer to get the Team Foundation add-in to Excel. See **Requirements** listed earlier in this article.   
 
 2. Connect to the team project and choose the query.   
 
@@ -102,7 +117,7 @@ Use this procedure when you work from the web portal or the Team Explorer plug-i
 
 ###Q: Can I create reports if I'm working in Azure DevOps?
  
-   **A:** You can't create Excel reports; however, you can create [query-based charts](../charts.md) or use the [Analytics Service](../analytics/index.md). 
+   **A:** You can't create Excel reports; however, you can create [query-based charts](../charts.md) or use the [Analytics Service](../powerbi/what-is-analytics.md?toc=/azure/devops/report/powerbi/toc.json&bc=/azure/devops/report/powerbi/breadcrumb/toc.json). 
 
 ###Q: How do I refresh the report to show the most recent data?
 

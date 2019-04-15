@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: Git Commits | REST API Reference for Team Foundation Server
 description: Work with Git commits programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: DD768682-3DC8-4E00-85E8-699633A93EB2
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -39,8 +39,8 @@ GET https://{instance}/DefaultCollection/{project}/_apis/repos/git/repositories/
 | itemPath   | string   | /       | Path of an item in the repository.
 | committer  | string   |         | Name of the person who committed the change.
 | author     | string   |         | Name of the author.
-| fromDate   | [DateTime](http://msdn.microsoft.com/en-us/library/az4se3k1.aspx) |         | Start date to search from.
-| toDate     | [DateTime](http://msdn.microsoft.com/en-us/library/az4se3k1.aspx) |         | End date to search to.
+| fromDate   | [DateTime](http://msdn.microsoft.com/library/az4se3k1.aspx) |         | Start date to search from.
+| toDate     | [DateTime](http://msdn.microsoft.com/library/az4se3k1.aspx) |         | End date to search to.
 | $skip      | integer  | 0       | Number of commits to skip.
 | $top       | integer  | 100     | Number of commits to return.
 
@@ -340,7 +340,7 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
         "email": "fabrikamfiber3@hotmail.com",
         "date": "2014-03-10T20:54:10Z"
       },
-      "comment": "Added method for submitting new customer addrress.",
+      "comment": "Added method for submitting new customer address.",
       "changeCounts": {
         "Edit": 2
       },
@@ -646,7 +646,7 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
         "email": "Fabrikamfiber16@hotmail.com",
         "date": "2014-03-10T20:54:10Z"
       },
-      "comment": "Added method for submitting new customer addrress.",
+      "comment": "Added method for submitting new customer address.",
       "changeCounts": {
         "Edit": 2
       },
@@ -952,7 +952,7 @@ GET https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-4
         "email": "Fabrikamfiber16@hotmail.com",
         "date": "2014-03-10T20:54:10Z"
       },
-      "comment": "Added method for submitting new customer addrress.",
+      "comment": "Added method for submitting new customer address.",
       "changeCounts": {
         "Edit": 2
       },
@@ -1912,7 +1912,7 @@ POST https://mytfsserver/DefaultCollection/_apis/git/repositories/278d5cd2-584d-
         "email": "hhill@microsoft.com",
         "date": "2014-03-10T20:54:10Z"
       },
-      "comment": "Added method for submitting new customer addrress.",
+      "comment": "Added method for submitting new customer address.",
       "changeCounts": {
         "Edit": 2
       },

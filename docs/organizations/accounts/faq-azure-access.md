@@ -1,18 +1,20 @@
 ---
-title: Troubleshoot permissions and access with Azure Active Directory (Azure AD)
-description: Need to understand Azure AD groups, how to add users, or how to connect or disconnect to and from your directory? Read these frequently asked questions.
+title: Troubleshoot permissions and access via Azure Active Directory
+titleSuffix: Azure DevOps Services
+ms.custom: seodec18
+description: Learn the answers to frequently asked questions (FAQs), like how to understand Azure AD groups, how to add users, or how to connect or disconnect to and from your directory.
 ms.prod: devops
 ms.technology: devops-accounts
 ms.assetid: d51de748-c53e-4468-ad9b-275d6bf1a4dd
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
-ms.date: 10/01/2018
-monikerRange: 'vsts'
+ms.date: 12/06/2018
+monikerRange: 'azure-devops'
 ---
 
-# Troubleshoot Azure DevOps access with Azure Active Directory (Azure AD)
+# Troubleshoot permissions and access with Azure Active Directory
 
 [!INCLUDE [version-vsts-only](../../_shared/version-vsts-only.md)]
 
@@ -26,19 +28,10 @@ A: Changes made in Azure AD can take up to 24 hours to be visible in Azure DevOp
 
 #### Q: Can I use Office 365 and Azure AD with Azure DevOps?
 
-A: Yes. You can't do this, however, by using the [free subscription](https://technet.microsoft.com/library/dn832618.aspx)
-that you can activate when you connect Office 365 and Azure AD.
+A: Yes.
 
-Instead, you must [sign up for a new Azure subscription](https://azure.microsoft.com/pricing/purchase-options/). You can also use an existing Azure subscription
-that's not from one of these offers:
-
-* An [Azure free trial](https://azure.microsoft.com/offers/ms-azr-0044p/)
-
-* A [free Azure AD subscription](https://technet.microsoft.com/library/dn832618.aspx)
-
-You must then associate that subscription with your Office 365 connection to Azure AD. Note that you need additional subscription administrator permissions, beyond the co-administrator permissions.
-
-Learn how to [associate your Azure subscription to Azure AD](/azure/billing-add-office-365-tenant-to-azure-subscription).
+- Dont have an organization yet? [Create an organization in Azure DevOps](https://aka.ms/SignupAzureDevOps).
+- Have an existing organization? [Connect your organization to Azure AD](connect-organization-to-azure-ad.md).
 
 <a name="ChooseOrgAcctMSAcct"></a>
 
@@ -94,7 +87,7 @@ A: When these group members sign in to your organization for the first time, Azu
 Azure DevOps assigns the respective access level to them. Otherwise, Azure DevOps assigns them the next "best available"
 [access level](https://visualstudio.microsoft.com/pricing/visual-studio-online-feature-matrix-vs), in this order: Basic, Stakeholder.
  
-If you don't have enough access levels for all Azure AD group members, those members who sign in will get a Stakeholder access.
+If you don't have enough access levels for all Azure AD group members, those members who sign in get a Stakeholder access.
 
 #### Q: Why doesn't the Security tab show all members when I select an Azure AD group?
 
@@ -142,7 +135,7 @@ A: No, but you might be interested in our [process customization plans](https://
 
 ## Add users to directory
 
-[Add Azure DevOps organization users to your Azure Active Directory](add-users-to-azure-ad.md).
+[Add organization users to your Azure Active Directory](add-users-to-azure-ad.md).
 
 #### Q: Can I switch current users from Microsoft accounts to work accounts in Azure DevOps?
 
@@ -193,7 +186,7 @@ A: Users can belong to your organization, both as individuals and as members of 
 
 To block all access for these users, remove them from Azure AD groups in your organization, or remove these groups from your organization. Although we'd like to make it possible to block access completely or make exceptions for such users, Azure DevOps doesn't currently have this capability.
 
-#### Q: If an AAD user is removed, will all their related PATs be revoked as well?
+#### Q: If an Azure AD user is removed, will all their related PATs be revoked as well?
 
 A: When users are disabled or removed from your directory, they can no longer access your organization by any mechanism including via PATs, SSH, or any other alternate credentials.
 
@@ -243,12 +236,12 @@ A: This might happen due to the following:
 * Your organization isn't linked to the Azure subscription that's associated with your directory. Learn [how to link them](../billing/set-up-billing-for-your-organization-vs.md).
 
   >[!IMPORTANT]
-  >This link also sets up organization billing, so you can bill purchases to your Azure subscription. Some Azure subscriptions have a [spending limit](https://azure.microsoft.com/pricing/spending-limits/). If your Azure subscription has a spending limit, and you want to bill purchases to this subscription, you must remove this limit indefinitely. This prevents disabling your Azure subscription the next month when your monthly charges are billed. Otherwise, all resources billed to this subscription will be suspended, including all Azure DevOps purchases, Visual Studio Marketplace purchases, and Azure resources. Learn more about [how to manage your subscription's spending limit](https://msdn.microsoft.com/library/azure/dn465781.aspx).
+  >This link also sets up organization billing, so you can bill purchases to your Azure subscription. Some Azure subscriptions have a [spending limit](https://azure.microsoft.com/pricing/spending-limits/). If your Azure subscription has a spending limit, and you want to bill purchases to this subscription, you must remove this limit indefinitely. This prevents disabling your Azure subscription the next month when your monthly charges are billed. Otherwise, all resources billed to this subscription is suspended, including all Azure DevOps purchases, Visual Studio Marketplace purchases, and Azure resources. Learn more about [how to manage your subscription's spending limit](https://msdn.microsoft.com/library/azure/dn465781.aspx).
 
   If you're the [organization administrator](https://azure.microsoft.com/documentation/articles/billing-add-change-azure-subscription-administrator) for the subscription, visit the Azure Account Center to remove the spending limit:
 
   1. Sign in to the [Azure portal](https://portal.azure.com), and go to the Azure Account Center (**Account** > **subscriptions**).
-  2. Select your Azure subscription. 
+  2. Select your Azure subscription.
   3. Remove your spending limit **indefinitely**.
 
 <a name="subscription-linked-already"></a>

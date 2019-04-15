@@ -1,14 +1,15 @@
 ---
-title: Azure Boards Documentation 
-titleSuffix: Azure DevOps Services
-description: Plan and track work and collaborate on software development using Agile tools you configure and customize to support your business needs.  
+title: Learn about Agile tools, backlogs, Kanban boards that Azure Boards supports
+titleSuffix: Azure Boards
+description: Plan and track issues, bugs, user stories, and other work; collaborate on software development with customizable Agile tools. 
+ms.custom: seodec18
 layout: HubPage 
 hide_bc: true
 ms.topic: hub-page
 ms.prod: devops 
-ms.technology: vs-devops-overview 
+ms.technology: devops-agile
 ms.assetid:  
-ms.manager: douge 
+ms.manager: jillfra
 ms.author: kaelli 
 ms.date: 09/05/2018
 featureFlags:
@@ -101,6 +102,25 @@ featureFlags:
                                                             <h3>Backlogs</h3>
                                                             <p>Create and organize your backlogs, track features, users stories, and
                                                                 bugs.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/azure/devops/boards/github/index">
+                                            <div class="cardSize">
+                                                <div class="cardPadding">
+                                                    <div class="card">
+                                                        <div class="cardImageOuter">
+                                                            <div class="cardImage">
+                                                                <img src="https://docs.microsoft.com/media/logos/logo_octokitty.svg" alt="GitHub logo" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardText">
+                                                            <h3>Azure Boards & GitHub</h3>
+                                                            <p>Use Azure Boards to plan and track work, linking to your GitHub commits and pull requests.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -222,6 +242,25 @@ featureFlags:
                                             </div>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="/azure/devops/organizations/security/permissions-access-work-tracking">
+                                            <div class="cardSize">
+                                                <div class="cardPadding">
+                                                    <div class="card">
+                                                        <div class="cardImageOuter">
+                                                            <div class="cardImage">
+                                                                <img src="https://docs.microsoft.com/media/common/i_security-management.svg" alt="Security management icon" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardText">
+                                                            <h3>Settings</h3>
+                                                            <p>Default permissions and access for Azure Boards.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
                                 </ul>
                                 <a href="#index2"></a>
                                 <h2 style="float: left; display: flex;">Additional resources</h2>
@@ -253,7 +292,7 @@ featureFlags:
                                             <div class="cardPadding">
                                                 <div class="card">
                                                     <div class="cardText">
-                                                        <a class="barLink" href="/azure/devops/articles/index"><img src="https://docs.microsoft.com/media/common/i_article.svg" alt="Article icon" />Technical articles</a>
+                                                        <a class="barLink" href="/azure/devops/migrate/index"><img src="https://docs.microsoft.com/media/common/i_article.svg" alt="Article icon" />Technical articles</a>
                                                     </div>
                                                 </div>
                                             </div>

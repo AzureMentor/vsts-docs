@@ -6,7 +6,7 @@ ms.technology: devops-analytics
 ms.topic: reference
 description: Determine how many test cases have been defined and are ready to run 
 ms.assetid: c4e804d5-1549-41c0-a365-28fdec77bffe
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelliauthor: KathrynEE
 ms.date: 10/17/17
 ---
@@ -46,7 +46,7 @@ After the team starts to define test cases, you can use the Test Case Readiness 
   
 -   Filter the test cases that are counted in the report by specifying area paths, priority, and state.  
   
- For more information, see [Filtering the Report](#Changing) later in this topic.  
+ For more information, see [Filtering the Report](#Changing) later in this article.  
   
 ### Required activities for tracking test cases  
  For the Test Case Readiness report to be useful and accurate, the team must perform the following activities:  

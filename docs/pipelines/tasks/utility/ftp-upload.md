@@ -1,15 +1,15 @@
 ---
 title: FTP Upload task
-titleSuffix: Azure Pipelines & TFS
 description: Upload files to a remote machine using the File Transfer Protocol (FTP), or securely with FTPS on Azure Pipelines and Team Foundation Server (TFS)
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 83301736-4DC7-4581-9AFD-4678BA0D3659
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: alewis
 author: andyjlewis
-ms.date: 08/18/2016
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2017'
 ---
 
@@ -27,7 +27,7 @@ Use this task in a build or release pipeline to upload files to a remote machine
 
 None
 
-::: moniker range="> tfs-2018"
+::: moniker range="azure-devops"
 ## YAML snippet
 [!INCLUDE [temp](../_shared/yaml/FtpUploadV1.md)]
 ::: moniker-end
@@ -76,7 +76,7 @@ None
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 
@@ -88,7 +88,7 @@ This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). F
 
 [!INCLUDE [temp](../../_shared/qa-agents.md)]
 
-::: moniker range="< vsts"
+::: moniker range="<= tfs-2018"
 [!INCLUDE [temp](../../_shared/qa-versions.md)]
 ::: moniker-end
 

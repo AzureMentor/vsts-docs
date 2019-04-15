@@ -1,15 +1,15 @@
 ---
 title: Archive Files task
-titleSuffix: Azure Pipelines & TFS
 description: Use an archive file to then create a source folder in Azure Pipelines and Team Foundation Server (TFS)  
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 9D2AE683-E116-4CEA-B673-CD7BEFB8F415
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: alewis
 author: andyjlewis
-ms.date: 08/30/2016
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2017'
 ---
 
@@ -41,7 +41,7 @@ None
 <tr>
 <td>Root folder (or file) to archive</td>
 <td>
-<p>The folder (or file) you wish to archive. The default file path is relative from the root folder of the repo (same as if you had specified ```$(Build.SourcesDirectory)```.</p>
+<p>The folder (or file) you wish to archive. The default file path is relative from the root folder of the repo (same as if you had specified ```$(Build.SourcesDirectory)```).</p>
 <p>If the specified path is a folder, recursively, all nested files and folders will be included in the archive.</p>
 <p>If the specified path is a file, only the single file will be included in the archive.</p>
 </td>
@@ -89,7 +89,7 @@ None
 </tr>
 <tr>
 <td>Replace existing archive</td>
-<td>If an existing archive exists, specify whether to overwrite it.  Otherwise, files will be added to it as long as it is not a comprssed tar.
+<td>If an existing archive exists, specify whether to overwrite it.  Otherwise, files will be added to it as long as it is not a compressed tar.
 <p>If adding to an existing archive, these types are supported:</p>
 <ul>
 <li><b>`zip`</b></li>
@@ -106,7 +106,7 @@ None
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 
@@ -116,7 +116,7 @@ This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). F
 
 [!INCLUDE [temp](../../_shared/qa-agents.md)]
 
-::: moniker range="< vsts"
+::: moniker range="< azure-devops"
 [!INCLUDE [temp](../../_shared/qa-versions.md)]
 ::: moniker-end
 

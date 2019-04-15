@@ -5,7 +5,7 @@ ms.prod: devops
 ms.technology: devops-analytics
 ms.topic: conceptual
 ms.assetid: d1576274-544b-4100-844a-2895e7acf2e4
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.date: 09/07/2017
@@ -18,7 +18,7 @@ ms.date: 09/07/2017
 Teams can quickly find important information about their team projects by using dashboards. Dashboards show project data, support investigation, and provide tools for teams to quickly perform common tasks.  
   
 > [!TIP]  
->  See [Dashboards](../dashboards.md) for information about creating dashboards in the web portal. If you work in Azure DevOps, you can also [Create Power BI dashboards and reports](https://visualstudio.microsoft.com/get-started/report/report-on-vso-with-power-bi-vs). This topic discusses SharePoint site dashboards.  
+>  See [Dashboards](../dashboards.md) for information about creating dashboards in the web portal. If you work in Azure DevOps, you can also [Create Power BI dashboards and reports](https://visualstudio.microsoft.com/get-started/report/report-on-vso-with-power-bi-vs). this article discusses SharePoint site dashboards.  
   
  To view a dashboard, choose **Go to project portal** from the **Documents** page in Team Explorer.  
   
@@ -96,7 +96,7 @@ Here's how you can customize a SharePoint dashboard:
 -   Add a custom query Web part that displays the list of work items that the query finds. For example, you can add a query that lists all active requirements, issues, or other types of work items that are assigned to you.    
 -   Add other SharePoint site supported Web parts that integrate with Office Outlook or search functions of SharePoint Products.    
 -   Change the filters of each report in Office Excel to focus on specific product areas or iterations.    
--   Add existing or adhoc Excel reports.  
+-   Add existing or ad hoc Excel reports.  
   
  For more information about how to work with and customize reports in Office Excel, see these articles:  
   

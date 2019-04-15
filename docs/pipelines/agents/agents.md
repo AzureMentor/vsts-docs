@@ -2,20 +2,20 @@
 ms.prod: devops
 title: Build and Release Agents
 ms.topic: conceptual
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Learn about building your code or deploying your software using build and release agents in Azure Pipelines and Team Foundation Server
 ms.technology: devops-cicd
 ms.assetid: 5C14A166-CA77-4484-8074-9E0AA060DE58
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
-ms.date: 10/16/2018
+ms.date: 04/03/2019
 monikerRange: '>= tfs-2015'
 ---
 
 # Build and release agents
 
-**Azure Pipelines | TFS 2018 | TFS 2017 | TFS 2015**
+[!INCLUDE [version-tfs-2015-rtm](../_shared/version-tfs-2015-rtm.md)]
 
 ::: moniker range="<= tfs-2018"
 [!INCLUDE [temp](../_shared/concept-rename-note.md)]
@@ -23,9 +23,14 @@ monikerRange: '>= tfs-2015'
 
 To build your code or deploy your software you need at least one agent. As you add more code and people, you'll eventually need more.
 
-When your build or deployment runs, the system begins one or more jobs. An agent is installable software that runs one build or deployment job at a time.
+When your build or deployment runs, the system begins one or more jobs.
+An agent is installable software that runs one build or deployment job at a time.
 
-::: moniker range="vsts"
+::: moniker range=">= azure-devops-2019"
+Jobs can be run [directly on the host](../process/phases.md) or [in a container](../process/container-phases.md).
+::: moniker-end
+
+::: moniker range="azure-devops"
 
 ## Microsoft-hosted agents
 
@@ -37,9 +42,12 @@ When your build or deployment runs, the system begins one or more jobs. An agent
 
 <h2 id="install">Self-hosted agents</h2>
 
-An agent that you set up and manage on your own to run build and deployment jobs is a **self-hosted agent**. You can use self-hosted agents in Azure Pipelines or Team Foundation Server (TFS). Self-hosted agents give you more control to install dependent software needed for your builds and deployments.
+An agent that you set up and manage on your own to run build and deployment jobs is a **self-hosted agent**.
+You can use self-hosted agents in Azure Pipelines or Team Foundation Server (TFS).
+Self-hosted agents give you more control to install dependent software needed for your builds and deployments.
+Also, machine-level caches and configuration persist from run to run, which can boost speed.
 
-:::moniker range="vsts"
+::: moniker range="azure-devops"
 
 > [!TIP]
 > Before you install a self-hosted agent you might want to see if a Microsoft-hosted agent pool will work for you. In many cases this is the simplest way to get going. [Give it a try](hosted.md).
@@ -70,17 +78,17 @@ You can install the agent on Linux, macOS, or Windows machines. You can also ins
 
 After you've installed the agent on a machine, you can install any other software on that machine as required by your build or deployment jobs.
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 ## Parallel jobs
 
 You might need more parallel jobs to use multiple Microsoft-hosted or self-hosted agents at the same time:
 
-* [Parallel jobs in Azure Pipelines](../licensing/concurrent-jobs-vsts.md)
+* [Parallel jobs in Azure Pipelines](../licensing/concurrent-jobs.md)
 
 ::: moniker-end
 
-::: moniker range=">= tfs-2015 < vsts"
+::: moniker range=">= tfs-2015 < azure-devops"
 
 ### Parallel jobs
 
@@ -108,13 +116,13 @@ You can view the system capabilities of an agent, and manage its user capabiliti
 
 <h2 id="communication">Communication</h2>
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 ### Communication with Azure Pipelines
 
 ::: moniker-end
 
-::: moniker range=">= tfs-2015 < vsts"
+::: moniker range=">= tfs-2015 < azure-devops"
 
 ### Communication with TFS
 
@@ -126,11 +134,11 @@ The agent communicates with Azure Pipelines or TFS to determine which job it nee
 
 ::: moniker-end
 
-::: moniker range=">= tfs-2017 < vsts"
+::: moniker range=">= tfs-2017 < azure-devops"
 ![Agent topologies](_img/agent-topologies-tfs.png)
 ::: moniker-end
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 ![Agent topologies](_img/agent-topologies-devops.png)
 ::: moniker-end
 
@@ -154,11 +162,11 @@ Here is a common communication pattern between the agent and TFS.
 
 * An agent pool administrator joins the agent to an agent pool, and the credentials of the service account (for Windows) or the saved user name and password (for Linux and macOS) are used to initiate communication with TFS. The agent uses these credentials to listen to the job queue.
 
-* The agent does not use asymmetric key encryption while communicating with the server. However, you can [use HTTPS to secure the communication](../../organizations/security/websitesettings.md) between the agent and TFS.
+* The agent does not use asymmetric key encryption while communicating with the server. However, you can [use HTTPS to secure the communication](/azure/devops/server/admin/websitesettings) between the agent and TFS.
 
 ::: moniker-end
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 ### Communication to deploy to target servers
 
@@ -185,11 +193,11 @@ To register an agent, you need to be a member of the [administrator role](pools-
 ### Personal Access Token (PAT): 
 [Generate](../../organizations/accounts/use-personal-access-tokens-to-authenticate.md) and use a PAT to connect an agent with Azure Pipelines or TFS 2017 and newer. PAT is the only scheme that works with Azure Pipelines. Also, as explained above, this PAT is used only at the time of registering the agent, and not for subsequent communication.
 
-To use a PAT with TFS, your server must be configured with HTTPS. See [Web site settings and security](../../organizations/security/websitesettings.md).
+To use a PAT with TFS, your server must be configured with HTTPS. See [Web site settings and security](/azure/devops/server/admin/websitesettings).
 
 ::: moniker-end
 
-::: moniker range=">= tfs-2015 < vsts"
+::: moniker range=">= tfs-2015 < azure-devops"
 
 ### Integrated
 
@@ -221,7 +229,7 @@ To use this method of authentication, you must first configure your TFS server.
 
 
 ### Alternate
-Connect to TFS using Basic authentication. To use this method you must first [configure HTTPS on TFS](../../organizations/security/websitesettings.md).
+Connect to TFS using Basic authentication. To use this method you must first [configure HTTPS on TFS](/azure/devops/server/admin/websitesettings).
 
 To use this method of authentication, you must configure your TFS server as follows:
 
@@ -231,20 +239,9 @@ To use this method of authentication, you must configure your TFS server as foll
 
 ::: moniker-end
 
-<h2 id="account">Interactive vs. service</h2>
+<h2 id="interactive-or-service">Interactive vs. service</h2>
 
 You can run your agent as either a service or an interactive process.
-Whether you run an agent as a service or interactively, you can choose
-which account you use to run the agent. Note that this is different
-from the credentials that you use when you register the agent with
-Azure Pipelines or TFS. The choice of agent account depends solely on the needs
-of the tasks running in your build and deployment jobs.
-
-For example, to run tasks that use Windows authentication to access an external
-service, you must run the agent using an account that has access
-to that service. However, if you are running UI tests such as Selenium or Coded UI tests that
-require a browser, the browser is launched in the context of the agent account.
-
 After you've configured the agent, we recommend you first try it
 in interactive mode to make sure it works. Then, for production use,
 we recommend you run the agent in one of the following modes so
@@ -278,17 +275,65 @@ ensure that the agent starts automatically if the machine is restarted.
 
    `%windir%\System32\tscon.exe 1 /dest:console`
 
+<h2 id="account">Agent account</h2>
+
+Whether you run an agent as a service or interactively, you can choose
+which computer account you use to run the agent. (Note that this is different
+from the credentials that you use when you register the agent with
+Azure Pipelines or TFS.) The choice of agent account depends solely on the needs
+of the tasks running in your build and deployment jobs.
+
+For example, to run tasks that use Windows authentication to access an external
+service, you must run the agent using an account that has access
+to that service. However, if you are running UI tests such as Selenium or Coded UI tests that
+require a browser, the browser is launched in the context of the agent account.
+
+On Windows, you should consider using a service account such as Network Service or Local Service.
+These accounts have restricted permissions and their passwords don't expire, meaning
+the agent requires less management over time.
+
 ## Agent version and upgrades
 
-We update the agent software every few weeks in Azure Pipelines, and with every update in TFS. We indicate the agent version in the format `{major}.{minor}`. For instance, if the agent version is `2.1`, then the major version is 2 and the minor version is 1. When a newer version of the agent is only different in minor version, it is automatically upgraded by Azure Pipelines or TFS. This upgrade happens when one of the tasks requires a newer version of the agent.
+::: moniker range="azure-devops"
 
-If you run the agent interactively, or if there is a newer major version of the agent available, then you have to manually upgrade the agents. You can do this easily from the agent pools tab under your project collection or organization.
+We update the agent software every few weeks in Azure Pipelines.
+We indicate the agent version in the format `{major}.{minor}`.
+For instance, if the agent version is `2.1`, then the major version is 2 and the minor version is 1.
+
+Microsoft-hosted agents are always kept up to date.
+If the newer version of the agent is only different in _minor_ version, self-hosted agents can usually be updated automatically by Azure Pipelines.
+An upgrade is requested when a platform feature or one of the tasks used in the pipeline requires a newer version of the agent.
+
+If you run a self-hosted agent interactively, or if there is a newer _major_ version of the agent available, then you may have to manually upgrade the agents.
+You can do this easily from the **Agent pools** tab under your organization.
+Your pipelines won't run until they can target a compatible agent.
+
+::: moniker-end
+
+::: moniker range="< azure-devops"
+
+We update the agent software with every update in Azure DevOps Server and TFS.
+We indicate the agent version in the format `{major}.{minor}`.
+For instance, if the agent version is `2.1`, then the major version is 2 and the minor version is 1.
+
+When your Azure DevOps Server or TFS server has a newer version of the agent, and that newer agent is only different in _minor_ version, it can usually be automatically upgraded.
+An upgrade is requested when a platform feature or one of the tasks used in the pipeline requires a newer version of the agent.
+Starting with Azure DevOps Server 2019, you don't have to wait for a new server release.
+You can [upload a new version of the agent to your application tier](#can-i-update-my-v2-agents-that-are-part-of-an-azure-devops-server-pool), and that version will be offered as an upgrade.
+
+If you run the agent interactively, or if there is a newer _major_ version of the agent available, then you may have to manually upgrade the agents.
+You can do this easily from the **Agent pools** tab under your project collection.
+Your pipelines won't run until they can target a compatible agent.
+
+::: moniker-end
 
 You can view the version of an agent by navigating to **Agent pools** and selecting the **Capabilities** tab for the desired agent.
 
 [!INCLUDE [agent-pools-tab](_shared/agent-pools-tab.md)]
 
 ## Q & A
+
+[!INCLUDE [include](_shared/v2/qa-agent-version.md)]
 
 <h3 id="private-agent-performance-advantages">Do self-hosted agents have any performance advantages over Microsoft-hosted agents?</h3>
 
@@ -305,5 +350,3 @@ Yes. This approach can work well for agents that run jobs that don't consume a l
 You might find that in other cases you don't gain much efficiency by running multiple agents on the same machine. For example, it might not be worthwhile for agents that run builds that consume a lot of disk and I/O resources.
 
 You might also run into problems if parallel build jobs are using the same singleton tool deployment, such as npm packages. For example, one build might update a dependency while another build is in the middle of using it, which could cause unreliable results and errors.
-
-[!INCLUDE [agent-latest-version](_shared/v2/qa-agent-version.md)]

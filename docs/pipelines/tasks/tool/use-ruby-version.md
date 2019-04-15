@@ -1,15 +1,15 @@
 ---
 title: Use Ruby Version task
-titleSuffix: Azure Pipelines & TFS
 description: Select a version of Ruby to run on an agent and optionally add it to PATH
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 0b9f5626-08ec-45a3-8a39-aff5b3394398
 ms.manager: madhurig
+ms.custom: seodec18
 ms.author: dastahel
 ms.reviewer: lukillgo
-ms.date: 05/03/2018
-monikerRange: 'vsts'
+ms.date: 12/07/2018
+monikerRange: 'azure-devops'
 ---
 
 # Use Ruby Version task
@@ -44,7 +44,7 @@ If the task completes successfully, the task's output variable will contain the 
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 <!-- BEGINSECTION class="md-qanda" -->

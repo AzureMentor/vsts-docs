@@ -1,19 +1,19 @@
 ---
-title: Notifications index to content for Azure DevOps Services & TFS
+title: Notifications index to content for Azure DevOps
 description: Index to topics for getting notifications or alerts from Azure DevOps Services or TFS  
 ms.technology: devops-collab
 ms.prod: devops
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
-ms.date: 10/11/2018
+ms.date: 12/10/2018
 monikerRange: '>= tfs-2015'
 ---
 
 # Notifications  
 
-**Azure DevOps Services | TFS 2018 | TFS 2017 | TFS 2015**
+[!INCLUDE [version-vsts-tfs-2015-on](../boards/_shared/version-vsts-tfs-2015-on.md)]
 
 Stay up-to-date with changes as they occur by subscribing to events such as code changes, build completions, or work item assignments.  
 
@@ -26,6 +26,7 @@ Stay up-to-date with changes as they occur by subscribing to events such as code
 
 * [Follow work & pull requests](../boards/work-items/follow-work-items.md?toc=/azure/devops/notifications/toc.json&bc=/azure/devops/notifications/breadcrumb/toc.json)
 * [Set your personal notifications](howto-manage-personal-notifications.md)
+* [Manage team and group notifications](howto-manage-team-notifications.md)
 
 ## Concepts
 
@@ -34,8 +35,6 @@ Stay up-to-date with changes as they occur by subscribing to events such as code
 
 ## How-to guides
 
-* [Manage personal notifications](howto-manage-personal-notifications.md)
-* [Manage team and group notifications](howto-manage-team-notifications.md)
 * [Manage organization subscriptions](howto-manage-organization-notifications.md)
 * [Manage organization default delivery settings](howto-manage-organization-notifications-settings.md)
 * [View notification statistics for your organization](howto-view-organization-notification-statistics.md)
@@ -55,11 +54,12 @@ Stay up-to-date with changes as they occur by subscribing to events such as code
 * [Supported event types](oob-supported-event-types.md)
 * [FAQs](faq-notifications.md)
 * [Default permissions and access set for collaboration tools](../project/wiki/wiki-readme-permissions.md?toc=/azure/devops/notifications/toc.json&bc=/azure/devops/notifications/breadcrumb/toc.json)
+* [Azure DevOps data protection overview](../organizations/security/data-protection.md?toc=/azure/devops/notifications/toc.json&bc=/azure/devops/notifications/breadcrumb/toc.json)
 
 ## Resources
 
 * [Git](../repos/git/index.md)
 * [Work items](../boards/work-items/index.md)
 * [Service Hooks](../service-hooks/index.md)  
-* [REST API](https://docs.microsoft.com/rest/api/vsts/notification/subscriptions)
+* [REST API](https://visualstudio.microsoft.com/docs/integrate/api/notification/subscriptions)
 * [Microsoft Teams Integration](https://marketplace.visualstudio.com/items?itemname=ms-vsts.vss-services-teams)

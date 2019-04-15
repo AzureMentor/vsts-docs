@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: Work Item Relation Types | REST API Reference for Team Foundation Server
 description: Work with work item relation types programmatically using the REST APIs for Team Foundation Server. 
 ms.assetid: D5EAD6ED-8972-4A9F-A5EE-369C1C77E996
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -19,7 +19,7 @@ ms.date: 08/04/2016
 [!INCLUDE [API_version](../_data/version.md)]
 
 Relation types define the types of associations work items can have with work items and other resources,
-but especially [links between two work items](http://msdn.microsoft.com/en-us/library/dd293534.aspx).
+but especially [links between two work items](http://msdn.microsoft.com/library/dd293534.aspx).
 
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]
 

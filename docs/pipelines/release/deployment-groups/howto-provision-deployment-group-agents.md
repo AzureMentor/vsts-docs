@@ -1,12 +1,12 @@
 ---
-title: How to provision agents for deployment groups
-titleSuffix: Azure Pipelines & TFS
+title: Provision agents for deployment groups
+ms.custom: seodec18
 description: How to provision agents for deployment groups in Azure Pipelines and Team Foundation Server (TFS)
 ms.assetid: DF79C2A3-DE70-4184-B7A3-F01A8E86C87C
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
 ms.date: 08/24/2018
@@ -15,7 +15,7 @@ monikerRange: '>= tfs-2018'
 
 # How To: Provision agents for deployment groups
 
-**Azure Pipelines | TFS 2018**
+[!INCLUDE [version-tfs-2018](../../_shared/version-tfs-2018.md)]
 
 ::: moniker range="<= tfs-2018"
 [!INCLUDE [temp](../../_shared/concept-rename-note.md)]
@@ -34,7 +34,7 @@ You can install the agent in any one of these ways:
 For information about agents and pipelines, see:
 
 * [Parallel jobs in Team Foundation Server](../../licensing/concurrent-pipelines-tfs.md).
-* [Parallel jobs in Azure Pipelines](../../licensing/concurrent-jobs-vsts.md).
+* [Parallel jobs in Azure Pipelines](../../licensing/concurrent-jobs.md).
 * [Pricing for Azure Pipelines features](https://visualstudio.microsoft.com/team-services/pricing/)
 
 <a name="runscript"></a>

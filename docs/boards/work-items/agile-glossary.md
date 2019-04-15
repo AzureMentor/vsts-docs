@@ -1,14 +1,17 @@
 ---
-title: Agile tools and terms 
-titleSuffix: Azure Boards and TFS
-description: Key definitions for objects and items used to track work in Azure Boards & Team Foundation Server
+title: Learn key concepts and terms used to support Agile tools 
+titleSuffix: Azure Boards
+description: Understand the objects and items used to track work in Azure Boards & TFS
 ms.technology: devops-agile
+ms.custom: seodec18
 ms.prod: devops
 ms.assetid:  
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
-ms.date: 10/12/2018
+author: KathrynEE
+monikerRange: '>= tfs-2013'
+ms.date: 11/19/2018
 ---
 
 # Agile glossary 
@@ -52,7 +55,7 @@ Supports tracking a piece of information about the work to perform. Values you a
 [!INCLUDE [temp](../../_shared/glossary-terms/follow.md)] 
 
 ## Global lists 
-Defines a list of menu items or pick list items that are shared across WITs and projects within a project collection. Global lists help to minimize the work that is required to update lists. You can define global lists within WITs that you upload with your process template. Learn more: [Manage global lists for work item types](../../reference/witadmin/manage-global-lists-for-work-item-types.md). (Only supported for Hosted XML and On-premises XML process models) 
+Defines a list of menu items or picklist items that are shared across WITs and projects within a project collection. Global lists help to minimize the work that is required to update lists. You can define global lists within WITs that you upload with your process template. Learn more: [Manage global lists for work item types](../../reference/witadmin/manage-global-lists-for-work-item-types.md). (Only supported for Hosted XML and On-premises XML process models) 
 
 ## Global workflow 
 Specifies both work item fields and global lists that multiple projects and types of work items can share. Learn more: [Manage global workflow](../../reference/witadmin/witadmin-import-export-global-workflow.md) (Only supported for On-premises XML process model).   
@@ -86,7 +89,7 @@ The On-premises XML process model provides support for customizing work tracking
 
 ## Pick lists
 
-Specifies an enumerated set of values that appear within a drop-down menu in a work item form and the **Value** column within the query editor. The method you use to customize a pick list varies depending on the field and the process model.  
+Specifies an enumerated set of values that appear within a drop-down menu in a work item form and the **Value** column within the query editor. The method you use to customize a picklist varies depending on the field and the process model.  
 
 [!INCLUDE [temp](../../_shared/glossary-terms/plans.md)] 
 

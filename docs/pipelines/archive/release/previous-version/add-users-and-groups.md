@@ -1,12 +1,12 @@
 ---
 title: Add users and groups and control access in Release Management
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Add users and groups and control access in Release Management server/client for Visual Studio 2015 and Team Foundation Server 2015
 ms.assetid: AEB78F81-1F59-47DE-AED0-F38C724024FC
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
 ms.date: 07/16/2018
@@ -36,7 +36,7 @@ If you want to restrict access, then you'll want to follow these steps:
 1. [Determine the groups you need](#control_access).
 
 1. [Define these groups in TFS](https://msdn.microsoft.com/library/bb558971%28v%3Dvs.140%29.aspx) 
-   or in [Active Directory](/tfs/server/admin/setup-ad-groups).
+   or in [Active Directory](/azure/devops/server/admin/setup-ad-groups).
 
 1. [Add the groups to Release Management, set their permissions, and change the Everyone group permissions](#add_group).
 

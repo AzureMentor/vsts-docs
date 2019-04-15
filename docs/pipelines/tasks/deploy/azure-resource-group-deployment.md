@@ -1,15 +1,15 @@
 ---
 title: Azure Resource Group Deployment task
-titleSuffix: Azure Pipelines & TFS
 description: Deploy, start, stop, or delete Azure Resource Groups
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 94A74903-F93F-4075-884F-DC11F34058B4
 ms.manager: dastahel
+ms.custom: seodec18
 ms.author: dastahel
-ms.date: 05/04/2018
-monikerRange: 'vsts'
+ms.date: 12/07/2018
+monikerRange: 'azure-devops'
 ---
 
 # Azure Resource Group Deployment task
@@ -63,4 +63,4 @@ To  view the template parameters in a grid, click on **...** next to Override te
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.

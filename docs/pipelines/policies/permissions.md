@@ -1,12 +1,12 @@
 ---
 title: Build and release permissions and security roles
 ms.topic: conceptual
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Understand how permissions and roles are used to securely manage build and release operations in Azure Pipelines and Team Foundation Server (TFS).
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: A7C38A15-C9FE-4353-8680-21BAC0F6C873
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
 ms.date: 02/12/18
@@ -15,7 +15,7 @@ monikerRange: '>= tfs-2015'
 
 # Build and release permissions and security roles
 
-**Azure Pipelines | TFS 2018 | TFS 2017 | TFS 2015**
+[!INCLUDE [version-tfs-2015-rtm](../_shared/version-tfs-2015-rtm.md)]
 
 [!INCLUDE [temp](../_shared/concept-rename-note.md)]
 
@@ -123,13 +123,13 @@ The following permissions are defined for releases. The scope column explains wh
 > | **Administer release permissions** | Can change any of the other permissions listed here. | Project, Release pipeline, Stage |
 > | **Create releases** | Can create new releases. | Project, Release pipeline |
 > | **Delete release pipeline** | Can delete release pipeline(s). | Project, Release pipeline |
-> | **Delete stage** | Can delete stage(s) in release pipeline(s). | Project, Release pipeline, Stage |
+> | **Delete release stage** | Can delete stage(s) in release pipeline(s). | Project, Release pipeline, Stage |
 > | **Delete releases** | Can delete releases for a pipeline. | Project, Release pipeline |
-> | **Edit release pipeline** | Can save any changes to a release pipeline, including configuration variables, triggers, artifacts, and retention policy as well as configuration within a stage of the release pipeline. To make changes to a specific stage in a release pipeline, the user also needs **Edit stage** permission. | Project, Release pipeline |
-> | **Edit stage** | Can edit stage(s) in release pipeline(s). To save the changes to the release pipeline, the user also needs **Edit release pipeline** permission. This permission also controls whether a user can edit the configuration inside the stage of a specific release instance. The user also needs **Manage releases** permission to save the modified release. | Project, Release pipeline, Stage |
+> | **Edit release pipeline** | Can save any changes to a release pipeline, including configuration variables, triggers, artifacts, and retention policy as well as configuration within a stage of the release pipeline. To make changes to a specific stage in a release pipeline, the user also needs **Edit release stage** permission. | Project, Release pipeline |
+> | **Edit release stage** | Can edit stage(s) in release pipeline(s). To save the changes to the release pipeline, the user also needs **Edit release pipeline** permission. This permission also controls whether a user can edit the configuration inside the stage of a specific release instance. The user also needs **Manage releases** permission to save the modified release. | Project, Release pipeline, Stage |
 > | **Manage deployments** | Can initiate a direct deployment of a release to a stage. This permission is only for direct deployments that are manually initiated by selecting the **Deploy** or **Redeploy** actions in a release. If the condition on a stage is set to any type of automatic deployment, the system automatically initiates deployment without checking the permission of the user that created the release. | Project, Release pipeline, Stage |
 > | **Manage release approvers** | Can add or edit approvers for stage(s) in release pipeline(s). This permissions also controls whether a user can edit the approvers inside the stage of a specific release instance. | Project, Release pipeline, Stage |
-> | **Manage releases** | Can edit the configuration in releases. To edit the configuration of a specific environment in a release instance, the user also needs **Edit stage** permission. | Project, Release pipeline |
+> | **Manage releases** | Can edit the configuration in releases. To edit the configuration of a specific stage in a release instance, the user also needs **Edit release stage** permission. | Project, Release pipeline |
 > | **View release pipeline** | Can view release pipeline(s). | Project, Release pipeline |
 > | **View releases** | Can view releases belonging to release pipeline(s). | Project, Release pipeline |
 

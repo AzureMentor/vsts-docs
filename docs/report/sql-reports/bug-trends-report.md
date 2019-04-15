@@ -7,7 +7,7 @@ ms.topic: reference
 description: Track the rate at which your team is discovering and resolving bugs - Team Foundation Server  
 ms.assetid: 631ec793-644f-4eff-8403-e48e746e369e
 ms.author: kaelliauthor: KathrynEE
-ms.manager: douge
+ms.manager: jillfra
 ms.date: 10/17/17
 ---
 
@@ -44,7 +44,7 @@ You can use the Bug Trends report to help track the rate at which your team is d
   
 -   Filter the bugs that are counted in the report by specifying iteration and area paths or bug state, priority, or severity.  
   
- For more information, see [Filtering the Report](#Changing) later in this topic.  
+ For more information, see [Filtering the Report](#Changing) later in this article.  
   
 ### Required Activities for Tracking Bugs  
  For the Bug Trends report to be useful and accurate, the team must perform the following activities:  

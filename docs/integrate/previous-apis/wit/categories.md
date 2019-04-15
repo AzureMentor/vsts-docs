@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: Work Item Type Categories | REST API Reference for Team Foundation Server
 description: Work with categories of work item types programmatically using the REST APIs for Team Foundation Server. 
 ms.assetid: 5DACB173-F971-4288-8EBD-29B4EF98237C
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -18,7 +18,7 @@ ms.date: 08/04/2016
 
 [!INCLUDE [API_version](../_data/version.md)]
 
-[Categories](http://msdn.microsoft.com/en-us/library/dd695775.aspx) define the set of work item types that are used in a specific role in your project.
+[Categories](http://msdn.microsoft.com/library/dd695775.aspx) define the set of work item types that are used in a specific role in your project.
 For example, work item types in the "requirements" category show up in your backlog.
 
 [!INCLUDE [GET_STARTED](../_data/get-started.md)]

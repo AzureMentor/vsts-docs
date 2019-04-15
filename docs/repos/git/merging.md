@@ -5,7 +5,7 @@ description: Resolving Merge Conflicts in Git from Visual Studio or the command 
 ms.assetid: 2a51a33a-134b-4357-bcfc-540b3195682f
 ms.prod: devops
 ms.technology: devops-code-git 
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: tutorial
@@ -109,13 +109,13 @@ Resolve merge conflicts on the command line:
 
 0. Update the conflicted files listed in `git status`. Git adds markers to files that have conflicts. These markers look like:   
    
-    <pre>
-    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    ```
+    <<<<<<< HEAD
     console.log("Writing changes to dev console");
     =======
     debug("Writing changes to debug module);
-    &gt;&gt;&gt;&gt;&gt;&gt;&gt; dev-updates
-    </pre>
+    >>>>>>> dev-updates
+    ```
 
     The `<<<<<<<` section are the changes from one commit, the `=======` separates the changes, and `>>>>>>>` for the other conflicting commit.   
 

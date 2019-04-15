@@ -5,9 +5,9 @@ ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual
 ms.custom: java
-ms.manager: douge
-ms.author: douge
-author: erickson-doug
+ms.manager: jillfra
+ms.author: dastahel
+author: davidstaheli
 ms.date: 10/26/2018
 monikerRange: '>= tfs-2017'
 ---
@@ -28,7 +28,7 @@ This exercise assumes you have completed the exercises to create a Team Project 
 
 ## Install a Marketplace Extension
 
-In this task you will install an Azure DevOps Services extension from the [Azure DevOps Services Marketplace](https://marketplace.visualstudio.com/Azure DevOps Services). This extension contains build and release tasks - you are going to use the ReplaceTokens task in the Release.
+In this task you will install an Azure DevOps Services extension from the [Azure DevOps Services Marketplace](https://marketplace.visualstudio.com/azuredevops). This extension contains build and release tasks - you are going to use the ReplaceTokens task in the Release.
 
 1. Connect to the virtual machine with the user credentials which you specified when creating the VM in Azure.
 
@@ -46,7 +46,7 @@ In this task you will install an Azure DevOps Services extension from the [Azure
 
     ![Install the extension](../_img/releasemanagement/install-extension.png)
 
-1. In the dialog that appears, ensure that your Azure DevOps organization is selected and click Continue. Once your permissions have been verified, click the Confirm button.
+2. In the dialog that appears, ensure that your organization is selected and click Continue. Once your permissions have been verified, click the Confirm button.
 
 ## Create a Release Pipeline
 

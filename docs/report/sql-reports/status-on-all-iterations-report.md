@@ -6,7 +6,7 @@ ms.technology: devops-analytics
 ms.topic: reference
 description: Helps you track the team's performance over successive iterations.
 ms.assetid: ab92d41e-aab1-4d82-ad57-a4f868adc102
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelliauthor: KathrynEE
 ms.date: 10/17/17
 ---
@@ -60,7 +60,7 @@ After work has progressed on several iterations, also known as sprints, you can 
 -   Update the **State** of each story, task, and bug as it progresses from active to closed.  
   
 ##  <a name="Interpreting"></a> Interpret the report  
- The Status on All Iterations report shows work progress across iterations that are defined for the product areas that you specify. For information about how to filter the report, see [Filtering the Report](#Changing) later in this topic.  
+ The Status on All Iterations report shows work progress across iterations that are defined for the product areas that you specify. For information about how to filter the report, see [Filtering the Report](#Changing) later in this article.  
   
 ### Questions answered by the report  
  You can review the report to determine how many stories are ready to release and to better understand the rate of the team's progress. For example, you can find answers to the following questions:  

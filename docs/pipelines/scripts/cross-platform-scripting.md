@@ -1,21 +1,21 @@
 ---
 title: Cross-platform scripting
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Patterns for safe cross-platform scripting
 ms.topic: conceptual
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 96b7da24-617e-4a58-b65f-040c374e60e2
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
-ms.date: 10/10/2018
+ms.date: 11/29/2018
 monikerRange: '>= tfs-2018'
 ---
 
 # Run cross-platform scripts
 
-**Azure Pipelines | TFS 2018**
+[!INCLUDE [version-tfs-2018](../_shared/version-tfs-2018.md)]
 
 With Azure Pipelines and Team Foundation Server (TFS), you can run your builds on macOS, Linux, and Windows.
 If you develop on cross-platform technologies such as Node.js and Python, these capabilities bring benefits, and also some challenges.
@@ -68,14 +68,14 @@ steps:
 - script: echo This is pipeline $(System.DefinitionId)
 ```
 
-In YAML, this also works for variables you're passing into the environment.
-They must be prefixed with `variables.`.
+This also works for variables you specify in the pipeline.
 
 ```yaml
+variables:
+  Example: 'myValue'
+
 steps:
-- script: echo The value passed in is $(variables.Example)
-  env:
-    Example: 'myValue'
+- script: echo The value passed in is $(Example)
 ```
 
 # [Designer](#tab/designer)
@@ -93,7 +93,7 @@ echo This is pipeline $(System.DefinitionId)
 
 If you have more complex scripting needs than the examples shown above, then consider writing them in Bash.
 Most macOS and Linux agents have Bash as an available shell, and Windows agents include Git Bash.
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 For Azure Pipelines, the Microsoft-hosted agents always have Bash available.
 ::: moniker-end
 
@@ -110,12 +110,14 @@ trigger:
         - master
 steps:
 - bash: |
+    echo "Hello world from $AGENT_NAME running on $AGENT_OS"
     case $BUILD_REASON in
             "Manual") echo "$BUILD_REQUESTEDFOR manually queued the build." ;;
             "IndividualCI") echo "This is a CI build for $BUILD_REQUESTEDFOR." ;;
             "BatchedCI") echo "This is a batched CI build for $BUILD_REQUESTEDFOR." ;;
         *) $BUILD_REASON ;;
     esac
+  displayName: Hello world
 ```
 
 # [Designer](#tab/designer)
@@ -155,22 +157,25 @@ steps:
 # Linux
 - bash: |
     export IPADDR=$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
-    echo ##vso[task.setvariable variable=IP_ADDR]$IPADDR
-  condition: eq( variables.Agent.OS, 'Linux' )
+    echo "##vso[task.setvariable variable=IP_ADDR]$IPADDR"
+  condition: eq( variables['Agent.OS'], 'Linux' )
+  displayName: Get IP on Linux
 # macOS
 - bash: |
     export IPADDR=$(ifconfig | grep 'en0' -A3 | tail -n1 | awk '{print $2}')
-    echo ##vso[task.setvariable variable=IP_ADDR]$IPADDR
-  condition: eq( variables.Agent.OS, 'Darwin' )
+    echo "##vso[task.setvariable variable=IP_ADDR]$IPADDR"
+  condition: eq( variables['Agent.OS'], 'Darwin' )
+  displayName: Get IP on macOS
 # Windows
 - powershell: |
-    Set-Variable -Name IPADDR -Value (Get-NetIPAddress | ?{ $_.AddressFamily -eq "IPv4" -and !($_.IPAddress -match "169") -and !($_.IPaddress -match "127") }).IPAddress
-    Write-Host ##vso[task.setvariable variable=IP_ADDR]$env:IPADDR
-  condition: eq( variables.Agent.OS, 'Windows_NT' )
+    Set-Variable -Name IPADDR -Value ((Get-NetIPAddress | ?{ $_.AddressFamily -eq "IPv4" -and !($_.IPAddress -match "169") -and !($_.IPaddress -match "127") } | Select-Object -First 1).IPAddress)
+    Write-Host "##vso[task.setvariable variable=IP_ADDR]$IPADDR"
+  condition: eq( variables['Agent.OS'], 'Windows_NT' )
+  displayName: Get IP on Windows
 
 # now we use the value, no matter where we got it
 - script: |
-    echo The IP address is $(variables.IP_ADDR)
+    echo The IP address is $(IP_ADDR)
 ```
 
 # [Designer](#tab/designer)
@@ -189,7 +194,7 @@ echo ##vso[task.setvariable variable=IP_ADDR]$IPADDR
 
 1. Change the value of **Run this task** to "Custom conditions".
 
-1. In the **Custom condition** field which appears, enter "eq( variables.Agent.OS, 'Linux' )".
+1. In the **Custom condition** field which appears, enter "eq( variables['Agent.OS'], 'Linux' )".
 
 Next, add a macOS script.
 
@@ -199,7 +204,7 @@ export IPADDR=$(ifconfig | grep 'en0' -A3 | tail -n1 | awk '{print $2}')
 echo ##vso[task.setvariable variable=IP_ADDR]$IPADDR
 ```
 
-1. For the **Custom condition**, enter "eq( variables.Agent.OS, 'Darwin' )".
+1. For the **Custom condition**, enter "eq( variables['Agent.OS'], 'Darwin' )".
 
 Next, add a Windows script.
 
@@ -215,7 +220,7 @@ Write-Host ##vso[task.setvariable variable=IP_ADDR]$env:IPADDR
 
 1. Change the value of **Run this task** to "Custom conditions".
 
-1. In the **Custom condition** field which appears, enter "eq( variables.Agent.OS, 'Windows_NT' )".
+1. In the **Custom condition** field which appears, enter "eq( variables['Agent.OS'], 'Windows_NT' )".
 
 Finally, add a task which uses the value, no matter how we got it.
 

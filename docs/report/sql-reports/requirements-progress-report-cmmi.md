@@ -6,7 +6,7 @@ ms.technology: devops-analytics
 ms.topic: reference
 description: Lists all requirements, filtered by product area and iteration in order of importance.
 ms.assetid: c5ecc16d-9645-4b5f-97b9-e92f76a88852
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelliauthor: KathrynEE
 ms.date: 10/17/17
 ---
@@ -84,7 +84,7 @@ The Requirements Progress report lists all requirements, filtered by product are
   
 -   Click ![Expand](_img/icon_expand.gif "Icon_Expand") or ![Collapse](_img/icon_collapse.gif "Icon_Collapse") to expand or collapse a requirement and display child requirements. Parent requirements display a rollup of all task hours that are assigned to it and its child requirements.  
   
- For more information, see [Filtering the Report and Changing the Display](#Changing) later in this topic.  
+ For more information, see [Filtering the Report and Changing the Display](#Changing) later in this article.  
   
 ### Questions That the Report Answers  
  You can review the report to determine how much work the team performed for the past week or recent period. Specifically, you can find answers to the following questions:  

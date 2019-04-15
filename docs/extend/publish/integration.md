@@ -5,7 +5,7 @@ title: Package and Publish an Integration | Extensions for Azure DevOps Services
 description: How to package and publish your integration to the Visual Studio Marketplace
 ms.assetid: 61550050-c6d7-40e1-9ea7-030b48b04e3b
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 monikerRange: '>= tfs-2017'
 ms.author: elbatk
 author: elbatk
@@ -21,11 +21,11 @@ The Visual Studio Marketplace is a one-stop-shop for individuals and teams to fi
 [Browse the marketplace](https://marketplace.visualstudio.com) to see examples of other integrations and extensions.
 
 > [!NOTE]
-> If you're looking for packaging and publishing information for extensions, check out [Package & Publish Extensions](./overview.md).
+> If you're looking for packaging and publishing information for extensions, check out [Package & Publish Extensions](overview.md).
 
 ## Publishing Requirements
 
-[!INCLUDE [](./_shared/before-publishing.md)]
+[!INCLUDE [](_shared/before-publishing.md)]
 
 ## What you will need
 
@@ -68,7 +68,7 @@ Before you package your integration as an extension, you'll need to create a `ho
 
 1. Fill your `vss-integration.json` file with the following JSON:
 
-  [!code-javascript[JSON]](../_data/integration.json)]
+  [!code-javascript[JSON](../_data/integration.json)]
 
 2. Update the JSON using the following reference:
 
@@ -117,13 +117,13 @@ tfx extension create --manifest-globs vss-extension.json
 [!INCLUDE [Publish_extension](../_shared/procedures/publish.md)]
 
 ### Share your integration
-Before an integration can be installed into an Azure DevOps Services organization, it must be shared with that organization. Sharing is a requirement during development and testing of an integration, as it is the only way to run an integration.
+Before an integration can be installed into an organization in Azure DevOps Services, it must be shared with that organization. Sharing is a requirement during development and testing of an integration, as it is the only way to run an integration.
 
 To share an integration so it can be installed:
 
 1. Click an integration from the list of displayed items 
 2. Click the **Share** button
-3. Specify the name of the Azure DevOps Services organization to make this integration visible to.
+3. Specify the name of the organization to make this integration visible to.
   - For example, to make an integration visible to the **dev.azure.com/fabrikam-fiber-inc** organization, specify `fabrikam-fiber-inc`.
 
 #### Update an item

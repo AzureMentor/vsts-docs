@@ -5,7 +5,7 @@ description: Lock and unlock folders or files using Team Foundation Version Cont
 ms.assetid: 3fe6cce2-b152-4733-8aa1-4f74072e8767
 ms.prod: devops
 ms.technology: devops-code-tfvc
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: conceptual
@@ -39,7 +39,7 @@ See [Permissions and groups reference](../../organizations/security/permissions.
 
 > [!IMPORTANT]
 > These options will appear only when you are making changes in a [server workspace](create-work-workspaces.md). 
-> The use of [local workspaces](decide-between-using-local-server-workspace.md) in your Team Project makes check-out locks un-enforceable. [Learn more](understand-lock-types.md).
+> The use of [local workspaces](decide-between-using-local-server-workspace.md) in your Project makes check-out locks un-enforceable. [Learn more](understand-lock-types.md).
 
 1.  On the **View** menu, choose **Other Windows**,and then choose **Source Control Explorer**.
 

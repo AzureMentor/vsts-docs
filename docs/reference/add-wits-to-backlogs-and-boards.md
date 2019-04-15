@@ -5,7 +5,7 @@ description: Add work item types to customize your tracking capabilities on prod
 ms.technology: devops-agile
 ms.prod: devops
 ms.assetid: f3e42cd4-912b-4fff-a6f2-cf584edc782a
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
@@ -41,9 +41,9 @@ To add a WIT to track as requirements, tasks, or as bugs perform the correspondi
 >We recommend that you add a WIT to one and only one of the following categories: Requirement Category, Task Category, or Bug Category. The system prevents you from adding the same WIT to both the Requirement Category and Task Category. WITs that you add to the Bug Category will follow the [bug behavior set for the team](../organizations/settings/show-bugs-on-backlog.md). 
 
 <a id="first-steps">  </a>
-##First steps
+## First steps
 
-###Hosted XML process model customization sequence  
+### Hosted XML process model customization sequence  
 > [!NOTE]    
 >Use the following guidance if you customize your process through import/export of definition files. Otherwise, if you customize your process through the admin UI, see [Add or modify a custom work item type for a process](../organizations/settings/work/customize-process-wit.md).
 
@@ -54,13 +54,13 @@ You'll make your changes to your process definition files, and then import that 
 -  If you're new to customizing a process, read [Customize a process for import](../organizations/settings/work/import-process/customize-process.md).
 
 
-###On-premises XML process model customization sequence 
+### On-premises XML process model customization sequence 
 You'll first export your work tracking definition files, update them, and then import them to your project.  
 -  If you aren't a member of the Project Administrator or Project Collection Administrator's group, [get added](../organizations/security/set-project-collection-level-permissions.md). 
 -  Update your project to [enable the latest features](configure-features-after-upgrade.md)
 -  [Export the following objects from your project](#import-export): 
 	- WIT you want to add to backlogs and boards (if you haven't created it, [do that now](https://msdn.microsoft.com/library/ms404855.aspx))
-	- Categories definition  
+	- [Categories definition](xml/apply-rule-work-item-field.md#apply-or-ignore-rules-based-on-user-or-group)  
 	- ProcessConfiguration  
 -  If you're new to customizing work tracking objects, familiarize yourself with the following resources:  
 	- [Add or modify a field](add-modify-field.md)  
@@ -69,7 +69,7 @@ You'll first export your work tracking definition files, update them, and then i
 
 
 <a id="wits-as-requirements">  </a>
-##Add a WIT to track it like a requirement   
+## Add a WIT to track it like a requirement   
 
 WITs that you add to the Requirement Category show up on the product backlog and Kanban board. You must make sure that the WIT definition contains required fields to support the Agile planning tools.  
 
@@ -152,7 +152,7 @@ WITs that you add to the Requirement Category show up on the product backlog and
 	<li>Agile, User Story: Add transitions from `Active` to `Removed` and `Resolved` to `Removed`; remove rules that populate  `Activated By` and `Activated Date` fields when state=`Resolved`  </li>
 	<li>Scrum, Product backlog item: Add transition from `Committed` to `Removed` </li>
 	</ul>
-	<p>If you've customized the `WORKFLOW`, make sure to define the required state-to-metastate mappings in the [ProcessConfiguration `RequirementBacklog` section](#edit-processconfig). </p>
+	<p>If you've customized the `WORKFLOW`, make sure to define the required state-to-metastate mappings in the [ProcessConfiguration `RequirementBacklog` section](add-features-manually.md#update-processconfiguration). </p>
 	</td>
 	</tr>
 	<tr>
@@ -201,7 +201,7 @@ WITs that you add to the Requirement Category show up on the product backlog and
 	<li>Make sure that you have only one State mapped to ```type="Complete"```</li>
 	</ul>
 	For example, add the Pending workflow state:  
-	```
+	```xml
 	<States>    
 	      <State value="New" type="Proposed" />  
 	      <State value="Active" type="InProgress" />  
@@ -211,7 +211,9 @@ WITs that you add to the Requirement Category show up on the product backlog and
 	</States>   
 	```
 5.	Add the WIT color definition to the ProcessConfiguration ```WorkItemColors``` section. For example:   
-	```<WorkItemColor primary="FF33CC33" secondary="FFD6F5D6" name="Service App" />```  
+	```xml
+	<WorkItemColor primary="FF33CC33" secondary="FFD6F5D6" name="Service App" />
+	```  
 
 6.	Update your project:  
 	- **Hosted XML:**  [Import your process](../organizations/settings/work/import-process/import-process.md).  
@@ -224,7 +226,7 @@ WITs that you add to the Requirement Category show up on the product backlog and
 
 
 <a id="wits-as-tasks">  </a>
-##Add a WIT to track it like a task   
+## Add a WIT to track it like a task   
 
 WITs that you add to the Task Category show up on the sprint backlogs and task boards. The WIT you add must specify required fields to support the Agile planning tools.  
 
@@ -260,7 +262,17 @@ WITs that you add to the Task Category show up on the sprint backlogs and task b
 	Activity field (Agile, Scrum)
 	</td>
 	<td><pre><code>
-	&lt;FIELD name="Backlog Priority" refname="Microsoft.VSTS.Common.BacklogPriority" type="Double" reportable="detail" /&gt;
+	&lt;FIELD name="Activity" refname="Microsoft.VSTS.Common.Activity" type="String" reportable="dimension"&gt; 
+	   &ltHELPTEXT&gt;Type of work involved&lt/HELPTEXT&gt; 
+	   &lt;SUGGESTEDVALUES&gt;  
+	      &lt;LISTITEM value="Development" /&gt;    
+	      &lt;LISTITEM value="Testing" /&gt;    
+	      &lt;LISTITEM value="Requirements" /&gt;    
+	      &lt;LISTITEM value="Design" /&gt;    
+	      &lt;LISTITEM value="Deployment" /&gt;    
+	      &lt;LISTITEM value="Documentation" /&gt;    
+	   &lt;/SUGGESTEDVALUES&gt;    
+	&lt;/FIELD&gt;    
 	</code></pre> </td>
 	</tr>
 	<tr>
@@ -322,7 +334,7 @@ WITs that you add to the Task Category show up on the sprint backlogs and task b
 	<li>Agile, User Story: Add transitions from `Active` to `Removed` and `Resolved` to `Removed`; remove rules that populate  `Activated By` and `Activated Date` fields when state=`Resolved`  </li>
 	<li>Scrum, Product backlog item: Add transition from `Committed` to `Removed` </li>
 	</ul>
-	<p>If you've customized the `WORKFLOW`, make sure to define the required state-to-metastate mappings in the [ProcessConfiguration `TaskBacklog` section](#edit-processconfig). </p>
+	<p>If you've customized the `WORKFLOW`, make sure to define the required state-to-metastate mappings in the [ProcessConfiguration `TestBacklog` section](add-features-manually.md#update-processconfiguration). </p>
 	</td>
 	</tr>
 	<tr>
@@ -369,7 +381,7 @@ WITs that you add to the Task Category show up on the sprint backlogs and task b
 	<li>Make sure that you have only one State mapped to ```type="Complete"```</li>
 	</ul>
 	For example, add the Blocked workflow state:
-	```
+	```xml
     <States>  
         <State value="New" type="Proposed" />  
         <State value="Active" type="InProgress" />  
@@ -379,7 +391,9 @@ WITs that you add to the Task Category show up on the sprint backlogs and task b
     </States>  
 	```
 5.	Add the WIT color definition to the ProcessConfiguration ```WorkItemColors``` section. For example:  
-	```<WorkItemColor primary="FFF2CB1D" secondary="FFF6F5D2" name="Service Task" />```
+	```xml
+	<WorkItemColor primary="FFF2CB1D" secondary="FFF6F5D2" name="Service Task" />
+	```
 
 6.	Update your project:  
 	- **Hosted XML:**  [Import your process](../organizations/settings/work/import-process/import-process.md).  
@@ -388,7 +402,7 @@ WITs that you add to the Task Category show up on the sprint backlogs and task b
 		b. Categories   
 		c. ProcessConfiguration  
 
-5. Confirm that you can add the WIT to the task board. Open the task board page, or refresh the page if it's already open.  
+1. Confirm that you can add the WIT to the task board. Open the task board page, or refresh the page if it's already open.  
 	You should be able to select either Task or Service Task as a linked work item to a user story.  
 	![Task board with Service Task work item type added](_img/ALM_AWB_AddTaskConfirm.png)  
 
@@ -396,7 +410,7 @@ WITs that you add to the Task Category show up on the sprint backlogs and task b
 
 
 <a id="wits-as-bugs">  </a>
-##Add a WIT to the Bug Category  
+## Add a WIT to the Bug Category  
 
 WITs that you add to the Bug Category will be treated based on the [team setting](../organizations/settings/show-bugs-on-backlog.md). Because these WITs may be treated either as requirements or tasks, they must meet Agile planning tool requirements for both requirements and tasks.  
 1.	Export your process (Hosted XML) or your definition files (On-premises XML) as indicated in [First steps](#first-steps).
@@ -422,7 +436,7 @@ WITs that you add to the Bug Category will be treated based on the [team setting
 	<li>Make sure that you have only one State mapped to ```type="Complete"```</li>
 	</ul>
 	For example, add the Investigate workflow state:  
-	```
+	```xml
     <States>  
       <State value="New" type="Proposed" />  
       <State value="Active" type="InProgress" />  
@@ -449,7 +463,7 @@ WITs that you add to the Bug Category will be treated based on the [team setting
 
 
 <a id="import-export">  </a>
-##Import and export definition files (On-premises XML) 
+## Import and export definition files (On-premises XML) 
 Use the **witadmin** commands to import and export definition files. For details, see [witAdmin: Customize and manage objects for tracking work](witadmin/witadmin-customize-and-manage-objects-for-tracking-work.md).   
 
 [!INCLUDE [temp](../_shared/process-editor.md)]  

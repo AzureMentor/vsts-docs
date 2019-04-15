@@ -1,21 +1,21 @@
 ---
 title: Run Functional Tests task
-titleSuffix: Azure Pipelines & TFS
 description: Run Coded UI/Selenium/Functional tests on a set of machines using the Test Agent to integrate cloud-based load tests into your build and release pipelines
 ms.assetid: DAA55EF5-A6A2-4962-80A0-7D25E64D1DE2
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: reference
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2015'
 ---
 
 # Run Functional Tests task
 
-**Azure Pipelines | TFS 2018 | TFS 2017 | TFS 2015**
+[!INCLUDE [version-tfs-2015-rtm](../../_shared/version-tfs-2015-rtm.md)]
 
 ::: moniker range="<= tfs-2018"
 [!INCLUDE [temp](../../_shared/concept-rename-note.md)]
@@ -24,7 +24,7 @@ monikerRange: '>= tfs-2015'
 ::: moniker range=">= tfs-2018"
 
 This task is deprecated in Azure Pipelines and TFS 2018 and later. Use version 2.x or higher of the
-[Visual Studio Test](https://github.com/Microsoft/vsts-tasks/blob/master/Tasks/VsTestV2/README.md)
+[Visual Studio Test](https://github.com/Microsoft/azure-pipelines-tasks/blob/master/Tasks/VsTestV2/README.md)
 task together with [jobs](../../process/phases.md)
 to run unit and functional tests on the universal agent.
 
@@ -136,12 +136,12 @@ These scenarios are supported for:
 ### More information
 
 * [Using the Visual Studio Agent Deployment task on machines not connected to the internet](https://blogs.msdn.microsoft.com/visualstudioalm/2017/05/05/using-visual-studio-agent-deployment-task-on-machines-not-connected-to-the-internet/)
-* [Set up environments to run continuous test tasks with your builds](../../test/set-up-continuous-test-environments-builds.md)
+* [Run continuous tests with your builds](../../languages/dotnet-core.md#run-your-tests)
 * [Testing in Continuous Integration and Continuous Deployment Workflows](https://blogs.msdn.microsoft.com/visualstudioalm/2015/05/29/testing-in-continuous-integration-and-continuous-deployment-workflows/)
 
 ### Related tasks
 
-* [Deploy Azure Resource Group](https://github.com/Microsoft/vsts-tasks/tree/master/Tasks/AzureResourceGroupDeploymentV2)
+* [Deploy Azure Resource Group](https://github.com/Microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureResourceGroupDeploymentV2)
 * [Azure File Copy](https://github.com/Microsoft/vso-agent-tasks/tree/master/Tasks/AzureFileCopyV1)
 * [Windows Machine File Copy](../deploy/windows-machine-file-copy.md)
 * [PowerShell on Target Machines](../deploy/powershell-on-target-machines.md)
@@ -149,7 +149,7 @@ These scenarios are supported for:
 
 ### Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 <!-- BEGINSECTION class="md-qanda" -->
@@ -162,7 +162,7 @@ This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). F
 
 [!INCLUDE [qa-agents](../../_shared/qa-agents.md)]
 
-::: moniker range="< vsts"
+::: moniker range="<= tfs-2018"
 [!INCLUDE [qa-versions](../../_shared/qa-versions.md)]
 ::: moniker-end
 

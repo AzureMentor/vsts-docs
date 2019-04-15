@@ -5,7 +5,7 @@ description: Create a local copy of an existing repo using Visual Studio or comm
 ms.assetid: b6240e2f-2d3d-4874-9953-7e554d5e3b97
 ms.prod: devops
 ms.technology: devops-code-git 
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: tutorial
@@ -63,7 +63,7 @@ Copy this URL into the clipboard or store it in a place where you can find it ea
 
 # [Visual Studio](#tab/visual-studio)
 
-* [Clone from Azure DevOps Services / Team Foundation Server](#clone-from-visual-studio-team-services--team-foundation-server)
+* [Clone from Azure DevOps Services / Team Foundation Server](#clone-from-azure-devops-services--team-foundation-server)
 * [Clone from another Git provider](#clone-from-another-git-provider)
 * [Open a solution in Visual Studio from a cloned repo](#open-a-solution-in-visual-studio-from-a-cloned-repo)
 
@@ -109,7 +109,7 @@ If you are not using Azure Repos, you can still clone your repo in Team Explorer
 ### Prerequisites
 
 * Ensure you have installed the [Git command line package](http://git-scm.com/download) for your platform as well as the 
-right [Git Credential Manager](set-up-credential-managers.md) before continuing.
+right [Git Credential Manager](set-up-credential-managers.md) or have [configured SSH authentication](use-ssh-keys-to-authenticate.md) before continuing.
 
 You'll need a clone URL to tell Git what repository you want to clone to your computer. Use the URL you copied earlier during the [previous step](#clone_url) in this article.
 

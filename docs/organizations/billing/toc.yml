@@ -18,7 +18,7 @@
     href: buy-load-testing-vs.md
 - name: Tutorials
   items:
-  - name: Connect organization to Azure AD
+  - name: Connect to Azure AD
     href: ../accounts/connect-organization-to-azure-ad.md?toc=/azure/devops/billing/toc.json&bc=/azure/devops/billing/breadcrumb/toc.json
 - name: How-to guides
   items:
@@ -30,7 +30,7 @@
       href: change-azure-subscription.md
     - name: Change number of paid users
       href: reduce-cancel-paid-users.md
-    - name: Buy TFS CALs or Test
+    - name: Buy Azure DevOps Server CALs or Test
       href: buy-access-tfs-test-hub.md
     - name: Billing FAQ
       href: billing-faq.md
@@ -44,14 +44,14 @@
       href: ../../marketplace/assign-paid-extensions.md?toc=/azure/devops/billing/toc.json&bc=/azure/devops/billing/breadcrumb/toc.json
     - name: Uninstall or disable extensions
       href: ../../marketplace/uninstall-disable-vsts-extensions.md?toc=/azure/devops/billing/toc.json&bc=/azure/devops/billing/breadcrumb/toc.json
-    - name: Buy TFS CALs or Test  
+    - name: Buy Azure DevOps Server CALs or Test  
       href: buy-access-tfs-test-hub.md 
   - name: Guidance for Cloud Solution Providers
     items:
     - name: "CSPs: Set up your customer"
       href: csp/set-up-csp-customer.md
     - name: "CSPs: Buy Azure DevOps for your customers"
-      href: csp/buy-csp-vsts.md
+      href: csp/buy-csp-azure-devops.md
     - name: "CSPs: Buy and manage Visual Studio subscriptions"
       href: /visualstudio/subscriptions/vscloud-csp
     - name: "CSPs: Buy App Center resources"
@@ -64,6 +64,8 @@
     href: ../../security/access-levels.md?toc=/azure/devops/billing/toc.json&bc=/azure/devops/billing/breadcrumb/toc.json
   - name: Default permissions & access
     href: ../../security/permissions-access.md?toc=/azure/devops/billing/toc.json&bc=/azure/devops/billing/breadcrumb/toc.json
+  - name: Data protection overview
+    href: ../../organizations/security/data-protection.md?toc=/azure/devops/organizations/billing/toc.json&bc=/azure/devops/organizations/billing/breadcrumb/toc.json
 - name: Resources
   items:
   - name: Start using Azure DevOps

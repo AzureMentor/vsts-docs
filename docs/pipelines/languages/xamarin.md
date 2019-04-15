@@ -1,24 +1,24 @@
 ---
-title: Building Xamarin apps with Azure Pipelines
-titleSuffix: Azure Pipelines & TFS
-description: Building Xamarin projects using Azure Pipelines
+title: Build Xamarin apps
+description: Build Xamarin projects with Azure Pipelines, Azure DevOps, & Team Foundation Server
 ms.prod: devops
 ms.technology: devops-cicd
+ms.topic: quickstart
 ms.assetid: 2bf80a9f-3f37-4582-8226-4a1d7e519265
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
 ms.reviewer: dastahel
-ms.date: 08/31/2018
-ms.topic: quickstart
-monikerRange: '> tfs-2018'
+ms.custom: seodec18
+ms.date: 03/27/2018
+monikerRange: 'azure-devops'
 ---
 
-# Build Xamarin apps with Azure Pipelines
+# Build Xamarin apps
 
 **Azure Pipelines**
 
-This guidance explains how to use Azure Pipelines to automatically build Xamarin apps for Android and iOS.
+This guidance explains how to automatically build Xamarin apps for Android and iOS.
 
 ## Example
 
@@ -30,11 +30,11 @@ https://github.com/MicrosoftDocs/pipelines-xamarin
 
 The sample code includes an `azure-pipelines.yml` file at the root of the repository. You can use this file to build the app.
 
-Follow all the instructions in [Create your first pipeline](../get-started-yaml.md) to create a build pipeline for the sample app.
+Follow all the instructions in [Create your first pipeline](../create-first-pipeline.md) to create a build pipeline for the sample app.
 
 ## Build environment
 
-You can use Azure Pipelines to build your Xamarin apps without needing to set up any infrastructure of your own. Xamarin tools are preinstalled on [Microsoft-hosted agents](../agents/hosted.md) in Azure Pipelines. You can use macOS or Windows agents to run Xamarin.Android builds, and macOS agents to run Xamarin.iOS builds.
+You can use Azure Pipelines to build your Xamarin apps without needing to set up any infrastructure of your own. Xamarin tools are preinstalled on [Microsoft-hosted agents](../agents/hosted.md) in Azure Pipelines. You can use macOS or Windows agents to run Xamarin.Android builds, and macOS agents to run Xamarin.iOS builds. If you are using a self-hosted agent, you must install [Visual Studio Tools for Xamarin](https://visualstudio.microsoft.com/xamarin/) for Windows agents or [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/) for macOS agents.
 
 For the exact versions of Xamarin that are preinstalled, refer to [Microsoft-hosted agents](../agents/hosted.md#software).
 
@@ -69,6 +69,10 @@ steps:
     configuration: '$(buildConfiguration)'
 ```
 
+### Sign a Xamarin.Android app
+
+See [Sign your mobile app during CI](../apps/mobile/app-signing.md) for information about signing your app.
+
 ### Next steps
 
 See [Android](android.md) guidance for information about:
@@ -91,15 +95,31 @@ variables:
 steps:
 - task: XamariniOS@2
   inputs:
-    solutionFile: '**/*.sln'
+    solutionFile: '**/*iOS.csproj'
     configuration: '$(buildConfiguration)'
     packageApp: false
     buildForSimulator: true
 ```
 
+### Sign and provision a Xamarin.iOS app
+
+To sign and provision a Xamarin.iOS app, set `packageApp` to `true` and specify a signing identity and provisioning profile ID:
+
+```yaml
+- task: XamariniOS@2
+    inputs:
+      solutionFile: '**/*iOS.csproj'
+      configuration: 'AppStore'
+      packageApp: true
+      signingIdentity: 'iPhone Developer: Chris Sidi (7RZ3N927YF)'
+      signingProvisioningProfileID: 'iOS Team Provisioning Profile: com.hashtagchris.*'
+```
+
+See [Sign your mobile app during CI](../apps/mobile/app-signing.md) for more information about signing and provisioning your app.
+
 ### Set the Xamarin SDK version on macOS
 
-To set a specific Xamarin SDK version to use on the Microsoft-hosted macOS agent pool, add the following snippet before the `XamariniOS` task in your `azure-piplines.yml` file. For details on properly formatting the version number (shown as **5_4_1** below), see [How can I manually select versions of tools on the Hosted macOS agent?](../agents/hosted.md#how-can-i-manually-select-versions-of-tools-on-the-hosted-macos-agent).
+To set a specific Xamarin SDK version to use on the Microsoft-hosted macOS agent pool, add the following snippet before the `XamariniOS` task in your `azure-pipelines.yml` file. For details on properly formatting the version number (shown as **5_4_1** below), see [How can I manually select versions of tools on the Hosted macOS agent?](../agents/hosted.md#how-can-i-manually-select-versions-of-tools-on-the-hosted-macos-agent).
 
 ```yaml
 - script: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_4_1
@@ -142,7 +162,7 @@ jobs:
       restoreSolution: '**/*.sln'
   - task: XamariniOS@2
     inputs:
-      solutionFile: '**/*.sln'
+      solutionFile: '**/*iOS.csproj'
       configuration: '$(buildConfiguration)'
       buildForSimulator: true
       packageApp: false
@@ -156,5 +176,3 @@ See [Xcode](xcode.md) guidance for information about:
 * Retaining build artifacts with the build record
 * Distributing through App Center
 * Distributing through the Apple App Store
-
-See [Sign your mobile app during CI](../apps/mobile/app-signing.md) for information about signing and provisioning your app.

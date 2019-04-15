@@ -1,8 +1,118 @@
 {
   "redirections": [
     {
+      "source_path": "docs/integrate/ide/extensions/overview.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/samples.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/sdk.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/develop_extensions/add_new_language.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/develop_extensions/add_tool_window.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/develop_extensions/customize_template.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/develop_extensions/extend_editor.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/develop_extensions/extend_ui.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/develop_extensions/unlisted.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/help/gitter.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/help/help.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/help/msdn.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/publish_extensions/other_resources.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/publish_extensions/publish.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/integrate/ide/extensions/hello_world.md",
+      "redirect_url": "/visualstudio/extensibility/shipping-visual-studio-extensions",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/extend/test/discover-menu-group-ids.md",
       "redirect_url": "/azure/devops/extend/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/packages/maven.md",
+      "redirect_url": "/azure/devops/pipelines/artifacts/maven",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/symbols/index.md",
+      "redirect_url": "/azure/devops/pipelines/artifacts/symbols",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/targets/nuget.md",
+      "redirect_url": "/azure/devops/pipelines/artifacts/nuget",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/targets/pypi.md",
+      "redirect_url": "/azure/devops/pipelines/artifacts/pypi",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/targets/universal-packages.md",
+      "redirect_url": "/azure/devops/pipelines/artifacts/universal-packages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/targets/npm.md",
+      "redirect_url": "/azure/devops/pipelines/artifacts/npm",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/build/artifacts.md",
+      "redirect_url": "/azure/devops/pipelines/artifacts/artifacts-overview",
       "redirect_document_id": true
     },
     {
@@ -82,8 +192,8 @@
     },
     {
       "source_path": "docs/package/vsts-package-badges.md",
-      "redirect_url": "/azure/devops/artifacts/vsts-package-badges",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/artifacts/package-badges",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/package/concepts/best-practices.md",
@@ -122,13 +232,13 @@
     },
     {
       "source_path": "docs/package/feeds/create-feed.md",
-      "redirect_url": "/azure/devops/artifacts/feeds/create-feed",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/artifacts",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/package/feeds/edit-feed.md",
-      "redirect_url": "/azure/devops/artifacts/feeds/edit-feed",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/artifacts",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/package/feeds/feed-permissions.md",
@@ -162,8 +272,8 @@
     },
     {
       "source_path": "docs/package/how-to/retention-policies.md",
-      "redirect_url": "/azure/devops/artifacts/how-to/retention-policies",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/artifacts/how-to/delete-and-recover-packages",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/package/how-to/set-up-upstream-sources.md",
@@ -172,8 +282,8 @@
     },
     {
       "source_path": "docs/package/maven/delete-artifact.md",
-      "redirect_url": "/azure/devops/artifacts/maven/delete-artifact",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/artifacts/concepts/deleted-packages",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/package/maven/install.md",
@@ -192,8 +302,8 @@
     },
     {
       "source_path": "docs/package/npm/deprecate-unpublish.md",
-      "redirect_url": "/azure/devops/artifacts/npm/deprecate-unpublish",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/artifacts/concepts/deleted-packages",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/package/npm/npmrc.md",
@@ -252,8 +362,8 @@
     },
     {
       "source_path": "docs/package/nuget/unlist-delete.md",
-      "redirect_url": "/azure/devops/artifacts/nuget/unlist-delete",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/artifacts/concepts/deleted-packages",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/package/nuget/upstream-sources.md",
@@ -347,442 +457,442 @@
     },
     {
       "source_path": "docs/tfs-server/admin/service-account-dependencies-tfs.md",
-      "redirect_url": "/tfs/server/admin/service-accounts-dependencies-tfs",
+      "redirect_url": "/azure/devops/server/admin/service-accounts-dependencies-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/config-tfs-resources.md",
-      "redirect_url": "/tfs/server/admin/config-tfs-resources",
+      "redirect_url": "/azure/devops/server/admin/config-tfs-resources",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/collection-upgrade-failure.md",
-      "redirect_url": "/tfs/server/troubleshooting/collection-upgrade-failure",
+      "redirect_url": "/azure/devops/server/troubleshooting/collection-upgrade-failure",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/tfs-2005-to-2015.md",
-      "redirect_url": "/tfs/server/upgrade/tfs-2005-to-2015",
+      "redirect_url": "/azure/devops/server/upgrade/tfs-2005-to-2015",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/run-upgrade-wizard.md",
-      "redirect_url": "/tfs/server/upgrade/run-upgrade-wizard",
+      "redirect_url": "/azure/devops/server/upgrade/run-upgrade-wizard",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/upgrade-2013/backup-and-restore-data.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/backup-and-restore-data",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/backup-and-restore-data",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/upgrade-2013/use-same-sharepoint-site.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/use-same-sharepoint-site",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/use-same-sharepoint-site",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/upgrade-2013/setup-sql-server.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/setup-sql-server",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/setup-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/upgrade-2013/same-app-tier-hardware.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/same-app-tier-hardware",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/same-app-tier-hardware",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/upgrade-2013/new-app-tier-hardware.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/new-app-tier-hardware",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/new-app-tier-hardware",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/upgrade-2013/upgrade-2013-requirements.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/upgrade-2013-requirements",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/upgrade-2013-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/create-tfs-farm.md",
-      "redirect_url": "/tfs/server/install/create-tfs-farm",
+      "redirect_url": "/azure/devops/server/install/create-tfs-farm",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/install-2013/config-tfs-advanced.md",
-      "redirect_url": "/tfs/server/install/install-2013/config-tfs-advanced",
+      "redirect_url": "/azure/devops/server/install/install-2013/config-tfs-advanced",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/install-2013/config-tfs-standard.md",
-      "redirect_url": "/tfs/server/install/install-2013/config-tfs-standard",
+      "redirect_url": "/azure/devops/server/install/install-2013/config-tfs-standard",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/install-2013/config-tfs-basic.md",
-      "redirect_url": "/tfs/server/install/install-2013/config-tfs-basic",
+      "redirect_url": "/azure/devops/server/install/install-2013/config-tfs-basic",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/install-2013/install-tfs.md",
-      "redirect_url": "/tfs/server/install/install-2013/install-tfs",
+      "redirect_url": "/azure/devops/server/install/install-2013/install-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/change-deployment.md",
-      "redirect_url": "/tfs/server/admin/change-deployment",
+      "redirect_url": "/azure/devops/server/admin/change-deployment",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/config-ent-sharepoint0710-dashboards.md",
-      "redirect_url": "/tfs/server/admin/config-ent-sharepoint0710-dashboards",
+      "redirect_url": "/azure/devops/server/admin/config-ent-sharepoint0710-dashboards",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/modify-remove-access-sharepoint-tfs.md",
-      "redirect_url": "/tfs/server/admin/modify-remove-access-shareport-tfs",
+      "redirect_url": "/azure/devops/server/admin/modify-remove-access-shareport-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/add-sharepoint-to-tfs.md",
-      "redirect_url": "/tfs/server/admin/add-sharepoint-to-tfs",
+      "redirect_url": "/azure/devops/server/admin/add-sharepoint-to-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/sharepoint/move-sharepoint-new-hardware.md",
-      "redirect_url": "/tfs/server/install/sharepoint/move-sharepoint-new-hardware",
+      "redirect_url": "/azure/devops/server/install/sharepoint/move-sharepoint-new-hardware",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/sharepoint/verify-sharepoint.md",
-      "redirect_url": "/tfs/server/install/sharepoint/verify-sharepoint",
+      "redirect_url": "/azure/devops/server/install/sharepoint/verify-sharepoint",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/sharepoint/setup-remote-sharepoint.md",
-      "redirect_url": "/tfs/server/install/sharepoint/setup-remote-sharepoint",
+      "redirect_url": "/azure/devops/server/install/sharepoint/setup-remote-sharepoint",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/sharepoint/install-sharepoint.md",
-      "redirect_url": "/tfs/server/install/sharepoint/install-sharepoint",
+      "redirect_url": "/azure/devops/server/install/sharepoint/install-sharepoint",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/sharepoint/config-enterprise-app-def.md",
-      "redirect_url": "/tfs/server/install/sharepoint/config-enterprise-app-def",
+      "redirect_url": "/azure/devops/server/install/sharepoint/config-enterprise-app-def",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/command-line/tfsservicecontrol-cmd.md",
-      "redirect_url": "/tfs/server/ref/command-line/tfsservicecontrol-cmd",
+      "redirect_url": "/azure/devops/server/ref/command-line/tfsservicecontrol-cmd",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/command-line/tfs-labconfig-cmd.md",
-      "redirect_url": "/tfs/server/ref/command-line/tfslabconfig-cmd",
+      "redirect_url": "/azure/devops/server/ref/command-line/tfslabconfig-cmd",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/command-line/tfsdeleteproject-cmd.md",
-      "redirect_url": "/tfs/server/ref/command-line/tfsdeleteproject-cmd",
+      "redirect_url": "/azure/devops/server/ref/command-line/tfsdeleteproject-cmd",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/command-line/tfssecurity-cmd.md",
-      "redirect_url": "/tfs/server/ref/command-line/tfssecurity-cmd",
+      "redirect_url": "/azure/devops/server/ref/command-line/tfssecurity-cmd",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/command-line/tfsconfig-cmd.md",
-      "redirect_url": "/tfs/server/ref/command-line/tfsconfig-cmd",
+      "redirect_url": "/azure/devops/server/ref/command-line/tfsconfig-cmd",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/architecture/required-ports.md",
-      "redirect_url": "/tfs/server/architecture/required-ports",
+      "redirect_url": "/azure/devops/server/architecture/required-ports",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/setup-secure-sockets-layer.md",
-      "redirect_url": "/tfs/server/admin/setup-secure-sockets-layer",
+      "redirect_url": "/azure/devops/server/admin/setup-secure-sockets-layer",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/change-caching-app-tier.md",
-      "redirect_url": "/tfs/server/admin/change-caching-app-tier",
+      "redirect_url": "/azure/devops/server/admin/change-caching-app-tier",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/manage-file-types.md",
-      "redirect_url": "/tfs/server/admin/manage-file-types",
+      "redirect_url": "/azure/devops/server/admin/manage-file-types",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/config-lab/scvmm-envs.md",
-      "redirect_url": "/tfs/server/admin/config-lab-scvmm-envs",
+      "redirect_url": "/azure/devops/server/admin/config-lab-scvmm-envs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/stop-start-stuff.md",
-      "redirect_url": "/tfs/server/admin/stop-start-stuff",
+      "redirect_url": "/azure/devops/server/admin/stop-start-stuff",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/change-service-account-or-password-sql-reporting.md",
-      "redirect_url": "/tfs/server/admin/change-service-account-or-password-sql-reporting",
+      "redirect_url": "/azure/devops/server/admin/change-service-account-or-password-sql-reporting",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/change-service-account-password.md",
-      "redirect_url": "/tfs/server/admin/change-service-account-password",
+      "redirect_url": "/azure/devops/server/admin/change-service-account-password",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/add-administrator-tfs.md",
-      "redirect_url": "/tfs/server/admin/add-administrator-tfs",
+      "redirect_url": "/azure/devops/server/admin/add-administrator-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/setup-ad-groups.md",
-      "redirect_url": "/tfs/server/admin/setup-ad-groups",
+      "redirect_url": "/azure/devops/server/admin/setup-ad-groups",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/split-team-project-collections.md",
-      "redirect_url": "/tfs/server/admin/split-team-project-collection",
+      "redirect_url": "/azure/devops/server/admin/split-team-project-collection",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/move-project-collection.md",
-      "redirect_url": "/tfs/server/admin/move-project-collection",
+      "redirect_url": "/azure/devops/server/admin/move-project-collection",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/manage-team-project-collections.md",
-      "redirect_url": "/tfs/server/admin/manage-team-project-collections",
+      "redirect_url": "/azure/devops/server/admin/manage-team-project-collections",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/command-line/open-admin-console.md",
-      "redirect_url": "/tfs/server/ref/command-line/open-admin-console",
+      "redirect_url": "/azure/devops/server/ref/command-line/open-admin-console",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/move-across-domains.md",
-      "redirect_url": "/tfs/server/admin/move-across-domains",
+      "redirect_url": "/azure/devops/server/admin/move-across-domains",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/rebuild-client-cache.md",
-      "redirect_url": "/tfs/server/admin/rebuild-client-cache",
+      "redirect_url": "/azure/devops/server/admin/rebuild-client-cache",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/move-clone-hardware.md",
-      "redirect_url": "/tfs/server/admin/move-clone-hardware",
+      "redirect_url": "/azure/devops/server/admin/move-clone-hardware",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/tut-single-svr-reconn-svcs-users.md",
-      "redirect_url": "/tfs/server/admin/backup/tut-single-svr-reconn-svcs-users",
+      "redirect_url": "/azure/devops/server/admin/backup/tut-single-svr-reconn-svcs-users",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/tut-single-svr-install-config-tfs.md",
-      "redirect_url": "/tfs/server/admin/backup/tut-single-svr-install-config-tfs",
+      "redirect_url": "/azure/devops/server/admin/backup/tut-single-svr-install-config-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/tut-single-svr-restore-dbs.md",
-      "redirect_url": "/tfs/server/admin/backup/tut-single-svr-restore-dbs",
+      "redirect_url": "/azure/devops/server/admin/backup/tut-single-svr-restore-dbs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/tut-single-svr-prep-new-hw.md",
-      "redirect_url": "/tfs/server/admin/backup/tut-single-svr-prep-new-hw",
+      "redirect_url": "/azure/devops/server/admin/backup/tut-single-svr-prep-new-hw",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/tut-single-svr-home.md",
-      "redirect_url": "/tfs/server/admin/backup/tut-single-svr-home",
+      "redirect_url": "/azure/devops/server/admin/backup/tut-single-svr-home",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/config-backup-sched-plan.md",
-      "redirect_url": "/tfs/server/admin/backup/config-backup-sched-plan",
+      "redirect_url": "/azure/devops/server/admin/backup/config-backup-sched-plan",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/restore-lab-management-components.md",
-      "redirect_url": "/tfs/server/admin/backup/restore-lab-management-components",
+      "redirect_url": "/azure/devops/server/admin/backup/restore-lab-management-components",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/restore-data-different-instance.md",
-      "redirect_url": "/tfs/server/admin/backup/restore-data-different-instance",
+      "redirect_url": "/azure/devops/server/admin/backup/restore-data-different-instance",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/restore-application-tier-server.md",
-      "redirect_url": "/tfs/server/admin/backup/restore-application-tier-server",
+      "redirect_url": "/azure/devops/server/admin/backup/restore-application-tier-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/refresh-data-caches.md",
-      "redirect_url": "/tfs/server/admin/backup/refresh-data-caches",
+      "redirect_url": "/azure/devops/server/admin/backup/refresh-data-caches",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/manually-backup-tfs.md",
-      "redirect_url": "/tfs/server/admin/backup/manually-backup-tfs",
+      "redirect_url": "/azure/devops/server/admin/backup/manually-backup-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/backup-db-architecture.md",
-      "redirect_url": "/tfs/server/admin/backup/backup-db-architecture",
+      "redirect_url": "/azure/devops/server/admin/backup/backup-db-architecture",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/admin/backup/back-up-restore-tfs.md",
-      "redirect_url": "/tfs/server/admin/backup/back-up-restore-tfs",
+      "redirect_url": "/azure/devops/server/admin/backup/back-up-restore-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/walkthrough.md",
-      "redirect_url": "/tfs/server/upgrade/walkthrough",
+      "redirect_url": "/azure/devops/server/upgrade/walkthrough",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/express.md",
-      "redirect_url": "/tfs/server/upgrade/express",
+      "redirect_url": "/azure/devops/server/upgrade/express",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/change-product-key.md",
-      "redirect_url": "/tfs/server/upgrade/change-product-key",
+      "redirect_url": "/azure/devops/server/upgrade/change-product-key",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/pre-production.md",
-      "redirect_url": "/tfs/server/upgrade/pre-production",
+      "redirect_url": "/azure/devops/server/upgrade/pre-production",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/pre-upgrade.md",
-      "redirect_url": "/tfs/server/upgrade/pre-upgrade",
+      "redirect_url": "/azure/devops/server/upgrade/pre-upgrade",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/clean-up-data.md",
-      "redirect_url": "/tfs/server/upgrade/clean-up-data",
+      "redirect_url": "/azure/devops/server/upgrade/clean-up-data",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/get-started.md",
-      "redirect_url": "/tfs/server/upgrade/get-started",
+      "redirect_url": "/azure/devops/server/upgrade/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/install-2013/add-tfs-svc-acct-report-svr.md",
-      "redirect_url": "/tfs/server/install/install-2013/add-tfs-svc-acct-report-svr",
+      "redirect_url": "/azure/devops/server/install/install-2013/add-tfs-svc-acct-report-svr",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/sql-server/use-always-on-groups.md",
-      "redirect_url": "/tfs/server/install/sql-server/use-always-on-groups",
+      "redirect_url": "/azure/devops/server/install/sql-server/use-always-on-groups",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/sql-server/reporting-service-roles.md",
-      "redirect_url": "/tfs/server/install/sql-server/reporting-services-roles",
+      "redirect_url": "/azure/devops/server/install/sql-server/reporting-services-roles",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/sql-server/collation-requirements.md",
-      "redirect_url": "/tfs/server/install/sql-server/collation-requirements",
+      "redirect_url": "/azure/devops/server/install/sql-server/collation-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/sql-server/install-sql-server.md",
-      "redirect_url": "/tfs/server/install/sql-server/install-sql-server",
+      "redirect_url": "/azure/devops/server/install/sql-server/install-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/install-proxy-setup-remote.md",
-      "redirect_url": "/tfs/server/install/install-proxy-setup-remote",
+      "redirect_url": "/azure/devops/server/install/install-proxy-setup-remote",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/multiple-server.md",
-      "redirect_url": "/tfs/server/install/multiple-server",
+      "redirect_url": "/azure/devops/server/install/multiple-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/dual-server.md",
-      "redirect_url": "/tfs/server/install/dual-server",
+      "redirect_url": "/azure/devops/server/install/dual-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/single-server.md",
-      "redirect_url": "/tfs/server/install/single-server",
+      "redirect_url": "/azure/devops/server/install/single-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install/get-started.md",
-      "redirect_url": "/tfs/server/install/get-started",
+      "redirect_url": "/azure/devops/server/install/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/background-job-agent.md",
-      "redirect_url": "/tfs/server/architecture/background-job-agent",
+      "redirect_url": "/azure/devops/server/architecture/background-job-agent",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/sql-server-databases.md",
-      "redirect_url": "/tfs/server/architecture/sql-server-databases",
+      "redirect_url": "/azure/devops/server/architecture/sql-server-databases",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/examples-complex-topo.md",
-      "redirect_url": "/tfs/server/architecture/examples-complex-topo",
+      "redirect_url": "/azure/devops/server/architecture/examples-complex-topo",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/examples-moderate-topo.md",
-      "redirect_url": "/tfs/server/architecture/examples-moderate-topo",
+      "redirect_url": "/azure/devops/server/architecture/examples-moderate-topo",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/examples-simple-topo.md",
-      "redirect_url": "/tfs/server/architecture/examples-simple-topo",
+      "redirect_url": "/azure/devops/server/architecture/examples-simple-topo",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/upgrade.md",
-      "redirect_url": "/tfs/server/upgrade/get-started",
+      "redirect_url": "/azure/devops/server/upgrade/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade/tfs-concepts.md",
-      "redirect_url": "/tfs/server/architecture/tfs-concepts",
+      "redirect_url": "/azure/devops/server/architecture/tfs-concepts",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/requirement-changes-tfs16.md",
-      "redirect_url": "/tfs/server/compatibility",
+      "redirect_url": "/azure/devops/server/compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/requirement-changes-tfs15.md",
-      "redirect_url": "/tfs/server/compatibility",
+      "redirect_url": "/azure/devops/server/compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/requirements.md",
-      "redirect_url": "/tfs/server/requirements",
+      "redirect_url": "/azure/devops/server/requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/whats-new.md",
-      "redirect_url": "/tfs/server/whats-new",
+      "redirect_url": "/azure/devops/server/whats-new",
       "redirect_document_id": false
     },
     {
@@ -792,7 +902,7 @@
     },
     {
       "source_path": "docs/package/nuget/remove.md",
-      "redirect_url": "/azure/devops/artifacts/nuget/unlist-delete",
+      "redirect_url": "/azure/devops/artifacts/concepts/deleted-packages",
       "redirect_document_id": false
     },
     {
@@ -912,7 +1022,7 @@
     },
     {
       "source_path": "docs/accounts/requirements.md",
-      "redirect_url": "/tfs/server/requirements",
+      "redirect_url": "/azure/devops/server/requirements",
       "redirect_document_id": false
     },
     {
@@ -932,12 +1042,12 @@
     },
     {
       "source_path": "docs/articles/devopsmsft/overview.md",
-      "redirect_url": "/azure/devops/",
+      "redirect_url": "/azure/devops/learn",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/articles/adopting-vsts.md",
-      "redirect_url": "/azure/devops/articles/migrate-to-vsts-from-tfs",
+      "redirect_url": "/azure/devops/migrate/migrate-from-tfs",
       "redirect_document_id": false
     },
     {
@@ -1007,7 +1117,7 @@
     },
     {
       "source_path": "docs/build/define/repository.md",
-      "redirect_url": "/azure/devops/pipelines/build/repository",
+      "redirect_url": "/azure/devops/pipelines/repos/index",
       "redirect_document_id": false
     },
     {
@@ -1102,7 +1212,7 @@
     },
     {
       "source_path": "docs/setup-admin/clean-up-data.md",
-      "redirect_url": "/tfs/server/upgrade/clean-up-data",
+      "redirect_url": "/azure/devops/server/upgrade/clean-up-data",
       "redirect_document_id": false
     },
     {
@@ -1137,7 +1247,7 @@
     },
     {
       "source_path": "docs/setup-admin/requirements.md",
-      "redirect_url": "/tfs/server/requirements",
+      "redirect_url": "/azure/devops/server/requirements",
       "redirect_document_id": false
     },
     {
@@ -1176,7 +1286,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/setup-admin/team-services/change-application-access-policies-vs.md",
+      "source_path": "docs/setup-admin/team-services/change-application-policies-vs.md",
       "redirect_url": "/azure/devops/organizations/accounts/change-application-access-policies",
       "redirect_document_id": false
     },
@@ -1227,7 +1337,12 @@
     },
     {
       "source_path": "docs/setup-admin/websitesettings.md",
-      "redirect_url": "/azure/devops/organizations/security/websitesettings",
+      "redirect_url": "/azure/devops/server/admin/websitesettings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/organizations/security/websitesettings.md",
+      "redirect_url": "/azure/devops/server/admin/websitesettings",
       "redirect_document_id": false
     },
     {
@@ -1402,7 +1517,7 @@
     },
     {
       "source_path": "docs/build-release/github/index.md",
-      "redirect_url": "/azure/devops/pipelines/build/repository",
+      "redirect_url": "/azure/devops/pipelines/repos/index",
       "redirect_document_id": false
     },
     {
@@ -1457,62 +1572,62 @@
     },
     {
       "source_path": "docs/tfs-server/install-tfs/dual-server.md",
-      "redirect_url": "/tfs/server/install/dual-server",
+      "redirect_url": "/azure/devops/server/install/dual-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install-tfs/get-started.md",
-      "redirect_url": "/tfs/server/install/get-started",
+      "redirect_url": "/azure/devops/server/install/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install-tfs/overview.md",
-      "redirect_url": "/tfs/server/install/get-started",
+      "redirect_url": "/azure/devops/server/install/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install-tfs/multiple-server.md",
-      "redirect_url": "/tfs/server/install/multiple-server",
+      "redirect_url": "/azure/devops/server/install/multiple-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/install-tfs/single-server.md",
-      "redirect_url": "/tfs/server/install/single-server",
+      "redirect_url": "/azure/devops/server/install/single-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade-tfs/express.md",
-      "redirect_url": "/tfs/server/upgrade/express",
+      "redirect_url": "/azure/devops/server/upgrade/express",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade-tfs/get-started.md",
-      "redirect_url": "/tfs/server/upgrade/get-started",
+      "redirect_url": "/azure/devops/server/upgrade/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade-tfs/upgrade.md",
-      "redirect_url": "/tfs/server/upgrade/get-started",
+      "redirect_url": "/azure/devops/server/upgrade/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade-tfs/pre-production.md",
-      "redirect_url": "/tfs/server/upgrade/pre-production",
+      "redirect_url": "/azure/devops/server/upgrade/pre-production",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade-tfs/pre-upgrade.md",
-      "redirect_url": "/tfs/server/upgrade/pre-upgrade",
+      "redirect_url": "/azure/devops/server/upgrade/pre-upgrade",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade-tfs/tfs-2005-to-2015.md",
-      "redirect_url": "/tfs/server/upgrade/tfs-2005-to-2015",
+      "redirect_url": "/azure/devops/server/upgrade/tfs-2005-to-2015",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/upgrade-tfs/walkthrough.md",
-      "redirect_url": "/tfs/server/upgrade/walkthrough",
+      "redirect_url": "/azure/devops/server/upgrade/walkthrough",
       "redirect_document_id": false
     },
     {
@@ -1717,7 +1832,7 @@
     },
     {
       "source_path": "docs/build-release/define/repository.md",
-      "redirect_url": "/azure/devops/pipelines/build/repository",
+      "redirect_url": "/azure/devops/pipelines/repos/index",
       "redirect_document_id": false
     },
     {
@@ -1812,17 +1927,17 @@
     },
     {
       "source_path": "docs/collaborate/campfire.md",
-      "redirect_url": "/azure/devops/service-hooks/services/campfire",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/collaborate/flowdock.md",
-      "redirect_url": "/azure/devops/service-hooks/services/flowdock",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/collaborate/hipchat.md",
-      "redirect_url": "/azure/devops/service-hooks/services/hipchat",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
@@ -1977,7 +2092,7 @@
     },
     {
       "source_path": "docs/marketplace/get-vsts-extensions.md",
-      "redirect_url": "/azure/devops/marketplace/install-vsts-extension",
+      "redirect_url": "/azure/devops/marketplace/install-extension",
       "redirect_document_id": false
     },
     {
@@ -2037,7 +2152,7 @@
     },
     {
       "source_path": "docs/package/get-started/feeds/create-feed.md",
-      "redirect_url": "/azure/devops/artifacts/feeds/create-feed",
+      "redirect_url": "/azure/devops/artifacts",
       "redirect_document_id": false
     },
     {
@@ -2082,7 +2197,7 @@
     },
     {
       "source_path": "docs/package/get-started/nuget/remove.md",
-      "redirect_url": "/azure/devops/artifacts/nuget/unlist-delete",
+      "redirect_url": "/azure/devops/artifacts/concepts/deleted-packages",
       "redirect_document_id": false
     },
     {
@@ -2102,7 +2217,7 @@
     },
     {
       "source_path": "docs/reference/overview.md",
-      "redirect_url": "/azure/devops/index#pivot=services&panel=admin",
+      "redirect_url": "/azure/devops/organizations/index",
       "redirect_document_id": false
     },
     {
@@ -2132,7 +2247,7 @@
     },
     {
       "source_path": "docs/tfs-server/clean-up-data.md",
-      "redirect_url": "/tfs/server/upgrade/clean-up-data",
+      "redirect_url": "/azure/devops/server/upgrade/clean-up-data",
       "redirect_document_id": false
     },
     {
@@ -2147,7 +2262,7 @@
     },
     {
       "source_path": "docs/tfs-server/get-started.md",
-      "redirect_url": "/tfs/server/index",
+      "redirect_url": "/azure/devops/server/index",
       "redirect_document_id": false
     },
     {
@@ -2157,7 +2272,7 @@
     },
     {
       "source_path": "docs/tfs-server/overview.md",
-      "redirect_url": "/tfs/server/admin/config-tfs-resources",
+      "redirect_url": "/azure/devops/server/admin/config-tfs-resources",
       "redirect_document_id": false
     },
     {
@@ -2322,7 +2437,7 @@
     },
     {
       "source_path": "docs/tfs-server/team-services/try-additional-features-vs.md",
-      "redirect_url": "/azure/devops/marketplace/install-vsts-extension",
+      "redirect_url": "/azure/devops/marketplace/install-extension",
       "redirect_document_id": false
     },
     {
@@ -2332,87 +2447,87 @@
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/add-sharepoint-to-tfs.md",
-      "redirect_url": "/tfs/server/admin/add-sharepoint-to-tfs",
+      "redirect_url": "/azure/devops/server/admin/add-sharepoint-to-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/backup-db-upgrade.md",
-      "redirect_url": "/tfs/server/admin/backup/back-up-restore-tfs",
+      "redirect_url": "/azure/devops/server/admin/backup/back-up-restore-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/back-up-restore-tfs.md",
-      "redirect_url": "/tfs/server/admin/backup/back-up-restore-tfs",
+      "redirect_url": "/azure/devops/server/admin/backup/back-up-restore-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/config-backup-sched-plan.md",
-      "redirect_url": "/tfs/server/admin/backup/config-backup-sched-plan",
+      "redirect_url": "/azure/devops/server/admin/backup/config-backup-sched-plan",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/manually-backup-tfs.md",
-      "redirect_url": "/tfs/server/admin/backup/manually-backup-tfs",
+      "redirect_url": "/azure/devops/server/admin/backup/manually-backup-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/refresh-data-caches.md",
-      "redirect_url": "/tfs/server/admin/backup/refresh-data-caches",
+      "redirect_url": "/azure/devops/server/admin/backup/refresh-data-caches",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/restore-application-tier-server.md",
-      "redirect_url": "/tfs/server/admin/backup/restore-application-tier-server",
+      "redirect_url": "/azure/devops/server/admin/backup/restore-application-tier-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/restore-data-different-instance.md",
-      "redirect_url": "/tfs/server/admin/backup/restore-data-different-instance",
+      "redirect_url": "/azure/devops/server/admin/backup/restore-data-different-instance",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/restore-data-same-location.md",
-      "redirect_url": "/tfs/server/admin/backup/restore-data-same-location",
+      "redirect_url": "/azure/devops/server/admin/backup/restore-data-same-location",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/restore-lab-management-components.md",
-      "redirect_url": "/tfs/server/admin/backup/restore-lab-management-components",
+      "redirect_url": "/azure/devops/server/admin/backup/restore-lab-management-components",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/tut-single-svr-home.md",
-      "redirect_url": "/tfs/server/admin/backup/tut-single-svr-home",
+      "redirect_url": "/azure/devops/server/admin/backup/tut-single-svr-home",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/tut-single-svr-install-config-tfs.md",
-      "redirect_url": "/tfs/server/admin/backup/tut-single-svr-install-config-tfs",
+      "redirect_url": "/azure/devops/server/admin/backup/tut-single-svr-install-config-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/tut-single-svr-prep-new-hw.md",
-      "redirect_url": "/tfs/server/admin/backup/tut-single-svr-prep-new-hw",
+      "redirect_url": "/azure/devops/server/admin/backup/tut-single-svr-prep-new-hw",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/.md",
-      "redirect_url": "/tfs/server/admin/config-tfs-resources",
+      "redirect_url": "/azure/devops/server/admin/config-tfs-resources",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/backup/tut-single-svr-restore-dbs.md",
-      "redirect_url": "/tfs/server/admin/backup/tut-single-svr-restore-dbs",
+      "redirect_url": "/azure/devops/server/admin/backup/tut-single-svr-restore-dbs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/change-caching-app-tier.md",
-      "redirect_url": "/tfs/server/admin/change-caching-app-tier",
+      "redirect_url": "/azure/devops/server/admin/change-caching-app-tier",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/change-deployment.md",
-      "redirect_url": "/tfs/server/admin/change-deployment",
+      "redirect_url": "/azure/devops/server/admin/change-deployment",
       "redirect_document_id": false
     },
     {
@@ -2422,72 +2537,72 @@
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/change-service-account-or-password-sql-reporting.md",
-      "redirect_url": "/tfs/server/admin/change-service-account-or-password-sql-reporting",
+      "redirect_url": "/azure/devops/server/admin/change-service-account-or-password-sql-reporting",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/change-service-account-password.md",
-      "redirect_url": "/tfs/server/admin/change-service-account-password",
+      "redirect_url": "/azure/devops/server/admin/change-service-account-password",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/config-ent-sharepoint0710-dashboards.md",
-      "redirect_url": "/tfs/server/admin/config-ent-sharepoint0710-dashboards",
+      "redirect_url": "/azure/devops/server/admin/config-ent-sharepoint0710-dashboards",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/config-lab-scvmm-envs.md",
-      "redirect_url": "/tfs/server/admin/config-lab-scvmm-envs",
+      "redirect_url": "/azure/devops/server/admin/config-lab-scvmm-envs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/config-tfs-resources.md",
-      "redirect_url": "/tfs/server/admin/config-tfs-resources",
+      "redirect_url": "/azure/devops/server/admin/config-tfs-resources",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/manage-file-types.md",
-      "redirect_url": "/tfs/server/admin/manage-file-types",
+      "redirect_url": "/azure/devops/server/admin/manage-file-types",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/manage-team-project-collections.md",
-      "redirect_url": "/tfs/server/admin/manage-team-project-collections",
+      "redirect_url": "/azure/devops/server/admin/manage-team-project-collections",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/modify-remove-access-shareport-tfs.md",
-      "redirect_url": "/tfs/server/admin/modify-remove-access-shareport-tfs",
+      "redirect_url": "/azure/devops/server/admin/modify-remove-access-shareport-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/move-across-domains.md",
-      "redirect_url": "/tfs/server/admin/move-across-domains",
+      "redirect_url": "/azure/devops/server/admin/move-across-domains",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/move-clone-hardware.md",
-      "redirect_url": "/tfs/server/admin/move-clone-hardware",
+      "redirect_url": "/azure/devops/server/admin/move-clone-hardware",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/move-project-collection.md",
-      "redirect_url": "/tfs/server/admin/move-project-collection",
+      "redirect_url": "/azure/devops/server/admin/move-project-collection",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/rebuild-client-cache.md",
-      "redirect_url": "/tfs/server/admin/rebuild-client-cache",
+      "redirect_url": "/azure/devops/server/admin/rebuild-client-cache",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/service-accounts-dependencies-tfs.md",
-      "redirect_url": "/tfs/server/admin/service-accounts-dependencies-tfs",
+      "redirect_url": "/azure/devops/server/admin/service-accounts-dependencies-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/setup-ad-groups.md",
-      "redirect_url": "/tfs/server/admin/setup-ad-groups",
+      "redirect_url": "/azure/devops/server/admin/setup-ad-groups",
       "redirect_document_id": false
     },
     {
@@ -2497,267 +2612,267 @@
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/setup-secure-sockets-layer.md",
-      "redirect_url": "/tfs/server/admin/setup-secure-sockets-layer",
+      "redirect_url": "/azure/devops/server/admin/setup-secure-sockets-layer",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/split-team-project-collection.md",
-      "redirect_url": "/tfs/server/admin/split-team-project-collection",
+      "redirect_url": "/azure/devops/server/admin/split-team-project-collection",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/admin/stop-start-stuff.md",
-      "redirect_url": "/tfs/server/admin/stop-start-stuff",
+      "redirect_url": "/azure/devops/server/admin/stop-start-stuff",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/upgrade.md",
-      "redirect_url": "/tfs/server/upgrade/get-started",
+      "redirect_url": "/azure/devops/server/upgrade/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/background-job-agent.md",
-      "redirect_url": "/tfs/server/architecture/background-job-agent",
+      "redirect_url": "/azure/devops/server/architecture/background-job-agent",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/examples-complex-topo.md",
-      "redirect_url": "/tfs/server/architecture/examples-complex-topo",
+      "redirect_url": "/azure/devops/server/architecture/examples-complex-topo",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/examples-moderate-topo.md",
-      "redirect_url": "/tfs/server/architecture/examples-moderate-topo",
+      "redirect_url": "/azure/devops/server/architecture/examples-moderate-topo",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/examples-simple-topo.md",
-      "redirect_url": "/tfs/server/architecture/examples-simple-topo",
+      "redirect_url": "/azure/devops/server/architecture/examples-simple-topo",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/extend-vs-for-alm.md",
-      "redirect_url": "/tfs/server/index",
+      "redirect_url": "/azure/devops/server/index",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/required-ports.md",
-      "redirect_url": "/tfs/server/architecture/architecture#default-network-settings",
+      "redirect_url": "/azure/devops/server/architecture/architecture#default-network-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/sql-server-databases.md",
-      "redirect_url": "/tfs/server/architecture/sql-server-databases",
+      "redirect_url": "/azure/devops/server/architecture/sql-server-databases",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/tfs-concepts.md",
-      "redirect_url": "/tfs/server/architecture/tfs-concepts",
+      "redirect_url": "/azure/devops/server/architecture/tfs-concepts",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/command-line/open-admin-console.md",
-      "redirect_url": "/tfs/server/ref/command-line/open-admin-console",
+      "redirect_url": "/azure/devops/server/ref/command-line/open-admin-console",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/command-line/tfsconfig-cmd.md",
-      "redirect_url": "/tfs/server/ref/command-line/tfsconfig-cmd",
+      "redirect_url": "/azure/devops/server/ref/command-line/tfsconfig-cmd",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/command-line/tfsdeleteproject-cmd.md",
-      "redirect_url": "/tfs/server/ref/command-line/tfsdeleteproject-cmd",
+      "redirect_url": "/azure/devops/server/ref/command-line/tfsdeleteproject-cmd",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/command-line/tfslabconfig-cmd.md",
-      "redirect_url": "/tfs/server/ref/command-line/tfslabconfig-cmd",
+      "redirect_url": "/azure/devops/server/ref/command-line/tfslabconfig-cmd",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/command-line/tfssecurity-cmd.md",
-      "redirect_url": "/tfs/server/ref/command-line/tfssecurity-cmd",
+      "redirect_url": "/azure/devops/server/ref/command-line/tfssecurity-cmd",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/command-line/tfsservicecontrol-cmd.md",
-      "redirect_url": "/tfs/server/ref/command-line/tfsservicecontrol-cmd",
+      "redirect_url": "/azure/devops/server/ref/command-line/tfsservicecontrol-cmd",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/create-tfs-farm.md",
-      "redirect_url": "/tfs/server/install/create-tfs-farm",
+      "redirect_url": "/azure/devops/server/install/create-tfs-farm",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/dual-server.md",
-      "redirect_url": "/tfs/server/install/dual-server",
+      "redirect_url": "/azure/devops/server/install/dual-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/get-started.md",
-      "redirect_url": "/tfs/server/install/get-started",
+      "redirect_url": "/azure/devops/server/install/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/install-2013/add-tfs-svc-acct-report-svr.md",
-      "redirect_url": "/tfs/server/install/install-2013/add-tfs-svc-acct-report-svr",
+      "redirect_url": "/azure/devops/server/install/install-2013/add-tfs-svc-acct-report-svr",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/install-2013/config-tfs-advanced.md",
-      "redirect_url": "/tfs/server/install/install-2013/config-tfs-advanced",
+      "redirect_url": "/azure/devops/server/install/install-2013/config-tfs-advanced",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/install-2013/config-tfs-basic.md",
-      "redirect_url": "/tfs/server/install/install-2013/config-tfs-basic",
+      "redirect_url": "/azure/devops/server/install/install-2013/config-tfs-basic",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/install-2013/config-tfs-standard.md",
-      "redirect_url": "/tfs/server/install/install-2013/config-tfs-standard",
+      "redirect_url": "/azure/devops/server/install/install-2013/config-tfs-standard",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/install-2013/install-tfs.md",
-      "redirect_url": "/tfs/server/install/install-2013/install-tfs",
+      "redirect_url": "/azure/devops/server/install/install-2013/install-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/install-proxy-setup-remote.md",
-      "redirect_url": "/tfs/server/install/install-proxy-setup-remote",
+      "redirect_url": "/azure/devops/server/install/install-proxy-setup-remote",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/multiple-server.md",
-      "redirect_url": "/tfs/server/install/multiple-server",
+      "redirect_url": "/azure/devops/server/install/multiple-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/sharepoint/config-enterprise-app-def.md",
-      "redirect_url": "/tfs/server/install/sharepoint/config-enterprise-app-def",
+      "redirect_url": "/azure/devops/server/install/sharepoint/config-enterprise-app-def",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/sharepoint/install-sharepoint.md",
-      "redirect_url": "/tfs/server/install/sharepoint/install-sharepoint",
+      "redirect_url": "/azure/devops/server/install/sharepoint/install-sharepoint",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/sharepoint/move-sharepoint-new-hardware.md",
-      "redirect_url": "/tfs/server/install/sharepoint/move-sharepoint-new-hardware",
+      "redirect_url": "/azure/devops/server/install/sharepoint/move-sharepoint-new-hardware",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/sharepoint/setup-remote-sharepoint.md",
-      "redirect_url": "/tfs/server/install/sharepoint/setup-remote-sharepoint",
+      "redirect_url": "/azure/devops/server/install/sharepoint/setup-remote-sharepoint",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/sharepoint/verify-sharepoint.md",
-      "redirect_url": "/tfs/server/install/sharepoint/verify-sharepoint",
+      "redirect_url": "/azure/devops/server/install/sharepoint/verify-sharepoint",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/single-server.md",
-      "redirect_url": "/tfs/server/install/single-server",
+      "redirect_url": "/azure/devops/server/install/single-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/sql-server/collation-requirements.md",
-      "redirect_url": "/tfs/server/install/sql-server/collation-requirements",
+      "redirect_url": "/azure/devops/server/install/sql-server/collation-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/sql-server/install-sql-server.md",
-      "redirect_url": "/tfs/server/install/sql-server/install-sql-server",
+      "redirect_url": "/azure/devops/server/install/sql-server/install-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/sql-server/reporting-services-roles.md",
-      "redirect_url": "/tfs/server/install/sql-server/reporting-services-roles",
+      "redirect_url": "/azure/devops/server/install/sql-server/reporting-services-roles",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/install/sql-server/use-always-on-groups.md",
-      "redirect_url": "/tfs/server/install/sql-server/use-always-on-groups",
+      "redirect_url": "/azure/devops/server/install/sql-server/use-always-on-groups",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/change-product-key.md",
-      "redirect_url": "/tfs/server/upgrade/change-product-key",
+      "redirect_url": "/azure/devops/server/upgrade/change-product-key",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/express.md",
-      "redirect_url": "/tfs/server/upgrade/express",
+      "redirect_url": "/azure/devops/server/upgrade/express",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/get-started.md",
-      "redirect_url": "/tfs/server/upgrade/get-started",
+      "redirect_url": "/azure/devops/server/upgrade/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/pre-production.md",
-      "redirect_url": "/tfs/server/upgrade/pre-production",
+      "redirect_url": "/azure/devops/server/upgrade/pre-production",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/pre-upgrade.md",
-      "redirect_url": "/tfs/server/upgrade/pre-upgrade",
+      "redirect_url": "/azure/devops/server/upgrade/pre-upgrade",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/run-upgrade-wizard.md",
-      "redirect_url": "/tfs/server/upgrade/run-upgrade-wizard",
+      "redirect_url": "/azure/devops/server/upgrade/run-upgrade-wizard",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/tfs-2005-to-2015.md",
-      "redirect_url": "/tfs/server/upgrade/tfs-2005-to-2015",
+      "redirect_url": "/azure/devops/server/upgrade/tfs-2005-to-2015",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/upgrade-2013/backup-and-restore-data.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/backup-and-restore-data",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/backup-and-restore-data",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/upgrade-2013/new-app-tier-hardware.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/new-app-tier-hardware",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/new-app-tier-hardware",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/upgrade-2013/same-app-tier-hardware.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/same-app-tier-hardware",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/same-app-tier-hardware",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/upgrade-2013/setup-sql-server.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/setup-sql-server",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/setup-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/upgrade-2013/upgrade-2013-requirements.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/upgrade-2013-requirements",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/upgrade-2013-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/upgrade-2013/use-same-sharepoint-site.md",
-      "redirect_url": "/tfs/server/upgrade/upgrade-2013/use-same-sharepoint-site",
+      "redirect_url": "/azure/devops/server/upgrade/upgrade-2013/use-same-sharepoint-site",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/tfs/upgrade/walkthrough.md",
-      "redirect_url": "/tfs/server/upgrade/walkthrough",
+      "redirect_url": "/azure/devops/server/upgrade/walkthrough",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/tfs-server/websitesettings.md",
-      "redirect_url": "/azure/devops/organizations/security/websitesettings",
+      "redirect_url": "/azure/devops/server/admin/websitesettings",
       "redirect_document_id": false
     },
     {
@@ -2912,42 +3027,42 @@
     },
     {
       "source_path": "docs/integrate/service-hooks/appveyor-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/appveyor",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/integrate/service-hooks/azure-service-bus-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/azure-service-bus",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/integrate/service-hooks/azurestorage-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/azure-storage",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/integrate/service-hooks/bamboo-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/bamboo",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/integrate/service-hooks/campfire-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/campfire",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/integrate/service-hooks/flowdock-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/flowdock",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/integrate/service-hooks/hipchat-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/hipchat",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/integrate/service-hooks/hubot-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/hubot",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
@@ -2957,7 +3072,7 @@
     },
     {
       "source_path": "docs/integrate/service-hooks/myget-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/myget",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
@@ -2972,7 +3087,7 @@
     },
     {
       "source_path": "docs/integrate/service-hooks/uservoice-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/uservoice",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
@@ -2982,12 +3097,72 @@
     },
     {
       "source_path": "docs/integrate/service-hooks/zapier-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/zapier",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/integrate/service-hooks/zendesk-and-vso-vs.md",
-      "redirect_url": "/azure/devops/service-hooks/services/zendesk",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/appveyor.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/azure-service-bus.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/azure-storage.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/bamboo.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/campfire.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/flowdock.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/hipchat.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/hubot.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/myget.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/uservoice.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/zapier.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/service-hooks/services/zendesk.md",
+      "redirect_url": "/azure/devops/service-hooks/overview",
       "redirect_document_id": false
     },
     {
@@ -3007,7 +3182,7 @@
     },
     {
       "source_path": "docs/git/concepts/history-simplification.md",
-      "redirect_url": "/azure/devops/articles/git-log-history-simplification",
+      "redirect_url": "/azure/devops/repos/git/git-log-history-simplification",
       "redirect_document_id": false
     },
     {
@@ -3051,9 +3226,9 @@
       "redirect_document_id": false
     },
     {
-    "source_path": "docs/organizations/accounts/create-organization-msa-or-work-student.md",
-    "redirect_url": "/azure/devops/organizations/accounts/create-organization",
-    "redirect_document_id": false
+      "source_path": "docs/organizations/accounts/create-organization-msa-or-work-student.md",
+      "redirect_url": "/azure/devops/organizations/accounts/create-organization",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/get-started/setup/use-personal-access-tokens-to-authenticate.md",
@@ -3162,7 +3337,7 @@
     },
     {
       "source_path": "docs/integrate/extensions/test/discover-menu-group-ids.md",
-      "redirect_url": "/azure/devops/extend/test/discover-menu-group-ids",
+      "redirect_url": "/azure/devops/extend/index",
       "redirect_document_id": false
     },
     {
@@ -3407,12 +3582,12 @@
     },
     {
       "source_path": "docs/release/getting-started/concurrent-pipelines-ts.md",
-      "redirect_url": "/azure/devops/pipelines/licensing/concurrent-jobs-vsts",
+      "redirect_url": "/azure/devops/pipelines/licensing/concurrent-jobs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/release/getting-started/concurrent-pipelines-vsts.md",
-      "redirect_url": "/azure/devops/pipelines/licensing/concurrent-jobs-vsts",
+      "redirect_url": "/azure/devops/pipelines/licensing/concurrent-jobs",
       "redirect_document_id": false
     },
     {
@@ -3552,7 +3727,7 @@
     },
     {
       "source_path": "docs/whats-new.md",
-      "redirect_url": "/tfs/server/whats-new",
+      "redirect_url": "/azure/devops/server/whats-new",
       "redirect_document_id": false
     },
     {
@@ -3562,7 +3737,7 @@
     },
     {
       "source_path": "docs/concepts.md",
-      "redirect_url": "/azure/devops/user-guide/concepts",
+      "redirect_url": "/azure/devops/user-guide/services",
       "redirect_document_id": false
     },
     {
@@ -3597,7 +3772,7 @@
     },
     {
       "source_path": "docs/migrate-to-vsts-from-tfs.md",
-      "redirect_url": "/azure/devops/articles/migrate-to-vsts-from-tfs",
+      "redirect_url": "/azure/devops/migrate/migrate-from-tfs",
       "redirect_document_id": false
     },
     {
@@ -3717,7 +3892,7 @@
     },
     {
       "source_path": "docs/work/office/track-work-vsts-tfs.md",
-      "redirect_url": "/azure/devops/boards/backlogs/office/track-work-vsts-tfs",
+      "redirect_url": "/azure/devops/boards/backlogs/office/track-work",
       "redirect_document_id": false
     },
     {
@@ -4862,7 +5037,7 @@
     },
     {
       "source_path": "docs/work/reference/define-modify-work-item-fields.md",
-      "redirect_url": "/azure/devops/reference/xml/define-modify-work-item-fields",
+      "redirect_url": "/azure/devops/boards/work-items/work-item-fields",
       "redirect_document_id": false
     },
     {
@@ -5682,7 +5857,7 @@
     },
     {
       "source_path": "docs/work/index.md",
-      "redirect_url": "/azure/devops/#pivot=services&panel=agile",
+      "redirect_url": "/azure/devops/boards/index",
       "redirect_document_id": false
     },
     {
@@ -5727,7 +5902,7 @@
     },
     {
       "source_path": "docs/articles/migration-advanced-topics.md",
-      "redirect_url": "/azure/devops/articles/migration-overview",
+      "redirect_url": "/azure/devops/migrate/migration-overview",
       "redirect_document_id": false
     },
     {
@@ -5792,17 +5967,17 @@
     },
     {
       "source_path": "docs/analytics.md",
-      "redirect_url": "/azure/devops/#pivot=services&panel=reporting",
+      "redirect_url": "/azure/devops/report/index",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/report.md",
-      "redirect_url": "/azure/devops/#pivot=services&panel=reporting",
+      "redirect_url": "/azure/devops/report/index",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/reporting.md",
-      "redirect_url": "/azure/devops/#pivot=services&panel=reporting",
+      "redirect_url": "/azure/devops/report/index",
       "redirect_document_id": false
     },
     {
@@ -5857,7 +6032,7 @@
     },
     {
       "source_path": "docs/report/guidance/enable-analytics-velocity.md",
-      "redirect_url": "/azure/devops/report/analytics/enable-analytics-velocity",
+      "redirect_url": "/azure/devops/report/dashboards/add-widget-to-dashboard",
       "redirect_document_id": false
     },
     {
@@ -6122,13 +6297,13 @@
     },
     {
       "source_path": "docs/build-release/archive/apps/aspnet/aspnet-core-from-vsts-to-azure-web-app.md",
-      "redirect_url": "/azure/devops/pipelines/archive/apps/aspnet/aspnet-core-from-vsts-to-azure-web-app",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/pipelines/archive/apps/aspnet/aspnet-core-to-azure-web-app",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/build-release/archive/apps/aspnet/aspnet-from-vsts-to-windows-vm.md",
-      "redirect_url": "/azure/devops/pipelines/archive/apps/aspnet/aspnet-from-vsts-to-windows-vm",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/pipelines/archive/apps/aspnet/aspnet-to-windows-vm",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/build-release/archive/apps/aspnet/aspnetcore-docker-to-azure.md",
@@ -6312,8 +6487,8 @@
     },
     {
       "source_path": "docs/build-release/concepts/definitions/build/artifacts.md",
-      "redirect_url": "/azure/devops/pipelines/build/artifacts",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/pipelines/artifacts/artifacts-overview",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/build-release/concepts/definitions/build/history.md",
@@ -6327,8 +6502,8 @@
     },
     {
       "source_path": "docs/build-release/concepts/definitions/build/repository.md",
-      "redirect_url": "/azure/devops/pipelines/build/repository",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/pipelines/repos/index",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/build-release/concepts/definitions/build/triggers.md",
@@ -6442,12 +6617,12 @@
     },
     {
       "source_path": "docs/build-release/concepts/licensing/concurrent-pipelines-ts.md",
-      "redirect_url": "/azure/devops/pipelines/licensing/concurrent-jobs-vsts",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/pipelines/licensing/concurrent-jobs",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/pipelines/licensing/concurrent-pipelines-ts.md",
-      "redirect_url": "/azure/devops/pipelines/licensing/concurrent-jobs-vsts",
+      "redirect_url": "/azure/devops/pipelines/licensing/concurrent-jobs",
       "redirect_document_id": false
     },
     {
@@ -6512,8 +6687,8 @@
     },
     {
       "source_path": "docs/build-release/packages/maven.md",
-      "redirect_url": "/azure/devops/pipelines/packages/maven",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/pipelines/artifacts/maven",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/build-release/packages/npm.md",
@@ -6522,17 +6697,17 @@
     },
     {
       "source_path": "docs/build-release/packages/nuget-pack-publish.md",
-      "redirect_url": "/azure/devops/pipelines/targets/nuget",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/pipelines/artifacts/nuget",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/pipelines/packages/nuget-pack-publish.md",
-      "redirect_url": "/azure/devops/pipelines/targets/nuget",
+      "redirect_url": "/azure/devops/pipelines/artifacts/nuget",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/pipelines/packages/npm.md",
-      "redirect_url": "/azure/devops/pipelines/targets/npm",
+      "redirect_url": "/azure/devops/pipelines/artifacts/npm",
       "redirect_document_id": false
     },
     {
@@ -6542,8 +6717,8 @@
     },
     {
       "source_path": "docs/build-release/symbols/index.md",
-      "redirect_url": "/azure/devops/pipelines/symbols/index",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/pipelines/artifacts/symbols",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/build-release/tasks/file-matching-patterns.md",
@@ -7307,13 +7482,13 @@
     },
     {
       "source_path": "docs/build-release/actions/integrate-jenkins-vsts-aks.md",
-      "redirect_url": "/azure/devops/pipelines/release/integrate-jenkins-vsts-aks",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/pipelines/release/integrate-jenkins-pipelines-aks",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/build-release/actions/integrate-jenkins-vsts-cicd.md",
-      "redirect_url": "/azure/devops/pipelines/release/integrate-jenkins-vsts-cicd",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/pipelines/release/integrate-jenkins-pipelines-cicd",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/build-release/apps/aspnet/build-aspnet-4.md",
@@ -7457,7 +7632,17 @@
     },
     {
       "source_path": "docs/build-release/apps/cd/azure/aspnet-core-to-windows-vm.md",
-      "redirect_url": "/azure/devops/pipelines/apps/cd/azure/aspnet-core-to-windows-vm",
+      "redirect_url": "/azure/devops/pipelines/apps/cd/deploy-webdeploy-iis-deploygroups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/pipelines/apps/cd/azure/aspnet-core-to-windows-vm.md",
+      "redirect_url": "/azure/devops/pipelines/apps/cd/deploy-webdeploy-iis-deploygroups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "azure/devops/pipelines/apps/cd/azure/aspnet-core-to-windows-vm.md",
+      "redirect_url": "/azure/devops/pipelines/apps/cd/deploy-webdeploy-iis-deploygroups",
       "redirect_document_id": true
     },
     {
@@ -7584,6 +7769,11 @@
       "source_path": "docs/build-release/set-permissions.md",
       "redirect_url": "/azure/devops/pipelines/policies/set-permissions",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/java/labs/sonarqube/index.md",
+      "redirect_url": "https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarqube",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/work/customize/process/custom-controls-process.md",
@@ -7732,7 +7922,7 @@
     },
     {
       "source_path": "docs/collaborate/project-vision-status.md",
-      "redirect_url": "/azure/devops/project/wiki/project-vision-status",
+      "redirect_url": "/azure/devops//organizations/projects/project-vision-status",
       "redirect_document_id": false
     },
     {
@@ -7952,12 +8142,17 @@
     },
     {
       "source_path": "docs/security/websitesettings.md",
-      "redirect_url": "/azure/devops/organizations/security/websitesettings",
+      "redirect_url": "/azure/devops/server/admin/websitesettings",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/feedback/about-feedback.md",
-      "redirect_url": "/azure/devops/project/feedback/about-feedback",
+      "redirect_url": "/azure/devops/project/feedback/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs//project/feedback/about-feedback.md",
+      "redirect_url": "/azure/devops/project/feedback/index",
       "redirect_document_id": false
     },
     {
@@ -8362,7 +8557,12 @@
     },
     {
       "source_path": "docs/work/scale/set-team-defaults.md",
-      "redirect_url": "/azure/devops/organizations/settings/set-team-defaults",
+      "redirect_url": "/azure/devops/organizations/settings/manage-teams",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/organizations/settings/set-team-defaults.md",
+      "redirect_url": "/azure/devops/organizations/settings/manage-teams",
       "redirect_document_id": false
     },
     {
@@ -8372,8 +8572,8 @@
     },
     {
       "source_path": "docs/billing/csp/buy-csp-vsts.md",
-      "redirect_url": "/azure/devops/organizations/billing/csp/buy-csp-vsts",
-      "redirect_document_id": true
+      "redirect_url": "/azure/devops/organizations/billing/csp/buy-csp-azure-devops",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/billing/csp/buy-vs-app-center.md",
@@ -9987,7 +10187,7 @@
     },
     {
       "source_path": "docs/work/customize/reference/define-modify-work-item-fields.md",
-      "redirect_url": "/azure/devops/reference/xml/define-modify-work-item-fields",
+      "redirect_url": "/azure/devops/boards/work-items/work-item-fields",
       "redirect_document_id": false
     },
     {
@@ -10572,7 +10772,7 @@
     },
     {
       "source_path": "docs/work/backlogs/office/track-work-vsts-tfs.md",
-      "redirect_url": "/azure/devops/boards/backlogs/office/track-work-vsts-tfs",
+      "redirect_url": "/azure/devops/boards/backlogs/office/track-work",
       "redirect_document_id": false
     },
     {
@@ -11122,12 +11322,12 @@
     },
     {
       "source_path": "docs/organizations/accounts/about-vsts-tfs.md",
-      "redirect_url": "/azure/devops/organizations/accounts/about-azure-devops-services-tfs",
+      "redirect_url": "/azure/devops/organizations/user-guide/about-azure-devops-services-tfs",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/organizations/accounts/what-is-vsts.md",
-      "redirect_url": "/azure/devops/organizations/accounts/what-is-azure-devops-services",
+      "redirect_url": "/azure/devops/organizations/user-guide/what-is-azure-devops-services",
       "redirect_document_id": false
     },
     {
@@ -11188,6 +11388,296 @@
     {
       "source_path": "docs/organizations/notifications/navigating-the-ux.md",
       "redirect_url": "/azure/devops/notifications/navigating-the-ui",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/user-guide/define-organizations-and-projects.md",
+      "redirect_url": "/azure/devops/user-guide/plan-your-azure-devops-org-structure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/organizations/billing/csp/buy-csp-vsts.md",
+      "redirect_url": "/azure/devops/organizations/billing/csp/buy-csp-azure-devops",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/pipelines/release/integrate-jenkins-vsts-cicd.md",
+      "redirect_url": "/azure/devops/pipelines/release/integrate-jenkins-pipelines-cicd",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/release/integrate-jenkins-vsts-aks.md",
+      "redirect_url": "/azure/devops/pipelines/release/integrate-jenkins-pipelines-aks",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/boards/backlogs/office/track-work-vsts-tfs.md",
+      "redirect_url": "/azure/devops/boards/backlogs/office/track-work",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/marketplace/start-trial-vsts-extension.md",
+      "redirect_url": "/azure/devops/marketplace/start-trial-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/marketplace/install-vsts-extension.md",
+      "redirect_url": "/azure/devops/marketplace/install-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/marketplace/install-paid-vsts-extension.md",
+      "redirect_url": "/azure/devops/marketplace/install-paid-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/licensing/concurrent-jobs-vsts.md",
+      "redirect_url": "/azure/devops/pipelines/licensing/concurrent-jobs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/demo-gen/use-vsts-demo-generator-v2.md",
+      "redirect_url": "/azure/devops/demo-gen/use-demo-generator-v2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/archive/apps/aspnet/aspnet-from-vsts-to-windows-vm.md",
+      "redirect_url": "/azure/devops/pipelines/archive/apps/aspnet/aspnet-to-windows-vm",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/archive/apps/aspnet/aspnet-core-from-vsts-to-azure-web-app.md",
+      "redirect_url": "/azure/devops/pipelines/archive/apps/aspnet/aspnet-core-to-azure-web-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/release/azure-policy.md",
+      "redirect_url": "/azure/devops/pipelines/policies/azure-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/artifacts/vsts-package-badges.md",
+      "redirect_url": "/azure/devops/artifacts/package-badges",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/articles/migrate-to-vsts-from-tfs.md",
+      "redirect_url": "/azure/devops/migrate/migrate-from-tfs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/git-log-history-simplification.md",
+      "redirect_url": "/azure/devops/repos/git/git-log-history-simplification",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/articles/effective-feature-isolation-on-tfvc.md",
+      "redirect_url": "/azure/devops/repos/tfvc/effective-feature-isolation-on-tfvc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/articles/effective-tfvc-branching-strategies-for-devops.md",
+      "redirect_url": "/azure/devops/repos/tfvc/effective-tfvc-branching-strategies-for-devops",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/articles/test-impact-for-partially-mapped-tfvc-repositories.md",
+      "redirect_url": "/azure/devops/repos/tfvc/test-impact-for-partially-mapped-tfvc-repositories",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/articles/move-git-repos-between-team-projects.md",
+      "redirect_url": "/azure/devops/repos/git/move-git-repos-between-team-projects",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/articles/perform-migration-from-svn-to-git.md",
+      "redirect_url": "/azure/devops/repos/git/perform-migration-from-svn-to-git",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/articles/remove-binaries.md",
+      "redirect_url": "/azure/devops/repos/git/remove-binaries",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/boards/github/troubleshoot-git-hub-connection.md",
+      "redirect_url": "/azure/devops/boards/github/troubleshoot-github-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/articles/team-services-security-whitepaper.md",
+      "redirect_url": "/azure/devops/organizations/security/data-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/data-location.md",
+      "redirect_url": "/azure/devops/organizations/security/data-location",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/credential-storage.md",
+      "redirect_url": "/azure/devops/organizations/security/credential-storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/migrate-from-tfs.md",
+      "redirect_url": "/azure/devops/migrate/migrate-from-tfs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/migration-import.md",
+      "redirect_url": "/azure/devops/migrate/migration-import",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/migration-overview.md",
+      "redirect_url": "/azure/devops/migrate/migration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/migration-post-import.md",
+      "redirect_url": "/azure/devops/migrate/migration-post-import",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/migration-processtemplates.md",
+      "redirect_url": "/azure/devops/migrate/migration-processtemplates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/migration-troubleshooting.md",
+      "redirect_url": "/azure/devops/migrate/migration-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/phase-features-with-feature-flags.md",
+      "redirect_url": "/azure/devops/migrate/phase-features-with-feature-flags",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/security-validation-cicd-pipeline.md",
+      "redirect_url": "/azure/devops/migrate/security-validation-cicd-pipeline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/phase-rollout-with-rings.md",
+      "redirect_url": "/azure/devops/migrate/phase-rollout-with-rings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/articles/service-status-info.md",
+      "redirect_url": "/azure/devops/user-guide/service-status-info",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/pipelines/build/ci-build-github.md",
+      "redirect_url": "/azure/devops/pipelines/get-started-designer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/project/wiki/project-vision-status.md",
+      "redirect_url": "/azure/devops/organizations/projects/project-vision-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/report/analytics/what-is-analytics.md",
+      "redirect_url": "/azure/devops/report/powerbi/what-is-analytics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/what-are-analytics-views.md",
+      "redirect_url": "/azure/devops/report/powerbi/what-are-analytics-views",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/troubleshooting-views.md",
+      "redirect_url": "/azure/devops/report/powerbi/troubleshooting-views",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/reporting-roadmap.md",
+      "redirect_url": "/azure/devops/report/powerbi/reporting-roadmap",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/performance-latency.md",
+      "redirect_url": "/azure/devops/report/powerbi/performance-latency",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/index.md",
+      "redirect_url": "/azure/devops/report/powerbi/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/enable-analytics-velocity.md",
+      "redirect_url": "/azure/devops/report/dashboards/add-widget-to-dashboard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/data-available-in-analytics.md",
+      "redirect_url": "/azure/devops/report/powerbi/data-available-in-analytics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/client-authentication-options.md",
+      "redirect_url": "/azure/devops/report/powerbi/client-authentication-options",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/analytics-widgets.md",
+      "redirect_url": "/azure/devops/report/dashboards/analytics-widgets",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/analytics-extension.md",
+      "redirect_url": "/azure/devops/report/dashboards/analytics-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/analytics-views-manage.md",
+      "redirect_url": "/azure/devops/report/powerbi/analytics-views-manage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/analytics-views-create.md",
+      "redirect_url": "/azure/devops/report/powerbi/analytics-views-create",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/analytics-default-views.md",
+      "redirect_url": "/azure/devops/report/powerbi/analytics-default-views",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/analytics-historical-filtering.md",
+      "redirect_url": "/azure/devops/report/powerbi/analytics-historical-filtering",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/analytics-security.md",
+      "redirect_url": "/azure/devops/report/powerbi/analytics-security",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/report/analytics/access-analytics-excel.md",
+      "redirect_url": "/azure/devops/report/powerbi/access-analytics-excel",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/get-started-designer.md",
+      "redirect_url": "/azure/devops/pipelines/create-first-pipeline",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/pipelines/get-started-yaml.md",
+      "redirect_url": "/azure/devops/pipelines/create-first-pipeline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/migrate/service-status-info.md",
+      "redirect_url": "/azure/devops/user-guide/service-status-info",
       "redirect_document_id": false
     }
   ]

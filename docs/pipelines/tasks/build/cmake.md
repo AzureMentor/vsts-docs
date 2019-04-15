@@ -1,12 +1,12 @@
 ---
 title: CMake build and release task
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: CMake build and release task for Azure Pipelines and Team Foundation Server (TFS)
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: A0C6CAF5-E953-4705-80C5-896267A910AF
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
 ms.date: 08/10/2016
@@ -44,11 +44,11 @@ cmake
 <p>Working directory when CMake is run. The default value is `build`.</p>
 <p>If you specify a relative path, then it is relative to your repo. For example, if you specify `build`, the result is the same as if you specified `$(Build.SourcesDirectory)\build`.</p>
 <p>You can also specify a full path outside the repo, and you can use [variables](../../build/variables.md). For example: `$(Build.ArtifactStagingDirectory)\build`</p>
- <p>If the path you specify does not exist, CMAke creates it.</p>
+ <p>If the path you specify does not exist, CMake creates it.</p>
 </td>
 </tr>
 <tr>
-<td>Arguments</td>
+<td>cmakeArgs</td>
 <td>
 Arguments that you want to pass to CMake.
 </td>
@@ -58,7 +58,7 @@ Arguments that you want to pass to CMake.
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 <!-- BEGINSECTION class="md-qanda" -->
@@ -110,7 +110,7 @@ The [Microsoft-hosted agents](../../agents/hosted.md) have CMake installed, but 
 
 [!INCLUDE [temp](../../_shared/qa-agents.md)]
 
-::: moniker range="< vsts"
+::: moniker range="< azure-devops"
 [!INCLUDE [temp](../../_shared/qa-versions.md)]
 ::: moniker-end
 

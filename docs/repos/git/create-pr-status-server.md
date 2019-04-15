@@ -5,7 +5,7 @@ description: Create a web server to listen to pull request events and post statu
 ms.assetid: 2653589c-d15e-4dab-b8b0-4f8236c4a67b
 ms.prod: devops
 ms.technology: devops-code-git
-ms.manager: douge
+ms.manager: jillfra
 ms.author: mmitrik
 author: mmitrik
 ms.topic: conceptual
@@ -21,7 +21,7 @@ monikerRange: '>= tfs-2018'
 The pull request (PR) workflow provides developers with an opportunity to get feedback on their code from peers as well as from automated tools. 3rd party tools and services can participate in the PR workflow by using the PR [Status API](https://go.microsoft.com/fwlink/?linkid=854107). This article guides you through the process of creating a status server to validate PRs in an Azure DevOps Services Git repository. For more information about PR status, see [Customize and extend pull request workflows with pull request status](pull-request-status.md).
 
 ## Prerequisites
-* An Azure DevOps organization with a Git repo. If you don't have an Azure DevOps organization, [sign up](../../organizations/accounts/create-organization.md) to upload and share code in free unlimited private Git repositories.
+* An organization in Azure DevOps with a Git repo. If you don't have an organization, [sign up](../../organizations/accounts/create-organization.md) to upload and share code in free unlimited private Git repositories.
 * Install [VS Code](http://code.visualstudio.com/Docs/setup) or other code editor of your choice. The instructions in this guide use VS Code but the steps in other code editors are similar.
 
 ## Install Node.js
@@ -41,7 +41,7 @@ The steps in this section use [Express](https://expressjs.com/), which is a ligh
 
     ```
     npm init
-    ````
+    ```
 
     Press Enter to accept the defaults for all of the options except the entry point. Change it to `app.js` 
 
@@ -122,7 +122,7 @@ In order to receive the service hook notifications, you'll need to expose a port
     http://c3c1bffa.ngrok.io
     ```
 
-3. Browse to your Azure DevOps project, e.g. `https://dev.azure.com/<your account>/<your project name>`
+3. Browse to your project in Azure DevOps, e.g. `https://dev.azure.com/<your account>/<your project name>`
 
 4. From the navigation menu, hover over the **gear** and select **Service Hooks**.
 
@@ -179,7 +179,7 @@ Now that your server can receive service hook events when new PRs are created, u
 
 2. Update `app.js` to use body-parser for parsing `application/json`.
 
-    ```
+    ```js
     var bodyParser = require('body-parser')
 
     app.use(bodyParser.json());
@@ -230,7 +230,7 @@ Now that your server can receive service hook events when new PRs are created, u
 
 9. Build the status object to post on the PR. 
 
-  `State` is an enum of type [GitStatusState](https://docs.microsoft.com/en-us/rest/api/vsts/git/pull%20request%20statuses/get?view=vsts-rest-4.1#gitstatusstate). Use `succeeded` to indicate that the PR has passed the status check and is ready to merge. 
+  `State` is an enum of type [GitStatusState](/rest/api/vsts/git/pull%20request%20statuses/get?view=vsts-rest-4.1#gitstatusstate). Use `succeeded` to indicate that the PR has passed the status check and is ready to merge. 
 
   The `description` is a string value that will be displayed to the user in the Status section and activity feed in the PR details view.
 

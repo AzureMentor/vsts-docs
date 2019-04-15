@@ -5,7 +5,7 @@ ms.assetid: 7cb70122-7c5b-46c1-b07e-1382cfc7d62b
 ms.prod: devops
 ms.technology: devops-artifacts
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: elbatk
 author: elbatk
 ms.date: 2/1/2018
@@ -24,6 +24,9 @@ Already familiar with the concepts and want to jump right in? Start with these h
 
 - [Use nuget.org as an upstream](../nuget/upstream-sources.md)
 - [Use npmjs.com as an upstream](../npm/upstream-sources.md)
+
+> [!NOTE]
+> Custom upstream sources are currently only supported for npm.
 
 ## Benefits of upstream sources
 
@@ -57,7 +60,7 @@ In order for your feed to provide [deterministic restore](#search-order), it's i
 
 For npm, you should have only one `registry` line, like:
 
-```text
+```ini
 registry=https://pkgs.dev.azure.com/fabrikam/_packaging/FabrikamFiber/npm/registry/
 always-auth=true
 ```

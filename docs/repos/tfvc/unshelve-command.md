@@ -5,7 +5,7 @@ description: Unshelve Command
 ms.assetid: 468ab1f4-f565-41d9-a5ad-1481ad29b176
 ms.prod: devops
 ms.technology: devops-code-tfvc
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: reference
@@ -95,8 +95,6 @@ When you unshelve a shelveset, Team Foundation restores each shelved revision in
 You can use the **unshelve** command to restore individual file revisions from a shelveset to your workspace. You should run get after unshelving to reconcile any changes checked into the server since the shelveset was created.
 
 For more information on how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
-
-### 
 
 #### Recycle Shelved Changes
 

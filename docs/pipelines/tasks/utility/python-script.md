@@ -1,15 +1,15 @@
 ---
 title: Python Script task
-titleSuffix: Azure Pipelines & TFS
 description: Run a Python script in a build or release pipeline
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 6392F95F-7E76-4A18-B3C7-7F078D2F7700
 ms.manager: brcrista
+ms.custom: seodec18
 ms.author: brcrista
-ms.date: 05/17/2018
-monikerRange: 'vsts'
+ms.date: 12/07/2018
+monikerRange: 'azure-devops'
 ---
 
 # Python Script task
@@ -38,4 +38,4 @@ Use this task in a build or release pipeline to run a Python script.
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.

@@ -1,20 +1,22 @@
 ---
-title: Run cloud-based load tests using your own machines
+title: Run cloud-based load tests on your own machines
 description: Run cloud-based load tests by using your own subscription and machines using Azure DevOps and TFS
 ms.assetid: FF61D623-7947-4769-B310-B3F477584BA2
 ms.prod: devops
 ms.technology: devops-test
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
-monikerRange: 'vsts'
+ms.date: 12/07/2018
+monikerRange: 'azure-devops'
 ---
 
 # Run cloud-based load tests using your own machines
 
 [!INCLUDE [version-header-devops-services](../_shared/version-header-devops-services.md)] 
+
+[!INCLUDE [loadtest-deprecated-include](../_shared/loadtest-deprecated-include.md)]
 
 When you run a cloud-based load test, the Cloud Load Test (CLT) service automatically provisions
 the necessary machines (load agents) to generate the load on your application.

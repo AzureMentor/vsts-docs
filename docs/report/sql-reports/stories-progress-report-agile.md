@@ -6,7 +6,7 @@ ms.technology: devops-analytics
 ms.topic: reference
 description: Lists all user stories, filtered by product area and iteration in order of importance.
 ms.assetid: 1478227b-50b9-4ef1-be5b-838cd5a5467b
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelliauthor: KathrynEE
 ms.date: 10/17/17
 ---
@@ -84,7 +84,7 @@ The Stories Progress report lists all user stories, filtered by product area and
   
 -   Click ![Expand](_img/icon_expand.gif "Icon_Expand") or ![Collapse](_img/icon_collapse.gif "Icon_Collapse") to expand or collapse a user story and display child stories. Parent stories display a rollup of all task hours that are assigned to it and its child stories.  
   
- For more information, see [Filtering the Report and Changing the Display](#Changing) later in this topic.  
+ For more information, see [Filtering the Report and Changing the Display](#Changing) later in this article.  
   
 ### Questions That the Report Answers  
  You can review the report to determine how much work the team performed for the past week or recent period. Specifically, you can find answers to the following questions:  

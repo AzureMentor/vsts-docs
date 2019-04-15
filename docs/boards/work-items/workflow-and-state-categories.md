@@ -1,17 +1,19 @@
 ---
-title: Workflow states and state categories
-titleSuffix: Azure Boards and TFS   
-description: Understand how workflow states map to state categories in Azure Boards and Team Foundation Server   
+title: Understand how backlogs and boards use workflow states and state categories
+titleSuffix: Azure Boards   
+description: Understand how workflow states map to state categories and are used in boards and backlogs in Azure Boards & TFS
+ms.custom: seodec18   
 ms.prod: devops
 ms.technology: devops-agile
 ms.assetid: C6FEEE5A-CD13-413E-8A3F-84A7D4F3A2C9
 ms.author: kaelliauthor: KathrynEE
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: conceptual
-ms.date: 03/20/2018
+monikerRange: '>= tfs-2013'
+ms.date: 11/19/2018
 ---
 
-# Workflow states and state categories
+# How workflow states and state categories are used in Backlogs and Boards
 
 [!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
 
@@ -80,8 +82,7 @@ Here's how the default, inherited states map to the state categories for all thr
 </tr>
 <tr valign="top" >
 <td>**Removed:** Assigned to the Removed state. Work items in a state mapped to the Removed category are hidden from the backlog and board experiences.
-
-<blockquote>**Note:** You should avoid using the Removed state and Removed state category as they are in the process of being deprecated.  Instead, you should [Delete work items](../backlogs/remove-delete-work-items.md) to remove them from the backlog. </td> 
+</td> 
 <td>Removed </td> 
 <td>Removed</td> 
 <td>n/a</td> 
@@ -103,6 +104,7 @@ Also, by adding custom states to support those workflow states that several team
 <a id="auto-complete-work-items-with-pr" />
 
 ::: moniker range=">= tfs-2018"
+
 ## Auto completion of work items with pull requests 
 
 When you link a work item to a pull request (PR), you have the option to automatically complete those work items when you successfully complete the PR.  As shown in the following image, all you have to do is check the box to **Complete linked work items after merging**. The system defaults to your selection for future PRs. 
@@ -121,10 +123,18 @@ To learn more about process models, see [Customize your work tracking experience
 
 ## Related articles
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 - [Lead Time and Cycle Time control charts (widgets)](../../report/dashboards/cycle-time-and-lead-time.md)
 - [Customize a workflow for a process](../../organizations/settings/work/customize-process-workflow.md)
 ::: moniker-end
+
+::: moniker range="azure-devops-2019"
+- [Lead Time and Cycle Time control charts (widgets)](../../report/dashboards/cycle-time-and-lead-time.md)
+- [Change the workflow for a work item type](../../reference/xml/change-workflow-wit.md)
+- [ProcessConfiguration XML element reference](../../reference/xml/process-configuration-xml-element.md)
+- [Customize your work tracking experience](../../reference/on-premises-xml-process-model.md) 
+::: moniker-end
+
 
 ::: moniker range=">= tfs-2013 <= tfs-2018"
 - [Change the workflow for a work item type](../../reference/xml/change-workflow-wit.md)

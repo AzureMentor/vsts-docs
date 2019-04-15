@@ -5,7 +5,7 @@ description: Create and work with workspaces
 ms.assetid: 1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a
 ms.prod: devops
 ms.technology: devops-code-tfvc
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: conceptual
@@ -126,4 +126,4 @@ If your team has a large and complex codebase or if you want your workspace to c
 
 #### Q: I work at a remote site. Is there any way I can save bandwidth?
 
-**A:** [Install Team Foundation Proxy and set up a remote site](/tfs/server/install/install-proxy-setup-remote).
+**A:** [Install Team Foundation Proxy and set up a remote site](/azure/devops/server/install/install-proxy-setup-remote).

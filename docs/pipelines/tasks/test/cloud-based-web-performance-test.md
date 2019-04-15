@@ -1,21 +1,23 @@
 ---
 title: Cloud-based Web Performance Test task
-titleSuffix: Azure Pipelines & TFS
 description: Runs the Quick Web Performance Test with a build or release pipeline to easily verify your web application exists and is responsive
 ms.assetid: 8030BD4C-F119-4A0F-9ED5-B021C4E760CD
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: reference
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2015'
 ---
 
 # Cloud-based Web Performance Test task
 
 [!INCLUDE [temp](../../_shared/version-tfs-2015-rtm.md)]
+
+[!INCLUDE [loadtest-deprecated-include](../../../test/_shared/loadtest-deprecated-include.md)]
 
 Use this task in a build or release pipeline to run the Quick Web Performance Test to easily verify your web application exists and is responsive.
 The task generates load against an application URL
@@ -41,7 +43,7 @@ The agent must have the following capability:
 | Argument | Description |
 | -------- | ----------- |
 | **Azure Pipelines connection** | The name of a Generic service connection that references the Azure DevOps organization you will be running the load test from and publishing the results to.<br />- Required for builds and releases on TFS and must specify a connection to the Azure DevOps organization where the load test will run.<br />- Optional for builds and releases on Azure Pipelines. In this case, if not provided, the current Azure Pipelines connection is used.<br />- See [Generic service connection](../../library/service-endpoints.md). |
-| **Website Url** | Required. The URL of the app to test. |
+| **Website URL** | Required. The URL of the app to test. |
 | **Test Name** | Required. A name for this load test, used to identify it for reporting and for comparison with other test runs. |
 | **User Load** | Required. The number of concurrent users to simulate in this test. Select a value from the drop-down list. |
 | **Run Duration (sec)** | Required. The duration of this test in seconds. Select a value from the drop-down list. |
@@ -53,21 +55,15 @@ The agent must have the following capability:
 ## More Information
 
 * [Cloud-based Load Testing](https://visualstudio.microsoft.com/features/vso-cloud-load-testing-vs)
-* [Performance testing video and Q&A](../../../test/load-test/reference-qa.md)
-
-## Related tasks
-
-* [Cloud-based Load Test](cloud-based-load-test.md)  
-* [Cloud-based Apache JMeter Load Test](run-jmeter-load-test.md)  
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 <!-- BEGINSECTION class="md-qanda" -->
 
-::: moniker range="< vsts"
+::: moniker range="<= tfs-2018"
 [!INCLUDE [qa-versions](../../_shared/qa-versions.md)]
 ::: moniker-end
 

@@ -1,22 +1,22 @@
 ---
 title: Run the agent with a self-signed certificate
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Learn how to run the build and release agent with a self-signed certificate for Azure Pipelines and Team Foundation Server (TFS)
 ms.topic: conceptual
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 09E36E4D-D94B-4F5B-BE4D-9E7B4E7B68E2
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
 ms.reviewer: chrispat
 ms.date: 10/15/2018
-monikerRange: '>= tfs-2017 < vsts'
+monikerRange: '>= tfs-2017 < azure-devops'
 ---
 
 # Run the agent with a self-signed certificate
 
-**TFS 2018 | TFS 2017**
+[!INCLUDE [version-tfs-only-2017](../_shared/version-tfs-only-2017.md)]
 
 This topic explains how to run a v2 self-hosted agent with self-signed certificate.
 
@@ -39,7 +39,7 @@ This error may indicate the server certificate you used on your TFS server is no
 Windows: Windows certificate store
 Linux: OpenSSL certificate store
 macOS: OpenSSL certificate store for agent version 2.124.0 or below
-       Keychian for agent version 2.125.0 or above
+       Keychain for agent version 2.125.0 or above
 ```
 
 You can easily verify whether the certificate has been installed correctly by running few commands.
@@ -107,7 +107,7 @@ When that IIS SSL setting enabled, you need to use `2.125.0` or above version ag
 
 - Install CA certificate(s) into machine certificate store
   - Linux: OpenSSL certificate store
-  - macOS: System or User Keychian
+  - macOS: System or User Keychain
   - Windows: Windows certificate store
 
 - Pass `--sslcacert`, `--sslclientcert`, `--sslclientcertkey`. `--sslclientcertarchive` and `--sslclientcertpassword` during agent configuration.   

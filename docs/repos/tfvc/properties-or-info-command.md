@@ -5,7 +5,7 @@ description: Properties Command
 ms.assetid: f306bc7a-db55-47d8-aa22-e2399260e838
 ms.prod: devops
 ms.technology: devops-code-tfvc
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: reference
@@ -44,7 +44,7 @@ To use the **properties** command, you must have the **Read** permission set to 
 	<td><p>Provides a value to the <strong>/login</strong> option. You can specify a username value as either <em>Domain</em>\<em>UserName</em> or <em>UserName</em>.</p></td></tr></tbody>
 </table>
 
-|**Option **|**Description**|
+|**Option**|**Description**|
 |---|---|
 |**/recursive**|Displays all files and subfolders of a folder.|
 |**/version**|Specifies the version of the file to open for viewing the properties on.|

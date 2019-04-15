@@ -5,10 +5,10 @@ description: Summary of what you can and can't customize in a process template t
 ms.technology: devops-agile
 ms.prod: devops
 ms.assetid: 2B500AEA-165C-428D-B580-C9C0A8D01635
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
-monikerRange: 'vsts'
+monikerRange: 'azure-devops'
 ms.date: 03/20/2018
 ---
 
@@ -31,7 +31,7 @@ The structure and overall syntax used in defining process templates remains the 
 
 ## Unsupported customizations and unreferenced plug-in files
 
-Any reference to the following objects in any of the XML definition files will result in a validation error upon import.  
+Any reference to the following objects in any of the XML definition files result in a validation error upon import.  
 *   Custom controls on work item forms  
 *   Custom link types  
 *   Global workflow 

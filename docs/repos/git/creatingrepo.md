@@ -5,7 +5,7 @@ description: Create new Git repos using Visual Studio or command line init
 ms.assetid: 83c20dac-85c6-4fa0-93b5-912d5477246a
 ms.prod: devops
 ms.technology: devops-code-git 
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: tutorial
@@ -111,7 +111,7 @@ git push origin users/frank/feature
 ```
 
 > [!NOTE]
-> You can also create and get repos from the command line or scripts using the [Azure DevOps Services CLI](/cli/vsts/overview?view=vsts-cli-latest).
+> You can also create and get repos from the command line or scripts using the [Azure DevOps Services CLI](/cli/azure/ext/azure-devops/?view=azure-cli-latest).
 
 ---
 

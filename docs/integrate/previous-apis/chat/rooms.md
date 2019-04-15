@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: Team Rooms | REST API Reference for Team Foundation Server
 description: Work with team rooms programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 6E6370DD-6E61-4F56-BCAD-8A66CC45965A
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -268,7 +268,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/chat/rooms/12797?api-version=1
 ```
 
 
-## Delete room ##
+## Delete room
 
 ```no-highlight
 DELETE https://{instance}/DefaultCollection/_apis/chat/rooms/{roomId}?api-version={version}

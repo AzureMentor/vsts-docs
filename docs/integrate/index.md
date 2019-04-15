@@ -5,7 +5,7 @@ ms.topic: conceptual
 title: Integrating custom apps and third party services with Azure DevOps Services and Team Foundation Server
 description: Overview of integrating with Azure DevOps Services and Team Foundation Server
 ms.assetid: c9b97ad7-ffd8-4657-8322-74f764eec5c9
-ms.manager: douge
+ms.manager: jillfra
 monikerRange: ">= tfs-2013"
 ms.author: elbatk
 author: elbatk
@@ -35,6 +35,7 @@ Check out the quick starts to get you started:
 - [Cross-origin resource sharing](./concepts/cross-origin-resource-sharing.md)
 - [Rate limits](./concepts/rate-limits.md)
 - [Deprecation of Work Item Tracking (WIT) & Test Client OM](./concepts/wit-client-om-deprecation.md)
+- [Migration Guide](./concepts/migration-guide.md)
 
 ## Samples
 

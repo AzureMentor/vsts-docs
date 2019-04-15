@@ -7,7 +7,7 @@ ms.topic: reference
 description: Track the team's progress toward resolving and closing bugs by viewing the Bug Status report - Team Foundation Server 
 ms.assetid: ede30011-e04a-4914-ab68-b4c725a54f96
 ms.author: kaelliauthor: KathrynEE
-ms.manager: douge
+ms.manager: jillfra
 ms.date: 10/17/17
 ---
 
@@ -49,7 +49,7 @@ After the team has started to find and fix bugs, you can track the team's progre
   
 -   Filter the bugs that are counted in the report by specifying iteration and area paths, bug state, priority, and severity.  
   
- For more information, see [Filtering the Report and Changing the Display](#Changing) later in this topic.  
+ For more information, see [Filtering the Report and Changing the Display](#Changing) later in this article.  
   
 ### Required Activities for Tracking Bugs  
  For the Bug Status report to be useful and accurate, the team must perform the following activities:  

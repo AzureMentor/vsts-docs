@@ -1,22 +1,21 @@
 ---
-title: Code coverage Azure Pipelines and TFS 
-titleSuffix: Azure Pipelines & TFS
+title: Review code coverage
 description: Review code coverage results in Azure Pipelines or Team Foundation Server (TFS)
 ms.assetid: 86D94FB7-D730-4ECE-8300-5E76934090A5
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual
-ms.custom: continuous-test
-ms.manager: douge
+ms.custom: "continuous-test, seodec18"
+ms.manager: jillfra
 ms.author: vinojos
-author: vinojos
-ms.date: 08/31/2018
+author: vinodjo
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2015'
 ---
 
 # Review code coverage results
 
-**Azure Pipelines | TFS 2018 | TFS 2017 | TFS 2015**
+[!INCLUDE [version-tfs-2015-rtm](../_shared/version-tfs-2015-rtm.md)]
 
 <a name="prerequisites"></a>  
 

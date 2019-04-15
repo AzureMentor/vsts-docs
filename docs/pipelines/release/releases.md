@@ -1,12 +1,12 @@
 ---
-title: Releases in Azure Pipelines and Team Foundation Server
-titleSuffix: Azure Pipelines & TFS
+title: Understand releases and deployments
+ms.custom: seodec18
 description: DevOps CI CD - Understand releases in Azure Pipelines and Team Foundation Server (TFS)
 ms.assetid: 2FF35C3B-FBF9-407F-8467-2D336973E63C
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
 ms.date: 08/24/2018
@@ -19,7 +19,7 @@ monikerRange: '>= tfs-2015'
 [!INCLUDE [temp](../_shared/concept-rename-note.md)]
 ::: moniker-end
 
-[!INCLUDE [version-rm-dev14](../_shared/version-rm-dev14.md)]
+[!INCLUDE [version-tfs-2015-rtm](../_shared/version-tfs-2015-rtm.md)]
 
 A **release** is the package or container that holds a versioned set of artifacts
 specified in a [release pipeline](index.md) in your DevOps CI/CD processes.
@@ -46,7 +46,7 @@ The following schematic shows the relationship between release pipelines, releas
 
 ![Relationship between release pipelines, releases, and deployments](_img/release-deploy.png)
 
-Releases (and, in some cases, draft releases) can be created from a release pipeline in several ways:
+Releases (and, in some cases, [draft releases](index.md#draftrelease)) can be created from a release pipeline in several ways:
 
 * By a [continuous deployment trigger](triggers.md)
   that creates a release when a new version of the source build artifacts is available.
@@ -77,7 +77,6 @@ or immediately start a deployment. For example:
   defined for a stage, and the deployment will not occur until all
   necessary approvals have been granted.
 
-* Approvers may defer the release to a stage until a specified date and time using a
-  [scheduled trigger](triggers.md#env-triggers).
+* Approvers may defer the release to a stage until a specified date and time.
 
 [!INCLUDE [rm-help-support-shared](../_shared/rm-help-support-shared.md)]

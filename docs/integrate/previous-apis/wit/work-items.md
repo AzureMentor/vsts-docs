@@ -4,8 +4,8 @@ description: Work with work items programmatically using the REST APIs for Team 
 ms.assetid: 2762B459-BD46-493C-998F-A14EE1DA4C94
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
-ms.manager: douge
+monikerRange: '>= tfs-2015 < azure-devops'
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -99,7 +99,7 @@ GET https://{instance}/DefaultCollection/_apis/wit/workitems?api-version={versio
 | api-version       | string                                                            |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
 | ids				| string                                                            |         | A comma-separated list of up to 200 IDs of the work items to get.
 | fields	    	| string                                                            |         | A comma-separated list of up to 100 fields to get with each work item.<br/>If not specified, all fields with values are returned. Calculated fields such as Attached File Count must be specifically queried for using this parameter.
-| asOf				| [DateTime](http://msdn.microsoft.com/en-us/library/az4se3k1.aspx) |         | Gets the work items as they existed at this time.
+| asOf				| [DateTime](http://msdn.microsoft.com/library/az4se3k1.aspx) |         | Gets the work items as they existed at this time.
 | $expand			| enum { all, relations, none }										| none    | Gets work item relationships (work item links, hyperlinks, file attachments, etc.).
 | ErrorPolicy		| string { throw, omit }                                            | throw   | Determines if the call will throw an error when encountering a work item (default behavior) that doesn't exist or simply omit it.
 
@@ -135,7 +135,7 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems?ids=297,299,300&ap
         "System.Title": "Customer can sign in using their Microsoft Account",
         "Microsoft.VSTS.Scheduling.Effort": 8,
         "WEF_6CB513B6E70E43499D9FC94E5BBFB784_Kanban.Column": "New",
-        "System.Description": "Our authorization logic needs to allow for users with Microsoft accounts (formerly Live Ids) - http://msdn.microsoft.com/en-us/library/live/hh826547.aspx"
+        "System.Description": "Our authorization logic needs to allow for users with Microsoft accounts (formerly Live Ids) - http://msdn.microsoft.com/library/live/hh826547.aspx"
       },
       "url": "https://mytfsserver/DefaultCollection/_apis/wit/workItems/297"
     },
@@ -350,7 +350,7 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems?ids=297,299,300&$e
         "Microsoft.VSTS.Scheduling.Effort": 8,
         "WEF_6CB513B6E70E43499D9FC94E5BBFB784_System.ExtensionMarker": true,
         "WEF_6CB513B6E70E43499D9FC94E5BBFB784_Kanban.Column": "New",
-        "System.Description": "Our authorization logic needs to allow for users with Microsoft accounts (formerly Live Ids) - http://msdn.microsoft.com/en-us/library/live/hh826547.aspx"
+        "System.Description": "Our authorization logic needs to allow for users with Microsoft accounts (formerly Live Ids) - http://msdn.microsoft.com/library/live/hh826547.aspx"
       },
       "relations": [
         {
@@ -618,7 +618,7 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/309?api-version=1.
     "System.Title": "Customer can sign in using their Microsoft Account",
     "Microsoft.VSTS.Scheduling.Effort": 8,
     "WEF_6CB513B6E70E43499D9FC94E5BBFB784_Kanban.Column": "New",
-    "System.Description": "Our authorization logic needs to allow for users with Microsoft accounts (formerly Live Ids) - http://msdn.microsoft.com/en-us/library/live/hh826547.aspx"
+    "System.Description": "Our authorization logic needs to allow for users with Microsoft accounts (formerly Live Ids) - http://msdn.microsoft.com/library/live/hh826547.aspx"
   },
   "_links": {
     "self": {
@@ -681,7 +681,7 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/309?$expand=relati
     "System.Title": "Customer can sign in using their Microsoft Account",
     "Microsoft.VSTS.Scheduling.Effort": 8,
     "WEF_6CB513B6E70E43499D9FC94E5BBFB784_Kanban.Column": "New",
-    "System.Description": "Our authorization logic needs to allow for users with Microsoft accounts (formerly Live Ids) - http://msdn.microsoft.com/en-us/library/live/hh826547.aspx"
+    "System.Description": "Our authorization logic needs to allow for users with Microsoft accounts (formerly Live Ids) - http://msdn.microsoft.com/library/live/hh826547.aspx"
   },
   "relations": [
     {
@@ -770,7 +770,7 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/309?$expand=all&ap
     "Microsoft.VSTS.Scheduling.Effort": 8,
     "WEF_6CB513B6E70E43499D9FC94E5BBFB784_System.ExtensionMarker": true,
     "WEF_6CB513B6E70E43499D9FC94E5BBFB784_Kanban.Column": "New",
-    "System.Description": "Our authorization logic needs to allow for users with Microsoft accounts (formerly Live Ids) - http://msdn.microsoft.com/en-us/library/live/hh826547.aspx"
+    "System.Description": "Our authorization logic needs to allow for users with Microsoft accounts (formerly Live Ids) - http://msdn.microsoft.com/library/live/hh826547.aspx"
   },
   "relations": [
     {
@@ -2217,7 +2217,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/wit/workitems/299?api-version=
 
 For scenarios, such as migration or synchronization tools, when you want to make changes to a work item that otherwise would be invalid, you may optionally choose to bypass the rules engine on a work item update.  This allows you to modify the work item fields without any restrictions, for example you can assign a work item to a user no longer in the organization.
 
-To modify the System.CreatedBy, System.CreatedDate, System.ChangedBy, or System.ChangedDate fields, you must be a member of the "Project Collection Service Acccounts" group.
+To modify the System.CreatedBy, System.CreatedDate, System.ChangedBy, or System.ChangedDate fields, you must be a member of the "Project Collection Service Accounts" group.
 
 NOTE: System.CreatedBy and System.CreatedDate can only be modified using bypass rules on work item creation, i.e. the first revision of a work item.
 

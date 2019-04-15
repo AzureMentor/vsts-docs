@@ -1,24 +1,24 @@
 ---
 title: Aggregate work tracking data 
-titleSuffix: Azure DevOps Services
+titleSuffix: Azure DevOps
 description: How to guide to aggregate and filter data with the Analytics Service and the OData aggregation extension in Azure DevOps
 ms.prod: devops
 ms.technology: devops-analytics
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: tutorial
-monikerRange: 'vsts'
-ms.date: 3/16/2018
+monikerRange: '>= azure-devops-2019'
+ms.date: 11/1/2018
 ---
 
 # Aggregate work tracking data using the Analytics service   
 
-[!INCLUDE [temp](../../_shared/version-vsts-only.md)]
+[!INCLUDE [temp](../_shared/version-azure-devops.md)]
 
 You can get a sum of your work tracking data in one of two ways using the Analytics service with Odata. The first method returns a simple count of work items based on your  OData query. The second method returns a JSON formatted result based on your OData query which exercises the OData Aggregation Extension.   
 
-In this topic you'll learn: 
+In this article you'll learn: 
 
 >[!div class="checklist"]
 > * About the OData Aggregation Extension  
@@ -35,15 +35,30 @@ In this topic you'll learn:
 Analytics relies on OData to author queries over your work tracking data. Aggregations in OData are achieved using an extension that introduces the `$apply` keyword. We have some examples of how to use this keyword below. Learn more about the extension at [OData Extension for Data Aggregation](http://docs.oasis-open.org/odata/odata-data-aggregation-ext/v4.0/cs01/odata-data-aggregation-ext-v4.0-cs01.html).
 
 ## Basic root URL
-Use the following basic root URL as a prefix for all the examples provided in this topic. Replace `{OrganizationName}` with your Azure DevOps name. 
+Use the following basic root URL as a prefix for all the examples provided in this article.
+
+::: moniker range="azure-devops"
 
 > [!div class="tabbedCodeSnippets"]
 ```OData
 https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}/
 ``` 
 
-Use the above URL as a prefix for all the examples.   
+::: moniker-end
 
+::: moniker range=">= azure-devops-2019"
+
+> [!div class="tabbedCodeSnippets"]
+```OData
+https://{servername}:{port}/tfs/{OrganizationName}/{ProjectName}/_odata/{version}/
+```
+
+> [!NOTE]
+> The examples shown in this document are based on a Azure DevOps Services URL, you will need to substitute in your Azure DevOps Server URL
+
+::: moniker-end
+
+<a id="simple-count" />
 
 ## Simple count aggregations
 
@@ -59,6 +74,7 @@ Where the full OData query is:
 ```OData
 https://analytics.dev.azure.com/{OrganizationName}/_odata/{version}/WorkItems/$count
 ``` 
+[!INCLUDE [temp](../_shared/api-versioning.md)]
 
 For comparison, using the OData aggregation extension, you add the following to your query:
 
@@ -103,6 +119,8 @@ https://analytics.dev.azure.com/{OrganizationName}/_odata/{version}/WorkItems?
    aggregate($count as Count)
 ``` 
 
+<a id="aggregation-extension" />
+
 ## Aggregate data using the OData aggregation extension
 
 Now that you've seen how to do simple counts, let's review how to trigger aggregations using the `$apply` token where the basic format at the end of the URL is as follows:
@@ -114,6 +132,8 @@ Where:
 - {columnToAggregate} is the aggregation column
 - {aggregationType} will specify the type of aggregation used
 - {newColumnName} specifies the name of the column having values after aggregation.
+
+<a id="apply-extension" />
 
 ## Aggregated data using the apply extension 
 
@@ -155,6 +175,8 @@ https://analytics.dev.azure.com/{OrganizationName}/_odata/{version}/WorkItems?
 https://analytics.dev.azure.com/{OrganizationName}/_odata/{version}/WorkItems?
   $apply=aggregate(WorkItemId with max as MaxWorkItemId)
 ```
+
+<a id="groupby" />
 
 ## Group results using the groupby clause
 
@@ -249,6 +271,8 @@ https://analytics.dev.azure.com/{OrganizationName}/_odata/{version}/Areas?
 
 --> 
 
+<a id="filter-aggregate" />
+
 ## Filter aggregated results
 
 You can also filter aggregated results, however they are applied slightly differently than when you are not using aggregation. The analytics service evaluates filters along a pipe so it's always best to do the most discrete filtering first. 
@@ -267,6 +291,7 @@ https://analytics.dev.azure.com/{OrganizationName}/_odata/{version}/WorkItems?
 > [!NOTE]    
 > You don't have to provide the `groupby` clause. You can simply use the `aggregate` clause to return a single value.  
 
+<a id="multiple-aggregate" />
 
 ## Generate multiple aggregations within a single call
 
@@ -287,6 +312,9 @@ This will return a result that looks like the following:
 }
 ```
 
+
+<a id="calculated-properties" />
+
 ## Generate calculated properties for use within a single call
 
 When you need to use a mathematical expression to calculate properties for use in a result set, such as the sum of completed work which is divided by the sum of completed work plus the sum of remaining work to calculate the percentage of work completed, you can accomplish this as follows:
@@ -304,13 +332,15 @@ When you need to use a mathematical expression to calculate properties for use i
 }
 ```
 
+<a id="cfd" />
+
 ## Generate a Cumulative Flow Diagram from aggregate data
 
 Let's say you want to create a [cumulative flow diagram](../guidance/cumulative-flow-cycle-lead-time-guidance.md) in Power BI. You can use a query similar to the one below:
 
 > [!div class="tabbedCodeSnippets"]
 ```OData
-https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItemBoardSnapshot?$apply=filter(DateValue gt 2015-07-16Z and DateValue le 2015-08-16Z)/filter(BoardLocation/BoardName eq 'Stories' and BoardLocation/Team/TeamName eq '{teamName}')/groupby((DateValue, BoardLocation/ColumnName), aggregate(Count with sum as Count))&$orderby=DateValue
+https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//WorkItemBoardSnapshot?$apply=filter(DateValue gt 2015-07-16Z and DateValue le 2015-08-16Z)/filter(BoardName eq 'Stories' and Team/TeamName eq '{teamName}')/groupby((DateValue, ColumnName), aggregate(Count with sum as Count))&$orderby=DateValue
 ```
 
 This returns a result similar to the following, which you can then use directly within your data visualization of choice.
@@ -318,25 +348,19 @@ This returns a result similar to the following, which you can then use directly 
 > [!div class="tabbedCodeSnippets"]
 ```JSON
 {
-  "@odata.context": "https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//$metadata#WorkItemBoardSnapshot(DateValue,BoardLocation(ColumnName),Count)",
+  "@odata.context": "https://analytics.dev.azure.com/{OrganizationName}/{ProjectName}/_odata/{version}//$metadata#WorkItemBoardSnapshot(DateValue,ColumnName,Count)",
   "value": [
     {
       "@odata.id": null,
       "DateValue": "2015-07-16T00:00:00-07:00",
       "Count": 324,
-      "BoardLocation": {
-        "@odata.id": null,
-        "ColumnName": "Completed"
-      }
+       "ColumnName": "Completed"
     },
     {
       "@odata.id": null,
       "DateValue": "2015-07-16T00:00:00-07:00",
       "Count": 5,
-      "BoardLocation": {
-        "@odata.id": null,
-        "ColumnName": "In Progress"
-      }
+      "ColumnName": "In Progress"
     }
   ]
 }
@@ -346,9 +370,6 @@ Let's take a look at what this query actually does:
 
 * Filters the data to a specific team
 * Filters the data to a specific backlog
-* Groups the result by Date (in the related Date entity) 
-* Groups the result by the ColumnName (in the related BoardLocation entity) 
-* Groups the result by the ColumnOrder (in the related BoardLocation entity) 
 * Returns a count of work items.
 
 When refreshing Power BI or Excel, the fewer rows required, the faster the refresh occurs.

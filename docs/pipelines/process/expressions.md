@@ -1,15 +1,15 @@
 ---
 title: Expressions
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Learn about how you can write custom conditions for running your task in Azure Pipelines or Team Foundation Server (TFS).
 ms.topic: conceptual
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 4df37b09-67a8-418e-a0e8-c17d001f0ab3
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
-ms.date: 03/22/2017
+ms.date: 03/25/2019
 monikerRange: '>= tfs-2017'
 ---
 
@@ -24,12 +24,8 @@ monikerRange: '>= tfs-2017'
 Expressions let you describe decisions the system should make, such as whether to run a step or the value of a variable.
 The most common use of expressions is in [conditions](conditions.md) to determine whether a job or step should run.
 Expressions are typically a nested set of functions evaluated from the innermost function out.
-Expressions always evaluate to strings, though the strings may be treated as booleans or other data types depending on where they're used.
 
 ## Types
-
-Although expressions evaluate to strings, they're coerced to other data types as needed.
-For instance, if an inner function evaluates to `"true"` and then is used as an input to `and()`, it will be coerced to Boolean `True`.
 
 ### Boolean
 `True` and `False`
@@ -106,10 +102,10 @@ runs C#'s `Version.TryParse`. Must contain Major and Minor component at minimum.
 Depending on the execution context, different variables are available.
 For instance, in a condition on a pipeline, [Build](../build/variables.md) or [Release](../release/variables.md) variables are available.
 
-You may access them using one of two syntaxes:
+You may access variables using one of two syntaxes:
 
-* Index syntax: `variables['Build.SourceBranch']`
-* Property dereference syntax: `variables.Build.SourceBranch`.
+* Index syntax: `variables['MyVar']`
+* Property dereference syntax: `variables.MyVar`.
 
 In order to use property dereference syntax, the property name must:
 - Start with `a-Z` or `_`
@@ -126,11 +122,26 @@ Depending on context, other functions may be available as well.
 * Casts parameters to Boolean for evaluation
 * Short-circuits after first `False`
 
+::: moniker range=">= azure-devops-2019"
+
+### coalesce
+* Evaluates the parameters in order, and returns the value that does not equal null or empty-string.
+* Min parameters: 2. Max parameters: N
+
+::: moniker-end
+
 ### contains
 * Evaluates `True` if left parameter String contains right parameter
 * Min parameters: 2. Max parameters: 2
 * Casts parameters to String for evaluation
 * Performs ordinal ignore-case comparison
+
+### containsValue
+* Evaluates `True` if the left parameter is an array, and any item equals the right parameter. Also evaluates `True` if the left parameter is an object, and the value of any property equals the right parameter.
+* Min parameters: 2. Max parameters: 2
+* If the left parameter is an array, converts each item to match the type of the right parameter. If the left parameter is an object, converts the value of each property to match the type of the right parameter.  The equality comparison for each specific item evaluates `False` if the conversion fails.
+* Ordinal ignore-case comparison for Strings
+* Short-circuits after the first match
 
 ### endsWith
 * Evaluates `True` if left parameter String ends with right parameter
@@ -143,6 +154,16 @@ Depending on context, other functions may be available as well.
 * Min parameters: 2. Max parameters: 2
 * Converts right parameter to match type of left parameter. Returns `False` if conversion fails.
 * Ordinal ignore-case comparison for Strings
+
+::: moniker range=">= azure-devops-2019"
+
+### format
+* Evaluates the trailing parameters and inserts them into the leading parameter string.
+* Min parameters: 1. Max parameters: N
+* Example: `format('Hello {0} {1}', 'John', 'Doe')`
+* Escape by doubling braces. For example: `format('literal left brace {{ and literal right brace }}')`
+
+::: moniker-end
 
 ### ge
 * Evaluates `True` if left parameter is greater than or equal to the right parameter
@@ -162,6 +183,16 @@ Depending on context, other functions may be available as well.
 * Converts right parameters to match type of left parameter. Equality comparison evaluates `False` if conversion fails.
 * Ordinal ignore-case comparison for Strings
 * Short-circuits after first match
+
+::: moniker range="> azure-devops-2019"
+
+### join
+* Concatenates all elements in the right parameter array, separated by the left parameter string.
+* Min parameters: 2. Max parameters: 2
+* Each element in the array is converted to a string. Complex objects are converted to empty string.
+* If the right parameter is not an array, the result is the right parameter converted to a string.
+
+::: moniker-end
 
 ### le
 * Evaluates `True` if left parameter is less than or equal to the right parameter
@@ -209,3 +240,29 @@ Depending on context, other functions may be available as well.
 * Evaluates `True` if exactly one parameter is `True`
 * Min parameters: 2. Max parameters: 2
 * Casts parameters to Boolean for evaluation
+
+## Filtered arrays
+
+When operating on a collection of items you can use the `*` syntax to apply a filtered array. A filtered array returns all objects/elements regardless their names.
+
+As an example, consider an array of objects named `foo`. We want to get an array of the values of the `id` property in each object in our array.
+
+```json
+[
+	{ "id": 1, "a": "avalue1"},
+	{ "id": 2, "a": "avalue2"},
+	{ "id": 3, "a": "avalue3"}
+]
+```
+
+We could do the following:
+
+`foo.*.id`
+
+This tells the system to operate on `foo` as a filtered array and then select the `id` property.
+
+This would return:
+
+```json
+[ 1, 2, 3 ]
+```

@@ -1,47 +1,57 @@
 ---
 title: Supported OData features   
-titleSuffix: Azure DevOps Services 
+titleSuffix: Azure DevOps 
 description: Current level of support for OData specification in the Analytics Service
 ms.prod: devops
 ms.technology: devops-analytics
 ms.assetid: 8D81FEFD-F432-4E10-A415-9167B5FE9A57 
 ms.reviewer: kokosins
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: reference
-ms.date: 3/16/2018
+monikerRange: '>= azure-devops-2019'
+ms.date: 04/05/2019
 ---
 
 
 # Supported OData features and clauses 
 
-[!INCLUDE [temp](../../_shared/version-vsts-only.md)]
+[!INCLUDE [temp](../_shared/version-azure-devops.md)]
 
-This topic provides a summary of the OData features and functions supported or not supported by the Analytics Service for Azure DevOps.
+this article provides a summary of the OData features and functions supported or not supported by the Analytics Service for Azure DevOps.
 
 [!INCLUDE [temp](../_shared/analytics-preview.md)]
+
+<a id="clauses" />
 
 ## Supported clauses
 
 - ```$apply``` 
-- ```$filter```
-- ```$select``` 
-- ```$top```  
-- ```$skip```  
-- ```$orderby```  
-- ```$expand```  
+- ```$compute``` 
 - ```$count``` 
+- ```$expand```  
+- ```$filter```
+- ```$orderby``` 
+- ```$select``` 
+- ```$skip```  
+- ```$top```  
+
 
 When multiple clauses are used in query they will be applied in the order specified above. Order of clauses in query string ignored. For example, in the following query, first work items are grouped and aggregated. Next, the groups are filtered. After that, the filtered groups are sorted. Finally, the first 5 records are returned. This means the query returns the top 5 work item types used at least 100 times.
 ``` 
 WorkItems?$filter=Count ge 100$apply=groupby((WorkItemType), aggregate($count as Count))&&$orderby=Count&top=5
 ```
+
+
+<a id="aggregation-extensions" />
+
 ### Aggregation extensions support
+
 $apply triggers aggregation behavior. It takes a sequence of set transformations, separated by forward slashes to express that they are consecutively applied, i.e. the result of each transformation is the input to the next transformation. For example in the following query, first work item are filtered. Next, grouped by work item type and state. Then groups are filtered and grouped again.
 
 > [!NOTE]  
-> OData aggregation extensions are relatively new and not yet fully supported by various client tools. 
+> OData aggregation extensions are relatively new and not yet fully supported by some client tools. 
 
 ``` 
 Workitems?$apply=filter(State ne 'Closed')/groupby((WorkItemType, State), aggregate($count as Count))/filter(Count gt 100)/groupby((State),aggregate(Count with max as MaxCount))  
@@ -50,15 +60,18 @@ Workitems?$apply=filter(State ne 'Closed')/groupby((WorkItemType, State), aggreg
 The following transformations are supported:
 | Transformation | Notes |
 | ------------------ | ----------- |
-| ```groupby```  | Allows grouping by properties |
-| ```filter```| Allows filtering input set. Supports the same expressions as ```$filter``` |  
 | ```aggregate```  | Allows aggregation using one of following methods   ```$count```, ```average```, ```max```,  ```min```, ```sum```  |
 | ```compute```  | Allows adding calculated properties |
+| ```expand```  | Allows expansion by specified properties |
+| ```filter```| Allows filtering input set. Supports the same expressions as ```$filter``` |  
+| ```groupby```  | Allows grouping by properties |
 
 For more details, see [Aggregate data](aggregated-data-analytics.md)
 
 <a id="supported-functions"></a> 
+
 ## Supported functions
+
 | Canonical function | Description |
 | ------------------ | ----------- |  
 | [```cast```](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part2-url-conventions/odata-v4.0-errata03-os-part2-url-conventions-complete.html#_Toc371341801) |  Returns expression casted to specified type  |  
@@ -94,6 +107,8 @@ However, you can't enter the following:
 /WorkItems?$select=WorkItemId,State,toupper(Title)
 ```  
 
+<a id="unsupported" />
+
 ## Not supported features
 
 - ```bottomcount```  
@@ -101,7 +116,6 @@ However, you can't enter the following:
 - ```bottompercent``` 
 - ```$crossjoin```  
 - ```concat```   
-- ```$compute```
 - ```countdistinct```  
 - ```from```
 - ```isdefined```  
@@ -114,7 +128,7 @@ However, you can't enter the following:
 
 ## Related articles  
 
-- [WIT analytics](wit-analytics.md)  
+- [Query your work tracking data](wit-analytics.md)  
 - [Aggregate data](aggregated-data-analytics.md)
 - [OData v4.0 specification](http://www.odata.org/documentation/)  
 - [OData v4.0 Part 2: URL Conventions Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html)

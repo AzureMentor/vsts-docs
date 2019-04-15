@@ -5,7 +5,7 @@ description: Resolve an error that occurs with the integration of SharePoint, Te
 ms.prod: devops
 ms.technology: devops-agile
 ms.assetid: fdb0f881-7ead-45f5-85c0-189a86d29d7a
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: troubleshooting
@@ -44,4 +44,4 @@ To perform this procedure, you must be a member of the Administrators group on t
   
 ## Related articles
  
-- [Verify SharePoint products for Team Foundation Server](/tfs/server/install/sharepoint/verify-sharepoint)
+- [Verify SharePoint products for Team Foundation Server](/azure/devops/server/install/sharepoint/verify-sharepoint)

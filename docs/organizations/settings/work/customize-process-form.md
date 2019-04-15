@@ -6,17 +6,17 @@ ms-custom: inherited-process
 ms.technology: devops-agile
 ms.prod: devops
 ms.assetid: E0AACC40-9A9E-4A48-A1D7-1CE70D53EEA8  
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
-monikerRange: 'vsts'
+monikerRange: '>= azure-devops-2019'
 ms.topic: conceptual
-ms.date: 05/31/2018
+ms.date: 11/19/2018
 ---
 
-# Customize the web layout for a work item type 
+# Customize the web layout for a work item type (Inheritance process) 
 
-[!INCLUDE [temp](../../../boards/_shared/version-vsts-only.md)]
+[!INCLUDE [temp](../../../boards/_shared/version-vsts-plus-azdevserver-2019.md)]
 
 Work items are the backbone for planning and tracking work. As such, you'll want to make sure that each work item type (WIT) is tracking the data that your team needs. 
 
@@ -27,6 +27,9 @@ For example, the following form shows that two custom pages have been added, **I
 <img src="_img/process/cpform-customized-form-intro.png" alt="Customized user story form" style="border: 1px solid #C3C3C3;" /> 
 
 Once you've added a custom page or group, you can add [custom fields to those pages or groups](customize-process-field.md). To learn more about what you can customize, see [About process customization and inherited processes](inheritance-process-model.md). 
+
+[!INCLUDE [temp](../_shared/note-on-prem-link.md)]
+
 
 
 [!INCLUDE [temp](../_shared/process-prerequisites.md)] 
@@ -61,10 +64,10 @@ Before you remove a group, first move all fields defined in that group to anothe
 > [!TIP]   
 >You must remove all fields from a group for the Remove option to appear. 
 
-Choose the ![Delete icon](../../../_img/icons/delete_icon.png) Remove option from the custom group &hellip; context menu.   
+Choose the ![Delete icon](../../../_img/icons/delete_icon.png) Remove option from the custom group &hellip; context menu.
 
 > [!NOTE]     
->When all fields in an inherited group are hidden, the inherited group itself will not appear on the form.   
+>When all fields in an inherited group are hidden, the inherited group itself does not appear on the form.
 
 <a id="move-field"></a>
 ## Move a field     

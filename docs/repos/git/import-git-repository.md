@@ -5,11 +5,11 @@ description: Import a repo from GitHub, GitLab, or Bitbucket into your Azure Dev
 ms.assetid: 5439629e-23fd-44f1-a345-f00a435f1430
 ms.prod: devops
 ms.technology: devops-code-git 
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: quickstart
-ms.date: 09/10/2018
+ms.date: 11/02/2018
 monikerRange: '>= tfs-2013'
 ---
 
@@ -17,7 +17,7 @@ monikerRange: '>= tfs-2013'
 # Import a Git repo
 #### Azure Repos | TFS 2018 | TFS 2017 | TFS 2015 | TFS 2013
 
-This guide shows you how to import an existing Git repo from GitHub, Bitbucket, GitLab, or other location into a new or empty existing repo in your Azure DevOps project.
+This guide shows you how to import an existing Git repo from GitHub, Bitbucket, GitLab, or other location into a new or empty existing repo in your project in Azure DevOps.
 
 ::: moniker range=">= tfs-2017 <= tfs-2018"
 
@@ -41,15 +41,36 @@ This issue is resolved starting with [Team Foundation Server 2018 Update 2 RC1 a
 
 ## Prerequisites
 
-* An Azure DevOps organization. If you don't have one, you can [sign up](../../organizations/accounts/create-organization.md) for one for free. Each organization includes free, unlimited private Git repositories.
+* An organization in Azure DevOps. If you don't have one, you can [sign up](../../organizations/accounts/create-organization.md) for one for free. Each organization includes free, unlimited private Git repositories.
 * To use the **Import repository** feature in TFS, you must have TFS 2017 Update 1 or higher. 
 * To import a repository using TFS 2017 RTM or earlier, see [Manually import a repo](#manually-import-a-repo).
 
-::: moniker range=">= tfs-2017"
+::: moniker range=">= tfs-2017"  
 
-## Import into a new repo
+## Import into a new repo  
+::: moniker-end  
 
-From the repo drop-down, select **Import repository**. 
+::: moniker range=">= azure-devops-2019"
+
+1. Select **Repos**, **Files**.
+
+  ![View your branches](_img/repos-navigation/repos-files.png)
+
+0. From the repo drop-down, select **Import repository**.
+
+  ![Manage repositories](_img/repo-mgmt/import-repository.png)
+
+0. If the source repo is publicly available, just [enter the clone URL](clone.md#clone_url) of the source repository and a name for your new Git repository.
+
+  If the source repository is private but can be accessed using basic authentication (username-password, personal access token, etc.),  select **Requires authorization** and enter the your credentials.
+
+  ![Import Repository Dialog](_img/Import-Repo/ImportRepoDialog.png)
+
+::: moniker-end
+
+::: moniker range="<= tfs-2018"
+
+From the repo drop-down, select **Import repository**.
 
 ![Import Repository Option](_img/Import-Repo/ImportRepository.png)
 
@@ -58,6 +79,9 @@ If the source repo is publicly available, just [enter the clone URL](clone.md#cl
 If the source repository is private but can be accessed using basic authentication (username-password, personal access token, etc.),  select **Requires authorization** and enter the your credentials.
 
 ![Import Repository Dialog](_img/Import-Repo/ImportRepoDialog.png)
+
+::: moniker-end
+
 
 ## Import into an existing empty repo
 
@@ -68,7 +92,6 @@ On the **Files** page of the empty Git repository, select **Import** and [enter 
 >[!NOTE]
 >The import feature disables automated linking for work items mentioned in a commit comment since the work item IDs in the destination project might not be the same as ones in the source project. Automatic linking for work items mentioned in a commit can be re-enabled by navigating to **Settings**, **Version Control**,  selecting your repository, and choosing **Options**. For more information on linking commits with work items, see [How do I associate my commits with work items?](share-your-code-in-git-vs-2017.md#how-do-i-associate-my-commits-with-work-items)
 
-::: moniker-end
 ::: moniker range=">= tfs-2013"
 
 ## Manually import a repo
@@ -97,9 +120,10 @@ The import repo feature was introduced in TFS 2017 Update 1. If you are using TF
     rm -rf old-contoso-repo.git
     ```
 
+::: moniker-end
+
 ## Frequently asked questions
 
-::: moniker-end
 ::: moniker range=">= tfs-2017"
 
 Although most of the time the import is successful, the following conditions can cause problems.
@@ -122,6 +146,7 @@ If the source repository does not provide this capability, the import service ca
 This failure can happen when creating import request or while import is in progress.
 
 ::: moniker-end
+
 ::: moniker range=">= tfs-2013"
 
 ### Can I import from previous versions of Team Foundation Server?
@@ -129,6 +154,7 @@ If the source Git repository is in a TFS version earlier than TFS 2017 RTM, then
 This happens because of a contract mismatch between the latest Azure DevOps Services/TFS and pre-2017 RTM versions of TFS.
 
 ::: moniker-end
+
 ::: moniker range=">= tfs-2017"
 
 ### Can I use MSA based credentials?
@@ -143,6 +169,8 @@ git clone https://<<username>>:<<password>>@<<remaining clone Url>>
 
 You can migrate code from an existing TFVC repository to a new Git repository within the same account. While migrating to Git has many benefits, it is an involved process for large TFVC repositories and teams. Centralized version control systems, like TFVC, behave different than Git in fundamental ways. The switch involves a lot more than learning new commands. It is a disruptive change that requires careful planning. For more information, see [Import from TFVC to Git](import-from-tfvc.md).
 
+::: moniker-end
+
 ## Next steps
 
 > [!div class="nextstepaction"]
@@ -151,4 +179,4 @@ You can migrate code from an existing TFVC repository to a new Git repository wi
 > [!div class="nextstepaction"]
 > [Learn more about using Git in the Git tutorial](gitworkflow.md)
 
-::: moniker-end
+

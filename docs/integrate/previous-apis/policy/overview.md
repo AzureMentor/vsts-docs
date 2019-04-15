@@ -4,8 +4,8 @@ description: Work with policies programmatically using the REST APIs for Team Fo
 ms.assetid: c7fc7c92-075e-4bfc-8b66-9a9a5f28bdbd
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
-ms.manager: douge
+monikerRange: '>= tfs-2015 < azure-devops'
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -33,5 +33,5 @@ If you haven’t already, look at the information on getting started with these 
 
 ### Get a list of policy configurations
 
-* Get the available [policy types](./types.md) for anorganization. 
+* Get the available [policy types](./types.md) for an organization. 
 * Get the [policy configurations](./configurations.md) for a project.

@@ -1,37 +1,41 @@
 ---
-title: VMware deployment
-titleSuffix: Azure Pipelines & TFS
+title: Deploy to VMware
 description: Provision and manage virtual machines (VMs) in VMware vCenter Server
 ms.assetid: 1A6903E4-B0B3-426E-9E07-67492ADB1F42
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2017'
 ---
 
-# VMware deployment
+# Deploy to VMware vCenter Server
 
-**Azure Pipelines | TFS 2018 | TFS 2017**
+[!INCLUDE [version-tfs-2017-rtm](../_shared/version-tfs-2017-rtm.md)]
 
-::: moniker range="<= tfs-2018"
 [!INCLUDE [temp](../_shared/concept-rename-note.md)]
-::: moniker-end
 
-You can automatically provision virtual machines in a VMware environment and deploy to those virtual machines after every successful build. Before this guidance, read the [web quickstart](../get-started-designer.md).
+You can automatically provision virtual machines in a VMware environment and deploy to those virtual machines after every successful build.
 
 ## VMware connection
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 You need to first configure how Azure Pipelines connects to vCenter. You cannot use Microsoft-hosted agents to run VMware tasks since the vSphere SDK is not installed on these machines. You have to a set up a self-hosted agent that can communicate with the vCenter server.
 
 ::: moniker-end
 
-::: moniker range="< vsts"
+::: moniker range="azure-devops-2019"
+
+You need to first configure how Azure DevOps Server connects to vCenter. You have to a set up a self-hosted agent that can communicate with the vCenter server.
+
+::: moniker-end
+
+::: moniker range="< azure-devops-2019"
 
 You need to first configure how TFS connects to vCenter. You have to a set up a self-hosted agent that can communicate with the vCenter server.
 
@@ -44,9 +48,9 @@ the agent machine:
 
    * Download and install the latest 
      version of the Java Runtime Environment from 
-     [this location](http://aka.ms/downloadjre).
+     [this location](https://aka.ms/downloadjre).
 
-   * Go to [this location](http://aka.ms/vspheresdk)
+   * Go to [this location](https://aka.ms/vspheresdk)
      and sign in with your existing credentials or register
      with the website. Then download the **vSphere 6.0 
      Management SDK**.
@@ -66,16 +70,8 @@ the agent machine:
      path will be:  
      `C:\vSphereSDK\SDK\vsphere-ws\java\JAXWS\lib\vim25.jar`<p />
 
-1. Install the VMware extension 
+1. Install the [VMware extension](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.vmwareapp)
    from Visual Studio Marketplace into TFS or Azure Pipelines.
-
-   * If you are using **Azure Pipelines**, 
-     install the extension from [this location](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.vmwareapp)
-     in Visual Studio Marketplace.
-   * If you are using **Team Foundation Server**, download 
-     the extension from [this location](https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.vmwareapp)
-     in Visual Studio Marketplace, upload it to your 
-     Team Foundation Server, and install it.<p />
 
 1. Follow these steps to create a vCenter Server service connection in your project:
 
@@ -128,7 +124,7 @@ Use the **VMware Resource Deployment** task from the VMware extension and config
    error page. The vSphere Web Client URL will be 
    of the form `https://machine.domain/vsphere-client/`.
    Good practice guidance for vCenter Server certificates 
-   can be found in the [VMware Knowledge Base](http://aka.ms/vcentercertificate)
+   can be found in the [VMware Knowledge Base](https://aka.ms/vcentercertificate)
    (article 2057223).
 
 ## Provisioning virtual machines

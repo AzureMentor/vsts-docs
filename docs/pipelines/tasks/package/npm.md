@@ -1,12 +1,12 @@
 ---
 title: npm task
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: How to use npm packages when building code in Azure Pipelines
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: BE298C30-3B6D-4E06-B747-62A8AF6E10A6
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
 ms.date: 07/05/2017
@@ -23,15 +23,15 @@ Use this task in a build or release pipeline to install and publish npm packages
 [!INCLUDE [temp](../../_shared/concept-rename-note.md)]
 ::: moniker-end
 
-## Install npm packages
-
-### Demands
-[npm](https://nodejs.org/en/download/)
-
 ::: moniker range="> tfs-2018"
 ## YAML snippet
 [!INCLUDE [temp](../_shared/yaml/NpmV1.md)]
 ::: moniker-end
+
+## Install npm packages
+
+### Demands
+[npm](https://nodejs.org/en/download/)
 
 ### Arguments
 <table>
@@ -59,16 +59,14 @@ Use this task in a build or release pipeline to install and publish npm packages
     <tr>
         <td>Registries to use</td>
         <td>
-            *Leave this section blank to use packages from npmjs directly.* Otherwise, select one of these options:
-            <br />
             **Registries in my .npmrc:**
             <ul>
-                <li>Select this option to use feeds specified in a [.npmrc](https://docs.npmjs.com/files/npmrc) file you've checked into source control.</li>
+                <li>Select this option to use feeds specified in a [.npmrc](https://docs.npmjs.com/files/npmrc) file you've checked into source control. If no .npmrc file is present, the task will default to using packages directly from npmjs.</li>
                 <ul><li>Credentials for registries outside this organization/collection can be used to inject credentials you've provided as an [npm service connection](../../library/service-endpoints.md#sep-npm) into your .npmrc as the build runs.</li></ul>
             </ul>
             **Use packages from this Azure Artifacts/TFS registry:**
             <ul>
-                <li>Select this option to use one Package Management feed in the same organization/collection as the build.</li>
+                <li>Select this option to use one Azure Artifacts feed in the same organization/collection as the build.</li>
             </ul>
         </td>
     </tr>
@@ -116,9 +114,9 @@ Use this task in a build or release pipeline to install and publish npm packages
         <td>Registry location</td>
         <td>
             <ul>
-                <li>**Registry I select here** publishes to a Package Management registry in the same organization/collection as the build. After you select this option, select the target registry from the dropdown.
+                <li>**Registry I select here** publishes to an Azure Artifacts registry in the same organization/collection as the build. After you select this option, select the target registry from the dropdown.
                 </li>
-                <li>**External npm registry (including other organizations/collections)** publishes to an external server such as [npm](https://www.npmjs.com/), [MyGet](http://www.myget.org/), or a Package Management feed in another Azure DevOps organization or TFS collection. After you select this option, create and select an [npm service connection](../../library/service-endpoints.md#sep-npm).
+                <li>**External npm registry (including other organizations/collections)** publishes to an external server such as [npm](https://www.npmjs.com/), [MyGet](http://www.myget.org/), or an Azure Artifacts feed in another Azure DevOps organization or TFS collection. After you select this option, create and select an [npm service connection](../../library/service-endpoints.md#sep-npm).
                 </li>
             </ul>
         </td>
@@ -186,7 +184,7 @@ Use this task in a build or release pipeline to install and publish npm packages
             </ul>
             **Use packages from this Azure Artifacts/TFS registry:**
             <ul>
-                <li>Select this option to use one Package Management feed in the same organization/collection as the build.</li>
+                <li>Select this option to use one Azure Artifacts feed in the same organization/collection as the build.</li>
             </ul>
         </td>
     </tr>
@@ -201,7 +199,7 @@ Use this task in a build or release pipeline to install and publish npm packages
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 
@@ -213,7 +211,7 @@ This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). F
 
 [!INCLUDE [temp](../../_shared/qa-agents.md)]
 
-::: moniker range="< vsts"
+::: moniker range="< azure-devops"
 [!INCLUDE [temp](../../_shared/qa-versions.md)]
 ::: moniker-end
 

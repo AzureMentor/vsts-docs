@@ -5,7 +5,7 @@ description: XML syntax to scope the allowed links within a links control elemen
 ms.prod: devops
 ms.technology: devops-agile
 ms.assetid: b43e4e57-3a42-4705-9e52-eec2f8fb5f72
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: reference
@@ -141,7 +141,7 @@ The links control that is displayed is the same for both the web portal and Team
 
   
 ## Related articles  
--  [LinkTypes elements reference, Define a custom link type ](link-type-element-reference.md)   
+-  [LinkTypes elements reference, Define a custom link type](link-type-element-reference.md)   
 -  [Define link controls to restrict link relationships](define-link-controls.md)
 -  [Specify work item form controls](specify-work-item-form-controls.md)  
  

@@ -6,10 +6,11 @@ ms.assetid: 81EDA53E-88A5-46E2-952B-2D6E1FBA33E2
 ms.prod: devops
 ms.technology: devops-analytics
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
-ms.date: 03/14/2018
+monikerRange: "<= azure-devops-2019" 
+ms.date: 11/19/2018
 ---
 
 # Manually process the TFS data warehouse and analysis services cube
@@ -34,7 +35,7 @@ Processing the warehouse or cube depends on how much data is involved; it can ta
 
 ### To access the web services
 
-1. If you aren't a member of the **Administrators** security group on the application-tier server for TFS, [get added now](/tfs/server/admin/add-administrator-tfs).  
+1. If you aren't a member of the **Administrators** security group on the application-tier server for TFS, [get added now](/azure/devops/server/admin/add-administrator-tfs).  
 
 	Also, make sure that your server-level **Administer warehouse** permission must be set to **Allow**.
 

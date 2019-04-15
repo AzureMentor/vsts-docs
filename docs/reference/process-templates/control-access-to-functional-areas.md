@@ -7,7 +7,7 @@ ms.technology: devops-agile
 ms.assetid: 6c967b40-4842-41db-9350-bb3320f3e57c
 ms.author: kaelli
 author: KathrynEE
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: reference
 ms.date: 09/08/2017
 ---
@@ -24,7 +24,7 @@ You can configure the initial security settings for the following functional are
  
 The default process templates assign several permissions to default security groups. You can modify these assignments by customizing the plug-in file for the corresponding functional area.  
 
-For information about how to configure initial security groups, see [Configure initial groups, teams, members, and permissions](configure-initial-groups-teams-members-permissions.md). For information about how to administer users and groups, see [Set up groups for use in TFS](/tfs/server/admin/setup-ad-groups).  
+For information about how to configure initial security groups, see [Configure initial groups, teams, members, and permissions](configure-initial-groups-teams-members-permissions.md). For information about how to administer users and groups, see [Set up groups for use in TFS](/azure/devops/server/admin/setup-ad-groups).  
   
 <a name="ElementsFunctionalArea"></a> 
 ##Assign permissions to functional areas  
@@ -78,7 +78,7 @@ You assign these permissions by using the functional **permission** element, as 
   
 <a name="Build"></a> 
 ##  Assign Build permissions    
-You can assign permissions that control access to build activities by changing the Build plug-in file. You can grant access to users and groups in Windows and groups in Team Foundation Server. For information about the format to use when you specify groups, see [Group macros and default groups ](configure-initial-groups-teams-members-permissions.md#group-macros).  
+You can assign permissions that control access to build activities by changing the Build plug-in file. You can grant access to users and groups in Windows and groups in Team Foundation Server. For information about the format to use when you specify groups, see [Group macros and default groups](configure-initial-groups-teams-members-permissions.md#group-macros).  
   
  You assign these permissions by using the functional **permission** element, as the following example shows:  
   
@@ -107,6 +107,6 @@ You can control access to activities in Lab Management by changing the Lab plug-
 ## Related articles
 - [Configure initial groups, teams, members, and permissions](configure-initial-groups-teams-members-permissions.md)   
 - [Add administrators, set permissions at the project-level or project collection-level](../../organizations/security/set-project-collection-level-permissions.md)
-- [Configure Lab Management with TFSLabConfig, Permissions](/tfs/server/ref/command-line/tfslabconfig-cmd#permissions)
+- [Configure Lab Management with TFSLabConfig, Permissions](/azure/devops/server/ref/command-line/tfslabconfig-cmd#permissions)
 
  

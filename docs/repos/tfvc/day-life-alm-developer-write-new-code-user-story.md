@@ -5,7 +5,7 @@ description: A day in the life of an devops developer. Write new code for a user
 ms.assetid: 1407effb-0d9b-451b-97b0-b40e0c48594c
 ms.prod: devops
 ms.technology: devops-code-tfvc
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: conceptual
@@ -33,7 +33,7 @@ Peter briefly reviews his backlog and selects the task he will work on today. He
 
 ## Review personal backlog and prepare tasks to begin work
 
-In **Team Explorer**, Peter opens the **My Work** page. The team has agreed that, during the current sprint, Peter will work on **Evaluate invoice status**, a top-priority item in the product backlog. Peter decides to start with ** Implement math functions**, a child task of the top-priority backlog item. He drags this task from the **Available Work Items** list into the **In Progress Work Items & Changes** list.
+In **Team Explorer**, Peter opens the **My Work** page. The team has agreed that, during the current sprint, Peter will work on **Evaluate invoice status**, a top-priority item in the product backlog. Peter decides to start with **Implement math functions**, a child task of the top-priority backlog item. He drags this task from the **Available Work Items** list into the **In Progress Work Items & Changes** list.
 
 ### To review personal backlog and prepare tasks to begin work
   

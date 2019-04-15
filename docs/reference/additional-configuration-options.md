@@ -5,11 +5,11 @@ description: Options to configure or customize after you upgrade an on-premises 
 ms.technology: devops-agile
 ms.prod: devops
 ms.assetid: F89F5890-31E6-47EF-810F-AB75E1AE7E00
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
-monikerRange: '>= tfs-2013 <= tfs-2018'
+monikerRange: '>= tfs-2013 <= azure-devops-2019'
 ms.date: 04/05/2017
 ---
 
@@ -42,7 +42,7 @@ Code Review
 Adds the Code Review Request and Code Review Response work item types (WITs). With them, you can [request a code review and track code review responses](../repos/tfvc/get-code-reviewed-vs.md).  
 </td>
 <td>
-**Required:** [Configure an SMTP server for TFS](/tfs/server/admin/setup-customize-alerts). <br/>
+**Required:** [Configure an SMTP server for TFS](/azure/devops/server/admin/setup-customize-alerts). <br/>
 **Required:** Visual Studio (any version).
 **Availability:** Only supported when your project uses Team Foundation version control for source control.
 </td></tr>
@@ -67,7 +67,7 @@ You can [request feedback](../project/feedback/get-feedback.md) from your stakeh
 </td>
 <td>
 **Required:** Provide [Advanced access](../organizations/security/change-access-levels.md) to users who'll request feedback.<br/>
-**Required:** [Configure an SMTP server for TFS](/tfs/server/admin/setup-customize-alerts). <br/>
+**Required:** [Configure an SMTP server for TFS](/azure/devops/server/admin/setup-customize-alerts). <br/>
 **Required:** [Grant stakeholders permission](../project/feedback/give-permissions-feedback.md).
 
 </td>

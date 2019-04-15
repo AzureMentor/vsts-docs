@@ -1,21 +1,22 @@
 ---
 title: Release artifacts and artifact sources
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: DevOps CI CD - Understand build artifacts in Azure Pipelines and Team Foundation Server (TFS)
 ms.assetid: 6820FA1F-4B20-4845-89E0-E6AB4BD5888D
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
+ms.date: 11/29/2018
 monikerRange: '>= tfs-2015'
 ---
 
 # Release artifacts and artifact sources
 
-[!INCLUDE [version-rm-dev14](../_shared/version-rm-dev14.md)]
+[!INCLUDE [version-tfs-2015-rtm](../_shared/version-tfs-2015-rtm.md)]
+
 ::: moniker range="<= tfs-2018"
 [!INCLUDE [temp](../_shared/concept-rename-note.md)]
 ::: moniker-end
@@ -170,7 +171,7 @@ The following features are available when using Azure Pipelines sources:
 |---------|----------------------------------|
 | Auto-trigger releases | New releases can be created automatically when new builds (including XAML builds) are produced. See [Continuous Deployment](triggers.md) for details. You do not need to configure anything within the build pipeline. See the notes above for differences between version of TFS.|
 | Artifact variables | A number of [artifact variables](variables.md#artifact-variables) are supported for builds from Azure Pipelines. |
-| Work items and commits | Azure Pipelines integrates with work items in TFS and Azure Pipelines. These work items are also shown in the details of releases. Azure Pipelines integrates with a number of version control systems such as TFVC and Git, GitHub, Subversion, and external Git repositories. Azure Pipelines shows the commits only when the build is produced from source code in TFVC or Git.|
+| Work items and commits | Azure Pipelines integrates with work items in TFS and Azure Pipelines. These work items are also shown in the details of releases. Azure Pipelines integrates with a number of version control systems such as TFVC and Git, GitHub, Subversion, and Other Git repositories. Azure Pipelines shows the commits only when the build is produced from source code in TFVC or Git.|
 | Artifact download | By default, build artifacts are downloaded to the agent. You can configure an option in the stage to [skip the download](../process/phases.md#agent-phase) of artifacts. |
 | Deployment section in build | The build summary includes a **Deployment** section, which lists all the stages to which the build was deployed. |
 
@@ -305,9 +306,9 @@ The following features are available when using Azure Container Registry, Docker
 
 <a name="nuget"></a>
 
-<h3 id="nugetsource">Azure Artifacts (NuGet, Maven, and npm packages)</h3>
+<h3 id="nugetsource">Azure Artifacts (NuGet packages only)</h3>
 
-To integrate with NuGet, Maven, or npm, you must first [assign licenses for the Azure Artifacts](../../artifacts/license-azure-artifacts.md). For more information, see the [Azure Artifacts](../../artifacts/overview.md) overview.
+To use NuGet packages from Azure Artifacts in your deployment, you must first [assign licenses for the Azure Artifacts](../../artifacts/license-azure-artifacts.md). For more information, see the [Azure Artifacts](../../artifacts/overview.md) overview.
 
 Scenarios where you may want to consume these artifacts are:
 
@@ -327,6 +328,9 @@ The following features are available when using Azure Artifacts sources:
 | Work items and commits | Azure Pipelines cannot show work items or commits. |
 | Artifact download | By default, packages are downloaded to the agent. You can configure an option in the stage to [skip the download](../process/phases.md#agent-phase) of artifacts. |
 <p />
+
+> [!NOTE]
+> Only NuGet packages are currently supported in the Azure Artifacts release artifact type. Support for the other package types supported in Azure Artifacts is coming soon.
 
 ----
 
@@ -425,6 +429,15 @@ The following features are available when using TeamCity sources:
 
 ----
 
+<a name="Custom artifacts"></a>
+
+### Custom artifacts
+
+In addition to built-in artifact sources, Azure DevOps Pipelines supports integrating any custom artifact source with the artifact extensibility model. You can plug in any custom artifact source, and Azure DevOps will provide a first-class user experience and seamless integration.
+
+For more details, see [Azure DevOps artifact extensibility model](https://aka.ms/artifactextensibility).
+
+----
 
 <a name="others"></a>
 
@@ -461,7 +474,7 @@ deployed again. In addition, because the previously downloaded contents are
 always deleted when you initiate a new release, Azure Pipelines cannot
 perform incremental downloads to the agent.
 
-::: moniker range="< vsts"
+::: moniker range="<= tfs-2018"
 
 You can, however, instruct Azure Pipelines to [skip the automatic download](../process/phases.md#artifact-download)
 of artifacts to the agent for a specific job and stage of the deployment if you
@@ -471,7 +484,7 @@ download the artifacts you require.
 
 ::: moniker-end
 
-::: moniker range="vsts"
+::: moniker range="> tfs-2018"
 
 In Azure Pipelines, you can, however, [select which artifacts you want to download](../process/phases.md#artifact-download)
 to the agent for a specific job and stage of the deployment.
@@ -508,9 +521,6 @@ build pipeline, job, project, or repository. You can edit
 the source alias from the artifacts tab of a release pipeline; for example, when you change
 the name of the build pipeline and you want to use a
 source alias that reflects the name of the build pipeline.
-
-> The source alias can contain only alphanumeric characters
-and underscores, and must start with a letter or an underscore
 
 <a name="art-primary"></a>
 

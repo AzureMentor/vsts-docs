@@ -1,20 +1,20 @@
 ---
-title: View and change your user preferences 
-titleSuffix: Azure DevOps & TFS
-description: Change picture, set preferred email, or other user preferences from your profile defined for Azure DevOps Services or Team Foundation Serer 
+title: View, change user preferences 
+titleSuffix: Azure DevOps
+ms.custom: seodec18
+description: Change picture, set preferred email, or other user preferences from your profile defined for Azure DevOps 
 ms.prod: devops
 ms.technology: devops-collab
 ms.assetid: 
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
 ms.topic: conceptual
 monikerRange: '>= tfs-2015'
-ms.date: 07-21-2018
+ms.date: 02/11/2019
 ---
 
-
-# Set your preferences
+# Set user preferences
 
 [!INCLUDE [temp](../../_shared/version-ts-tfs-2015-2016.md)]
 
@@ -64,14 +64,11 @@ From your profile page, you can change your picture or other account preferences
 
 Locale settings include language, date and time pattern, time zone, and user interface theme.
 
+
+::: moniker range=">= azure-devops-2019"  
 ## Change profile settings  
 
-[!INCLUDE [temp](../../_shared/new-navigation.md)] 
-
-# [New navigation](#tab/new-nav)
-
-::: moniker range="vsts"  
-0. To change your user preferences, open your profile menu.
+1. To change your user preferences, open your profile menu.
 
 	> [!div class="mx-imgBorder"]  
 	> ![Open profile menu](../../_shared/_img/settings/profile-menu-vert.png)
@@ -91,28 +88,29 @@ Locale settings include language, date and time pattern, time zone, and user int
 	> [!div class="mx-imgBorder"]  
 	> ![Choose Edit ](../../_shared/_img/settings/edit-profile-preferences-dialog.png)
 
-::: moniker-end  
+0. Choose **Edit profile**. 
 
-::: moniker range=">= tfs-2015  <= tfs-2018"  
-[!INCLUDE [temp](../../_shared/new-navigation-not-supported.md)]  
-::: moniker-end  
-
-
-# [Previous navigation](#tab/previous-nav)
-
-0. To change your user preferences, open your profile menu.
-	::: moniker range="vsts"  
 	> [!div class="mx-imgBorder"]  
-	> ![Open profile menu](../../_shared/_img/settings/profile-menu-horz.png)
-	::: moniker-end  
+	> ![Choose Edit ](../../_shared/_img/settings/profile-jamal-h.png)
 
-	::: moniker range=">= tfs-2017 <= tfs-2018"  
-	![Open Profile menu, TFS 2015](../../_shared/_img/settings/open-profile-tfs-2017.png)
-	::: moniker-end  
+0. From the **About** page, you can change your profile picture, change your display name, contact information, and country. 
 
-	::: moniker range="tfs-2015"  
-	![Open Profile menu, TFS 2015](../../_shared/_img/settings/open-profile-tfs-2015.png)
-	::: moniker-end  
+	> [!div class="mx-imgBorder"]  
+	> ![Choose Edit ](../../_shared/_img/settings/edit-profile-about-dialog.png)
+
+0. From the **Preferences** page, you can change your preferred language, date and time pattern, time zone, UI theme, and whether or not borders appear on work item forms for fields.
+
+	> [!div class="mx-imgBorder"]  
+	> ![Choose Edit ](../../_shared/_img/settings/edit-profile-preferences-dialog.png)
+
+::: moniker-end  
+
+::: moniker range="<= tfs-2018"  
+## Change profile settings  
+
+1. To change your user preferences, open your profile menu.
+
+	![Open Profile menu](../../_shared/_img/settings/open-profile-tfs-2017.png)
 
 0. Choose **Edit profile**. 
 
@@ -129,27 +127,9 @@ Locale settings include language, date and time pattern, time zone, and user int
 	> [!div class="mx-imgBorder"]  
 	> ![Choose Edit ](../../_shared/_img/settings/edit-profile-preferences-dialog.png)
 
-
----
+::: moniker-end  
 
 ## Related articles
 
 - [Set favorites](../../project/navigation/set-favorites.md)
 
-
-<!---
-
-
-![Profile page](_img/account-prefs/team-services-profile-dialog-co.png)
-
-::: moniker range=">= tfs-2015 <= tfs-2018"
-
-![TFS, My Profile link on Account menu](_img/account-prefs/open-profile.png)
-
-Choose **edit** to change a setting. Choose the Locale tab to change a locale preference.
-
-![TFS, Set preferences](_img/account-prefs/account-prefs-tfs-user-profile.png)
-
-::: moniker-end
-
--->

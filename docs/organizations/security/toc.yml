@@ -44,7 +44,7 @@
   - name: Azure Active Directory groups
     href: ../accounts/access-with-azure-ad.md?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json 
   - name: Active Directory groups 
-    href: /tfs/server/admin/setup-ad-groups?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json
+    href: /azure/devops/server/admin/setup-ad-groups?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json
   - name: Security glossary 
     href: security-glossary.md
   - name: Resources granted to project members
@@ -54,7 +54,7 @@
   - name: Add users to Azure DevOps Services
     href: ../accounts/add-organization-users.md?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json 
   - name: Change access levels
-    href: change-access-levels.md 
+    href: change-access-levels.md?view=azure-devops-2019
   - name: Export user list  
     href: export-users-audit-log.md   
   - name: Set permissions for an object or role
@@ -87,6 +87,8 @@
     href: ../projects/connect-to-projects.md?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json 
   - name: Authenticate access with personal access tokens
     href: ../accounts/use-personal-access-tokens-to-authenticate.md?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json
+  - name: Revoke user PATs - for admins
+    href: ../accounts/admin-revoke-user-pats.md
 - name: Troubleshooting
   items:
   - name: Add and delete users
@@ -120,11 +122,18 @@
   - name: Git permissions prior to TFS 2017 Update 1
     href: git-permissions-before-2017.md?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json  
   - name: Web site settings and security
-    href: websitesettings.md
-  - name: Azure DevOps Services data protection overview
-    href: ../../articles/team-services-security-whitepaper.md?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json  
+    href: /azure/devops/server/admin/websitesettings
+  - name: Azure DevOps Services 
+    items:
+    - name: Data protection overview
+      href: data-protection.md 
+    - name: Data location
+      href: data-location.md 
+    - name: Credential storage
+      href: credential-storage.md 
+      displayname: Personal access tokens, PATs, basic auth, Oauth, SSH
   - name: TFSSecurity command
-    href: /tfs/server/ref/command-line/tfssecurity-cmd?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json  
+    href: /azure/devops/server/ref/command-line/tfssecurity-cmd?toc=/azure/devops/organizations/security/toc.json&bc=/azure/devops/organizations/security/breadcrumb/toc.json
   - name: REST API, Permissions
     href: /rest/api/vsts/security/permissions 
 - name: Resources
@@ -135,5 +144,4 @@
     href: ../accounts/index.md
   - name: REST API authentication guidance
     href: ../../integrate/get-started/authentication/authentication-guidance.md
-  - name: Technical articles
-    href: ../../articles/index.md
+

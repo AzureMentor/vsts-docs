@@ -1,12 +1,12 @@
 ---
 title: Build and Test Cordova Projects
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: Build and Test Cordova Projects with Azure Pipelines or Team Foundation Server 2015
 ms.topic: conceptual
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 22fc4e22-ef0a-4c55-8cce-20ad2fa14342
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
 ms.date: 10/15/2018
@@ -16,7 +16,7 @@ monikerRange: '>= tfs-2015'
 
 # Build Apache Cordova apps
 
-**Azure Pipelines | TFS 2018 | TFS 2017 | TFS 2015**
+[!INCLUDE [version-tfs-2015-rtm](../../../_shared/version-tfs-2015-rtm.md)]
 
 > **Notice**: Apple's WWDR certificate expired on Feb 14th and as a result you may experience signing failures if you have not updated the cert and **removed the old one**. Follow the steps outlined by Apple under [What should I do if Xcode doesn't recognize my distribution certificate?](https://developer.apple.com/support/certificates/expiration/) to resolve the problem. Note that this also affects development certs despite the title.
 
@@ -116,7 +116,7 @@ Now let's create a version of this same build pipeline to target iOS that will r
 
 2. Change the **Platform** value for the **Cordova Build** task to **ios** 
 
-3. Update the **iOS** category for the **Cordova Build** task. See **[securing your signing keys](../../../apps/mobile/secure-certs.md)** for details on the appropriate options to set for your situation. Be sure to check out the "P12 Certificate File" and "Provisioning Profile File" options that can really streamline setup! The Xcode Developer Path option also allows you to specify the path of a different version of Xcode than you have installed locally.  (Ex: /Applicaitons/Xcode6.4.app/Contents/Developer will use Xcode 6.4 in MacinCloud.)
+3. Update the **iOS** category for the **Cordova Build** task. See **[securing your signing keys](../../../apps/mobile/secure-certs.md)** for details on the appropriate options to set for your situation. Be sure to check out the "P12 Certificate File" and "Provisioning Profile File" options that can really streamline setup! The Xcode Developer Path option also allows you to specify the path of a different version of Xcode than you have installed locally.  (Ex: /Applications/Xcode6.4.app/Contents/Developer will use Xcode 6.4 in MacinCloud.)
 
 	![Windows Build pipeline - npm](_img/cordova-build/tfs2015-2.png)
 
@@ -281,7 +281,7 @@ The following will also need to be in your path:
 * [Read tutorials and learn about tips, tricks, and known issues for Cordova](http://go.microsoft.com/fwlink/?LinkID=618471)
 * [Download samples from our Cordova Samples repository](http://github.com/Microsoft/cordova-samples)
 * [Follow us on Twitter](https://twitter.com/VSCordovaTools)
-* [Visit our site http://aka.ms/cordova](http://aka.ms/cordova)
+* [Visit our site https://aka.ms/cordova](https://aka.ms/cordova)
 * [Ask for help on StackOverflow](http://stackoverflow.com/questions/tagged/visual-studio-cordova)
 
 ## Q & A
@@ -292,7 +292,7 @@ The following will also need to be in your path:
 
 [!INCLUDE [temp](../../../_shared/qa-agents.md)]
 
-::: moniker range="< vsts"
+::: moniker range="< azure-devops"
 [!INCLUDE [temp](../../../_shared/qa-versions.md)]
 ::: moniker-end
 

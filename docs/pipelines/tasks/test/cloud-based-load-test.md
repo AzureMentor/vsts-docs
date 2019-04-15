@@ -1,21 +1,23 @@
 ---
 title: Cloud-based Load Test task
-titleSuffix: Azure Pipelines & TFS
 description: Runs the load test in cloud with a build or release pipeline with Azure Pipelines to integrate cloud-based load tests into your build and release pipelines
 ms.assetid: 4D10E9D5-2269-4A95-8670-2901DFE4CBB1
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: reference
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2015'
 ---
 
 # Cloud-based Load Test task
 
 [!INCLUDE [temp](../../_shared/version-tfs-2015-rtm.md)]
+
+[!INCLUDE [loadtest-deprecated-include](../../../test/_shared/loadtest-deprecated-include.md)]
 
 Use this task in a build or release pipeline to run a load test in the cloud, to understand, test, and validate your app's performance. 
 The task uses the Cloud-based Load Test Service based in
@@ -50,7 +52,6 @@ The agent must have the following capability:
 
 ## Examples
 
-* [Load test your app in the cloud](../../../test/load-test/index.md)
 * [Scheduling Load Test Execution](http://blogs.msdn.com/b/visualstudioalm/archive/2015/11/23/scheduling-load-test-execution.aspx)
 
 ## More Information
@@ -60,13 +61,9 @@ The agent must have the following capability:
 * [Build your Visual Studio solution](../../apps/windows/dot-net.md)
 * [Cloud-based Load Testing Knowledge Base](https://blogs.msdn.microsoft.com/devops/?s=clt)  
 
-## Related tasks
-
-* [Cloud-based Web Performance Test](cloud-based-web-performance-test.md)  
- 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 <!-- BEGINSECTION class="md-qanda" -->
@@ -87,7 +84,7 @@ a failure to be reported. For more details, see:
 
 [!INCLUDE [qa-agents](../../_shared/qa-agents.md)]
 
-::: moniker range="< vsts"
+::: moniker range="<= tfs-2018"
 [!INCLUDE [qa-versions](../../_shared/qa-versions.md)]
 ::: moniker-end
 

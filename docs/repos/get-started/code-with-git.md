@@ -5,12 +5,12 @@ description: Share code in a Git repo and a new team project
 ms.assetid: 
 ms.prod: devops
 ms.technology: devops-new-user
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.date: 09/10/2018
 ms.topic: quickstart
-monikerRange: 'vsts'
+monikerRange: '>= tfs-2018'
 ---
 
 # Code with Git
@@ -31,7 +31,7 @@ In this article, we'll show you how to start working with your code in Azure Rep
 Install one of the following Git command-line tools:
 
   - To install Git for Windows, including Git Credential Manager, see [Install Git Credential Manager for Windows](../git/set-up-credential-managers.md#windows).
-  - To install Git for macOS and Linux, see [Install Git Credential Manager for macOS and Linux](../git/set-up-credential-managers.md#macos-and-linux).
+  - To install on macOS or Linux, check out the [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) chapter in the open-source _Pro Git_ book. For macOS and Linux, we recommend [configuring SSH authentication](../git/use-ssh-keys-to-authenticate.md)
 
 ## Get your code
 
@@ -39,12 +39,12 @@ To get a copy of the source code, you clone the Git repo that contains the code.
 
 If you're just getting started with Azure Repos, your code might be in one of several places:
 
-- [I just created my Azure DevOps organization, so I don't have any code](#i-just-created-my-azure-devops-organization-so-i-dont-have-any-code)
+- [I just created my organization in Azure DevOps, so I don't have any code](#i-just-created-my-organization-in-azure-devops-so-i-dont-have-any-code)
 - [The code is in my (or my organization's) Azure Repos Git repo](#the-code-is-in-my-or-my-organizations-azure-repos-git-repo)
 - [The code is in another Git repo such as GitHub or another Azure Repos Git repo](#the-code-is-in-another-git-repo)
 - [The code is on my local computer and not yet in version control](#the-code-is-on-my-local-computer-and-not-yet-in-version-control)
 
-### I just created my Azure DevOps organization, so I don't have any code
+### I just created my organization in Azure DevOps, so I don't have any code
 
 If you just signed up for Azure DevOps Services, by default you have a project named `MyFirstProject` and a Git repo named `MyFirstProject`. If you want to work in that repo, you can [clone it](#clone-the-repo) and then add your code to that repo.
 
@@ -71,19 +71,17 @@ After the repository is cloned, we'll show you how to add your existing code to 
 
 To work with a Git repo, you clone it to your computer. Cloning a repo creates a complete local copy of the repo for you to work with. Cloning also downloads all [commits](../git/commits.md) and [branches](../git/branches.md) in the repo and sets up a named relationship with the repo on the server. Use this relationship to interact with the existing repo, pushing and pulling changes to share code with your team.
 
-[!INCLUDE [temp](../../_shared/new-navigation.md)]
+::: moniker range=">= azure-devops-2019"
 
-# [New navigation](#tab/new-nav)
-
-1. From your web browser, open the team project for your Azure DevOps organization and select **Repos** > **Files**. If you don't have a team project, [create one now](sign-up-invite-teammates.md). 
+1. From your web browser, open the team project for your organization and select **Repos** > **Files**. If you don't have a team project, [create one now](sign-up-invite-teammates.md). 
 
    ![Repos files](_img/clone-repo/repos-files.png)
 
-1. Select **Clone** in the upper-right corner of the **Files** window and copy the clone URL.
+2. Select **Clone** in the upper-right corner of the **Files** window and copy the clone URL.
 
    ![Retrieve the clone URL](_img/clone-repo/clone-repo.png)
 
-1. Open the Git command window (Git Bash on Git for Windows) and browse to the folder where you want the code from the repo stored on your computer. Run `git clone` followed by the path copied from the **Clone URL** in the previous section, as shown in the following example.
+3. Open the Git command window (Git Bash on Git for Windows) and browse to the folder where you want the code from the repo stored on your computer. Run `git clone` followed by the path copied from the **Clone URL** in the previous section, as shown in the following example.
 
    ```
    git clone https://dev.azure.com/contoso-ltd/MyFirstProject/_git/contoso-demo
@@ -91,7 +89,7 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
 
    Git downloads a copy of the code, including all [commits](../git/commits.md) and [branches](../git/branches.md) from the repo, into a new folder for you to work with.
 
-1. Switch your directory to the repository that you just cloned.
+4. Switch your directory to the repository that you just cloned.
 
    ```
    cd fabrikam-web
@@ -99,15 +97,17 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
 
   Keep this command window open, because you'll use it in the following steps.
 
-# [Previous navigation](#tab/previous-nav)
+::: moniker-end
 
-1. From your web browser, open the team project for your Azure DevOps organization and select the **Code** page. If you don't have a team project, [create one now](sign-up-invite-teammates.md). 
+::: moniker range="<= tfs-2018"
 
-1. Select **Clone** in the upper-right corner of the **Code** page and copy the **Clone URL**.
+1. From your web browser, open the team project for your organization and select the **Code** page. If you don't have a team project, [create one now](sign-up-invite-teammates.md). 
+
+2. Select **Clone** in the upper-right corner of the **Code** page and copy the **Clone URL**.
 
    ![Retrieve the clone URL](../../user-guide/_img/code-with-git-clone-repo.png)
 
-1. Open the Git command window (Git Bash on Git for Windows) and browse to the folder where you want the code from the repo stored on your computer. Run `git clone` followed by the path copied from the **Clone URL** in the previous section, as shown in the following example.
+3. Open the Git command window (Git Bash on Git for Windows) and browse to the folder where you want the code from the repo stored on your computer. Run `git clone` followed by the path copied from the **Clone URL** in the previous section, as shown in the following example.
 
    ```
    git clone https://regius@dev.azure.com/regius/FabrikamFiber%20Web/_git/SmartHotel360
@@ -115,7 +115,7 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
 
    Git downloads a copy of the code, including all [commits](../git/commits.md) and [branches](../git/branches.md) from the repo, into a new folder for you to work with.
 
-1. Switch your directory to the repository that you just cloned.
+4. Switch your directory to the repository that you just cloned.
 
    ```
    cd SmartHotel360
@@ -123,7 +123,7 @@ To work with a Git repo, you clone it to your computer. Cloning a repo creates a
 
   Keep this command window open, because you'll use it in the following steps.
 
----
+::: moniker-end
 
 ## Work in a branch
 
@@ -172,7 +172,7 @@ Browse to the location of the repository on your local computer, make an edit to
 
 ## Share your changes
 
-Once you are happy with the changes on your local computer, you can share them back to the remote repository.
+When you're happy with the changes on your local computer, you can share them back to the remote repository.
 
 1. Commit your changes by entering the following command in the Git command window:
 
@@ -197,17 +197,17 @@ Pull requests combine the review and merge of your code into a single collaborat
 
 This example shows the basic steps of creating and completing a pull request.
 
-# [New navigation](#tab/new-nav)
+::: moniker range=">= azure-devops-2019"
 
-1. From your web browser, open the team project for your Azure DevOps organization and select **Repos** > **Files**. If you kept your browser open after getting the clone URL, you can just switch back to it.
+1. From your web browser, open the team project for your organization and select **Repos** > **Files**. If you kept your browser open after getting the clone URL, you can just switch back to it.
 
    ![Repos files](_img/clone-repo/repos-files.png)
 
-1. Select **Create a pull request** in the upper-right corner of the **Files** window. If you don't see a message like **You updated users/jamal/feature1 just now**, refresh your browser.
+2. Select **Create a pull request** in the upper-right corner of the **Files** window. If you don't see a message like **You updated users/jamal/feature1 just now**, refresh your browser.
 
    ![Create a pull request](_img/updated-file-create-pull-request.png)
 
-1. New pull requests are configured to merge your branch into the default branch, which in this example is `master`. The title and description are pre-populated with your commit message.
+3. New pull requests are configured to merge your branch into the default branch, which in this example is `master`. The title and description are pre-populated with your commit message.
 
    ![New pull request](_img/create-pull-request.png)
 
@@ -219,27 +219,28 @@ This example shows the basic steps of creating and completing a pull request.
 
    Select **Create** to create the pull request.
 
-1. You can view the details of your pull request from the **Overview** tab, and view the changed files, updates, and commits in your pull request from the other tabs. Select **Complete** to begin the process of completing the pull request.
+4. You can view the details of your pull request from the **Overview** tab, and view the changed files, updates, and commits in your pull request from the other tabs. Select **Complete** to begin the process of completing the pull request.
 
    ![Pull request](_img/pull-request.png)
 
-1. Select **Complete merge** to complete the pull request and merge your code into the `master` branch.
+5. Select **Complete merge** to complete the pull request and merge your code into the `master` branch.
 
    ![Complete pull request](_img/complete-pull-request.png)
 
 >[!NOTE]
 >This example shows the basic steps of creating and completing a pull request. To learn more about pull requests, including voting and reviewing, commenting, autocomplete, and more, see [Pull requests overview](../git/pull-requests-overview.md).
 
+::: moniker-end
 
-# [Previous navigation](#tab/previous-nav)
+::: moniker range="<= tfs-2018"
 
-1. From your web browser, open the team project for your Azure DevOps organization and select the **Code** page. If you don't have a team project, [create one now](sign-up-invite-teammates.md). 
+1. From your web browser, open the team project for your organization and select the **Code** page. If you don't have a team project, [create one now](sign-up-invite-teammates.md). 
 
-1. Select **Clone** in the upper-right corner of the **Code** page and copy the **Clone URL**.
+2. Select **Clone** in the upper-right corner of the **Code** page and copy the **Clone URL**.
 
    ![Retrieve the clone URL](../../user-guide/_img/code-with-git-clone-repo.png)
 
-1. Open the Git command window (Git Bash on Git for Windows) and browse to the folder where you want the code from the repo stored on your computer. Run `git clone` followed by the path copied from the **Clone URL** in the previous section, as shown in the following example.
+3. Open the Git command window (Git Bash on Git for Windows) and browse to the folder where you want the code from the repo stored on your computer. Run `git clone` followed by the path copied from the **Clone URL** in the previous section, as shown in the following example.
 
    ```
    git clone https://dev.azure.com/contoso-ltd/MyFirstProject/_git/contoso-demo
@@ -247,7 +248,7 @@ This example shows the basic steps of creating and completing a pull request.
 
    Git downloads a copy of the code, including all [commits](../git/commits.md) and [branches](../git/branches.md) from the repo, into a new folder for you to work with.
 
-1. Switch your directory to the repository that you just cloned.
+4. Switch your directory to the repository that you just cloned.
 
    ```
    cd fabrikam-web
@@ -255,7 +256,7 @@ This example shows the basic steps of creating and completing a pull request.
 
   Keep this command window open, because you'll use it in the following steps.
 
----
+::: moniker-end
 
 Your changes are now merged into the `master` branch, and your `users/jamal/feature1` branch is deleted on the remote repository. To delete your local copy of the branch, switch back to your Git Bash command prompt and run the following commands.
 

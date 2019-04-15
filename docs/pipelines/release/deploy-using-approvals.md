@@ -1,12 +1,12 @@
 ---
-title: Use approvals and gates to control your deployment
-titleSuffix: Azure Pipelines & TFS
+title: Control deployments with approvals and gates 
+ms.custom: seodec18
 description: DevOps CI CD - Use a combination of manual deployment approvals, gates, and manual intervention to control your deployment in Azure Pipelines and TFS
 ms.assetid: 3D22D4B3-DE1F-482C-BBD4-475C829452C1
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: tutorial
-ms.manager: douge
+ms.manager: jillfra
 ms.author: ahomer
 author: alexhomer1
 ms.date: 08/24/2018
@@ -15,7 +15,7 @@ monikerRange: '>= tfs-2018'
 
 # Use approvals and gates to control your deployment
 
-**Azure Pipelines | TFS 2018**
+[!INCLUDE [version-tfs-2018](../_shared/version-tfs-2018.md)]
 
 ::: moniker range="<= tfs-2018"
 [!INCLUDE [temp](../_shared/concept-rename-note.md)]
@@ -90,10 +90,11 @@ meets a wide range or criteria, without requiring user intervention.
 
    ![Configuring the Query Work Items approval gate](_img/deploy-using-approvals/gates-04.png)
 
-   >You'll need to open the **Advanced** section to see the **Maximum Threshold** setting.
-   For more details about the gate arguments, see [Work Item Query task](../tasks/utility/work-item-query.md).
+   > You'll need to open the **Advanced** section to see the **Lower Threshold** setting.
+   > You can also set an **Output Variable** to be returned from the gate task. 
+   > For more details about the gate arguments, see [Work Item Query task](../tasks/utility/work-item-query.md).
 
-1. Open the **Options for all gates** section and specify the timeout and the sampling interval.
+1. Open the **Evaluation options** section and specify the timeout and the sampling interval.
    For this example, choose short periods so that you can see the results reasonably quickly.
    The minimum values you can specify are 6 minutes timeout and 5 minutes sampling interval.
 
@@ -201,4 +202,4 @@ auditing capabilities you may require.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy to IIS web servers on Windows](../apps/cd/deploy-webdeploy-iis-deploygroups.md)
+> [Integrate with ServiceNow change management](approvals/servicenow.md)

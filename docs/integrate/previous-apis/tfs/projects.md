@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: Projects | REST API Reference for Team Foundation Server
 description: Work with projects programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 537E1A1F-DAE8-4110-AF0F-63D5D52F2AB6
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -37,7 +37,7 @@ GET https://{instance}/DefaultCollection/_apis/projects?api-version={version}[&s
 | instance           | string                                                   |            | TFS server name ({server:port}).
 | Query                                                                                                                                                         
 | api-version        | string                                                   |            | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| stateFilter        | enum {<br/>&nbsp;&nbsp;WellFormed,<br/>&nbsp;&nbsp;CreatePending,<br/>&nbsp;&nbsp;Deleting,<br/>&nbsp;&nbsp;New,<br/>&nbsp;&nbsp;All<br/>}   | WellFormed | Return projects in a specific [project state](#Bystate). 
+| stateFilter        | enum {<br/>&nbsp;&nbsp;WellFormed,<br/>&nbsp;&nbsp;CreatePending,<br/>&nbsp;&nbsp;Deleting,<br/>&nbsp;&nbsp;New,<br/>&nbsp;&nbsp;All<br/>}   | WellFormed | Return projects in a specific [project state](#by-state). 
 | $top               | integer                                                  | 100        | Number of projects to return.
 | $skip              | integer                                                  | 0          | Number of projects to skip. 
 
@@ -176,7 +176,7 @@ GET https://{instance}/DefaultCollection/_apis/projects/{project}?api-version={v
 | project            | string  |         | Name or ID of the project.   
 | Query                                                                                                                                                         
 | api-version        | string  |         | [Version](../../concepts/rest-api-versioning.md) of the API to use.
-| includeCapabilites | boolean | `false` | Use `true` to [include capabilities](#withcapabilities) (such as source control) in the project result.
+| includeCapabilities | boolean | `false` | Use `true` to [include capabilities](#withcapabilities) (such as source control) in the project result.
 | includeHistory     | boolean | `false` | Use `true` to search within renamed projects that had such name in the past. 
 
 ### With capabilities
@@ -258,7 +258,7 @@ POST https://mytfsserver/DefaultCollection/_apis/projects?api-version=2.0-previe
 ```json
 {
   "name": "FabrikamTravel",
-  "description": "Frabrikam travel app for Windows Phone",
+  "description": "Fabrikam travel app for Windows Phone",
   "capabilities": {
     "versioncontrol": {
       "sourceControlType": "Git"
@@ -600,7 +600,7 @@ PATCH https://mytfsserver/DefaultCollection/_apis/projects/94e82dfb-8ce4-430c-aa
   {
     "op": "add",
     "path": "/Alias",
-    "value": "Frabrikam"
+    "value": "Fabrikam"
   }
 ]
 ```

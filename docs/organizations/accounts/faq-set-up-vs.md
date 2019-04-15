@@ -1,15 +1,17 @@
 ---
-title: Troubleshoot setting up Visual Studio with Azure DevOps Services
-description: Having problems installing Visual Studio, signing in, creating an organization, or handling an expired subscription? Read these frequently asked questions and answers. 
+title: Troubleshoot setting up Visual Studio - Azure DevOps
+titleSuffix: Azure DevOps Services
+ms.custom: seodec18
+description: Having problems installing Visual Studio, signing in, creating an organization, or handling an expired subscription? Learn answers to these frequently asked questions (FAQs). 
 ms.prod: devops
 ms.technology: devops-accounts
 ms.assetid: 985fcb48-0d9e-44ef-811d-7178df1cb09b
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
-ms.date: 07/31/2018
-monikerRange: 'vsts'
+ms.date: 12/06/2018
+monikerRange: 'azure-devops'
 ---
 
 # Troubleshoot setting up Visual Studio with Azure DevOps

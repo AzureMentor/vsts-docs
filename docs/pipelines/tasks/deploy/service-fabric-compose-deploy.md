@@ -1,16 +1,16 @@
 ---
 title: Service Fabric Compose Deploy task
-titleSuffix: Azure Pipelines & TFS
 description: Service Fabric Compose Deploy Deployment task
 ms.assetid: 891A8845-6EC1-4A70-B187-BBF9416AB41F
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: reference
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
-monikerRange: 'vsts'
+ms.date: 12/07/2018
+monikerRange: '> tfs-2018'
 ---
 
 # Service Fabric Compose Deploy task
@@ -49,11 +49,11 @@ See [/azure/service-fabric/service-fabric-docker-compose](/azure/service-fabric/
 | **Get Status Timeout (s)** | Timeout in seconds for getting the status of an existing application. |
 | **Control options** | See [Control options](../../process/tasks.md#controloptions) |
 
-Also see: [Service Fabric PowerShell Utility ](../utility/service-fabric-powershell.md)
+Also see: [Service Fabric PowerShell Utility](../utility/service-fabric-powershell.md)
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 <!-- BEGINSECTION class="md-qanda" -->

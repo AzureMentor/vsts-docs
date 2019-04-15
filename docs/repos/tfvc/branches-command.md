@@ -5,7 +5,7 @@ description: Branches Command
 ms.assetid: dae78c90-c65a-444d-96cb-84027b91ad4a
 ms.prod: devops
 ms.technology: devops-code-tfvc
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: reference
@@ -80,9 +80,7 @@ The branches command tells you when an item has been the source or destination o
 
 For more information on how to find the **tf** command-line utility, see [Tf Command-Line Utility Commands](https://msdn.microsoft.com/library/z51z7zy0).
 
-Examples
------------------------------------------------------------------------------
-
+## Examples
 
 The following example displays branch history for the version-controlled file C:\\314.cs.
 

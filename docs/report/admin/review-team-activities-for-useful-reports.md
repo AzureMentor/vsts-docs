@@ -6,10 +6,11 @@ ms.assetid: 46456FBF-EECC-4096-9A98-3A9457F97EB2
 ms.prod: devops
 ms.technology: devops-analytics
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
-ms.date: 10/17/17
+monikerRange: "<= azure-devops-2019" 
+ms.date: 11/19/2018
 ---
 
 #Review team activities to support useful reports 
@@ -17,10 +18,10 @@ ms.date: 10/17/17
 [!INCLUDE [temp](../_shared/tfs-report-platform-version.md)]
 
 
->[!IMPORTANT]
+> [!IMPORTANT]
 >**Feature availability**: You can only add a report server to an on-premises TFS.  If you're using Azure DevOps, adding a report server isn't a supported option, instead, you can use [PowerBI](../powerbi/overview.md).
 
-This is the fourth task in the four-task sequence to add reports to your team project. To generate useful reports, team members must perform certain tasks. This topic summarizes those tasks.     
+This is the fourth task in the four-task sequence to add reports to your team project. To generate useful reports, team members must perform certain tasks. this article summarizes those tasks.     
 
 [![Add a report server](_img/step-1-add-a-report-server.png)](add-a-report-server.md)
 [![Upload reports](_img/step-2-upload-reports.png)](upload-reports.md)
@@ -44,7 +45,7 @@ Build reports track the quality of software under development. By defining tests
 <ol>
 <li>[Configure a build system](../../pipelines/agents/agents.md)</li>
 <li>[Get started with CI/CD](../../pipelines/get-started-designer.md)</li>
-<li>[Run tests in your build process](../../pipelines/test/getting-started-with-continuous-testing.md)</li>
+<li>[Run tests in your build process](../../pipelines/languages/dotnet-core.md#run-your-tests)</li>
 <li>(Optional) [Rate completed builds](https://msdn.microsoft.com/library/ms181734.aspx) to populate the Build Quality dimension.</li>
 </ol>
 </td>

@@ -1,12 +1,12 @@
 ---
 title: Migrate from XAML builds
-titleSuffix: Azure Pipelines & TFS
+ms.custom: seodec18
 description: How to migrate from XAML builds to new builds in your Azure Pipelines or Team Foundation Server (TFS)
 ms.topic: conceptual
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 77D7057E-FE9B-4DF8-89CC-244E2A38CA35
-ms.manager: douge
+ms.manager: jillfra
 ms.author: alewis
 author: andyjlewis
 ms.date: 04/17/2018
@@ -37,7 +37,7 @@ Here are the steps to migrate from XAML builds to newer builds:
 
 1. If you're using a private TFS server, [set up agents](../agents/v2-windows.md) to run your builds.
 
-1. To get familiar with the new build system, create a ["Hello world" build pipeline](../get-started-designer.md).
+1. To get familiar with the new build system, create a ["Hello world" build pipeline](../create-first-pipeline.md).
 
 1. Create a new build pipeline intended to replace one of your XAML build pipelines.
 
@@ -137,13 +137,13 @@ We don't yet support the **Build even if nothing has changed since the previous 
 | XAML process parameter | TFS 2017 and newer equivalent | Azure Pipelines equivalent |
 |-|-|-|
 | Build controller | On the **General** tab, select the default agent pool. | On the **Options** tab, select the default agent pool. |
-| Staging location | On the **Tasks** tab, specify arguments to the Copy Files and Publish Build Artifacts tasks. See [Build artifacts](../build/artifacts.md). | On the **Tasks** tab, specify arguments to the Copy Files and Publish Build Artifacts tasks. See [Build artifacts](../build/artifacts.md). |
+| Staging location | On the **Tasks** tab, specify arguments to the Copy Files and Publish Build Artifacts tasks. See [Build artifacts](../artifacts/pipeline-artifacts.md). | On the **Tasks** tab, specify arguments to the Copy Files and Publish Build Artifacts tasks. See [Build artifacts](../artifacts/pipeline-artifacts.md). |
 
 The new build pipeline offers you some new options. For example:
 
 * You don't need a controller, and the new agents are easier to set up and maintain. See [Build and release agents](../agents/agents.md).
 
-* You can exactly specify which sets of files you want to publish as build artifacts. See [Build artifacts](../build/artifacts.md).
+* You can exactly specify which sets of files you want to publish as build artifacts. See [Build artifacts](../artifacts/pipeline-artifacts.md).
 
 ### Process tab
 
@@ -181,7 +181,7 @@ On the **Build** tab (TFS 2017 and newer) or the **Tasks** tab (Azure Pipelines)
 | Projects | Solution |
 | Configurations | Platform, Configuration. See [Visual Studio Build: How do I build multiple configurations for multiple platforms?](../tasks/build/visual-studio-build.md#how-do-i-build-multiple-configurations-for-multiple-platforms) | 
 | Clean build | Clean | 
-| Output location | The Visual Studio Build task builds and outputs files in the same way you do it on your dev machine, in the local workspace. We give you full control of publishing artifacts out of the local workspace on the agent. See [Artifacts in Azure Pipelines](../build/artifacts.md). |
+| Output location | The Visual Studio Build task builds and outputs files in the same way you do it on your dev machine, in the local workspace. We give you full control of publishing artifacts out of the local workspace on the agent. See [Artifacts in Azure Pipelines](../artifacts/pipeline-artifacts.md). |
 | Advanced, MSBuild arguments | MSBuild Arguments | 
 | Advanced, MSBuild platform | Advanced, MSBuild Architecture |
 | Advanced, Perform code analysis | Use an MSBuild argument such as`/p:RunCodeAnalysis=true` |
@@ -199,7 +199,7 @@ Learn more: [Visual Studio Build task](../tasks/build/visual-studio-build.md) (f
 
 ![xaml source settings git tfs](_img/migrate-from-xaml-builds/xaml-build-template-12-test.png)
 
-See [Get started with continuous testing](../test/getting-started-with-continuous-testing.md) and [Visual Studio Test task](../tasks/test/vstest.md).
+See [continuous testing](../languages/dotnet-core.md#run-your-tests) and [Visual Studio Test task](../tasks/test/vstest.md).
 
 #### Publish Symbols
 
@@ -260,7 +260,7 @@ Here are a few examples of the kinds of apps you can build:
 
 The new build system is tightly integrated with Azure Pipelines. So it's easier then ever to automatically kick off a deployment after a successful build. Learn more:
 
-* [CI/CD Hello world](../get-started-designer.md)
+* [Create your first pipeline](../create-first-pipeline.md)
 
 * [Release pipelines](../release/index.md)
 
@@ -284,7 +284,7 @@ In XAML builds you created custom XAML tasks. In the new builds, you've got a ra
 
 ### Get tasks from the Marketplace
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/vsts)
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/azuredevops)
 offers hundreds of extensions that you can install to add tasks that extend your build and deployment capabilities.
 
 ### Write a script
@@ -315,7 +315,7 @@ In XAML builds you created custom XAML templates. In the new builds, it's easier
 
 ### Create a template
 
-If you don't see a template for the kind of app you can start from an empty pipeline and [add the tasks you need](../tasks/index.md). After you've got a pattern that you like, you can clone it or save it as a template directly in your web browser. See [CI/CD Hello world](../get-started-designer.md).
+If you don't see a template for the kind of app you can start from an empty pipeline and [add the tasks you need](../tasks/index.md). After you've got a pattern that you like, you can clone it or save it as a template directly in your web browser. See [Create your first pipeline](../create-first-pipeline.md).
 
 ### Task groups (TFS 2017 or newer)
 
@@ -335,9 +335,9 @@ XAML builds are deprecated. We strongly recommend that you migrate to the new bu
 
 ::: moniker-end
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
-If you're not yet ready to migrate, then to enable XAML builds you must connect a XAML build controller to your organization. See [Configure and manage your build system](https://msdn.microsoft.com/en-us/library/ms252495%28v=vs.120%29.aspx).
+If you're not yet ready to migrate, then to enable XAML builds you must connect a XAML build controller to your organization. See [Configure and manage your build system](https://msdn.microsoft.com/library/ms252495%28v=vs.120%29.aspx).
 
 ::: moniker-end
 
@@ -347,7 +347,7 @@ If you're not yet ready to migrate, then to enable XAML builds:
 
 1. Install [TFS 2018.2](https://visualstudio.microsoft.com/downloads/?q=tfs).
 
-1. Connect your XAML build servers to your TFS instance. See [Configure and manage your build system](https://msdn.microsoft.com/en-us/library/ms252495%28v=vs.120%29.aspx).
+1. Connect your XAML build servers to your TFS instance. See [Configure and manage your build system](https://msdn.microsoft.com/library/ms252495%28v=vs.120%29.aspx).
 
 ::: moniker-end
 

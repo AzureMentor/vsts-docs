@@ -5,7 +5,7 @@ description: Git history tools with Visual Studio and git command line tools to 
 ms.assetid: aed4bd97-378a-45f6-8b13-59143fccfe3b
 ms.prod: devops
 ms.technology: devops-code-git 
-ms.manager: douge
+ms.manager: jillfra
 ms.author: sdanie
 author: steved0x
 ms.topic: tutorial
@@ -126,7 +126,7 @@ an existing one, you'll need to commit your changes to add the previous version 
 
 Use `git log` to find the version to restore and `git checkout` or `git show` to restore the file from your history.
 
-Find the commit with the version of the file you need to restore using `git log` using the steps from [comparing versions](review-history.md#compare-files?tabs=command-line) above.
+Find the commit with the version of the file you need to restore using `git log` using the steps from [comparing versions](review-history.md?tabs=command-line#compare-files) above.
 Restore the version in its current location using `git checkout`:
    
 <pre style="color:white;background-color:black;font-family:Consolas,Courier,monospace;padding:10px">

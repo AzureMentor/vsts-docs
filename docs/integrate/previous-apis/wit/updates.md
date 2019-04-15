@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: Work Item Updates | REST API Reference for Team Foundation Server
 description: Work with updates to work items programmatically using the REST APIs for Team Foundation Server. 
 ms.assetid: B4C07EF4-535A-4479-803D-C181553613EE
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -508,7 +508,7 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/updates?api-ve
 
 #### Sample code
 
-* [C# (GetListofWorkItemUpdates method)](https://github.com/Microsoft/vsts-dotnet-samples/blob/master/ClientLibrary/Snippets/Microsoft.TeamServices.Samples.Client/WorkItemTracking/UpdatesSample.cs#L19)
+* [C# (GetListOfWorkItemUpdates method)](https://github.com/Microsoft/vsts-dotnet-samples/blob/master/ClientLibrary/Snippets/Microsoft.TeamServices.Samples.Client/WorkItemTracking/UpdatesSample.cs#L19)
 
 ### A page at a time
 
@@ -635,7 +635,7 @@ GET https://mytfsserver/DefaultCollection/_apis/wit/workitems/299/updates?$skip=
 
 #### Sample code
 
-* [C# (GetListofWorkItemUpdatesPaged method)](https://github.com/Microsoft/vsts-dotnet-samples/blob/master/ClientLibrary/Snippets/Microsoft.TeamServices.Samples.Client/WorkItemTracking/UpdatesSample.cs#L43)
+* [C# (GetListOfWorkItemUpdatesPaged method)](https://github.com/Microsoft/vsts-dotnet-samples/blob/master/ClientLibrary/Snippets/Microsoft.TeamServices.Samples.Client/WorkItemTracking/UpdatesSample.cs#L43)
 
 ## Get a work item update
 

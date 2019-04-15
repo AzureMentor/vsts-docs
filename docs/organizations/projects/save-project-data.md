@@ -1,21 +1,22 @@
 ---
-title: Save project data 
-titleSuffix: Azure DevOps & TFS
-description: Save project data, like source code, custom build templates, build data, and work items, for Azure DevOps Services
+title: Save project data - Azure DevOps
+titleSuffix: Azure DevOps
+ms.custom: seodec18
+description: Save project data, like source code, custom build templates, build data, and work items.
 ms.assetid: b944f980-81c0-4100-b0d8-2fc575c65693
 ms.prod: devops
 ms.technology: devops-accounts
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
-ms.date: 10/15/2017
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2013'
 ---
 
 # Save project data
 
-[!INCLUDE [temp](../../_shared/version-vsts-tfs-all-versions.md)]  
+[!INCLUDE [temp](../../_shared/version-vsts-tfs-all-versions.md)]  � 
 
 When you delete a project, you cannot recover its data later. Therefore, you should save project data.
 
@@ -39,10 +40,10 @@ You can use the following procedures to save data that users most care about, su
 
     This process doesn't save any attachments, change history, or links to other artifacts.
 
-To learn more about how we manage and protect your data, read our [Data Protection Overview](../../articles/team-services-security-whitepaper.md).
+To learn more about how we manage and protect your data, read our [Data Protection Overview](../../organizations/security/data-protection.md).
 
 ::: moniker range=">= tfs-2013 <= tfs-2018"
 You can easily save data stored for a project collection
-by [making a backup of the database](/tfs/server/admin/backup/config-backup-sched-plan). You can also
+by [making a backup of the database](/azure/devops/server/admin/backup/config-backup-sched-plan). You can also
 use the same steps as above.
 ::: moniker-end

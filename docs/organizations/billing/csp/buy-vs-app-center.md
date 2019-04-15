@@ -4,7 +4,7 @@ description: Partners in the cloud service provider (CSP) program can enable the
 ms.prod: devops
 ms.technology: devops-billing
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
 ms.date: 09/10/2018
@@ -20,4 +20,4 @@ To enable the customer to purchase App Center resources by using a CSP-based Azu
 
 * The customer has organization admin rights in App Center, which grants them access to the Billing tab.
 
-* The customer has owner role permissions to the CSP-based Azure subscription in order to make purchases. Learn more about [how to add users with co-owner permissions](https://docs.microsoft.com/en-us/azure/billing/billing-add-change-azure-subscription-administrator#add-or-change-co-administrator).
+* The customer has owner role permissions to the CSP-based Azure subscription in order to make purchases. Learn more about [how to add users with co-owner permissions](https://docs.microsoft.com/azure/billing/billing-add-change-azure-subscription-administrator#add-or-change-co-administrator).

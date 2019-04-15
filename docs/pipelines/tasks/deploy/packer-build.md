@@ -1,15 +1,15 @@
 ---
 title: Build Machine Image task
-titleSuffix: Azure Pipelines & TFS
 description: Build a machine image using Packer to use for Azure Virtual machine scale set deployment
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 845fd4f4-642d-4694-8514-047948a5a556
 ms.manager: dastahel
+ms.custom: seodec18
 ms.author: dastahel
-ms.date: 05/04/2018
-monikerRange: 'vsts'
+ms.date: 12/07/2018
+monikerRange: 'azure-devops'
 ---
 
 # Build Machine Image task
@@ -20,7 +20,7 @@ Use this task in a build or release pipeline to build a machine image using Pack
 
 ::: moniker range="> tfs-2018"
 ## YAML snippet
-[!INCLUDE [temp](../_shared/yaml/PackerBuildV0.md)]
+[!INCLUDE [temp](../_shared/yaml/PackerBuildV1.md)]
 ::: moniker-end
 
 ## Arguments
@@ -35,7 +35,7 @@ Use this task in a build or release pipeline to build a machine image using Pack
 <tr><td>Resource group</td><td>(Required) Azure Resource group that contains the selected storage account.</td></tr>
 <tr><td>Base image source</td><td>(Required) Select the source of base image. You can either choose from a curated gallery of OS images or provide url of your custom image.</td></tr>
 <tr><td>Base image</td><td>(Required) Choose from curated list of OS images. This will be used for installing pre-requisite(s) and application(s) before capturing machine image.</td></tr>
-<tr><td>Base image URL</td><td>(Required) Specify url of base image. This will be used for installing pre-requisitie(s) and application(s) before capturing machine image.</td></tr>
+<tr><td>Base image URL</td><td>(Required) Specify url of base image. This will be used for installing pre-requisite(s) and application(s) before capturing machine image.</td></tr>
 <tr><td>Base image OS</td><td>(Required) undefined</td></tr>
 <tr><td>Deployment Package</td><td>(Required) Specify the path for deployment package directory relative to $(System.DefaultWorkingDirectory). Supports minimatch pattern. Example path: FrontendWebApp/**/GalleryApp</td></tr>
 <tr><td>Deployment script</td><td>(Required) Specify the relative path to powershell script(for Windows) or shell script(for Linux) which deploys the package. This script should be contained in the package path selected above. Supports minimatch pattern. Example path: deploy/**/scripts/windows/deploy.ps1</td></tr>
@@ -48,4 +48,4 @@ Use this task in a build or release pipeline to build a machine image using Pack
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.

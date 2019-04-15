@@ -1,14 +1,14 @@
 ---
 title: What is Azure Pipelines?
-titleSuffix: Azure DevOps Services
+ms.custom: seodec18
 description: Learn how to automatically build, test, and deploy your code with Azure Pipelines
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: overview
-ms.manager: douge
-ms.author: douge
+ms.manager: jillfra
+ms.manager: elbatk
 ms.date: 07/06/2018
-monikerRange: 'vsts'
+monikerRange: 'azure-devops'
 ---
 
 # What is Azure Pipelines?
@@ -27,11 +27,11 @@ You can use many languages with Azure Pipelines, such as Python, Java, PHP, Ruby
 
 ### Version control systems
 
-Before you use continuous integration and continuous delivery practices for your applications, you must have your source code in a version control system. Azure Pipelines integrates with GitHub, Azure Repos, Bitbucket, and Subversion.
+Before you use continuous integration and continuous delivery practices for your applications, you must have your source code in a version control system. Azure Pipelines integrates with GitHub, GitHub Enterprise, Azure Repos, Bitbucket Cloud, and Subversion.
 
 ### Application types
 
-You can use Azure Pipelines with most application types, such as Java, JavaScript, Python, .NET, PHP, Go, XCode, and C++.
+You can use Azure Pipelines with most application types, such as Java, JavaScript, Python, .NET, PHP, Go, Xcode, and C++.
 
 ### Deployment targets
 
@@ -45,14 +45,14 @@ To produce packages that can be consumed by others, you can publish NuGet, npm, 
 
 To use Azure Pipelines, you need:
 
-* An Azure DevOps organization.
+* An organization in Azure DevOps.
 * To have your source code stored in a version control system.
 
 ### Pricing
 
 If you use public projects, Azure Pipelines is free.
 If you use private projects, you can run up to 1,800 minutes (30 hours) of pipeline jobs for free every month.
-Learn more about how the pricing works based on [parallel jobs](../licensing/concurrent-jobs-vsts.md).
+Learn more about how the pricing works based on [parallel jobs](../licensing/concurrent-jobs.md).
 
 ## Why should I use CI and CD and Azure Pipelines?
 Implementing CI and CD pipelines helps to ensure consistent and quality code that's readily available to users.

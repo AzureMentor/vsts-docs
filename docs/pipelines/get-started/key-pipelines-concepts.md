@@ -1,14 +1,14 @@
 ---
 title: Azure Pipelines New User Guide - Key concepts
-titleSuffix: Azure DevOps Services
+ms.custom: seodec18
 description: Learn how Azure Pipelines works with your code and tools to automate build and deployment, and the key concepts behind it.
 ms.topic: overview
 ms.prod: devops
 ms.technology: devops-cicd
-ms.manager: douge
-ms.author: douge
-ms.date: 07/06/2018
-monikerRange: 'vsts'
+ms.manager: jillfra
+ms.manager: elbatk
+ms.date: 01/16/2019
+monikerRange: 'azure-devops'
 ---
 
 # Key concepts for new Azure Pipelines users
@@ -25,7 +25,7 @@ For more in-depth information about the different types of agents and how to use
 
 ## Artifact
 
-An artifact is a collection of files or packages published by a build. Artifacts are made available to subsequent tasks, such as distribution or deployment.
+An artifact is a collection of files or packages published by a build. Artifacts are made available to subsequent tasks, such as distribution or deployment. For more information, see [Artifacts in Azure Pipelines](../artifacts/artifacts-overview.md).
 
 ## Build
 
@@ -53,12 +53,12 @@ A pipeline defines the continuous integration and deployment process for your ap
 
 ## Release
 
-When you use the visual designer, you create a release pipeline in addition to a build pipeline. A release is the term used to describe one execution of a release pipeline. It's made up of deployments to multiple stages.
+When you use the classic editor, you create a release pipeline in addition to a build pipeline. A release is the term used to describe one execution of a release pipeline. It's made up of deployments to multiple stages.
 
 ## Task
 
-A task is the building block of a pipeline. For example, a build pipeline might consist of build tasks and test tasks. A release pipeline consists of deployment tasks. Each task runs a specific job in the pipeline.
+A task is the building block of a pipeline. For example, a build pipeline might consist of build tasks and test tasks. A release pipeline consists of deployment tasks. Each task runs a specific job in the pipeline. To view the available tasks, see the [Build and release tasks](../tasks/index.md) reference. For information on creating custom tasks, see [Create a custom task](../../extend/develop/add-build-task.md).
 
 ## Trigger
 
-A trigger is something that's set up to tell the pipeline when to run. You can configure a pipeline to run upon a push to a repository, at scheduled times, or upon the completion of another build. All of these actions are known as triggers.
+A trigger is something that's set up to tell the pipeline when to run. You can configure a pipeline to run upon a push to a repository, at scheduled times, or upon the completion of another build. All of these actions are known as triggers. For more information, see [build triggers](../build/triggers.md) and [release triggers](../release/triggers.md).

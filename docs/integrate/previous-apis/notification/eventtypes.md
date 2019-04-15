@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: Notification event types | REST API Reference for Team Foundation Server
 description: REST APIs for Team Foundation Server.
 ms.assetid: 70F8A8F8-474C-4664-A26C-A5DC714E6242
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -731,7 +731,7 @@ GET https://mytfsserver/DefaultCollection/_apis/notification/eventTypes?api-vers
     },
     {
       "id": "ms.vss-notifications.subscription-disabled-event",
-      "name": "Subcription disabled",
+      "name": "Subscription disabled",
       "url": "https://mytfsserver/DefaultCollection/_apis/notification/Subscriptions/ms.vss-notifications.subscription-disabled-event",
       "eventPublisher": {
         "id": "ms.vss-notifications.notifications-event-publisher",

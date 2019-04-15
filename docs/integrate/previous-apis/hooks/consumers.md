@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: Service Hook Consumers | REST API Reference for Team Foundation Server
 description: Work with service hook consumers programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: B05297FC-F542-42FD-ACDA-E9734974ACBC
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -742,7 +742,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
         {
           "id": "password",
           "name": "User API token (or password)",
-          "description": "The user's API token, which is available in the Jenkin user configuration page. The API token is new since version 1.426. For earlier versions of Jenkins the real user password must be specified.",
+          "description": "The user's API token, which is available in the Jenkins user configuration page. The API token is new since version 1.426. For earlier versions of Jenkins the real user password must be specified.",
           "inputMode": "passwordBox",
           "isConfidential": true,
           "useInDefaultDescription": false,
@@ -809,7 +809,7 @@ GET https://mytfsserver/DefaultCollection/_apis/hooks/consumers?api-version=1.0
             {
               "id": "buildParams",
               "name": "Build parameters",
-              "description": "Build parameteres names and values separated by a colon(e.g. \"param1:value1\") with each name-value pair appearing on its own line of text",
+              "description": "Build parameters names and values separated by a colon(e.g. \"param1:value1\") with each name-value pair appearing on its own line of text",
               "inputMode": "textArea",
               "isConfidential": false,
               "useInDefaultDescription": false,

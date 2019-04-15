@@ -1,15 +1,15 @@
 ---
 title: IIS Web App Deploy task
-titleSuffix: Azure Pipelines & TFS
 description: Deploy a website or web app using WebDeploy
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 1B467810-6725-4B6D-ACCD-886174C09BBA
 ms.manager: dastahel
+ms.custom: seodec18
 ms.author: dastahel
-ms.date: 05/04/2018
-monikerRange: 'vsts'
+ms.date: 12/07/2018
+monikerRange: 'azure-devops'
 ---
 
 # IIS Web App Deploy task
@@ -42,4 +42,4 @@ Use this task in a build or release pipeline to deploy a website or web app usin
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.

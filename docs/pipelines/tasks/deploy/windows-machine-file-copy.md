@@ -1,15 +1,15 @@
 ---
 title: Windows Machine File Copy task
-titleSuffix: Azure Pipelines & TFS
 description: Copy application files and other artifacts to remote Windows machines
 ms.assetid: 1451866C-180E-4D8A-88ED-3B76BC30C09F
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: reference
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2015'
 ---
 
@@ -44,12 +44,12 @@ command-line utility built for fast copying of data.
 | **Advanced - Copy Files in Parallel** | Set this option to copy files to all the target machines in parallel, which can speed up the copying process. |
 | **Advanced - Additional Arguments** | Arguments to pass to the RoboCopy process. Example: `/min:33553332 /l` |
 | **Select Machines By** | Depending on how you want to specify the machines in the group when using the **Filter Criteria** parameter, choose **Machine Names** or **Tags**. |
-| **Filter Criteria** | Optional. A list of machine names or tag names that identifies the machines that the task will target. The filter criteria can be:<br />- The name of an <a href="https://azure.microsoft.com/documentation/articles/resource-group-overview/">Azure Resource Group</a>.<br />- An output variable from a previous task.<br />- A comma-delimited list of tag names or machine names.<br />Format when using machine names is a comma-separated list of the machine FDQNs or IP addresses.<br />Specify tag names for a filter as {TagName}<strong>:</strong>{Value} Example: `Role:DB;OS:Win8.1` |
+| **Filter Criteria** | Optional. A list of machine names or tag names that identifies the machines that the task will target. The filter criteria can be:<br />- The name of an <a href="https://azure.microsoft.com/documentation/articles/resource-group-overview/">Azure Resource Group</a>.<br />- An output variable from a previous task.<br />- A comma-delimited list of tag names or machine names.<br />Format when using machine names is a comma-separated list of the machine FQDNs or IP addresses.<br />Specify tag names for a filter as {TagName}<strong>:</strong>{Value} Example: `Role:DB;OS:Win8.1` |
 | **Control options** | See [Control options](../../process/tasks.md#controloptions) |
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 <!-- BEGINSECTION class="md-qanda" -->
@@ -59,11 +59,11 @@ This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). F
 Typically this occurs when the specified path cannot be located.
 This may be due to a firewall blocking the necessary ports for file and printer sharing,
 or an invalid path specification. For more details, see
-[Error 53](https://technet.microsoft.com/library/cc940100.aspx) on Technet.
+[Error 53](https://technet.microsoft.com/library/cc940100.aspx) on TechNet.
 
 [!INCLUDE [qa-agents](../../_shared/qa-agents.md)]
 
-::: moniker range="< vsts"
+::: moniker range="<= tfs-2018"
 [!INCLUDE [qa-versions](../../_shared/qa-versions.md)]
 ::: moniker-end
 

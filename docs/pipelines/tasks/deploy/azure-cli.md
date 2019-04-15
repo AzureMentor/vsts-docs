@@ -1,16 +1,16 @@
 ---
 title: Azure CLI task
-titleSuffix: Azure Pipelines & TFS
 description: Azure Pipelines and Team Foundation Server build task to run a shell or batch script containing Microsoft Azure CLI commands
 ms.assetid: C6F8437B-FF52-4EA1-BCB0-F34924303CA8
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: reference
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: ahomer
 author: alexhomer1
-ms.date: 08/24/2018
-monikerRange: 'vsts'
+ms.date: 12/07/2018
+monikerRange: '> tfs-2018'
 ---
 
 # Azure CLI task
@@ -35,7 +35,7 @@ please [contact us](mailto:RM_Customer_Queries@microsoft.com).
 - Both versions of Azure-CLI can coexist in the same system, but task V1.0 logs into the Python based AZ CLI using the user's subscription, whereas task V0.0 logs into the node based Azure CLI. Therefore, scripts should include only the appropriate corresponding commands.
 - Limitations:
   - No support for Classic subscriptions. AZ CLI 2.0 supports only Azure Resource Manager (ARM) subscriptions
-  - Currently, Microsoft-hosted agents do not have AZ CLI installed. You can either install using `npm install -g azure-cli` or use self-hosted agents with AZ CLI pre-installed
+  - Currently, Microsoft-hosted agents do not have the AZ CLI installed. You can either install it using `npm install -g azure-cli` (on Microsoft-hosted Linux agents, use `sudo npm install -g azure-cli`) or use a self-hosted agent with the AZ CLI pre-installed.
 
 ## Demands
 
@@ -49,7 +49,7 @@ None
   - [Azure Resource Manager service connection](../../library/connect-to-azure.md)
 * Azure CLI installed on the computer(s) that run the build and release agent.
   See [Install the Azure CLI](https://azure.microsoft.com/documentation/articles/xplat-cli-install/).
-  If an agent is already running on the machine on which the Azure CLI is installed, restart the agent to ensure all the relevent stage variables are updated.
+  If an agent is already running on the machine on which the Azure CLI is installed, restart the agent to ensure all the relevant stage variables are updated.
 
 ::: moniker range="> tfs-2018"
 ## YAML snippet
@@ -79,7 +79,7 @@ None
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 <!-- BEGINSECTION class="md-qanda" -->

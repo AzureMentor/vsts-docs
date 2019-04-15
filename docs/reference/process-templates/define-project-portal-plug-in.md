@@ -5,11 +5,11 @@ description: Define the initial document libraries, library structure, and docum
 ms.prod: devops
 ms.technology: devops-agile
 ms.assetid: 3351a292-1ce5-4573-ac88-b86ad7482ac0
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: reference
-monikerRange: '>= tfs-2013 <= tfs-2018' 
+monikerRange: '>= tfs-2013 <= azure-devops-2019' 
 ms.date: 10/11/2017
 ---
 
@@ -29,7 +29,7 @@ When you create a project from Visual Studio Team Explorer, the project portal p
 
 By using the portal plug-in, you can define the initial document libraries, library structure, and documents of a [project's portal](../../report/sharepoint-dashboards/share-information-using-the-project-portal.md). You can also include the tasks that create dashboards and Excel reports that are designed to work with the default [process templates](../../boards/work-items/guidance/choose-process.md).  
 
-The tasks that you specify in the plug-in for SharePoint Products are run only when you create a SharePoint site when you [create a project](../../organizations/projects/create-project.md). For more information about site requirements and administration, see [SharePoint Products requirements for Team Foundation Server](/tfs/server/requirements#sharepoint). 
+The tasks that you specify in the plug-in for SharePoint Products are run only when you create a SharePoint site when you [create a project](../../organizations/projects/create-project.md). For more information about site requirements and administration, see [SharePoint Products requirements for Team Foundation Server](/azure/devops/server/requirements#sharepoint). 
 
 
 > [!IMPORTANT]  
@@ -105,7 +105,7 @@ The following example shows how to reference the English version of the Agile pr
 ### Use the site template  
  You can include files as part of the SharePoint site template. This moves files out of the process template and into the site template and improves performance when creating new projects.  
   
- However, there is a benefit to listing files in WssTasks.xml. You can bind Microsoft Project and Microsoft Excel files to a query using the queryid attribute described previously. This assists team members when they open the files because they will already be connected to the correct Team Foundation Server and query.  
+ However, there is a benefit to listing files in WssTasks.xml. You can bind Microsoft Project and Microsoft Excel files to a query using the queryId attribute described previously. This assists team members when they open the files because they will already be connected to the correct Team Foundation Server and query.  
   
 ### Use an alternate website  
  If you have a large collection of files that are shared amongst multiple projects, you can use an alternate Web site to host the files and link to the files from the project portal or Web pages. This strategy also increases performance when creating projects since the files do not need to be copied to the project portal. For more information, see [Configure or add a project portal](../../report/sharepoint-dashboards/configure-or-add-a-project-portal.md).  

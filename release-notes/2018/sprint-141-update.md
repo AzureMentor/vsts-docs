@@ -10,7 +10,7 @@ description: In the Sprint 141 Update of Azure DevOps Services, you can now incl
 
 # Pipeline compliance and security validations - Sprint 141 Update
 
-In the **Sprint 141 Update** of Azure DevOps Services, you can now include [compliance and security validations in your Azure Pipelines](#release-pipelines-include-compliance-and-security-validations). In Azure Repos, you can [change the target branch of pull requests](#change-the-target-branch-of-a-pull-request).
+In the **Sprint 141 Update** of Azure DevOps Services, you can now include [compliance and security validations in your Azure Pipelines](#azure-policy-compliance-and-security-validations-in-pipelines). In Azure Repos, you can [change the target branch of pull requests](#change-the-target-branch-of-a-pull-request).
 
 Check out the [Features](#features) list below for more.
 
@@ -53,7 +53,7 @@ Read about the new features below and head over to Azure DevOps Services to try 
 
 ### Navigation update
 
-Back in June of this year, we rolled out the first iteration of our [new navigation model](https://blogs.msdn.microsoft.com/devops/2018/06/19/new-navigation/). We’ve spent the summer improving that experience based on the feedback many of you have provided. Thank you! Our next step is to move from the new model being a preview, to becoming _the_ navigation for the product. Please read [our blog post](http://aka.ms/azuredevopsnav) describing the recent changes along with our schedule for bringing the new model to all organizations.
+Back in June of this year, we rolled out the first iteration of our [new navigation model](https://blogs.msdn.microsoft.com/devops/2018/06/19/new-navigation/). We’ve spent the summer improving that experience based on the feedback many of you have provided. Thank you! Our next step is to move from the new model being a preview, to becoming _the_ navigation for the product. Please read [our blog post](https://aka.ms/azuredevopsnav) describing the recent changes along with our schedule for bringing the new model to all organizations.
 
 ### Expanded search box
 
@@ -96,7 +96,7 @@ In this release, we added a new wizard to simplify the process of setting up con
 
 ### The Xcode task supports newly released Xcode 10
 
-Coinciding with Apple's release of Xcode 10, you can now set your projects to build or be tested specifically with Xcode 10. Your pipeline can also run jobs in parallel with a [matrix](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=vsts#matrix-1) of Xcode versions. You can use the Microsoft-hosted macOS agent pool to run these builds. See the [guidance](https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/xcode?view=vsts) for using Xcode in Azure Pipelines.
+Coinciding with Apple's release of Xcode 10, you can now set your projects to build or be tested specifically with Xcode 10. Your pipeline can also run jobs in parallel with a [matrix](https://docs.microsoft.com/azure/devops/pipelines/yaml-schema?view=azure-devops#matrix-1) of Xcode versions. You can use the Microsoft-hosted macOS agent pool to run these builds. See the [guidance](https://docs.microsoft.com/azure/devops/pipelines/languages/xcode?view=azure-devops) for using Xcode in Azure Pipelines.
 
 > [!div class="mx-imgBorder"]
 ![Xcode 10](_img/141_01.png)
@@ -107,7 +107,7 @@ When you use a hosted agent, you get a fresh VM for each job. This provides an e
 
 ### Create Azure service connection with service principal that authenticates with a certificate
 
-You can now define an Azure service connection in Azure Pipelines or Team Foundation Server (TFS) with a service principal and certificate for authentication. With the Azure service connection now supporting service principal that authenticates with a certificate, you can now deploy to [Azure Stack](https://docs.microsoft.com/en-us/azure/devops/pipelines/targets/azure-stack?view=vsts) configured with [AD FS](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-identity-overview). To create a service principal with certificate authentication, refer to the article on [how to create a service principal that authenticates with a certificate](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authenticate-service-principal#create-service-principal-with-self-signed-certificate). 
+You can now define an Azure service connection in Azure Pipelines or Team Foundation Server (TFS) with a service principal and certificate for authentication. With the Azure service connection now supporting service principal that authenticates with a certificate, you can now deploy to [Azure Stack](https://docs.microsoft.com/azure/devops/pipelines/targets/azure-stack?view=azure-devops) configured with [AD FS](https://docs.microsoft.com/azure/azure-stack/azure-stack-identity-overview). To create a service principal with certificate authentication, refer to the article on [how to create a service principal that authenticates with a certificate](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-authenticate-service-principal#create-service-principal-with-self-signed-certificate). 
 
 > [!div class="mx-imgBorder"]
 ![Connect with service principal](_img/141_02.png)
@@ -118,12 +118,12 @@ Tracking test quality over time and improving test collateral is key to maintain
 
 You can group test results by various elements, identify key tests for your branch or test files, or drill down to a specific test to view trends and understand quality issues such as flakiness. 
 
-View test analytics for [builds](https://docs.microsoft.com/en-us/azure/devops/pipelines/test/test-analytics?view=vsts#view-test-analytics-for-builds) and [release](https://docs.microsoft.com/en-us/azure/devops/pipelines/test/test-analytics?view=vsts#view-test-analytics-for-releases), preview below:
+View test analytics for [builds](https://docs.microsoft.com/azure/devops/pipelines/test/test-analytics?view=azure-devops#view-test-analytics-for-builds) and [release](https://docs.microsoft.com/azure/devops/pipelines/test/test-analytics?view=azure-devops#view-test-analytics-for-releases), preview below:
 
 > [!div class="mx-imgBorder"]
 ![Test analytics](_img/141_08.png)
 
-For more information, see our [documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/test/test-analytics?view=vsts).
+For more information, see our [documentation](https://docs.microsoft.com/azure/devops/pipelines/test/test-analytics?view=azure-devops).
 
 ## Azure Repos
 
@@ -143,9 +143,9 @@ Now, consider what would happen if the feature branch also had a PR active, and 
 
 ### Protect Git repos with cross platform compatibility settings
 
-Since Git is a cross-platform technology, it is possible for files or directories to find their way to a file system where they may be incompatible on a specific platform. You can see details about these incompatibilies in [our documentation](https://docs.microsoft.com/en-us/azure/devops/repos/git/os-compatibility?view=vsts).
+Since Git is a cross-platform technology, it is possible for files or directories to find their way to a file system where they may be incompatible on a specific platform. You can see details about these incompatibilities in [our documentation](https://docs.microsoft.com/azure/devops/repos/git/os-compatibility?view=azure-devops).
 
-To help teams protect their repo and its developers, we have added new repository settings to block pushes containing commits with files/directories that are incompatible with one or more OS platforms. Read more about [these settings](https://docs.microsoft.com/en-us/azure/devops/repos/git/repository-settings?view=vsts).
+To help teams protect their repo and its developers, we have added new repository settings to block pushes containing commits with files/directories that are incompatible with one or more OS platforms. Read more about [these settings](https://docs.microsoft.com/azure/devops/repos/git/repository-settings?view=azure-devops).
 
 ## Administration
 

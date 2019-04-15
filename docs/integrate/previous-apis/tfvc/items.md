@@ -1,11 +1,11 @@
 ---
 ms.prod: devops
 ms.technology: devops-ecosystem
-monikerRange: '>= tfs-2015 < vsts'
+monikerRange: '>= tfs-2015 < azure-devops'
 title: TFVC Items | REST API Reference for Team Foundation Server
 description: Work with TFVC items programmatically using the REST APIs for Team Foundation Server.
 ms.assetid: 35C86B30-7BAA-45C8-B9A3-CFA560B1CDA7
-ms.manager: douge
+ms.manager: jillfra
 ms.topic: article
 ms.author: elbatk
 author: elbatk
@@ -49,7 +49,7 @@ GET http://fabrikam-fiber-inc:8080/DefaultCollection/_apis/tfvc/items?path=$/Fab
 ```
 ####Response
 #####Status code: 200
-```
+```xml
 <?xml version="1.0"?>
 <configuration>
     <system.web>
@@ -65,7 +65,7 @@ GET http://fabrikam-fiber-inc:8080/DefaultCollection/_apis/tfvc/items/$/Fabrikam
 ```
 ####Response
 #####Status code: 200
-```
+```html
 <div class="jumbotron">
     <h1>ASP.NET</h1>
     <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
@@ -217,7 +217,7 @@ GET https://mytfsserver/DefaultCollection/_apis/tfvc/items?scopePath=$/Fabrikam-
 
 
 ### Multiple items
-To get more than one item in a single batch, specify the path of each item in an array of item descriptors in the post body. You can specify the [version](#getaspecificversion) and [recursion level](#mutlipleitems) for each item, too.
+To get more than one item in a single batch, specify the path of each item in an array of item descriptors in the post body. You can specify the [version](#getaspecificversion) and [recursion level](#afolderanditschildren) for each item, too.
 
 #### Sample request
 

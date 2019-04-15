@@ -1,15 +1,15 @@
 ---
 title: Command Line task
-titleSuffix: Azure Pipelines & TFS
 description: Execute tools from a command prompt when building code in Azure Pipelines and Team Foundation Server (TFS)
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 72C7D4F4-E626-42FF-BCA8-24D58D9A960F
-ms.manager: douge
+ms.manager: jillfra
+ms.custom: seodec18
 ms.author: alewis
 author: andyjlewis
-ms.date: 08/10/2016
+ms.date: 02/15/2019
 monikerRange: '>= tfs-2015'
 ---
 
@@ -38,7 +38,7 @@ The CmdLine task also has a shortcut syntax in YAML:
   workingDirectory: #
   displayName: #
   failOnStderr: #
-  env:  # mapping of environment variables to add
+  env: { string: string } # mapping of environment variables to add
 ```
 ::: moniker-end
 
@@ -94,6 +94,8 @@ steps:
     set MYVAR=foo
     set
   displayName: Set a variable and then display all
+  env:
+    aVarFromYaml: someValue
 ```
 
 # [Designer](#tab/designer)
@@ -156,7 +158,7 @@ On the Build tab of a build pipeline, add these tasks:
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.
 
 ## Q & A
 
@@ -168,7 +170,7 @@ This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). F
 
 [!INCLUDE [temp](../../_shared/qa-agents.md)]
 
-::: moniker range="< vsts"
+::: moniker range="< azure-devops"
 [!INCLUDE [temp](../../_shared/qa-versions.md)]
 ::: moniker-end
 

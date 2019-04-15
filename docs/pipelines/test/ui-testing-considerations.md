@@ -1,28 +1,30 @@
 ---
-title: Run UI tests in a CI/CD pipeline
-titleSuffix: Azure Pipelines & TFS
+title: Configure for UI testing
 description: Continuous testing. Things to consider when running UI tests and FAQ. 
 ms.assetid: 1B7C890E-FB67-4BEF-A48E-20C9453BD54A
 ms.prod: devops
 ms.technology: devops-cicd
 ms.topic: conceptual 
-ms.custom: continuous-test
-ms.manager: douge
+ms.custom: "continuous-test, seodec18"
+ms.manager: jillfra
 ms.author: pbora
 author: pboraMSFT
-ms.ms.date: 09/01/2018
+ms.date: 12/07/2018
 monikerRange: '>= tfs-2017'
 ---
 
 # UI testing considerations
 
-**Azure Pipelines | TFS 2017.1 and later**
+[!INCLUDE [version-header-vsts-tfs2017](../_shared/version-tfs-2017-rtm.md)]
 
 When running automated tests in the CI/CD pipeline, you may need a special configuration
 in order to run UI tests such as Selenium, Appium or Coded UI tests. This topic describes
 the typical considerations for running UI tests. 
 
 ::: moniker range="<= tfs-2018"
+
+> [!NOTE] 
+> Applies only to TFS 2017 Update 1 and later.
 
 [!INCLUDE [temp](../_shared/concept-rename-note.md)]
 
@@ -40,7 +42,7 @@ When running Selenium tests for a web app, you can launch the browser in two way
    components being visible. While this mode is obviously not useful for browsing the web,
    it is useful for running automated tests in an unattended manner in a CI/CD pipeline.
    [Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
-   and [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode) browsers can be run in headless mode.
+   and [Firefox](https://developer.mozilla.org/docs/Mozilla/Firefox/Headless_mode) browsers can be run in headless mode.
 	
    This mode generally consumes less resources on the machine because the UI is not
    rendered and tests run faster. As a result, potentially more tests can be run in
@@ -100,7 +102,7 @@ context of the user specified in the auto-logon settings.
 If you use Remote Desktop to access the computer on which an agent is running
 with auto-logon, simply disconnecting the Remote Desktop causes the computer
 to be locked and any UI tests that run on this agent may fail.
-To avoid this, use the [tscon](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tscon)
+To avoid this, use the [tscon](https://docs.microsoft.com/windows-server/administration/windows-commands/tscon)
 command on the remote computer to disconnect from Remote Desktop. For example: 
 
 `%windir%\System32\tscon.exe 1 /dest:console`

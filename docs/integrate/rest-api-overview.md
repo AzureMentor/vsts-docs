@@ -5,7 +5,7 @@ ms.assetid: bdddaf58-6849-4134-a295-2887dafeeea3
 ms.prod: devops
 ms.technology: devops-ecosystem
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 monikerRange: '>= tfs-2013'
 ms.author: elbatk
 author: elbatk
@@ -84,7 +84,7 @@ For Azure DevOps Services, *instance* is `dev.azure.com/{organization}` and *col
 VERB https://dev.azure.com/{organization}/_apis[/{area}]/{resource}?api-version={version}
 ```
 
-For example, here's how to get a list of projects in an Azure DevOps Services organization.
+For example, here's how to get a list of projects in an organization.
 
 ```dos
 curl -u {username}[:{personalaccesstoken}] https://dev.azure.com/{organization}/_apis/projects?api-version=2.0
@@ -92,11 +92,11 @@ curl -u {username}[:{personalaccesstoken}] https://dev.azure.com/{organization}/
 
 If you wish to provide the personal access token through an HTTP header, you must first convert it to a Base64 string (the following example shows how to convert to Base64 using C#).  The resulting string can then be provided as an HTTP header in the format:
 
-```
+```http
 Authorization: Basic BASE64PATSTRING
 ``` 
 
-Here it is in C# using the [HttpClient class](http://msdn.microsoft.com/en-us/library/system.net.http.httpclient.aspx).
+Here it is in C# using the [HttpClient class](http://msdn.microsoft.com/library/system.net.http.httpclient.aspx).
 
 ```cs
 public static async void GetProjects()

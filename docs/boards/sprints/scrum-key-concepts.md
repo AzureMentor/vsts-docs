@@ -1,18 +1,18 @@
 ---
 title: Sprints and Scrum key concepts and terms
-titleSuffix: Azure Boards and TFS
+titleSuffix: Azure Boards
 description: Key concepts and glossary of terms for Sprints and Scrum tools in Azure Boards and Team Foundation Server (TFS)  
 ms.custom: boards-sprints
 ms.technology: devops-agile
 ms.prod: devops
 ms.assetid: 
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
 monikerRange: '>= tfs-2013'
-ms.date: 10/12/2018
---- 
+ms.date: 11/19/2018
+---
 
 #  Sprints and Scrum key concepts
 
@@ -137,7 +137,7 @@ Learn more: [Triage work items](../queries/triage-work-items.md).
 
 ## Velocity and velocity chart
 
-Velocity provides a useful metric for gaining insight into how much work your team can complete during a sprint cycle. After your team has worked several sprints, they can use the[velocity chartand [forecast](#forecast) tool to estimate work that can be accomplished in future sprints.  
+Velocity provides a useful metric for gaining insight into how much work your team can complete during a sprint cycle. After your team has worked several sprints, they can use the velocity chart and [forecast](#forecast) tool to estimate work that can be accomplished in future sprints.  
 
 Velocity is a measure of how much work a team can complete based on their sprint cadence. The built-in velocity chart measures velocity by summing the Story Points (Agile), Effort (Scrum), or Size (CMMI) defined for a sprint. 
 
@@ -145,7 +145,7 @@ For example, in the chart shown below the green bar indicates the total estimate
 
 ![Velocity chart](_img/velocity-chart.png)
 
-::: moniker range="vsts"  
+::: moniker range=">= azure-devops-2019"  
 In addition to the built-in Velocity chart, you can add a Velocity widget to your team dashboard. You can configure this widget to sum a count of work items or the sum of effort. Learn more: [Configure the Velocity widget](../../report/dashboards/team-velocity.md). 
 ::: moniker-end  
 

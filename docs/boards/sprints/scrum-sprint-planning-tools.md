@@ -1,16 +1,17 @@
 ---
 title: Scrum and sprint planning tools
-titleSuffix: Azure Boards and TFS 
-description: Understand the tools available to you to support Scrum and working in sprints in Azure Boards & Team Foundation Server 
+titleSuffix: Azure Boards 
+description: Understand the tools available to you to support Scrum and working in sprints in Azure Boards, Azure DevOps, & Team Foundation Server 
 ms.custom: boards-sprints
 ms.technology: devops-agile
 ms.prod: devops
 ms.assetid: 
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
-ms.date: 08/19/2017
+monikerRange: '>= tfs-2013'
+ms.date: 11/19/2018
 ---
 
 
@@ -18,11 +19,11 @@ ms.date: 08/19/2017
  
 [!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)] 
 
-
+<!--- ADD WIDGET INFO AS WELL --> 
 
 <a id="sprint-tools">   </a>
 
-Once you've [defined and selected the sprints for your team](../../organizations/settings/set-team-defaults.md), you can start using the following tools to plan your sprint.  
+Once you've [defined iteration paths (aka sprints) and configured team iterations](../../organizations/settings/set-iteration-paths-sprints.md), you can start using the following tools to plan your sprint.  
 
 
 ## Track team capacity
@@ -37,7 +38,7 @@ At the start of each sprint, you'll want to plan the work that your team can com
 </p>
 <p>By setting team capacity, the team knows exactly the total number of work hours or days the team has for each sprint. With this tool, you set individual team member capacity as well as days off. And, conveniently, you can set holidays or shared days off taken by the entire team. </p>
 <p>Setting capacity for each team member working during a sprint causes the capacity bar for that individual to appear. </p>
-<p>You [set recurring days off](../sprints/set-capacity.md#team_settings), such as weekends, through team settings.</p>
+<p>You [set recurring days off](../../organizations/settings/set-working-days.md), such as weekends, through team settings.</p>
 </td>
 <td>
 ![Team capacity planning tool](_img/team-capacity-planning-tool.png) 
@@ -137,7 +138,7 @@ During a sprint, your team can use the taskboard and sprint burndown chart to tr
 
 
 ## Related articles 
-If you work with several teams, and each team wants their own backlog view, you can [create additional teams](../../organizations/settings/add-teams.md). Each team then gets access to their own set of Agile tools. Each Agile tool filters work items to only include those assigned values under the team's default area path and iteration path, which you configure via the [Set team defaults](../../organizations/settings/set-team-defaults.md) .  
+If you work with several teams, and each team wants their own backlog view, you can [create additional teams](../../organizations/settings/add-teams.md). Each team then gets access to their own set of Agile tools. Each Agile tool filters work items to only include those assigned values under the team's default area path and iteration path.  
 
 - [About Sprints, Scrum and project management](scrum-overview.md)
 - [What is Scrum?](/azure/devops/learn/agile/what-is-scrum)
@@ -145,4 +146,3 @@ If you work with several teams, and each team wants their own backlog view, you 
 - [Define iterations for a project](../../organizations/settings/set-iteration-paths-sprints.md) 
 - [Manage teams and configure team tools](../../organizations/settings/manage-teams.md)  
 
-<!--- ADD WIDGET INFO AS WELL --> 

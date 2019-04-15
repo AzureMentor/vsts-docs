@@ -5,18 +5,18 @@ ms.assetid: 255E1E2B-9CB2-4FC3-8495-12DB4149A449
 ms.prod: devops
 ms.technology: devops-ecosystem
 ms.topic: conceptual
-ms.manager: douge
+ms.manager: jillfra
 monikerRange: '>= tfs-2013'
 ms.author: elbatk
 author: elbatk
-ms.date: 08/04/2016
+ms.date: 11/09/2018
 ---
 
 # Authenticating with personal access tokens
 
-If you are working on a larger application or project we recommend you check out our [authentication guidance](./authentication-guidance.md) page to help you choose the correct authentication mechanism. For smaller projects that require a less robust solution, personal access tokens are a simple alternative. Please be aware that unless your users are using a credential manager (hyper link to below), they will have to enter their credentials each time.
+If you are working on a larger application or project we recommend you check out our [authentication guidance](authentication-guidance.md) page to help you choose the correct authentication mechanism. For smaller projects that require a less robust solution, personal access tokens are a simple alternative. Please be aware that unless your users are using a credential manager (hyper link to below), they will have to enter their credentials each time.
 
-These APIs support [OAuth](./oauth.md) for authorization and you should plan to use that. With Oauth your users 
+These APIs support [OAuth](oauth.md) for authorization and you should plan to use that. With Oauth your users 
 don't have to provide their Azure DevOps Services credentials to use when the APIs are called.
 To get started on your app, though, you can authenticate using personal access tokens.
 
@@ -34,8 +34,9 @@ If you wish to provide the personal access token through an HTTP header, you mus
 Authorization: Basic BASE64PATSTRING
 ``` 
 <br/>
-Here it is in C# using the [HttpClient class](http://msdn.microsoft.com/en-us/library/system.net.http.httpclient.aspx).
+Here it is in C# using the [HttpClient class](/previous-versions/visualstudio/hh193681(v=vs.118)).
 <br/>
+
 ```cs
 public static async void GetBuilds()
 {
@@ -54,7 +55,7 @@ public static async void GetBuilds()
 						string.Format("{0}:{1}", "", personalaccesstoken))));
 
 			using (HttpResponseMessage response = client.GetAsync(
-						"https://dev.azure.com/{organization}/_apis/build-release/builds").Result)
+						"https://dev.azure.com/{organization}/{project}/_apis/build/builds?api-version=5.0").Result)
 			{
 				response.EnsureSuccessStatusCode();
 				string responseBody = await response.Content.ReadAsStringAsync();
@@ -69,7 +70,7 @@ public static async void GetBuilds()
 }
 ```
 <br/>
-When your code is working, it's a good time to switch from basic auth to [OAuth](./oauth.md).
+When your code is working, it's a good time to switch from basic auth to [OAuth](oauth.md).
 
 
 ## Enabling IIS Basic Authentication invalidates using PATs for TFS
@@ -81,5 +82,5 @@ Learn more about [using IIS Basic Authentication with TFS on-premises](iis-basic
 
 #### Q: Can I use basic auth with all of the Azure DevOps Services REST APIs?
 
-A: No. You can use basic auth with most of them, but [organizations and profiles](/rest/api/vsts/profile) only support [OAuth](./oauth.md).
+A: No. You can use basic auth with most of them, but [organizations and profiles](/rest/api/azure/devops) only support [OAuth](oauth.md).
 

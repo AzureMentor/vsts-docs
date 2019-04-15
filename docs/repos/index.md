@@ -6,9 +6,9 @@ layout: HubPage
 hide_bc: true
 ms.topic: hub-page
 ms.prod: devops 
-ms.technology: vs-devops-overview 
+ms.technology: devops-code-git
 ms.assetid: B13C10AF-4FBC-493A-869F-79BABD6D453A 
-ms.manager: douge 
+ms.manager: jillfra 
 ms.author: kaelli 
 ms.date: 09/10/2018
 featureFlags:
@@ -28,7 +28,7 @@ featureFlags:
                         <a class="singlePanelNavItem selected" style="display: none" href="#indexA" data-linktype="self-bookmark"></a>
                         <ul class="panelContent singlePanelContent" id="indexA" style="margin-top: 0px; display: flex; float: left; border: none;">
                             <li class="fullSpan">
-                                <a href="#start"> </a>
+                                <a href="#index1"> </a>
                                 <ul id="index1" class="cardsF panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
                                     <li>
                                         <a href="/azure/devops/repos/get-started/index">
@@ -106,6 +106,25 @@ featureFlags:
                                             </div>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="/azure/devops/boards/github/index">
+                                            <div class="cardSize">
+                                                <div class="cardPadding">
+                                                    <div class="card">
+                                                        <div class="cardImageOuter">
+                                                            <div class="cardImage">
+                                                                <img src="https://docs.microsoft.com/media/logos/logo_octokitty.svg" alt="GitHub logo" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardText">
+                                                            <h3>Azure Boards & GitHub</h3>
+                                                            <p>Use Azure Boards to plan and track work, linking to your GitHub commits and pull requests.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
 									<li>
                                         <a href="/azure/devops/repos/git/branch-policies-overview">
                                             <div class="cardSize">
@@ -164,7 +183,7 @@ featureFlags:
                                         </a>
                                     </li>
                                 </ul>                                
-                                <a href="#index2"></a>
+                                <a href="#index4"></a>
                                 <h2 style="float: left; display: flex;">Additional resources</h2>
                                 <ul id="index4" class="cardsFTitle panelContent singlePanelContent cols cols4" style="float: left; display: flex!important;">
                                     <li>
@@ -204,7 +223,7 @@ featureFlags:
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/azure/devops/articles/index">
+                                        <a href="/azure/devops/migrate/index">
                                         <div class="cardSize">
                                             <div class="cardPadding">
                                                 <div class="card">

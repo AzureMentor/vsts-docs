@@ -13,8 +13,7 @@ if (Test-Path -Path $GitCommitMessageHookPath)
         Write-Host "Putting back your previous commit-msg hook."
         Rename-Item -Path $BackedUpCommitMessageHook -NewName $GitCommitMessageHookPath
     }
-    
-    }
+}
 else
 {
     Write-Host "No commit-msg hook found, nothing to do."

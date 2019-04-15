@@ -5,7 +5,7 @@ ms.prod: devops
 ms.technology: devops-artifacts
 ms.topic: quickstart
 ms.assetid: 45ECCEFD-3804-4D8C-8567-57C84F92A705
-ms.manager: douge
+ms.manager: jillfra
 ms.author: elbatk
 author: elbatk
 ms.date: 01/24/2018
@@ -18,7 +18,9 @@ monikerRange: '>= tfs-2017'
 
 Azure Artifacts is an *extension* to Azure DevOps Services and TFS. The Azure Artifacts extension comes pre-installed in both Azure DevOps Services and TFS (2017 and 2018).
 
-::: moniker range=">= tfs-2017 < vsts" 
+Azure Artifacts is required for each user that consumes packages from (e.g., nuget restore or npm install) or produces packages to (e.g., nuget push or npm publish) Azure Artifacts feeds. Azure Artifacts is also required for each user that consumes or publishes symbols.
+
+::: moniker range=">= tfs-2017 < azure-devops" 
 
 ## Install Azure Artifacts in TFS
 
@@ -28,7 +30,7 @@ Azure Artifacts is installed by default for TFS 2017 customers.  You must upgrad
 
 ::: moniker-end
 
-::: moniker range="vsts" 
+::: moniker range="azure-devops" 
 
 ## Assign Artifacts in Azure DevOps Services
 
@@ -36,7 +38,9 @@ Each organization gets five (5) free licenses. If you need more than 5 licenses,
 
 You will need to assign your licenses by following the instructions below:
 
-# [New navigation](#tab/new-nav)
+::: moniker-end
+
+::: moniker range=">= azure-devops-2019"
 
 1. Go to your organization, select **Admin settings** in the bottom left of the UX.
 2. Select **Users**.
@@ -45,18 +49,18 @@ You will need to assign your licenses by following the instructions below:
 
 If you have a Visual Studio Enterprise license, you already have access to Azure Artifacts and don't need to be assigned a license, just ensure that you've been assigned the "Visual Studio Enterprise" access level.
 
-# [Previous navigation](#tab/previous-nav)
+::: moniker-end
+
+::: moniker range="<= tfs-2018"
 
 1. Go to your account, navigate to the **Users** page, and select Package Management.
 2. Select **Assign**, type the users you want to assign licenses to, then select **Ok**.
 
 If you have a Visual Studio Enterprise license, you already have access to Package Management and don't need to be assigned a license, just ensure that you've been assigned the "Visual Studio Enterprise" access level.
 
----
-
 ::: moniker-end
 
-::: moniker range=">= tfs-2017 < vsts" 
+::: moniker range=">= tfs-2017 < azure-devops" 
 
 ## Assign licenses in TFS
 

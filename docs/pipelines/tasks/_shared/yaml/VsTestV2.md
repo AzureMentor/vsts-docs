@@ -15,7 +15,7 @@
     #runAllTestsAfterXBuilds: '50' # Optional
     #uiTests: false # Optional
     #vstestLocationMethod: 'version' # Optional. Options: version, location
-    #vsTestVersion: 'latest' # Optional. Options: latest, 15.0, 14.0, toolsInstaller
+    #vsTestVersion: 'latest' # Optional. Options: latest, 16.0, 15.0, 14.0, toolsInstaller
     #vstestLocation: # Optional
     #runSettingsFile: # Optional
     #overrideTestrunParameters: # Optional
@@ -35,7 +35,7 @@
     #configuration: # Optional
     #publishRunAttachments: true # Optional
     #diagnosticsEnabled: True # Optional
-    #collectDumpOn: 'onAbortOnly' # Optional. Options: onAbortOnly, always
+    #collectDumpOn: 'onAbortOnly' # Optional. Options: onAbortOnly, always, never
     #rerunFailedTests: False # Optional
     #rerunType: 'basedOnTestFailurePercentage' # Optional. Options: basedOnTestFailurePercentage, basedOnTestFailureCount
     #rerunFailedThreshold: '30' # Optional

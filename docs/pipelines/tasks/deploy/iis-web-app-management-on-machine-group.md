@@ -1,15 +1,15 @@
 ---
 title: IIS Web App Manage task
-titleSuffix: Azure Pipelines & TFS
 description: Create or update a Website, Web App, Virtual Directory, or Application Pool
 ms.topic: reference
 ms.prod: devops
 ms.technology: devops-cicd
 ms.assetid: 1b2aec60-dc49-11e6-9b76-63056e018cac
 ms.manager: dastahel
+ms.custom: seodec18
 ms.author: dastahel
-ms.date: 05/04/2018
-monikerRange: 'vsts'
+ms.date: 12/07/2018
+monikerRange: 'azure-devops'
 ---
 
 # IIS Web App Manage task
@@ -101,4 +101,4 @@ Example: To create an application Site/Application enter /Application. The paren
 
 ## Open source
 
-This task is open source [on GitHub](https://github.com/Microsoft/vsts-tasks). Feedback and contributions are welcome.
+This task is open source [on GitHub](https://github.com/Microsoft/azure-pipelines-tasks). Feedback and contributions are welcome.

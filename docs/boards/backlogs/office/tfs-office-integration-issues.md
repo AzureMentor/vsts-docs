@@ -1,11 +1,11 @@
 ---
 title: TFS-Office integration issues
-titleSuffix: Azure Boards and TFS
+titleSuffix: Azure Boards
 description: Resolve common integration issues that occur with TFS Office integration, resolve TF86001 
 ms.technology: devops-agile
 ms.prod: devops
 ms.assetid: 819EA180-2BAC-46DB-A17E-A5179E6BEADC
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: troubleshooting
@@ -13,11 +13,11 @@ ms.date: 09/28/2018
 ---
 
 
-# TFS-Office integration issues
+# TFS-Microsoft Office integration issues
 
 [!INCLUDE [temp](../../_shared/version-vsts-tfs-all-versions.md)]
 
-If you don't see the Team ribbon in Excel, as shown in the image below, you may be able to resolve the issue with the procedures provided in this topic. 
+If you don't see the Team ribbon in Microsoft Excel, as shown in the image below, you may be able to resolve the issue with the procedures provided in this article. 
 
 <img src="_img/tfs-office-issues-excel-team-ribbon.png" alt="Excel TFS-Office integration Team ribbon" style="border: 1px solid #C3C3C3;" /> 
 
@@ -25,7 +25,7 @@ If you don't see the Team ribbon in Excel, as shown in the image below, you may 
 ## Enable the Team Foundation Add-in 
 
 1.	From the Excel **File** menu, choose **Options**.  
-2.	Choose Add-ins and from the **Manage** pick list, choose **COM Add-ins**, and then choose **Go**.
+2.	Choose Add-ins and from the **Manage** picklist, choose **COM Add-ins**, and then choose **Go**.
 
 	<img src="_img/tfs-office-issues-excel-open-com-add-ins.png" alt="Excel Options, Add-ins, Choose Com Add-ins" style="border: 1px solid #C3C3C3;" /> 
 
@@ -76,7 +76,7 @@ Install Visual Studio to ensure that you have access to the Visual Studio Comman
 
 0. Open the Visual Studio Command Prompt and choose to run it as an administrator. 
 
-	<img src="_img/tfs-office-issues-run-developer-cmd-prompt.png" alt="Deve;p[er Cp,,[amd {rp,[t fpr Vosia; Stidop, Run as administrator" style="border: 2px solid #C3C3C3;" />
+	<img src="_img/tfs-office-issues-run-developer-cmd-prompt.png" alt="Developer Command Prompt for VS2015 start menu with 'Run as administrator' context menu" style="border: 2px solid #C3C3C3;" />
 
 0.	**For Office 2016 and Office 2013**, run the following commands:   
 

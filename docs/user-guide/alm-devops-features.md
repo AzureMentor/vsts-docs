@@ -1,33 +1,34 @@
 ---
-title: Feature overview 
-titleSuffix: Azure DevOps Services & TFS 
-description: Comprehensive index to all features in Azure DevOps Services & Team Foundation Server 
+title: Feature overview for Azure DevOps
+titleSuffix: Azure DevOps 
+description: Comprehensive index to all features for Azure DevOps
 ms.prod: devops
 ms.technology: devops-new-user  
-ms.article: get-started-article
+ms.article: quickstart
 ms.assetid: 330E6DA5-3DC9-432D-B3CA-BF999F151733
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
 ms.topic: reference
-ms.date: 08/02/2018
+ms.date: 04/05/2019
 monikerRange: '>= tfs-2013'
 ---
 
-# Azure DevOps Features
+# What are the features in Azure DevOps?
 
 [!INCLUDE [temp](../_shared/version-vsts-tfs-all-versions.md)]
 
-Use this end-to-end feature index to learn about all the features available to help you plan and track your projects and code, build, test, and release your software applications.  
+Learn about all the features available to help you plan and track your projects and code, build, test, and release your software applications in Azure DevOps.  
 
-If you're new to Azure DevOps Services or TFS, see the [Key concepts](concepts.md) and other overview topics designed to give beginners an understanding of the server-client structure and tools supported. For a description of the core services supported through the web portal, see [Essential services](services.md).
+If you're new to Azure DevOps, see our overview articles that are designed to give beginners an understanding of the server-client structure and tools supported. For a description of the core services supported through the web portal, see [Essential services](services.md).
 
 > [!NOTE]  
-> Some features are platform dependent and are noted as follows:  
->- **Azure DevOps Services** - Available from Azure DevOps Services (cloud service)  
->- **TFS** - Available from Team Foundation Server (on-premises)
+> Some features are platform-dependent, based on the following two platforms:
+> 
+>- **Azure DevOps Services** - cloud service
+>- **Azure DevOps Server** - on-premises
 
-##Access and supported clients
+## Access and supported clients
 
 <table>
 <tbody>
@@ -38,7 +39,7 @@ If you're new to Azure DevOps Services or TFS, see the [Key concepts](concepts.m
 <p><b>Browsers</b></p>
 [Connect to the web portal](../organizations/projects/connect-to-projects.md) from the latest versions of these supported browsers:  
 - Chrome  
-- Edge    
+- Microsoft Edge    
 - Firefox   
 - Internet Explorer   
 - Safari (Mac)        
@@ -84,7 +85,7 @@ Use features supported by these familiar clients to manage your project and illu
 
 <p><b>Access levels</b></p>
 <p>All users that you add to your Azure DevOps organization or to your TFS project have access to Basic features by default, except [Stakeholders](../organizations/security/get-started-stakeholder.md) who have access to a limited set of features, or those added to the Advanced access level in TFS.</p>
-- [Manage users (Azure DevOps Services)](../organizations/accounts/add-organization-users.md)   
+- [Manage users (Azure DevOps Services)](../organizations/accounts/add-organization-users.md)
 - [Change access levels (TFS)](../organizations/security/change-access-levels.md)  
 <br/>
 <p><b>Permissions</b></p>
@@ -144,7 +145,7 @@ Use features supported by these familiar clients to manage your project and illu
 </td>
 <td width="320">
 <p><b>Move work item to a different project (Azure DevOps Services)</b></p>
-<p>Choose the ![Change project icon](../boards/_img/icons/change-team-project-icon.png) Change project menu option ![Actions icon](../boards/_img/icons/actions-icon.png) Actions menu in a work item form to [move the work item to a different project](../boards/backlogs/remove-delete-work-items.md#move). </p>
+<p>Choose the ![Change project icon](../boards/_img/icons/change-team-project-icon.png) Change project menu option, ![Actions icon](../boards/_img/icons/actions-icon.png) Actions menu in a work item form to [move the work item to a different project](../boards/backlogs/remove-delete-work-items.md#move). </p>
 
 <p><b>Full screen mode</b></p>
 <p>Choose ![full screen icon](../boards/_img/icons/fullscreen_icon.png) or ![exit full screen icon](../boards/_img/icons/exitfullscreen_icon.png)  to enter or exit full screen mode.  </p>
@@ -169,7 +170,7 @@ Use features supported by these familiar clients to manage your project and illu
 
 <td width="30%">
 <p><b>Change work item type (Azure DevOps Services)</b></p>
-<p>If you've added a task instead of a bug and want to change the work item type to bug, you can. Choose the ![Change type icon](../boards/_img/icons/change-type-icon.png) Change type option from the ![Actions icon](../boards/_img/icons/actions-icon.png) Actions menu in a work item form to [change the work item type](../boards/backlogs/remove-delete-work-items.md#change-type). </p>
+<p>If you added a task instead of a bug and want to change the work item type to bug, you can. Choose the ![Change type icon](../boards/_img/icons/change-type-icon.png) Change type option from the ![Actions icon](../boards/_img/icons/actions-icon.png) Actions menu in a work item form to [change the work item type](../boards/backlogs/remove-delete-work-items.md#change-type). </p>
 
 <p><b>Filter your backlog</b></p>
 <p>Use **Show/Hide in progress** to only show or hide items which have moved from the new or proposed state to active or in progress state.     </p>
@@ -221,7 +222,7 @@ Use features supported by these familiar clients to manage your project and illu
 <br/>
 
 <p><b>Rich text comments</b></p>
-<p>Describe and comment on work to perform using [formatted text, hyperlinks, and inline images](../boards/backlogs/add-work-items.md). Choose ![full screen icon](../boards/_img/icons/fullscreen_icon.png) or ![exit full screen icon](../boards/_img/icons/exitfullscreen_icon.png)  to expand or contract the viewing area. </p>
+<p>Describe and comment on work using [formatted text, hyperlinks, and inline images](../boards/backlogs/add-work-items.md). Choose ![full screen icon](../boards/_img/icons/fullscreen_icon.png) or ![exit full screen icon](../boards/_img/icons/exitfullscreen_icon.png)  to expand or contract the viewing area. </p>
 
 
 <p><b>Clear HTML formatting </b></p>
@@ -247,7 +248,7 @@ Use features supported by these familiar clients to manage your project and illu
 
 
 <p><b>Manage bugs</b></p>
-<p>[Capture and triage bugs](../boards/backlogs/manage-bugs.md) using a variety of tools. </p>
+<p>[Capture and triage bugs](../boards/backlogs/manage-bugs.md) using different kinds of tools. </p>
 
 
 <p><b>Choose how you want to track bugs</b></p>
@@ -264,7 +265,7 @@ Use features supported by these familiar clients to manage your project and illu
  <br/>
 
 <p><b>Tags</b></p>
-<p>[Add tags to work items](../boards/queries/add-tags-to-work-items.md) to filter backlogs and queries. Also, you can [bulk update work items](../boards/backlogs/bulk-modify-work-items.md#tags) or [use work item templates](../boards/backlogs/work-item-template.md) to add or remove tags. </p>
+<p>[Add tags to work items](../boards/queries/add-tags-to-work-items.md) to filter backlogs and queries. [Bulk update work items](../boards/backlogs/bulk-modify-work-items.md#tags) or [use work item templates](../boards/backlogs/work-item-template.md) to add or remove tags. </p>
 ![Add tags to filter backlogs, boards, and queries](_img/features/alm-feature-tags.png)  
 <br/>
 
@@ -284,12 +285,12 @@ Use features supported by these familiar clients to manage your project and illu
 
 
 <p><b>Integrate Git development with work tracking </b></p>
-<p>Drive Git development and stay in sync as a team to complete backlog items and tasks using the [Git Development section](../boards/backlogs/connect-work-items-to-git-dev-ops.md). Add branches, create pull requests, and view all development performed to support the specific work item.  </p>
+<p>Drive Git development and stay in sync as a team to complete backlog items and tasks using the [Git Development section](../boards/backlogs/connect-work-items-to-git-dev-ops.md). Add branches, create pull requests, and view all development done to support the specific work item.  </p>
 ![Work item form Development section](_img/features/alm-feature-git-dev-section.png)  
 <br/>
 
 
-<p><b>Verify a bug, re-run test case</b></p>
+<p><b>Verify a bug, rerun test case</b></p>
 <p>Choose the **Verify** option from the bug work item form context menu to launch the relevant test case in the web runner. For more information, see [Run tests for web apps](../test/run-manual-tests.md). </p>
 
 
@@ -316,7 +317,7 @@ Use features supported by these familiar clients to manage your project and illu
 </tbody>
 </table>
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 <a id="customize-vsts">  </a>
 
@@ -590,7 +591,7 @@ Use features supported by these familiar clients to manage your project and illu
 ![Multiple teams](_img/features/alm-feature-multiple-teams.png)  
 <br/>
 <p><b>Set team defaults</b></p>
-<p>Several Agile tools reference the team's default area path, iteration path, and activated sprints to automatically filter the set of work items they display. Understand how defaults are used and how to [set the defaults for your team](../organizations/settings/set-team-defaults.md).</p>
+<p>Several Agile tools reference the team's default area path, iteration path, and activated sprints to automatically filter the set of work items they display. [Understand how defaults are used](../organizations/settings/about-teams-and-settings.md).</p>
 
 </td>
 <td width="33%">
@@ -644,7 +645,7 @@ Use features supported by these familiar clients to manage your project and illu
 <p>[Schedule and activate your team's sprints](../boards/sprints/define-sprints.md) to gain access to sprint backlogs and task boards.</p>
 
 <p><b>Select team sprints, set team defaults</b></p>
-<p>Several tools reference the team's default and active iteration paths or sprints. For the Agile tools to work best, each team needs to [set their team area path(s) and iteration paths](../organizations/settings/set-team-defaults.md) to support their work tracking activities. </p>
+<p>Several tools reference the team's default and active iteration paths or sprints. For the Agile tools to work best, each team needs to [set their team area path(s)](../organizations/settings/set-area-paths.md) and [iteration paths](../organizations/settings/set-iteration-paths-sprints.md) to support their work tracking activities. </p>
 
 
 <p><b>Plan sprints</b></p>
@@ -840,7 +841,7 @@ Use features supported by these familiar clients to manage your project and illu
 
 
 <p><b>Get started with Git in Visual Studio </b></p>
-<p>To get started working with Git, [clone a repository, add code, and create topic branches in Azure DevOps Services](../repos/git/create-new-repo.md) or [Visual Studio](../repos/git/gitquickstart.md). Learn how to commit, publish, and conduct a pull request of your changes. </p>
+<p>To get started working with Git, [clone a repository, add code, and create branches in Azure DevOps Services](../repos/git/create-new-repo.md) or [Visual Studio](../repos/git/gitquickstart.md). Learn how to commit, publish, and conduct a pull request of your changes. </p>
 ![Visual Studio Git UI pages](_img/features/features-git-vs-ui.png)  
 <br/>
 
@@ -862,7 +863,7 @@ Use features supported by these familiar clients to manage your project and illu
 </td>
 <td width="33%">
 <p><b>Get started using Eclipse</b></p>
-<p>[Work with Git repositories](../repos/git/share-your-code-in-git-eclipse.md) using the Team Explorer Everwhere IDE for Eclipse.  </p>
+<p>[Work with Git repositories](../repos/git/share-your-code-in-git-eclipse.md) using the Team Explorer Everywhere IDE for Eclipse.  </p>
 
 <p><b>Add reviewers to get feedback </b></p>
 <p>Use the [**@mention** control to add reviewers](../notifications/at-mentions.md) to your pull request to get their feedback about your changes.  </p>
@@ -918,7 +919,7 @@ Use features supported by these familiar clients to manage your project and illu
 <p>Grant an [Exempt from policy enforcement permission](../repos/git/branch-policies.md) to a user or group.</p>
 
 <p><b>Rebase a branch</b></p>
-<p>Before merging a topic branch into master, you may choose to first [rebase your topic branch onto the latest commit in master](../repos/git/rebase.md).</p>
+<p>Before merging a branch into master, you may choose to first [rebase your branch onto the latest commit in master](../repos/git/rebase.md).</p>
 
 
 
@@ -1017,7 +1018,7 @@ Use features supported by these familiar clients to manage your project and illu
 </tbody>
 </table>
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 <a id="package-management"></a>
 
@@ -1061,7 +1062,7 @@ Use features supported by these familiar clients to manage your project and illu
 
 
 <p><b>Remove a NuGet package from a feed </b></p>
-<p>[Unlist or remove a package](../artifacts/nuget/unlist-delete.md) you no longer want users to discover.</p>
+<p>[Unlist or remove a package][Delete packages and recover deleted packages from the recycle bin in Azure Artifacts](../artifacts/how-to/delete-and-recover-packages.md) you no longer want users to discover.</p>
 
 <p><b>Secure feeds </b></p>
 <p>Control who can [contribute to or consume from a feed](../artifacts/feeds/feed-permissions.md).</p>
@@ -1173,7 +1174,7 @@ pipelines\tasks\build\_img
 <td width="33%">
 
 <p><b>Automate deployments</b></p>
-<p>Reduce time-to-market and respond to customer feedback with greater agility by [automating your release process](../pipelines/overview.md). Deploy applications across platforms to all environments of the pipeline with just one click.</p>
+<p>Reduce time-to-market and respond to customer feedback with greater agility by [automating your release process](../pipelines/overview.md). Deploy applications across platforms to all environments of the pipeline with just one selection.</p>
 ![Release Manager](_img/features/alm-feature-release-1.png)  
 <br />
 
@@ -1195,7 +1196,7 @@ pipelines\tasks\build\_img
 
 
 <p><b>Tasks</b></p>
-<p>Automate release deployment by [defining the events that will trigger a release](../pipelines/release/triggers.md#release-triggers).</p>
+<p>Automate release deployment by [defining the events that trigger a release](../pipelines/release/triggers.md#release-triggers).</p>
 
 <p><b>Agents and agent pools</b></p>
 <p>Agent pools are the execution containers that specify the security context and runtime environment for the [agents that run when you deploy a release](../pipelines/agents/agents.md).</p>
@@ -1218,7 +1219,7 @@ pipelines\tasks\build\_img
 <p>View or download log files as zip files. Log files contain the status for each step or task of a release, for each of the environments in the release definition. Each completed release--succeeded, failed, or abandoned--[includes a live log file, details, and history for each step or task](../pipelines/release/define-multistage-release-process.md#monitor-and-track-deployments).</p>
 
 <p><b>Triggers</b></p>
-<p>Automate release deployment by [defining the events that will trigger a release](../pipelines/release/triggers.md#release-triggers).</p>
+<p>Automate release deployment by [defining the events that trigger a release](../pipelines/release/triggers.md#release-triggers).</p>
 
 <p><b>Variables</b></p>
 <p>Lookup the description for all [release system, global, and agent variables](../pipelines/process/tasks.md).</p>
@@ -1264,13 +1265,12 @@ pipelines\tasks\build\_img
 <td width="33%">
 
 <p><b>Comprehensive testing</b></p>
-<p>[Perform exploratory, manual, system, user acceptance, and performance tests for any app, in any language](../test/index.md). Using Visual Studio or 3rd-party test frameworks, you can include automated tests with builds and releases for continuous integration and deployment. </p>
+<p>[Perform exploratory, manual, system, and user acceptance tests for any app, in any language](../test/index.md). Using Visual Studio or 3rd-party test frameworks, you can include automated tests with builds and releases for continuous integration and deployment. </p>
 
 <p><b>Unit testing with Git</b></p>
 <p>Create [unit tests](/visualstudio/test/create-unit-tests-menu) and run them frequently to make sure your code is working properly.</p>
 ![view tests in test explorer](_img/features/alm-feature-test-unittests.png)  
 <br />
-
 
 <p><b>Manual test plans and test cases</b></p>
 <p>Get started by [creating test plans and test cases](../test/create-test-cases.md) to track manual testing for sprints or milestones.</p>
@@ -1278,24 +1278,14 @@ pipelines\tasks\build\_img
 <p><b>Shared steps and shared parameters</b></p>
 <p>[Create shared steps](https://msdn.microsoft.com/library/dd286655.aspx) to include often repeated sequence of steps in your manual test cases, such as logging in. Repeat manual tests with different data using [shared parameters](../test/repeat-test-with-different-data.md). </p>
 
-
-<p><b>Performance and load testing  </b></p>
-<p>Understand and fix performance issues before they impact your business by [running performance tests on your apps](../test/load-test/getting-started-with-performance-testing.md).</p>
-
-
-<p><b>Cloud-based load tests</b></p>
-<p>Find performance problems in your app before customers do with [cloud-based load tests](../test/load-test/get-started-simple-cloud-load-test.md).</p>
-
-
 </td>
 <td width="33%">
-
 
 <p><b>Coded UI testing</b></p>
 <p>Use Visual Studio to create [coded UI tests](https://msdn.microsoft.com/library/dd286726.aspx) to test your application's user interface.</p>
 
 <p><b>Run test with your builds for continuous integration</b></p>
-<p>Use continuous integration builds to [run tests automatically](../pipelines/test/getting-started-with-continuous-testing.md).</p>
+<p>Use continuous integration builds to [run tests automatically](../pipelines/languages/dotnet-core.md#run-your-tests).</p>
 
 <p><b>Review automated test results after a build</b></p>
 <p>[Review your test results](../pipelines/test/review-continuous-test-results-after-build.md) to analyze any problems that were found.</p>
@@ -1327,7 +1317,7 @@ pipelines\tasks\build\_img
 
 
 <p><b>Test environments</b></p>
-<p>[Specify a combination of hardware and software](../test/test-different-configurations.md) that represents a user or machine environment in which your app will run.</p>
+<p>[Specify a combination of hardware and software](../test/test-different-configurations.md) that represents a user or machine environment in which your app runs.</p>
 
 <p><b>Test permissions</b></p>
 <p>Set permissions on who can [manage test configurations, test environments, and publish and delete test results](../organizations/security/set-project-collection-level-permissions.md).</p>
@@ -1412,7 +1402,7 @@ pipelines\tasks\build\_img
 <br/>
 
 <p><b>Auto-refresh dashboards </b></p>
-<p>You can [enable auto-refresh for any team dashboard](../report/dashboards/dashboards.md#manage), and it will automatically update every five minutes. This is a useful feature for when your dashboard serves as a team wallboard.   </p>
+<p>You can [enable auto-refresh for any team dashboard](../report/dashboards/dashboards.md#manage), and it automatically updates every five minutes. This is a useful feature for when your dashboard serves as a team wallboard.   </p>
 
 
 <p><b>Widget catalog</b></p>
@@ -1440,7 +1430,7 @@ pipelines\tasks\build\_img
 </tbody>
 </table>
 
-::: moniker range="vsts"
+::: moniker range="azure-devops"
 
 <a id="power-bi">  </a>
 
@@ -1878,7 +1868,7 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 
 <p><b>Language Interface Packs (LIPs)</b></p>
-<p>By using a [Windows Language Interface Pack (LIP)](https://msdn.microsoft.com/library/ms246590.aspx), you can install a language version of Windows and then install various User Interface Language Packs. Language packs switch your English Visual Studio Professional user interface into any of these languages and will have a majority of the user interface localized. </p>
+<p>By using a [Windows Language Interface Pack (LIP)](https://msdn.microsoft.com/library/ms246590.aspx), you can install a language version of Windows, and then install various User Interface Language Packs. Language packs switch your English Visual Studio Professional user interface into any of these languages and have a majority of the user interface localized. </p>
 
 </td>
 <td width="33%">
@@ -1957,7 +1947,7 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 
 <p><b>What is Application Insights</b></p>
-<p>Application Insights, an extensible analytics service that monitors your live web application, supports developers to continuously improve the performance and usability of apps. With it you can [detect and diagnose performance issues, and understand what users actually do with your app](/azure/application-insights/app-insights-overview). </p>
+<p>Application Insights, an extensible analytics service that monitors your live web application, supports developers to continuously improve the performance and usability of apps. With it you can [detect and diagnose performance issues, and understand what users actually do with your app](https://azure.microsoft.com/en-in/documentation/articles/app-insights-overview/). </p>
 
 
 <p><b>Web site availability monitoring </b></p>
@@ -1992,7 +1982,7 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p>Gain a clear view of [where your users are coming from and how they use your app ](https://azure.microsoft.com/documentation/articles/app-insights-overview-usage/). Add custom instrumentation to determine usage patterns and next version investment areas.  </p>
 
 <p><b>Diagnose dependency issues</b></p>
-<p>See how long your application [waits for dependencies and how often a dependency call fails](/azure/application-insights/app-insights-asp-net-dependencies). Dependencies are external components that your app calls such as an HTTP service, database, or file system. </p>
+<p>See how long your application [waits for dependencies and how often a dependency call fails](https://azure.microsoft.com/en-in/documentation/articles/app-insights-dependencies/). Dependencies are external components that your app calls such as an HTTP service, database, or file system. </p>
 
 
 <p><b>Custom data collectors </b></p>
@@ -2131,7 +2121,7 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 
 <p><b>Test</b></p>
-<p>[Create and run manual tests](../test/create-a-test-plan.md) and [load tests for your app](../test/load-test/getting-started-with-performance-testing.md).</p>
+<p>[Create and run manual tests](../test/create-a-test-plan.md) for your app.</p>
 
 <p><b>Package (Azure DevOps Services, Preview)</b></p>
 <p>Share code as binary assets and control dependencies by [subscribing to and working with Azure Artifacts feeds](../artifacts/overview.md).</p>
@@ -2172,13 +2162,13 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 
 
 <p><b>Project admin context</b></p>
-<p>Open the admin context to [add teams](../organizations/settings/add-teams.md), [set team defaults](../organizations/settings/set-team-defaults.md), and [manage permissions](../organizations/security/change-individual-permissions.md). From any project hub, choose the ![gear icon](../boards/_img/icons/gear_icon.png) gear icon to open the admin context.</p>
+<p>Open the admin context to [add teams](../organizations/settings/add-teams.md) and [manage permissions](../organizations/security/change-individual-permissions.md). From any project hub, choose the ![gear icon](../boards/_img/icons/gear_icon.png) gear icon to open the admin context.</p>
 ![Admin context](_img/features/alm-feature-admin-context.png)  
 <br/>
 
 
 <p><b>Project collection admin context</b></p>
-<p>From the collection admin context, you can [manage collection-level permissions](../organizations/security/set-project-collection-level-permissions.md), and set build policies, and [manage extensions](../extend/overview.md). Choose the ![gear icon](../boards/_img/icons/gear_icon.png) gear icon to open the admin context and then choose DefaultCollection. </p>
+<p>From the collection admin context, you can [manage collection-level permissions](../organizations/security/set-project-collection-level-permissions.md), and set build policies, and [manage extensions](../extend/overview.md). Choose the ![gear icon](../boards/_img/icons/gear_icon.png) gear icon to open the admin context, and then choose DefaultCollection. </p>
 
 
 </td>
@@ -2299,7 +2289,7 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p>Easily control access to your team's critical resources and key business assets with [Azure Active Directory groups](../organizations/accounts/manage-azure-active-directory-groups.md).</p>
 
 <p><b>Set up groups (TFS)</b></p>
-<p>[Create Windows or Active Directory groups](/tfs/server/admin/setup-ad-groups) to manage access to your team projects and collections.  </p>
+<p>[Create Windows or Active Directory groups](/azure/devops/server/admin/setup-ad-groups) to manage access to your team projects and collections.  </p>
 
 <p><b>Built-in groups</b></p>
 <p>Understand the [permissions granted to built-in groups](../organizations/security/permissions.md#groups) and use them to manage access to your team projects and collections.</p>
@@ -2344,12 +2334,12 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <ul>
 <li>[Project Administrators](../organizations/security/set-project-collection-level-permissions.md), who manage shared features for a project </li>
 <li>[Project Collection Administrators](../organizations/security/set-project-collection-level-permissions.md), who manage collection-level features </li>
-<li>[Team Foundation Server Administrators](/tfs/server/admin/add-administrator-tfs), who manage on-premises application servers </li>
+<li>[Team Foundation Server Administrators](/azure/devops/server/admin/add-administrator-tfs), who manage on-premises application servers </li>
 </ul>
 <br/>
 
 <p><b>Restrict access</b></p>
-<p>You can restrict access to several features and tasks by setting the permission state to Deny to individual userss or a security group.</p>
+<p>You can restrict access to several features and tasks by setting the permission state to Deny to individual users or a security group.</p>
 
 
 </td>
@@ -2427,13 +2417,13 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 </td>
 <td width="33%">
 <p><b>Email configuration (TFS)</b></p>
-<p>For feedback requests, alerts, and other special controls to work, you must [configure an SMTP server](/tfs/server/admin/setup-customize-alerts) for your on-premises TFS. </p>
+<p>For feedback requests, alerts, and other special controls to work, you must [configure an SMTP server](/azure/devops/server/admin/setup-customize-alerts) for your on-premises TFS. </p>
 
 <p><b>Automated, scheduled backups (TFS)</b></p>
-<p>Reduce the risk of lost data by [scheduling automated backups of the data store](/tfs/server/admin/backup/config-backup-sched-plan).</p>
+<p>Reduce the risk of lost data by [scheduling automated backups of the data store](/azure/devops/server/admin/backup/config-backup-sched-plan).</p>
 
 <p><b>Built-in SQL Server database (TFS)</b></p>
-<p>For small teams, you can install [TFS using SQL Server Express which installs with TFS](/tfs/server/install/single-server).  </p>
+<p>For small teams, you can install [TFS using SQL Server Express which installs with TFS](/azure/devops/server/install/single-server).  </p>
 
 
 </td>
@@ -2689,7 +2679,7 @@ Oauth 2.0 provides safe, secure access to your resources like work items, source
 <p>By [configuring your teams and backlogs into an hierarchical structure](../boards/plans/portfolio-management.md), program owners can more easily track progress across teams, manage portfolios, and generate rollup data. </p>
 
 <p><b>Set team defaults</b></p>
-<p>Several Agile tools reference the team's default area path, iteration path, and activated sprints to automatically filter the set of work items they display. Understand how defaults are used and how to [set the defaults for your team](../organizations/settings/set-team-defaults.md).</p>
+<p>Several Agile tools reference the team's default area path, iteration path, and activated sprints to automatically filter the set of work items they display. Understand how defaults are used](../organizations/settings/about-teams-and-settings.md).</p>
 
 <p><b>Select team sprints</b></p>
 <p>[Select your team's sprints](../boards/sprints/define-sprints.md) to gain access to sprint backlogs and task boards.</p>

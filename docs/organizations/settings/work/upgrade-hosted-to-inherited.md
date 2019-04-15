@@ -5,11 +5,11 @@ description: Clone a Hosted XML process model to an inherited process in Azure D
 ms-custom: inherited-process
 ms.technology: devops-agile
 ms.prod: devops
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
 ms.topic: conceptual
-monikerRange: 'vsts'
+monikerRange: 'azure-devops'
 ms.date: 05/30/2018
 ---
 
@@ -37,7 +37,7 @@ The general sequence of steps to support clone are:
 0. Manually reapply customizations that were ignored during clone
 0. Create a test project to verify customizations. 
 
-[!INCLUDE [temp](../_shared/open-process-admin-context-ts.md)]
+[!INCLUDE [temp](../_shared/open-process-admin-context-ts-only.md)]
 
 
 ## Clone a Hosted XML process to an Inheritance process 

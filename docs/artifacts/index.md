@@ -6,9 +6,9 @@ layout: HubPage
 hide_bc: true
 ms.topic: hub-page
 ms.prod: devops 
-ms.technology: vs-devops-overview 
+ms.technology: devops-artifacts
 ms.assetid: B13C10AF-4FBC-493A-869F-79BABD6D453A 
-ms.manager: douge 
+ms.manager: jillfra 
 ms.author: kaelli 
 ms.date: 09/05/2018
 featureFlags:
@@ -88,6 +88,25 @@ featureFlags:
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="/azure/devops/artifacts/quickstarts/python-packages">
+                                            <div class="cardSize">
+                                                <div class="cardPadding">
+                                                    <div class="card">
+                                                        <div class="cardImageOuter">
+                                                            <div class="cardImage">
+                                                                <img src="https://docs.microsoft.com/media/logos/logo_python.svg" alt="python logo" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardText">
+                                                            <h3>Get started with Python packages</h3>
+                                                            <p>Create, host, and share Python packages with your teams.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="/azure/devops/artifacts/quickstarts/universal-packages">
                                             <div class="cardSize">
                                                 <div class="cardPadding">
@@ -156,7 +175,7 @@ featureFlags:
                                             <div class="cardPadding">
                                                 <div class="card">
                                                     <div class="cardText">
-                                                        <a class="barLink" href="/azure/devops/articles/index"><img src="https://docs.microsoft.com/media/common/i_article.svg" alt="Article icon" />Technical articles</a>
+                                                        <a class="barLink" href="/azure/devops/migrate/index"><img src="https://docs.microsoft.com/media/common/i_article.svg" alt="Article icon" />Technical articles</a>
                                                     </div>
                                                 </div>
                                             </div>

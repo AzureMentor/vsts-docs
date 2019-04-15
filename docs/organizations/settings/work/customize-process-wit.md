@@ -6,10 +6,10 @@ ms-custom: inherited-process
 ms.technology: devops-agile
 ms.prod: devops
 ms.assetid: DBF41880-62A4-43A9-9A31-8DB701EB888E
-ms.manager: douge
+ms.manager: jillfra
 ms.author: kaelli
 author: KathrynEE
-monikerRange: 'vsts'
+monikerRange: '>= azure-devops-2019'
 ms.topic: conceptual
 ms.date: 05/31/2018
 ---
@@ -25,6 +25,10 @@ For example, you may want to capture customer issues in a custom Ticket WIT.
 > [!div class="mx-imgBorder"]  
 > ![Custom Ticket work item form](_img/process/custom-wit-new-ticket-form.png) 
 
+[!INCLUDE [temp](../_shared/note-on-prem-link.md)]
+
+
+
 [!INCLUDE [temp](../_shared/process-prerequisites.md)] 
 
 [!INCLUDE [temp](../_shared/open-process-admin-context-ts.md)]
@@ -38,12 +42,9 @@ For example, you may want to capture customer issues in a custom Ticket WIT.
 
 	<img src="_img/process/cpwit-add-new-wit.png" alt="Process, Inherited process, Work Item Types, Add new work item type" style="border: 2px solid #C3C3C3;" />
  
-0. Name the WIT and optionally specify a description, icon and color. The icon and color you specify will appear throughout the web portal, including on the work item form and when associated work items appear on a backlog, boards, query results, and more. Click Create to save. 
+1. Name the WIT and optionally specify a description, icon and color. The icon and color you specify appear throughout the web portal, including on the work item form and when associated work items appear on a backlog, boards, query results, and more. Click Create to save. 
 
 	<img src="_img/process/cwit-create-wit-ticket.png" alt="Create new work item type dialog" style="border: 1px solid #C3C3C3;" /> 
-
-
- 
 
 
 0.   From the Layout page, you can add fields, groups, or pages to specify the form and fields you want to track. Each new WIT comes predefined with a Details page with the Description field, and Discussion, Development, and Related Work groups. For details, see [Add and manage fields](customize-process-field.md) or [Customize the web layout for a process](customize-process-form.md).    
@@ -85,7 +86,7 @@ Here we change the description, icon and color for the Ticket custom WIT.
 <a id="enable-disable"></a>
 ## Enable or disable a WIT  
 
-You can disable a custom WIT which will prevent users from being able to add work items using it. However, all existing work items defined using the custom WIT remain available. You can query for them and edit them.   
+You can disable a custom WIT, which prevents users from being able to add work items using it. However, all existing work items defined using the custom WIT remain available. You can query for them and edit them.
 
 You may want to disable a custom WIT until you have defined all the fields, workflow, and layout that you have planned.
 
@@ -94,15 +95,15 @@ To disable a custom WIT, choose **Disable** from the WIT context menu.
 To re-enable the WIT, choose **Enable** from the WIT context menu. 
 
 > [!NOTE]    
-> Disabling a WIT will remove the WIT from the **New** drop down and add experiences. Creating a work item of that WIT will also be blocked via REST APIs.  
+> Disabling a WIT removes the WIT from the **New** drop down and add experiences. Creating a work item of that WIT is also blocked via REST APIs.  
 >
->No changes are made to existing work items of that type. You can update or delete them and they will continue to appear on backlogs and boards. Also, you can change the work item type of disabled WITs to an enabled type, but you can't change the type to a disabled WIT.
+>No changes are made to existing work items of that type. You can update or delete them and they continue to appear on backlogs and boards. Also, you can change the work item type of disabled WITs to an enabled type, but you can't change the type to a disabled WIT.
 
 <a id="destroy">  </a>
 ## Delete or destroy a custom WIT 
 
 > [!IMPORTANT]  
-> Destroying a WIT will delete all work items and data associated with that WIT, including historical values. Once destroyed, you can't recover the data. 
+> Destroying a WIT deletes all work items and data associated with that WIT, including historical values. Once destroyed, you can't recover the data.
 
 1. To completely remove a custom WIT and all work items based on that WIT, choose **Destroy** from the WIT context menu.
 
@@ -114,7 +115,7 @@ To re-enable the WIT, choose **Enable** from the WIT context menu.
  
 ### WIT extensibility
 
-To work with WITs programmatically, see [Work Item Types REST API](/rest/api/vsts/processdefinitions/work%20item%20types). 
+To work with WITs programmatically, see [Work Item Types REST API](/rest/api/azure/devops/processdefinitions/work%20item%20types). 
 
 
 ## Related articles  

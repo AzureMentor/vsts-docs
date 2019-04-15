@@ -4,8 +4,6 @@
   items:
     - name: About work tracking customization
       href: customize-work.md
-    - name: Deprecation of WIT & Test Client OM
-      href: ../integrate/concepts/wit-client-om-deprecation.md
 - name: Quickstarts
   items:
     - name: Define area paths
@@ -36,13 +34,9 @@
       href: ../boards/work-items/agile-glossary.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
 - name: How-to Guides
   items:
-    - name: "Manage permissions (Security)"
-      href: ../organizations/security/set-permissions-access-work-tracking.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
     - name: Configure team settings
       href: ../organizations/settings/configure-team-settings.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
       items:
-        - name: Set team defaults
-          href: ../organizations/settings/set-team-defaults.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
         - name: Customize cards on boards
           href: ../boards/boards/customize-cards.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
         - name: Reorder cards
@@ -122,8 +116,6 @@
           href: ./xml/expand-list-items-and-exclude-groups-from-lists.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
         - name: Combine list types
           href: ./xml/combine-list-types.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
-        - name: Change reporting attributes (TFS)
-          href: ./xml/add-or-modify-work-item-fields-to-support-reporting.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
     - name: Change the workflow
       href: ./xml/change-workflow-wit.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
     - name: Work item type or form
@@ -144,8 +136,6 @@
           href: ./xml/specify-work-item-form-controls.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
         - name: Define link controls
           href: ./xml/define-link-controls.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
-        - name: Change the maximum attachment size
-          href: ./xml/change-maximum-attachment-size-work-items.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
     - name: Backlogs and boards
       items:
         - name: Add work item types
@@ -160,6 +150,8 @@
           href: ../boards/work-items/guidance/manage-process-templates.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
         - name: Customize a process template
           href: ./process-templates/customize-process.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
+    - name: "Manage permissions (Security)"
+      href: ../organizations/security/set-permissions-access-work-tracking.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
 - name: Troubleshooting
   items:
     - name: Resolve validation errors
@@ -311,10 +303,9 @@
           href: ./witadmin/rebuild-client-cache.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
         - name: Remove work items permanently
           href: ./witadmin/remove-work-items-permanently.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
-    - name: Project-to-TFS field mapping
+    - name: Project integration field mapping
+      href: ./xml/add-or-change-how-project-fields-map-to-tfs-fields.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
       items:
-        - name: Change how fields map
-          href: ./xml/add-or-change-how-project-fields-map-to-tfs-fields.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
         - name: Customize the Project field mapping
           href: ./xml/customize-project-field-mapping-file.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
         - name: Map Project fields
@@ -323,12 +314,16 @@
           href: ./xml/field-mappings-in-microsoft-project.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
         - name: Upload/download the Project mapping file
           href: ./xml/upload-or-download-the-microsoft-project-mapping-file.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
-    - name: On-premises TFS Only
+    - name: On-premises only
       items:
-        - name: Field data type and reportable attributes
-          href: ./xml/define-modify-work-item-fields.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
+        - name: Reportable fields reference 
+          href: ./xml/reportable-fields-reference.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
+        - name: Change reporting attributes 
+          href: ./xml/add-or-modify-work-item-fields-to-support-reporting.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
         - name: Customize and manage the test experience
           href: ./witadmin/tcm-customize-manage-test-experience.md?toc=/azure/devops/reference/toc.json&bc=/azure/devops/reference/breadcrumb/toc.json
+    - name: Deprecation of WIT & Test Client OM
+      href: ../integrate/concepts/wit-client-om-deprecation.md
     - name: API SDK reference
       items:
         - name: IProcessTemplates.AddUpdateTemplate

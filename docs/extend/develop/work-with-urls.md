@@ -5,8 +5,8 @@ title: Working with URLs in extensions | Azure DevOps Services
 description: Best practices for working with URLs in Azure DevOps extensions and integrations
 ms.assetid: 1f27f05e-2c55-4873-ab4a-8c9c0947a7fe
 ms.topic: conceptual
-ms.manager: douge
-monikerRange: 'vsts'
+ms.manager: jillfra
+monikerRange: 'azure-devops'
 ms.author: wismythe
 author: willsmythe
 ms.date: 08/31/2018
@@ -262,7 +262,7 @@ $releaseDefinitionsUrl = [string]::Format("{0}/_apis/release/definitions?api-pre
 This table shows the IDs for common resource areas. See the previous section for details on how to use this table. 
 
 > [!NOTE]
-> Resource area IDs are fixed and are consistent across all Azure DevOps Services organizations.
+> Resource area IDs are fixed and are consistent across all organizations in Azure DevOps Services.
 
 | Resource Area ID | Name |
 |---|---|

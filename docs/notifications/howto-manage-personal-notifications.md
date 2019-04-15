@@ -1,73 +1,74 @@
 ---
 title: Manage personal notification settings
-titleSuffix: Azure DevOps Services & TFS
+titleSuffix: Azure DevOps
 description: Get notified when changes occur to source code, git, work items, and builds when using Azure DevOps Services and Team Foundation Server (TFS)
 ms.technology: devops-collab
 ms.prod: devops
 ms.assetid: 644687b3-e30e-46b0-8d3e-3d4a4e34d13a
-ms.manager: douge
+ms.manager: jillfra
 ms.author: chcomley
 author: chcomley
 ms.topic: conceptual
-ms.date: 10/11/2018
+ms.date: 02/19/2019
 monikerRange: '>= tfs-2017'
 ---
 
 # Manage your notifications
 
-<b>Azure DevOps Services | TFS 2018 | TFS 2017.1 | [Previous versions](../boards/queries/alerts-and-notifications.md)</b>
+[!INCLUDE [version-vsts-tfs-2017-on](../boards/_shared/version-vsts-tfs-2017-on.md)]
 
 >[!NOTE]  
->**Feature availability**: This topic applies to Azure DevOps Services, TFS 2017 Update 1, and later versions. If you work from an on-premises TFS 2017 or ealier versions, see [Set alerts, get notified when changes occur](../boards/queries/alerts-and-notifications.md). For on-premises TFS, [you must configure an SMTP server](/tfs/server/admin/setup-customize-alerts) in order for team members to see the Notifications option from their organization menu and to  receive notifications. 
- 
-As changes occur to your code base, builds, work items, and other operations, you can receive email notifications. For example, you can set an alert to be notified whenever a bug that you opened is resolved or a work item is assigned to you.
+>**Feature availability**: This topic applies to Azure DevOps Services, TFS 2017 Update 1, and later versions. If you work from an on-premises TFS 2017 or earlier versions, see [Set alerts, get notified when changes occur](../boards/queries/alerts-and-notifications.md). For on-premises TFS, [you must configure an SMTP server](/azure/devops/server/admin/setup-customize-alerts) for team members to see the Notifications option from their organization menu and to  receive notifications.
 
-Use this topic to learn how to do the following:
+As changes occur to your code base, builds, work items, and other operations, you can receive email notifications. For example, you can set an alert, so you're notified whenever a bug that you opened is resolved or you're assigned to a work item.
 
-> [!div class="checklist"]   
-> * View your notifications    
-> * Add a custom subscription      
-> * Unsubscribe or opt out of a team or project subscription   
+In this tutorial, you learn how to do the following tasks:
+
+> [!div class="checklist"]
+> * View your notifications
+> * Add a custom subscription
+> * Unsubscribe or opt out of a team or project subscription
 
 ## View your personal notifications
 
-From the web portal, select the icon with your initials or picture, and select **Notification settings** from the drop-down menu.
+From the web portal, select the icon with your initials or picture, and then select **Notification settings** from the drop-down menu.
+::: moniker range=">= azure-devops-2019"
+   ![Navigate to personal notifications page](_img/nav-personal-notifications-hub-newnav.png)  
+::: moniker-end
 
-   # [New navigation](#tab/new-nav)
-   ![Navigate to personal notifications page](_img/nav-personal-notifications-hub-newnav.png)
+::: moniker range="<= tfs-2018"
+   ![Navigate to personal notifications page](_img/nav-personal-notifications-hub.png)  
+::: moniker-end
 
-   # [Previous navigation](#tab/previous-nav)
-   ![Navigate to personal notifications page](_img/nav-personal-notifications-hub.png)
-
-   ---
+## View all subscriptions
 
 This view shows all subscriptions that you have created or that have been created by an administrator. Subscriptions let you control what you are notified about. Those notifications you're subscribed to are indicated with the State as **On**.
 
-   # [New navigation](#tab/new-nav)
-   <img src="_img/unsubscribe-personal-notifications-newnav.png" alt="Personal notification subscriptions" style="border: 2px solid #C3C3C3;" />
+::: moniker range=">= azure-devops-2019"
+<img src="_img/unsubscribe-personal-notifications-newnav.png" alt="Personal notification subscriptions" style="border: 2px solid #C3C3C3;" />
+::: moniker-end
 
-   # [Previous navigation](#tab/previous-nav)
-   <img src="_img/unsubscribe-personal-notifications.png" alt="Personal notification subscriptions" style="border: 2px solid #C3C3C3;" />
-   
-   ---
+::: moniker range="<= tfs-2018"
+<img src="_img/unsubscribe-personal-notifications.png" alt="Personal notification subscriptions" style="border: 2px solid #C3C3C3;" />  
+::: moniker-end
 
 A subscription can be just for you, or if you are a team admin, can be shared by everyone in the team.
 
 ## Add a custom subscription
 
-With custom personal subscriptions, you can define precise criteria for the events you want to receive notifications for. In contrast to a default subscription which will only notify the users or groups directly associated with an event, a custom subscription can notify you about any event.
+With custom personal subscriptions, you can define precise criteria for the events you want to receive notifications for. In contrast to a default subscription, which only notifies the users or groups directly associated with an event, a custom subscription can notify you about any event.
 
 1. From your Notifications page, select **New subscription**.
 
-   # [New navigation](#tab/new-nav)
+::: moniker range=">= azure-devops-2019"
    <img src="_img/manage-personal-notifications-new-subscription-newnav.png" alt="Open the new subscription dialog" style="border: 2px solid #C3C3C3;" />
+::: moniker-end
 
-   # [Previous navigation](#tab/previous-nav)
+::: moniker range="<= tfs-2018"
    <img src="_img/manage-personal-notifications-new-subscription.png" alt="Open the new subscription dialog" style="border: 2px solid #C3C3C3;" />
-   
-   ---
-	
-2. Choose the category and template you want to use. For a list of supported templates, see [Default and supported notifications](oob-built-in-notifications.md).
+::: moniker-end
+
+1. Choose the category and template you want to use. For a list of supported templates, see [Default and supported notifications](oob-built-in-notifications.md).
 
 	Here we choose to get notified when a pull request is created within a specific project, Fabrikam Fiber.
 
@@ -152,6 +153,7 @@ You can choose to not receive notifications for certain team subscriptions by op
 
 ## Related articles
 
+- [Set your preferences](../organizations/settings/set-your-preferences.md)
 - [Default and supported notifications](oob-built-in-notifications.md)
 - [Follow a specific work item](../boards/work-items/follow-work-items.md)  
 - [Manage notifications for a team](howto-manage-team-notifications.md)  
